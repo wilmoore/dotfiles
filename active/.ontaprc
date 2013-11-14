@@ -167,12 +167,6 @@ install nmap
 install tcpdump
 
 #
-# security / privacy
-#
-
-install fail2ban
-
-#
 # vcs
 #
 
@@ -203,6 +197,7 @@ install ctags
 install lnav
 install pcre
 install reattach-to-user-namespace
+install terminal-notifier
 install tmux
 install tree
 install watch

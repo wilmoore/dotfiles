@@ -184,7 +184,7 @@
   project-name        = config --replace-all project.info.name
 
   # github style pull request against origin regarding current branch (FYI, make sure you are using an `https` origin url; otherwise, this won't work)
-  pr                  = !git sync && git web--browse $(git config --get remote.origin.url | sed 's/.git$//')/pull/new/$(git name-rev --name-only HEAD)
+  pr                  = !git web--browse $(git config --get remote.origin.url | sed 's/.git$//')/pull/new/$(git name-rev --name-only HEAD)
 
   # stage file after resolving a merge conflict (like svn, hg)
   resolve             = stage --
