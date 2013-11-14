@@ -1,0 +1,25 @@
+# periodically backup each project `.git/config` and other files.
+# restoring projects clone from "clone"
+---
+- name:  selectn
+    remotes:
+      origin:   https://github.com/wilmoore/selectn.git
+      upstream: https://github.com/wilmoore/selectn.git
+    backup:
+      - .git/config
+
+- name:  hnavclient
+    remotes:
+      origin:   https://github.webapps.rr.com/wilmoore/hnavclient.git
+      upstream: https://github.webapps.rr.com/hnav/hnavclient.git
+    backup:
+      - .git/config
+      - src/profiles/devProfile.json
+
+- name:  beforei
+    remotes:
+      origin:   https://github.com/wilmoore/beforei.git
+      upstream: https://github.com/before-i/beforei.git
+    backup:
+      - .git/config
+
