@@ -24,7 +24,7 @@ install brew-cask
 #
 
 cask-install calibre
-cask-install cheat-sheet
+cask-install cheatsheet
 cask-install cloudup
 cask-install colors
 cask-install cord
@@ -36,7 +36,7 @@ cask-install handbrake
 cask-install heroku-toolbelt
 cask-install imageoptim
 cask-install inkscape
-cask-install lime-chat
+cask-install limechat
 cask-install mysql-workbench
 cask-install node-webkit
 cask-install opera
@@ -46,6 +46,7 @@ cask-install robomongo
 cask-install screenhero
 cask-install sequel-pro
 cask-install skype
+cask-install smcfancontrol
 cask-install sourcetree
 cask-install spotify
 cask-install vagrant
@@ -64,7 +65,7 @@ cask-install google-chrome
 # cask-install mailplane (automate license install)
 cask-install marked2
 # cask-install one-password (automate license install)
-cask-install size-up
+cask-install sizeup
 cask-install xscope
 
 #
