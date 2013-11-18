@@ -182,7 +182,7 @@ chmod 600 $SSH_PATH/*  || fail "comamnd failed: chmod 600 $SSH_PATH/*"
 ################################################################################
 
 say "List of broken links"
-  find -L $HOME -type l
+  find -L $HOME -type l -maxdepth 1
 
 ################################################################################
 # fin
