@@ -255,27 +255,27 @@ colorscheme solarized
 
 " should match the setting in your terminal for consistency
 if has("gui_running")
-  set guifont=Anonymous\ Pro\ for\ Powerline:h18
+  set guifont=Monaco:h14
 endif
- 
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" gui (general)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
- 
+
 " when running in GUI mode
 if has("gui_running")
   set guioptions-=T
   set guioptions+=e
   set guitablabel=%M\ %t
 endif
- 
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" encodings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
  " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
- 
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" file types
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -350,7 +350,7 @@ let g:fugitive_github_domains = ['http://github.webapps.rr.com']
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" open all the things
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" 
+
 " open url under cursor
 map gu :!open <cfile><cr>
 

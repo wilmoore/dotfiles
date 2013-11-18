@@ -17,10 +17,11 @@
 systemsetup -settimezone "America/Denver" > /dev/null
 
 ###############################################################################
-# Screen
+# Display
 ###############################################################################
 
 # enable subpixel font rendering on non-apple LCDs
+# http://www.wezm.net/technical/2010/08/howto-install-consolas-font-mac/
 
 defaults write NSGlobalDomain AppleFontSmoothing -int 2
 

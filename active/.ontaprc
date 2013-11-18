@@ -23,56 +23,53 @@ install brew-cask
 # GUI Mac applications (free)
 #
 
+cask-install alfred
+cask-alfred link
 cask-install calibre
 cask-install cheatsheet
+cask-install chromium
 cask-install cloudup
 cask-install colors
 cask-install cord
 cask-install cyberduck
 cask-install firefox
+cask-install evernote
+cask-install gfxcardstatus
+cask-install google-chrome
 cask-install google-drive
 cask-install growlnotify
 cask-install handbrake
 cask-install heroku-toolbelt
 cask-install imageoptim
 cask-install inkscape
+cask-install kaleidoscope
+cask-install ksdiff
 cask-install limechat
+cask-install macvim
+cask-install mailplane
+cask-install marked2
 cask-install mysql-workbench
 cask-install node-webkit
+cask-install onepassword
 cask-install opera
 cask-install pgadmin3
 cask-install postgres
 cask-install robomongo
 cask-install screenhero
 cask-install sequel-pro
+cask-install sizeup
 cask-install skype
 cask-install smcfancontrol
 cask-install sourcetree
 cask-install spotify
 cask-install vagrant
 cask-install virtualbox
-
-#
-# GUI Mac applications (app store and/or non-free)
-# REVIEW EACH BEFORE INSTALLING
-#
-
-# cask-install alfred (automate license install)
-cask-install chromium
-# cask-install evernote (automate license install)
-cask-install google-chrome
-# cask-install kaleidoscope (automate license install)
-# cask-install mailplane (automate license install)
-cask-install marked2
-# cask-install one-password (automate license install)
-cask-install sizeup
 cask-install xscope
 
 #
 # editor / pager
 #
 
-install macvim
 install vim
 install vimpager
 
@@ -165,6 +162,7 @@ install fping
 install netcat
 install ngrep
 install nmap
+install stunnel
 install tcpdump
 
 #
