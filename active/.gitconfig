@@ -114,8 +114,8 @@
   # list aliases
   aliases             = !git config --get-regexp '^alias.' | awk -F '[. ]' '{ print $2 }'
 
-  # list git bins (lots of gems in there)
-  bin                 = !find $(git --exec-path) -type f | xargs basename | $(git config --get core.pager)
+  # list git sub-commands (lots of gems in there)
+  bin                 = !find $(git --exec-path) -type f | xargs basename -a | $(git config --get core.pager)
 
   # number of commits in this branch
   branch-commit-count = !git log upstream/master.. --no-merges --format=oneline | wc | awk '{ print $1 }'
