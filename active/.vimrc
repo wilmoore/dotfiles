@@ -324,12 +324,17 @@ map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
 " Switch CWD to the directory of the open buffer
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" buffers
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Remember info about open buffers on close
+set viminfo^=%
+
 " Specify the behavior when switching between buffers
-try
-  set switchbuf=useopen,usetab,newtab
-  set stal=2
-catch
-endtry
+" http://stackoverflow.com/a/6853779/128346
+set switchbuf=useopen,usetab,newtab
+set stal=2
 
 " Return to last edit position when opening files (You want this!)
 autocmd BufReadPost *
@@ -337,8 +342,41 @@ autocmd BufReadPost *
     \   exe "normal! g`\"" |
     \ endif
 
-" Remember info about open buffers on close
-set viminfo^=%
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" quickfix
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" automatically opens the quickfix window after :Ggrep (or any command with `grep` in the name)
+" https://github.com/tpope/vim-fugitive/blob/master/README.markdown#faq
+
+autocmd QuickFixCmdPost *grep* nested cwindow
+
+" automatically close the quick fix window when leaving a file (will close vim if the quickfix window is the only visible window/tab).
+" http://stackoverflow.com/a/7477056/128346
+
+aug QFClose
+  au!
+  au WinEnter * if winnr('$') == 1 && getbufvar(winbufnr(winnr()), "&buftype") == "quickfix"|q|endif
+aug END
+
+" Quick fix toggle
+" http://learnvimscriptthehardway.stevelosh.com/chapters/38.html
+
+nnoremap <leader>q :call QuickfixToggle()<cr>
+
+let g:quickfix_is_open = 0
+
+function! QuickfixToggle()
+    if g:quickfix_is_open
+        cclose
+        let g:quickfix_is_open = 0
+        execute g:quickfix_return_to_window . "wincmd w"
+    else
+        let g:quickfix_return_to_window = winnr()
+        copen
+        let g:quickfix_is_open = 1
+    endif
+endfunction
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" fugitive.vim
@@ -496,3 +534,4 @@ Bundle "terryma/vim-multiple-cursors"
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 let g:NERDTreeWinSize = 40
+

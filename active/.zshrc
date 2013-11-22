@@ -27,9 +27,6 @@ source $HOME/.aliases
 # keybindings
 source $HOME/.bindkey
 
-# ontap
-source $HOME/projects/active/ontap/ontap.sh
-
 ################################################################################
 # programming virtual environments & version managers
 ################################################################################
