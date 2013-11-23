@@ -435,6 +435,12 @@ augroup END
 " key bindings
 "
 
+" disable esc (use <C-c)
+:inoremap <esc> <nop>
+
+" make C-<enter> act like esc (obviously you want to have mapped CAPSLOCK to control)
+:inoremap <C-M> <esc>
+
 " $MYVIMRC reload
 nmap <Leader>rc :source $MYVIMRC<CR>
 
@@ -443,6 +449,16 @@ nmap <Leader>rt :tabnew $MYVIMRC<CR>
 
 " $MYVIMRC open buffer for editing in current tab/buffer
 nmap <Leader>re :e $MYVIMRC<CR>
+
+" take off the training wheels
+:inoremap  <Up>     <nop>
+:inoremap  <Down>   <nop>
+:inoremap  <Left>   <nop>
+:inoremap  <Right>  <nop>
+:noremap   <Up>     <nop>
+:noremap   <Down>   <nop>
+:noremap   <Left>   <nop>
+:noremap   <Right>  <nop>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" statusline
