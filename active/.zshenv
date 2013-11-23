@@ -24,25 +24,21 @@ path=(
 ################################################################################
 
 #
-# cask options
+# brew cask options
 #
 
+# ensure homebrew cask links applications into `/Applications` (I like to see everything in one place)
+# obviously you would not do this on a multi-user system as this could cause confusion.
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
-################################################################################
-# manual page search path
-################################################################################
-
 #
-# homebrew
+# man page search paths
 #
 
+# base
 MANPATH=$HOME/.homebrew/share/man:$MANPATH
 
-#
-# erlang
-#
-
+# erlang is special
 MANPATH=$(brew --prefix erlang)/lib/erlang/man:$MANPATH
 
 ################################################################################
@@ -72,7 +68,7 @@ export GROOVY_HOME=$(brew --prefix)/opt/groovy/libexec
 export TERM=xterm-256color
 
 ################################################################################
-# browser
+# web browser
 ################################################################################
 
 if [[ "$OSTYPE" == darwin* ]]; then
@@ -152,7 +148,7 @@ export GITHUB_OAUTH_TOKEN=$__PRIVATE_GITHUB_OAUTH_TOKEN
 
 #
 # HNav Client
-# TODO: create an ignored "private" file that is sourced (i.e. should not expose this IP address).
+# TODO: create an ignored "private" file that is sourced (so we can add more private info)
 #
 
 # when set,  grunt/make tasks that open a web browser, will use this instead of system default browser
