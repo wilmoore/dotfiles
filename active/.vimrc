@@ -301,30 +301,6 @@ map <leader>pp :setlocal paste!<cr>
 map <leader>ss :setlocal spell!<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"" tabs
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" Maximum number of tabs to display
-set tabpagemax=50
-
-" Useful mappings for managing tabs (Vim 7 specific mappings)
-if version >= 700
-  nnoremap <C-t> :tabnew<cr>
-  nnoremap <C-l> :tabnext<cr>
-  nnoremap <C-h> :tabprevious<cr>
-endif
-
-" opens a new tab edit the file whose name is under or after the cursor
-:map gt :tabedit <cfile><CR>
-
-" Opens a new tab with the current buffer's path
-" Super useful when editing files in the same directory
-map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
-
-" Switch CWD to the directory of the open buffer
-map <leader>cd :cd %:p:h<cr>:pwd<cr>
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" buffers
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -411,6 +387,9 @@ let NERDTreeWinSize=26
 " <leader>f invokes NERDTreeFind
 nmap <leader>f :NERDTreeFind<cr>
 
+" default window size
+let g:NERDTreeWinSize = 40
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" timeout
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -431,9 +410,9 @@ augroup reload_vimrc
   autocmd bufwritepost ~/.vim/* source $MYVIMRC
 augroup END
 
-"
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " key bindings
-"
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " disable esc (use <C-c)
 :inoremap <esc> <nop>
@@ -517,7 +496,7 @@ autocmd FileType javascript set sts=2
 set number
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" tabs & indentation
+" indent
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " indent
@@ -534,6 +513,30 @@ set smarttab
 set expandtab
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" tabs
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Maximum number of tabs to display
+set tabpagemax=50
+
+" Useful mappings for managing tabs (Vim 7 specific mappings)
+if version >= 700
+  nnoremap <C-t> :tabnew<cr>
+  nnoremap <C-l> :tabnext<cr>
+  nnoremap <C-h> :tabprevious<cr>
+endif
+
+" opens a new tab edit the file whose name is under or after the cursor
+:map gt :tabedit <cfile><CR>
+
+" Opens a new tab with the current buffer's path
+" Super useful when editing files in the same directory
+map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
+
+" Switch CWD to the directory of the open buffer
+map <leader>cd :cd %:p:h<cr>:pwd<cr>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " sublime (multiple selections) mode
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -544,10 +547,4 @@ set expandtab
 " https://github.com/terryma/vim-multiple-cursors
 " http://www.youtube.com/watch?v=Umb59mMvCxA
 Bundle "terryma/vim-multiple-cursors"
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" nerdtree
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-let g:NERDTreeWinSize = 40
 
