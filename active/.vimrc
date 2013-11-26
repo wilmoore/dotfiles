@@ -414,11 +414,8 @@ augroup END
 " key bindings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" disable esc (use <C-c)
-:inoremap <esc> <nop>
-
-" make C-<enter> act like esc (obviously you want to have mapped CAPSLOCK to control)
-:inoremap <C-M> <esc>
+" make C-<enter> act like <esc> and C-c (obviously you want to have mapped CAPSLOCK to control)
+:inoremap <C-[> <esc>
 
 " $MYVIMRC reload
 nmap <Leader>rc :source $MYVIMRC<CR>
@@ -535,6 +532,15 @@ map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
 
 " Switch CWD to the directory of the open buffer
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" sounds
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" disable beeping (aka "bell") and window flashing
+" http://vim.wikia.com/wiki/Disable_beeping
+set noerrorbells visualbell t_vb=
+autocmd GUIEnter * set visualbell t_vb=
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " sublime (multiple selections) mode

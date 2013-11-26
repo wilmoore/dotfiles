@@ -153,6 +153,7 @@ install rust
 
 # scala
 install scala
+install giter8
 
 #
 # networking
