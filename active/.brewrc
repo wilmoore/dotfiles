@@ -8,6 +8,7 @@
 
 tap homebrew/binary
 tap homebrew/dupes
+tap homebrew/headonly
 tap homebrew/versions
 tap josegonzalez/php
 tap wilmoore/binaries
@@ -96,6 +97,8 @@ install dart
 # erlang
 install erlang
 install elixir
+unlink elixir
+install elixir --HEAD
 install rebar
 install wilmoore/binaries/expm
 
@@ -115,11 +118,7 @@ install lua
 # https://gist.github.com/shtirlic/4696903
 
 # node
-install node
-unlink  node
-
-install homebrew/versions/node08
-unlink  node08
+install https://raw.github.com/wilmoore/homebrew-headonly/nvm/nvm.rb --HEAD
 
 # ocaml
 install ocaml
@@ -152,6 +151,7 @@ install ruby-build
 install rust
 
 # scala
+install sbt
 install scala
 install giter8
 
@@ -185,6 +185,7 @@ install phantomjs
 #
 
 install redis
+install rethinkdb
 install riak
 install sqlite3
 
@@ -206,6 +207,11 @@ install wget
 # irc / instant message
 install bitlbee
 install znc
+
+# video
+
+install ffmpeg
+install youtube-dl
 
 #
 # documentation

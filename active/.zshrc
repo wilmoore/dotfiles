@@ -14,8 +14,8 @@ fi
 # osx defaults
 ################################################################################
 
-# this will only run once
-[[ -f "$HOME/.osx-defaults" ]] && source "$HOME/.osx-defaults"
+# this will only run once and only on OSX
+[ $(echo "$OSTYPE" | grep -E '^darwin') ] && source "$HOME/.osx-defaults"
 
 ################################################################################
 # core
@@ -32,7 +32,7 @@ source $HOME/.bindkey
 ################################################################################
 
 # nvm (Node.js)
-source $HOME/.nvm/nvm.sh
+source $(brew --prefix nvm)/nvm.sh
 
 # chruby (Ruby) and default to latest ruby 2.x
 source $(brew --prefix chruby)/share/chruby/chruby.sh && chruby 2

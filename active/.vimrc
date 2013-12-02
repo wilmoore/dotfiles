@@ -440,12 +440,32 @@ nmap <Leader>re :e $MYVIMRC<CR>
 "" statusline
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" airline plugin
 Bundle 'bling/vim-airline'
+
+" custom theme for airline
+Bundle 'paranoida/vim-airlineish'
+let g:airline_theme = 'airlineish'
 
 " always show status line
 set laststatus=2
 
-let g:airline_powerline_fonts = 1
+" theme
+let g:airline_theme = 'dark'
+
+" extensions
+let g:airline#extensions#tabline#enabled    = 1
+let g:airline#extensions#branch#enabled     = 1
+let g:airline#extensions#syntastic#enabled  = 1
+let g:airline#extensions#bufferline#enabled = 1
+
+" fonts & symbols
+let g:airline_left_sep          = '▶'
+let g:airline_right_sep         = '◀'
+let g:airline_linecolumn_prefix = '§'
+let g:airline_paste_symbol      = 'Þ'
+let g:airline_readonly_symbol   = 'Ʀ'
+let g:airline_fugitive_prefix   = '⎇ '
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Menus
@@ -541,6 +561,13 @@ map <leader>cd :cd %:p:h<cr>:pwd<cr>
 " http://vim.wikia.com/wiki/Disable_beeping
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" on focus lost
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" auto-save all vim buffers when focus is lost (http://unix.stackexchange.com/a/75066)
+autocmd BufLeave,FocusLost,VimResized * silent! wall
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " sublime (multiple selections) mode

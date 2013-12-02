@@ -21,3 +21,17 @@ alias vundle.update='vim +BundleInstall! +BundleClean +qall'
 ################################################################################
 
 alias clear-logs='sudo rm -rf /private/var/log/asl/*.asl'
+
+################################################################################
+# homebrew
+################################################################################
+
+# update, upgrade, bundle
+alias brew-update='brew update && brew upgrade && brew bundle ~/.brewrc'
+
+################################################################################
+# npm
+################################################################################
+
+# update, upgrade, bundle
+alias npm-install-global='npm install -g bower grunt-cli jasmine-node'
