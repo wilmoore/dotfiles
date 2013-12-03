@@ -1,3 +1,7 @@
+[submodule "active/.vim/bundle/npm.vim"]
+	path = active/.vim/bundle/npm.vim
+	ignore = all
+
 [submodule "active/.vim/bundle/rust.vim"]
 	path = active/.vim/bundle/rust.vim
 	ignore = all
