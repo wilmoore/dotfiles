@@ -27,6 +27,9 @@ source $HOME/.aliases
 # keybindings
 source $HOME/.bindkey
 
+# widely accepted ulimit setting
+ulimit -n 4096
+
 ################################################################################
 # programming virtual environments & version managers
 ################################################################################

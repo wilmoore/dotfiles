@@ -71,7 +71,7 @@
 
 [push]
   # safe handling when no refspec is given (i.e `git push`). The default in Git 2.x is 'simple'.
-  default             = nothing
+  default             = simple
 
 [rerere]
   # Reuse recorded resolution of conflicted merges:

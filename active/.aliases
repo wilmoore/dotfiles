@@ -34,4 +34,4 @@ alias brew-update='brew update && brew upgrade && brew bundle ~/.brewrc'
 ################################################################################
 
 # update, upgrade, bundle
-alias npm-install-global='npm install -g bower grunt-cli jasmine-node'
+alias npm-install-global='npm install -g bower grunt-cli jasmine-node node-inspector'
