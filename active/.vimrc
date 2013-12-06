@@ -116,6 +116,8 @@ Bundle "SuperTab"
 Bundle "file-line"
 Bundle "godlygeek/tabular"
 Bundle "kien/ctrlp.vim"
+Bundle "kshenoy/vim-signature"
+Bundle "Shougo/unite.vim"
 
 " server (nginx)
 Bundle "nginx.vim"
