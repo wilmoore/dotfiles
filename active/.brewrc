@@ -188,6 +188,20 @@ install riak
 install sqlite3
 
 #
+# quick look plugins
+#
+
+cask install qlcolorcode
+cask install qlstephen
+cask install qlmarkdown
+cask install quicklook-json
+cask install qlprettypatch
+cask install quicklook-csv
+cask install betterzipql
+cask install webp-quicklook
+cask install suspicious-package
+
+#
 # utility
 #
 
