@@ -14,6 +14,7 @@ typeset -gU cdpath fpath mailpath path
 
 path=(
   /usr/local/{bin,sbin}      # obviously :)
+  /usr/libexec               # lots of non-obvious goodies in here (i.e. PlistBuddy)
   $HOME/.homebrew/{bin,sbin} # homebrew@$HOME
   $HOME/.local/bin           # custom binaries & scripts
   $path                      # system defaults
