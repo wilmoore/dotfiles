@@ -140,6 +140,9 @@
   # consider a topic branch "finished" by deleting it locally and from your "origin" remote
   finish              = ![[ -z "$*" ]] && echo 'No branch was provided.' 1>&2 && exit 1 || git branch -d "$*" && git push origin --delete $!
 
+  # `git finish` all branched emitted by `git merged`
+  finish-merged       = !git merged | xargs git finish
+
   # edit your global config
   edit-config         = config --global -e
 
@@ -171,10 +174,10 @@
   markdown            = !BN=$(git name-rev --name-only HEAD) && git log --no-merges --grep=$BN --pretty=oneline | awk -F"$BN: " '{print \"-\", $NF}' | uniq
 
   # show branches that have been merged into current (HEAD) branch
-  merged              = !git fetch --all --prune && git branch --all --merged HEAD
+  merged              = !git fetch --all --prune >/dev/null && git branch --all --merged HEAD | grep -Ev '^\\s+remotes/' | grep -Ev 'master$'
 
   # show branches that have not been merged into current (HEAD) branch
-  not-merged          = !git fetch --all --prune && git branch --all --no-merged HEAD
+  not-merged          = !git fetch --all --prune >/dev/null && git branch --all --no-merged HEAD | grep -Ev '^\\s+remotes/' | grep -Ev 'master$'
 
   # navigate to help on installing `git-credential-osxkeychain`
   osxkeychain-help    = web--browse http://git.io/dz-m6w
