@@ -213,6 +213,7 @@ install reattach-to-user-namespace
 install terminal-notifier
 install tmux
 install tree
+install unrar
 install watch
 install wget
 

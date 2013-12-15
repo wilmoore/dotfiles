@@ -67,6 +67,10 @@ zstyle ':prezto:module:editor' dot-expansion 'yes'
 # Set the command prefix on non-GNU systems.
 # zstyle ':prezto:module:gnu-utility' prefix 'g'
 
+# disable color diff as it messes up the intrinsic diff tool which does not work on directories
+# https://github.com/sorin-ionescu/prezto/issues/332
+zstyle ':prezto:module:utility:diff' color 'no'
+
 #
 # History Substring Search
 #
