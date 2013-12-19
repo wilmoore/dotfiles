@@ -149,6 +149,9 @@
   # open files with conflict markers in your configured editor
   edit-conflicted     = !$EDITOR $(git grep --name-only --full-name '<<<<<<< HEAD' | awk '{print $NF}')
 
+  # edit last 5 files commited
+  edit-last-commited  = !$EDITOR $(git log --pretty=format: --name-only | grep -vE '^$' | head -n 5 | sort -u)
+
   # open modified files in your configured editor
   edit-modified       = !$EDITOR $(git status --porcelain | grep -E '[^MARC]' | awk '{print $NF}')
 
@@ -163,6 +166,9 @@
 
   # navigate to the JIRA story corresponding to the current branch (`git set-jira-domain your domain` to configure 
   jira-branch         = !echo 'To set your Jira Server Url: `git config --replace-all jira.serverurl http://...`' && git web--browse $(git config --get jira.serverurl)/browse/$(git name-rev --name-only HEAD)
+
+  # last 5 files commited
+  last-commited       = !git log --pretty=format: --name-only | grep -vE '^$' | head -n 5 | sort -u
 
   # list commits not yet pushed to remote
   local               = log --branches --not --remotes

@@ -44,6 +44,3 @@ source $(brew --prefix chruby)/share/chruby/chruby.sh && chruby 2
 # source $(brew --prefix php-version)/php-version.sh && php-version 5
 source ~/projects/active/php-version/php-version.sh && php-version 5
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
