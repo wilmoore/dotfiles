@@ -591,3 +591,11 @@ autocmd BufLeave,FocusLost,VimResized * silent! wall
 " http://www.youtube.com/watch?v=Umb59mMvCxA
 Bundle "terryma/vim-multiple-cursors"
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" vcs diff
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" http://www.vim.org/scripts/script.php?script_id=4487
+Bundle "mhinz/vim-signify"
+let g:signify_mapping_toggle_highlight = '<leader>gh'
+

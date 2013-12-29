@@ -6,13 +6,12 @@
 # taps
 #
 
-tap homebrew/binary
-tap homebrew/dupes
-tap homebrew/headonly
-tap homebrew/versions
-tap josegonzalez/php
-tap wilmoore/binaries
-tap phinze/cask
+# tap homebrew/binary
+# tap homebrew/dupes
+# tap homebrew/headonly
+# tap homebrew/versions
+# tap wilmoore/binaries
+# tap phinze/cask
 
 #
 # homebrew external commands
@@ -54,7 +53,9 @@ cask install node-webkit
 cask install onepassword
 cask install opera
 cask install pgadmin3
+cask install poedit
 cask install postgres
+cask install redis-desktop-manager
 cask install robomongo
 cask install screenhero
 cask install sequel-pro
@@ -113,7 +114,8 @@ install haskell-platform
 install lua
 
 # mono (.net)
-# https://gist.github.com/shtirlic/4696903
+cask install mono-mdk
+cask install mono-mre
 
 # node
 install nvm
@@ -122,14 +124,15 @@ install nvm
 install ocaml
 
 # php
-install php55 --without-pear --without-apache --with-pgsql --with-fpm --with-intl
-unlink  php55
 
-install php54 --without-pear --without-apache --with-pgsql --with-fpm --with-intl
-unlink  php54
+install josegonzalez/php/php55 --without-pear --without-apache --with-pgsql --with-fpm --with-intl
+unlink  josegonzalez/php/php55
 
-install php53 --without-pear --without-apache --with-pgsql --with-fpm --with-intl
-unlink  php53
+install josegonzalez/php/php54 --without-pear --without-apache --with-pgsql --with-fpm --with-intl
+unlink  josegonzalez/php/php54
+
+install josegonzalez/php/php53 --without-pear --without-apache --with-pgsql --with-fpm --with-intl
+unlink  josegonzalez/php/php53
 
 # ruby
 install chruby
@@ -137,13 +140,11 @@ install chruby
 install ruby
 unlink  ruby
 
-install ruby192
-unlink  ruby192
+install homebrew/versions/ruby192
+unlink  homebrew/versions/ruby192
 
-install ruby193
-unlink  ruby193
-
-install ruby-build
+install homebrew/versions/ruby193
+unlink  homebrew/versions/ruby193
 
 # rust
 install rust
@@ -152,6 +153,13 @@ install rust
 install sbt
 install scala
 install giter8
+
+#
+# web development
+#
+
+# sass
+install sassc
 
 #
 # networking
