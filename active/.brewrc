@@ -82,6 +82,7 @@ install vimpager
 install apple-gcc42
 install autoconf
 install automake
+install cmake
 install gettext
 install intltool
 
@@ -162,6 +163,12 @@ install giter8
 install sassc
 
 #
+# serialization
+#
+
+install protobuf
+
+#
 # networking
 #
 
@@ -169,6 +176,7 @@ install fping
 install netcat
 install ngrep
 install nmap
+install sshfs
 install stunnel
 install tcpdump
 
@@ -213,12 +221,15 @@ cask install suspicious-package
 # utility
 #
 
+# ag is an alias for the_silver_searcher
 install ag
 install ctags
 install lnav
 install pcre
 install reattach-to-user-namespace
 install terminal-notifier
+# http://todotxt.com
+install todo-txt
 install tmux
 install tree
 install unrar

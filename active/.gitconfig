@@ -54,6 +54,11 @@
   # (2) mixed spaces and tabs
   whitespace          = trailing-space,space-before-tab
 
+[http]
+  # see:
+  # - https://github.com/isaacs/npm/pull/4222
+	sslVerify = true
+
 [help]
   # wait .5 seconds before autocorrecting
   autocorrect         = 5

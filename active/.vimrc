@@ -55,6 +55,8 @@ let g:yankring_history_dir = '~/.vim'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Programming
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'marijnh/tern_for_vim'
 Bundle 'jQuery'
 Bundle 'gh:vim-ruby/vim-ruby'
 Bundle 'rails.vim'
@@ -118,6 +120,7 @@ Bundle "godlygeek/tabular"
 Bundle "kien/ctrlp.vim"
 Bundle "kshenoy/vim-signature"
 Bundle "Shougo/unite.vim"
+Bundle "mivok/vimtodo"
 
 " server (nginx)
 Bundle "nginx.vim"
@@ -596,6 +599,5 @@ Bundle "terryma/vim-multiple-cursors"
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " http://www.vim.org/scripts/script.php?script_id=4487
-Bundle "mhinz/vim-signify"
+" Bundle "mhinz/vim-signify"
 let g:signify_mapping_toggle_highlight = '<leader>gh'
-
