@@ -95,7 +95,7 @@ Bundle 'ervandew/supertab'
 
 " Git integration
 Bundle "git.zip"
-Bundle "fugitive.vim"
+Bundle 'tpope/vim-fugitive'
 
 " Github integration
 Bundle 'mattn/webapi-vim'

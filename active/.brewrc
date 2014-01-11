@@ -64,8 +64,6 @@ cask install skype
 cask install smcfancontrol
 cask install sourcetree
 cask install spotify
-cask install vagrant
-cask install virtualbox
 cask install xscope
 
 #
@@ -236,14 +234,27 @@ install unrar
 install watch
 install wget
 
+#
 # irc / instant message
+#
+
 install bitlbee
 install znc
 
+#
 # video
+#
 
 install ffmpeg
 install youtube-dl
+
+#
+# virtualization
+#
+
+install docker
+cask install vagrant
+cask install virtualbox
 
 #
 # documentation
