@@ -1,3 +1,7 @@
+[submodule "active/.vim/bundle/delimitMate.vim"]
+	path = active/.vim/bundle/delimitMate.vim
+	ignore = all
+
 [submodule "active/.vim/bundle/npm.vim"]
 	path = active/.vim/bundle/npm.vim
 	ignore = all

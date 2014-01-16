@@ -121,6 +121,7 @@ Bundle "kien/ctrlp.vim"
 Bundle "kshenoy/vim-signature"
 Bundle "Shougo/unite.vim"
 Bundle "mivok/vimtodo"
+Bundle "delimitMate.vim"
 
 " server (nginx)
 Bundle "nginx.vim"
