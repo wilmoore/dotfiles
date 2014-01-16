@@ -90,9 +90,6 @@ au BufRead,BufNewFile *.md set filetype=markdown
 Bundle 'shougo/vimproc'
 Bundle 'shougo/vimshell'
 
-" completion
-Bundle 'ervandew/supertab'
-
 " Git integration
 Bundle "git.zip"
 Bundle 'tpope/vim-fugitive'
@@ -109,12 +106,7 @@ let g:gist_post_private = 1
 "Bundle "ragtag.vim"
 
 " Utility
-Bundle 'Lokaltog/vim-easymotion'
-Bundle "repeat.vim"
-Bundle "surround.vim"
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'matchit.zip'
-Bundle "SuperTab"
 Bundle "file-line"
 Bundle "godlygeek/tabular"
 Bundle "kien/ctrlp.vim"

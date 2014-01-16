@@ -27,6 +27,7 @@ cask install alfred
 cask alfred link
 cask install calibre
 cask install cheatsheet
+cask install chromecast
 cask install chromium
 cask install cloudup
 cask install colors
@@ -171,9 +172,11 @@ install protobuf
 #
 
 install fping
+install masscan
 install netcat
 install ngrep
 install nmap
+install ssh-copy-id
 install sshfs
 install stunnel
 install tcpdump
@@ -222,6 +225,7 @@ cask install suspicious-package
 # ag is an alias for the_silver_searcher
 install ag
 install ctags
+cask install geekbench
 install lnav
 install pcre
 install reattach-to-user-namespace
@@ -263,3 +267,14 @@ cask install virtualbox
 # zsh
 install zsh-lovers
 
+#
+# writing
+#
+
+cask install pdftk
+
+#
+# audio/video
+#
+
+install openrtsp
