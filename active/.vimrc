@@ -54,41 +54,35 @@ let g:yankring_history_dir = '~/.vim'
 "" common bundles
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Programming
+" Completion
 Bundle 'Valloric/YouCompleteMe'
+
+" Programming Languages (style, tabs, spaces, etc.)
+Bundle 'editorconfig-vim'
+
+" Programming Languages (syntax highlight, indent)
 Bundle 'marijnh/tern_for_vim'
 Bundle 'jQuery'
 Bundle 'gh:vim-ruby/vim-ruby'
 Bundle 'rails.vim'
 Bundle 'jnwhiteh/vim-golang'
-Bundle 'tpope/vim-dispatch'
-Bundle 'editorconfig-vim'
 Bundle 'epmatsw/ag.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'mmalecki/vim-node.js'
-Bundle 'oinksoft/npm.vim'
-Bundle 'JavaScript-Indent'
 Bundle 'jelera/vim-javascript-syntax'
-Bundle 'tpope/vim-eunuch'
 Bundle 'skammer/vim-css-color'
 Bundle 'groenewege/vim-less'
-Bundle 'terryma/vim-expand-region'
-Bundle 'Tagbar'
-Bundle 'michaeljsmith/vim-indent-object'
-Bundle 'mru.vim'
 Bundle 'wting/rust.vim'
-Bundle 'mattboehm/vim-unstack'
 Bundle 'jimenezrick/vimerl'
+
+" Error/Exception Debugging & Stack traces
+Bundle 'mattboehm/vim-unstack'
 
 " Markdown
 Bundle "Markdown"
 Bundle 'itspriddle/vim-marked'
 au BufRead,BufNewFile *.md set filetype=markdown
-
-" shell
-Bundle 'shougo/vimproc'
-Bundle 'shougo/vimshell'
 
 " Git integration
 Bundle "git.zip"
@@ -102,27 +96,21 @@ let g:gist_detect_filetype = 1
 let g:gist_open_browser_after_post = 1
 let g:gist_post_private = 1
 
-" (HT|X)ml tool
-"Bundle "ragtag.vim"
-
 " Utility
-Bundle 'matchit.zip'
 Bundle "file-line"
-Bundle "godlygeek/tabular"
-Bundle "kien/ctrlp.vim"
-Bundle "kshenoy/vim-signature"
-Bundle "Shougo/unite.vim"
-Bundle "mivok/vimtodo"
 Bundle "delimitMate.vim"
+Bundle 'tpope/vim-dispatch'
+Bundle "repeat.vim"
+Bundle "tpope/vim-surround"
 
 " server (nginx)
 Bundle "nginx.vim"
 
-" FuzzyFinder
-Bundle "L9"
-Bundle "FuzzyFinder"
+" File Navigation, Browsing, Searching
+Bundle "kien/ctrlp.vim"
+Bundle 'mru.vim'
 
-" Navigation
+" Content (in-file) Searching
 Bundle "http://github.com/gmarik/vim-visual-star-search.git"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -592,5 +580,6 @@ Bundle "terryma/vim-multiple-cursors"
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " http://www.vim.org/scripts/script.php?script_id=4487
-" Bundle "mhinz/vim-signify"
+Bundle "mhinz/vim-signify"
 let g:signify_mapping_toggle_highlight = '<leader>gh'
+
