@@ -583,3 +583,13 @@ Bundle "terryma/vim-multiple-cursors"
 Bundle "mhinz/vim-signify"
 let g:signify_mapping_toggle_highlight = '<leader>gh'
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" JavaScript
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"
+" JS Hint
+"
+
+Bundle 'walm/jshint.vim'
+
