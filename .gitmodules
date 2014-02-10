@@ -1,3 +1,10 @@
+[submodule "active/.vim/bundle/Syntastic"]
+	path = active/.vim/bundle/Syntastic
+	ignore = all
+
+[submodule "active/.vim/bundle/CSScomb-for-Vim"]
+	path = active/.vim/bundle/CSScomb-for-Vim
+	ignore = all
 
 [submodule "active/.vim/bundle/jshint.vim"]
 	path = active/.vim/bundle/jshint.vim
