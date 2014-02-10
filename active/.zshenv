@@ -104,10 +104,11 @@ export VISUAL='vim -p'
 # default pager
 #
 
-export PAGER='vimpager'
+export PAGER="less"
 
 #
 # `less` configuration
+# see: http://www.reddit.com/r/vim/comments/1l304v/use_vim_as_alternative_to_less/
 #
 
 # Set the default Less options.
@@ -166,7 +167,7 @@ export GITHUB_OAUTH_TOKEN=$__PRIVATE_GITHUB_OAUTH_TOKEN
 #
 
 # when set,  grunt/make tasks that open a web browser, will use this instead of system default browser
-export HNAVC_DEFAULT_WEB_BROWSER='Google Chrome'
+export HNAVC_DEFAULT_WEB_BROWSER='Chromium'
 
 # if this is set, always use; otherwise, look up port using nmap (i.e. some people have a standing apache server for whatever reason; some people use the portable NodeJS server -- these tend to have different base paths)
 export HNAVC_DEVELOPER_SERVERURL='http://192.168.0.36:8800'

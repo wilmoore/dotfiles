@@ -190,6 +190,12 @@
   # show branches that have not been merged into current (HEAD) branch
   not-merged          = !git fetch --all --prune >/dev/null && git branch --all --no-merged HEAD | grep -Ev '^\\s+remotes/' | grep -Ev 'master$'
 
+  # resolve conflicts by keeping only your own changes for a file throwing away incoming changes.
+  only-mine           = checkout --ours --
+
+  # resolve conflicts by keeping only the incoming changes for a file throwing away your own changes.
+  only-theirs         = checkout --theirs --
+
   # navigate to help on installing `git-credential-osxkeychain`
   osxkeychain-help    = web--browse http://git.io/dz-m6w
 
@@ -201,6 +207,9 @@
 
   # stage file after resolving a merge conflict (like svn, hg)
   resolve             = stage --
+
+  # show a file from a particular ref or HEAD if not specified.
+  show-file           = !git show $2:$1
 
   # backup then `git merge --squash` current branch
   squash              = !TB=$(git name-rev --name-only HEAD) && BB=__SQUASH_BACKUP_$TB && git branch -M $TB $BB && git fetch upstream master && git checkout -b $TB upstream/master && git merge --squash $BB

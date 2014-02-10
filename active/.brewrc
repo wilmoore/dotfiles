@@ -23,6 +23,7 @@ install brew-cask
 # GUI Mac applications (free)
 #
 
+cask install adium
 cask install alfred
 cask alfred link
 cask install calibre
@@ -32,7 +33,6 @@ cask install chromecast
 cask install chromium
 cask install cloudup
 cask install colors
-cask install cord
 cask install cyberduck
 cask install firefox
 cask install evernote
@@ -46,8 +46,8 @@ cask install imageoptim
 cask install inkscape
 cask install kaleidoscope
 cask install ksdiff
+cask install licecap
 cask install limechat
-cask install macvim
 cask install mailplane
 cask install marked2
 cask install mysql-workbench
@@ -72,8 +72,9 @@ cask install xscope
 # editor / pager
 #
 
-install vim
-install vimpager
+install macvim --with-cscope --with-lua --HEAD
+linkapps
+install vim --with-lua
 
 #
 # programming environment
@@ -178,11 +179,18 @@ install masscan
 install netcat
 install ngrep
 install nmap
+install socat
 install ssh-copy-id
 install sshfs
 install stunnel
 install homebrew/dupes/tcpdump
 install wireshark
+
+#
+# remote access & control
+#
+
+cask install cord
 
 #
 # vcs
@@ -202,9 +210,9 @@ install phantomjs
 # databases
 #
 
-install redis
-install rethinkdb
-install riak
+# install redis
+# install rethinkdb
+# install riak
 install sqlite3
 
 #
@@ -229,6 +237,7 @@ cask install suspicious-package
 install ag
 install ctags
 cask install geekbench
+install jq
 install lnav
 install pcre
 install reattach-to-user-namespace
