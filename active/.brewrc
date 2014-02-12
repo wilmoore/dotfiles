@@ -66,6 +66,7 @@ cask install skype
 cask install smcfancontrol
 cask install sourcetree
 cask install spotify
+cask install the-unarchiver
 cask install xscope
 
 #
@@ -160,7 +161,6 @@ install giter8
 # web development
 #
 
-# sass
 install sassc
 
 #
@@ -196,15 +196,17 @@ cask install cord
 # vcs
 #
 
+install bzr
 install git
 install mercurial
 
 #
-# web browsers
+# web browsers & browser engines
 #
 
 # finally this has been bottled
 install phantomjs
+install v8
 
 #
 # databases
@@ -219,6 +221,7 @@ install sqlite3
 # quick look plugins
 #
 
+cask install phinze/cask/cert-quicklook
 cask install qlcolorcode
 cask install qlstephen
 cask install qlmarkdown
@@ -233,16 +236,16 @@ cask install suspicious-package
 # utility
 #
 
-# ag is an alias for the_silver_searcher
 install ag
 install ctags
 cask install geekbench
 install jq
+install jsonpp
+cask install jimbojsb/launchrocket/launchrocket
 install lnav
 install pcre
 install reattach-to-user-namespace
 install terminal-notifier
-# http://todotxt.com
 install todo-txt
 install tmux
 install tree
