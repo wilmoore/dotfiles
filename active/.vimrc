@@ -69,8 +69,6 @@ Bundle 'rails.vim'
 Bundle 'jnwhiteh/vim-golang'
 Bundle 'epmatsw/ag.vim'
 Bundle 'pangloss/vim-javascript'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'mmalecki/vim-node.js'
 Bundle 'jelera/vim-javascript-syntax'
 Bundle 'skammer/vim-css-color'
 Bundle 'groenewege/vim-less'
@@ -147,31 +145,25 @@ endif
 
 Bundle 'HTML-AutoCloseTag'
 
-" Programming (language specific) PHP
-Bundle 'phpcomplete.vim'
-
-" Programming (language specific) Python
-Bundle 'pep8'
-
 " Programming (language specific) CSS
 Bundle 'git://github.com/miripiruni/CSScomb-for-Vim.git'
 
 " Error/Exception Debugging & Stack traces
-Bundle 'mattboehm/vim-unstack'
+Bundle "mattboehm/vim-unstack"
 
 " Markdown
 Bundle "Markdown"
-Bundle 'itspriddle/vim-marked'
+Bundle "itspriddle/vim-marked"
 au BufRead,BufNewFile *.md set filetype=markdown
 
 " Git integration
 Bundle "git.zip"
-Bundle 'tpope/vim-fugitive'
+Bundle "tpope/vim-fugitive"
 
 " Github integration
-Bundle 'mattn/webapi-vim'
-Bundle 'mattn/gist-vim'
-let g:gist_clip_command = 'pbcopy'
+Bundle "mattn/webapi-vim"
+Bundle "mattn/gist-vim"
+let g:gist_clip_command = "pbcopy"
 let g:gist_detect_filetype = 1
 let g:gist_open_browser_after_post = 1
 let g:gist_post_private = 1
@@ -179,7 +171,7 @@ let g:gist_post_private = 1
 " Utility
 Bundle "file-line"
 Bundle "delimitMate.vim"
-Bundle 'tpope/vim-dispatch'
+Bundle "tpope/vim-dispatch"
 Bundle "repeat.vim"
 
 " server (nginx)
@@ -187,7 +179,7 @@ Bundle "nginx.vim"
 
 " File Navigation, Browsing, Searching
 Bundle "kien/ctrlp.vim"
-Bundle 'mru.vim'
+Bundle "mru.vim"
 
 " Content (in-file) Searching
 Bundle "http://github.com/gmarik/vim-visual-star-search.git"
@@ -248,10 +240,13 @@ set incsearch
 " clear search highlight
 nnoremap <space> :nohlsearch<CR>
 
+" make `gf` actually useful (see: http://stackoverflow.com/a/2848414/128346)
+" nmap gf :tabe **/<cfile><cr>
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" files, backups and undo
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
- 
+
 " Turn backup off, since most stuff is in source control
 set nobackup
 set nowb
@@ -260,7 +255,7 @@ set noswapfile
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" mouse
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
- 
+
 set mouse=a
 set ttym=xterm2
 
@@ -268,11 +263,15 @@ set ttym=xterm2
 "" keyboard
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" <Ctrl-C> -- copy selected to system clipboard (see: " http://vim.wikia.com/wiki/Quick_yank_and_paste)
+" <Ctrl-C> -- copy selected to system clipboard (see: " http://vim.wikia.com/wiki/Quick_yank_and_paste).
 vmap <C-C> "*y
 
-" <Ctrl-A> -- visually select all and copy to system clipboard
+" <Ctrl-A> -- visually select all and copy to system clipboard.
 map <C-A> ggvG$"*y<C-o><C-o>
+
+" <Ctrl-U> -- unformatted system clipboard paste without need to toggle paste.
+" http://stackoverflow.com/a/3217023/128346
+map <C-U> "+p
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" editing
@@ -663,7 +662,7 @@ Bundle "mhinz/vim-signify"
 let g:signify_mapping_toggle_highlight = '<leader>gh'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" JavaScript
+" JavaScript / JSON
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "
@@ -671,4 +670,11 @@ let g:signify_mapping_toggle_highlight = '<leader>gh'
 "
 
 Bundle 'walm/jshint.vim'
+
+"
+" jdaddy.vim
+"
+
+Bundle 'tpope/vim-jdaddy'
+
 
