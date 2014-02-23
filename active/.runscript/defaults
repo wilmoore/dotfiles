@@ -5,8 +5,8 @@
 #   - https://github.com/mathiasbynens/dotfiles/blob/master/.osx
 #
 
-# guard from doing this more than once
-[[ -f $HOME/.runonce/$(basename $0) ]] && return
+# run only on OSX
+[ $(echo "$OSTYPE" | grep -E '^darwin') ] || return
 
 ###############################################################################
 # System
@@ -286,11 +286,4 @@ defaults write com.irradiatedsoftware.SizeUp ShowPrefsOnNextStart -bool false
 
 killall "SizeUp" > /dev/null 2>&1
 open -a "Sizeup"
-
-###############################################################################
-# done
-###############################################################################
-
-mkdir -p $HOME/.runonce
-date -u +'%Y%m%dT%H%M%SZ' > $HOME/.runonce/$(basename $0)
 

@@ -1,49 +1,32 @@
-#
-# shell aliases
-#
 
-################################################################################
+#
 # editors & pagers
-################################################################################
+#
 
 alias less=$PAGER
 alias zless=$PAGER
 
 #
-# vim
-#
-
-# update vundle bundles
-alias vundle.update='vim +BundleInstall! +BundleClean +qall'
-
-################################################################################
 # utilities
-################################################################################
+#
 
 alias clear-logs='sudo rm -rf /private/var/log/asl/*.asl'
 
-################################################################################
+#
 # homebrew
-################################################################################
+#
 
-# update, upgrade, bundle
-alias brew-update='brew update && brew upgrade && brew bundle ~/.brewrc'
+alias brewrc='brew update && brew upgrade && brew bundle ~/.brewrc'
 
-################################################################################
-# npm
-################################################################################
-
-# update, upgrade, bundle
-alias npm-install-global='npm install -g npmd bower jam grunt-cli jasmine-node node-inspector'
-
-################################################################################
+#
 # bower
-################################################################################
+#
 
 alias bower-register-me='bower register $(basename $PWD) $(node -e "console.log(require('./package.json').repository.url)")'
 
-################################################################################
+#
 # todo.sh
-################################################################################
+#
 
 alias todo='todo.sh'
+
