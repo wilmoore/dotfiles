@@ -198,6 +198,7 @@ cask install cord
 
 install bzr
 install git
+install hub
 install mercurial
 
 #
@@ -212,9 +213,10 @@ install v8
 # databases
 #
 
-# install redis
-# install rethinkdb
-# install riak
+cask install mysqlworkbench
+install redis
+install rethinkdb
+install riak
 install sqlite3
 
 #
@@ -297,4 +299,12 @@ cask install pdftk
 #
 
 install openrtsp
+
+#
+# reading
+#
+
+install homebrew/binary/kindlegen
+cask install kindle
+cask install send-to-kindle
 

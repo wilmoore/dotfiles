@@ -30,6 +30,11 @@
 [github]
   user                = wilmoore
 
+[hub]
+  # twc github instance
+  host                = github.webapps.rr.com
+  protocol            = https
+
 [core]
   bare                = false
 
@@ -237,4 +242,3 @@
 
   # list untracked files
   untracked           = ls-files -o
-
