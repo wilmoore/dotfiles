@@ -17,6 +17,7 @@ alias clear-logs='sudo rm -rf /private/var/log/asl/*.asl'
 #
 
 alias brewrc='brew update && brew upgrade && brew bundle ~/.brewrc'
+alias brewrc-edit='$EDITOR ~/.brewrc'
 
 #
 # bower
