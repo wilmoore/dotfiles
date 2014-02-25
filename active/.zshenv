@@ -157,6 +157,9 @@ export GIT_AUTHOR_EMAIL="wil.moore@wilmoore.com"
 export GITHUB_USER='wilmoore'
 export GITHUB_OAUTH_TOKEN=$__PRIVATE_GITHUB_OAUTH_TOKEN
 
+# gh
+export GH_CONFIG=~/.gh
+
 ################################################################################
 # application development variables
 ################################################################################

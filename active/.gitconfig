@@ -30,7 +30,7 @@
 [github]
   user                = wilmoore
 
-[hub]
+[gh]
   # twc github instance
   host                = github.webapps.rr.com
   protocol            = https

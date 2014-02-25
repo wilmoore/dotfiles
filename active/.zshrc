@@ -24,6 +24,13 @@ source $HOME/.bindkey
 ulimit -n 4096
 
 #
+# git
+#
+
+# gh alias
+eval "$(gh alias -s)"
+
+#
 # programming virtual environments & version managers
 #
 

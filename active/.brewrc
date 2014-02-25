@@ -198,7 +198,7 @@ cask install cord
 
 install bzr
 install git
-install hub
+install jingweno/gh/gh
 install mercurial
 
 #
