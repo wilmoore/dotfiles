@@ -39,6 +39,9 @@ setopt sh_word_split
 # obviously you would not do this on a multi-user system as this could cause confusion.
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
+# where are your brew bundles?
+export HOMEBREW_BUNDLES_D="~/.dotfiles/active/.brews.d"
+
 #
 # man page search paths
 #

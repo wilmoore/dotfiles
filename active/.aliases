@@ -16,7 +16,7 @@ alias clear-logs='sudo rm -rf /private/var/log/asl/*.asl'
 # homebrew
 #
 
-alias brewrc='brew update && brew upgrade && brew bundle ~/.brewrc'
+alias brewrc='brew update && brew upgrade && brew bundle $HOMEBREW_BUNDLES_D/people/wilmoore.brew'
 alias brewrc-edit='$EDITOR ~/.brewrc'
 
 #
