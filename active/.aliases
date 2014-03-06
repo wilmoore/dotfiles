@@ -7,10 +7,23 @@ alias less=$PAGER
 alias zless=$PAGER
 
 #
-# utilities
+# logs
 #
 
 alias clear-logs='sudo rm -rf /private/var/log/asl/*.asl'
+
+#
+# servers
+#
+
+alias serve='python -m SimpleHTTPServer'
+
+#
+# utility
+#
+
+alias path='echo $PATH | tr ":" "\n"'
+alias path-sorted='echo $PATH | tr ":" "\n" | sort'
 
 #
 # homebrew

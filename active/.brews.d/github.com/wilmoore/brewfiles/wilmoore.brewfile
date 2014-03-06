@@ -128,14 +128,9 @@ install ocaml
 
 # php
 
-install josegonzalez/php/php55 --without-pear --without-apache --with-pgsql --with-fpm --with-intl
+install josegonzalez/php/php55 --without-pear --without-apache --with-pgsql --with-fpm --with-intl --with-gmp --with-homebrew-curl --with-homebrew-openssl --with-homebrew-libxslt --with-imap --with-pgsql
+install josegonzalez/php/php55-intl
 unlink  josegonzalez/php/php55
-
-install josegonzalez/php/php54 --without-pear --without-apache --with-pgsql --with-fpm --with-intl
-unlink  josegonzalez/php/php54
-
-install josegonzalez/php/php53 --without-pear --without-apache --with-pgsql --with-fpm --with-intl
-unlink  josegonzalez/php/php53
 
 # ruby
 install chruby
@@ -245,6 +240,8 @@ install jq
 install jsonpp
 cask install jimbojsb/launchrocket/launchrocket
 install lnav
+# https://github.com/Homebrew/homebrew-binary/pull/58
+install https://raw.github.com/egrim/homebrew-binary/add-ngrok/ngrok.rb
 install pcre
 install reattach-to-user-namespace
 install terminal-notifier
@@ -313,4 +310,16 @@ cask install send-to-kindle
 #
 
 cask install balsamiq-mockups
+
+#
+# usb/serial drivers
+#
+
+cask install https://github.webapps.rr.com/hnav/homebrew/raw/master/prolific-usb-serial-driver.rb
+
+#
+# localization/translation
+#
+
+install translate-toolkit
 
