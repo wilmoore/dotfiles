@@ -281,6 +281,7 @@ cask install virtualbox
 
 # zsh
 install zsh-lovers
+install zsh
 
 # developer docs
 cask install dash

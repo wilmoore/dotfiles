@@ -3,6 +3,23 @@
 #
 
 ################################################################################
+# shell options
+################################################################################
+
+# turn on word split
+setopt sh_word_split
+
+################################################################################
+# auto `cd` paths
+################################################################################
+
+cdpath=(
+  $HOME                 # ~/
+  $HOME/projects/active # active projects
+  $cdpath               # default
+)
+
+################################################################################
 # program search path
 ################################################################################
 
@@ -17,15 +34,25 @@ path=(
   /usr/libexec               # lots of non-obvious goodies in here (i.e. PlistBuddy)
   $HOME/.homebrew/{bin,sbin} # homebrew@$HOME
   $HOME/.local/bin           # custom binaries & scripts
+  $HOME/.go/bin              # go executables
   $path                      # system defaults
 )
 
 ################################################################################
-# shell options
+# programming languages
 ################################################################################
 
-# turn on word split
-setopt sh_word_split
+#
+# groovy
+#
+
+export GROOVY_HOME=$(brew --prefix)/opt/groovy/libexec
+
+#
+# go
+#
+
+export GOPATH=$HOME/.go
 
 ################################################################################
 # homebrew
@@ -51,32 +78,6 @@ MANPATH=$HOME/.homebrew/share/man:$MANPATH
 
 # erlang is special
 MANPATH=$(brew --prefix erlang)/lib/erlang/man:$MANPATH
-
-################################################################################
-# auto `cd` paths
-################################################################################
-
-cdpath=(
-  $HOME                 # ~/
-  $HOME/projects/active # active projects
-  $cdpath               # default
-)
-
-################################################################################
-# programming languages
-################################################################################
-
-#
-# groovy
-#
-
-export GROOVY_HOME=$(brew --prefix)/opt/groovy/libexec
-
-#
-# go
-#
-
-export GOPATH=$HOME/.go
 
 ################################################################################
 # terminal

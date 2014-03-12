@@ -23,16 +23,20 @@
   email               = wil.moore@wilmoore.com
 
 [credential]
-  # if you install git via homebrew; [you are done](http://git.io/yjOG-Q).
-  # if you do not install via homebrew, [there is help for you](http://git.io/dz-m6w)
+  # if you install git via homebrew; [you have the binary available](http://git.io/yjOG-Q).
+  # if you do not install via homebrew, `git osxkeychain-help` (aliased below).
   helper              = osxkeychain
 
 [github]
   user                = wilmoore
 
 [gh]
+  # for use with [gh: GitHub command line client](https://github.com/jingweno/gh)
+
   # twc github instance
   host                = github.webapps.rr.com
+
+  # always use https
   protocol            = https
 
 [core]
@@ -62,7 +66,7 @@
 [http]
   # see:
   # - https://github.com/isaacs/npm/pull/4222
-	sslVerify = true
+  sslVerify           = false
 
 [help]
   # wait .5 seconds before autocorrecting
@@ -93,6 +97,7 @@
   # see: https://git-scm.com/docs/git-merge
   conflictstyle       = diff3
 
+  # brew cask install kaleidoscope
   tool                = Kaleidoscope
 
 [mergetool]
@@ -103,17 +108,20 @@
   prompt              = false
 
 [mergetool "Kaleidoscope"]
+  # brew cask install ksdiff
   cmd                 = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
 
   trustExitCode       = true
 
 [diff]
+  # brew cask install kaleidoscope
   tool                = Kaleidoscope
 
 [difftool]
   prompt              = false
 
 [difftool "Kaleidoscope"]
+  # brew cask install ksdiff
   cmd                 = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 
 [alias]
@@ -205,16 +213,17 @@
   osxkeychain-help    = web--browse http://git.io/dz-m6w
 
   # terminal tab reflecting your current git project name (https://gist.github.com/3874729)
+  # TODO: ZSH compatibility (currently BASH-only)
   project-name        = config --replace-all project.info.name
 
   # github style pull request against origin regarding current branch (FYI, make sure you are using an `https` origin url; otherwise, this won't work)
   pr                  = !git web--browse $(git config --get remote.origin.url | sed 's/.git$//')/pull/new/$(git name-rev --name-only HEAD)
 
+  # list tags for beta releases
+  releases-beta       = tag --list *-BETA
+
   # stage file after resolving a merge conflict (like svn, hg)
   resolve             = stage --
-
-  # show a file from a particular ref or HEAD if not specified.
-  show-file           = !git show $2:$1
 
   # backup then `git merge --squash` current branch
   squash              = !TB=$(git name-rev --name-only HEAD) && BB=__SQUASH_BACKUP_$TB && git branch -M $TB $BB && git fetch upstream master && git checkout -b $TB upstream/master && git merge --squash $BB
