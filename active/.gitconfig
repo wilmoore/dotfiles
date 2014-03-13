@@ -23,8 +23,8 @@
   email               = wil.moore@wilmoore.com
 
 [credential]
-  # if you install git via homebrew; [you have the binary available](http://git.io/yjOG-Q).
-  # if you do not install via homebrew, `git osxkeychain-help` (aliased below).
+  # `brew install git` [installs the git-credential-osxkeychain binary](http://git.io/yjOG-Q).
+  # otherwise, `git osxkeychain-help` (aliased below) or navigate to http://git.io/dz-m6w.
   helper              = osxkeychain
 
 [github]
