@@ -1,4 +1,4 @@
-############################################################
+################################################################################
 # My Personal Git Configuration -- `git config --global -e`
 # Wil Moore III <wil.moore@wilmoore.com>
 #
@@ -15,7 +15,7 @@
 # - http://git.io/kELRRA
 # - https://github.com/visionmedia/git-extras
 # - https://github.com/mhartl/git-utils
-############################################################
+################################################################################
 
 [user]
   name                = Wil Moore III
