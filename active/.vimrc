@@ -642,6 +642,13 @@ autocmd GUIEnter * set visualbell t_vb=
 autocmd BufLeave,FocusLost,VimResized * silent! wall
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Visual Editor Indicators
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+set cursorline
+highlight CursorLine term=underline cterm=underline gui=underline
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " sublime (multiple selections) mode
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
