@@ -168,12 +168,14 @@ install protobuf
 # networking
 #
 
+cask install angry-ip-scanner
 install curl-ca-bundle
 install fping
 install masscan
 install netcat
 install ngrep
 install nmap
+cask install serf
 install socat
 install ssh-copy-id
 install sshfs
@@ -321,4 +323,16 @@ cask install https://github.webapps.rr.com/hnav/homebrew/raw/master/prolific-usb
 #
 
 install translate-toolkit
+
+#
+# acceptance testing
+#
+
+install selenium-server-standalone
+
+#
+# email
+#
+
+install sendemail
 
