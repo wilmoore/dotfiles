@@ -2,11 +2,8 @@
 # My Personal Git Configuration -- `git config --global -e`
 # Wil Moore III <wil.moore@wilmoore.com>
 #
-# This is meant to be cherry picked from so if you don't
-# need or want everything in here, just take what you want
-# The only caveat is the `git sync*` aliases. You'll want
-# to grab all three since that is the one group of alias
-# where one alias references another.
+# Most of the aliases can be cherry-picked (see what I did there); however; a
+# small few have dependencies on other aliases (i.e. sync*, fresh*, finish*).
 #
 # Always up-to-date @:
 # - http://git.io/zuH1MQ
@@ -172,6 +169,9 @@
 
   # open modified files in your configured editor
   edit-modified       = !$EDITOR $(git status --porcelain | grep -E '[^MARC]' | awk '{print $NF}')
+
+  # get a fresh start by checking out master and syncing, and cleaning up finished branches.
+  fresh-start         = !git checkout master && git sync && git finish-merged
 
   # group grep search results (much more readable this way)
   grep-group          = grep --break --heading --line-number
