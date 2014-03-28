@@ -1,5 +1,6 @@
 ################################################################################
 # for use with `brew bundle-dir` or `brew bundle`
+# https://github.com/Homebrew/homebrew/pull/27258
 ################################################################################
 
 #
@@ -252,6 +253,7 @@ install tmux
 install tree
 install unrar
 install watch
+install watchman
 install wget
 
 #
