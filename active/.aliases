@@ -7,11 +7,11 @@ alias less=$PAGER
 alias zless=$PAGER
 
 #
-# dotfiles
+# dotfile management
 #
 
-alias dls='ls -lah ~/.dotfiles/active'
-alias dup='bash ~/.dotfiles/setup'
+alias dfls='ls -lah ~/.dotfiles/active'
+alias dfup='bash ~/.dotfiles/setup'
 
 #
 # logs
