@@ -140,24 +140,14 @@ git pull 2>/dev/null || fail "failed to update $(pwd)"
 pass "Prezto Installed Successfully"
 
 ################################################################################
-# set default shell to "Zsh"
+# set default shell to "ZSH"
 ################################################################################
 
-DEFAULT_SHELL=zsh
-DEFAULT_SHELL_PATH=$(command -v $DEFAULT_SHELL)
+TARGET_SHELL=zsh
+say "Preparing to set set default shell to $TARGET_SHELL"
 
-# OSX specific (todo: make this less osx specific)
-CURRENT_SHELL_PATH=$(dscl localhost -read /Local/Default/Users/$USER shell | awk '{ print $NF }')
-
-say "Preparing to set set default shell to $DEFAULT_SHELL"
-
-[[ -e $DEFAULT_SHELL_PATH ]] || fail "$DEFAULT_SHELL does not seem to be available...aborting!"
-
-if [[ $CURRENT_SHELL_PATH == $DEFAULT_SHELL_PATH ]]; then
-  pass "Current shell is already set to ($DEFAULT_SHELL_PATH)...nothing to do!"
-else
-  chsh -s $DEFAULT_SHELL_PATH  || fail "Unable to set shell to $DEFAULT_SHELL_PATH"
-fi
+[[ -e $(command -v $TARGET_SHELL) ]] || fail "$TARGET_SHELL does not seem to be available...aborting!"
+dscl localhost change /Local/Default/Users/$USER UserShell $SHELL $(command -v $TARGET_SHELL) || fail "Unable to set shell to $TARGET_SHELL"
 
 ################################################################################
 # ensure proper permissions for ssh files and folders.
