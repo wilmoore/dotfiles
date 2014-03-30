@@ -1,87 +1,91 @@
+[submodule "active/.vim/bundle/inline_edit.vim"]
+  path = active/.vim/bundle/inline_edit.vim
+  ignore = all
+
 [submodule "active/.vim/bundle/Syntastic"]
-	path = active/.vim/bundle/Syntastic
-	ignore = all
+  path = active/.vim/bundle/Syntastic
+  ignore = all
 
 [submodule "active/.vim/bundle/CSScomb-for-Vim"]
-	path = active/.vim/bundle/CSScomb-for-Vim
-	ignore = all
+  path = active/.vim/bundle/CSScomb-for-Vim
+  ignore = all
 
 [submodule "active/.vim/bundle/jshint.vim"]
-	path = active/.vim/bundle/jshint.vim
-	ignore = all
+  path = active/.vim/bundle/jshint.vim
+  ignore = all
 
 [submodule "active/.vim/bundle/delimitMate.vim"]
-	path = active/.vim/bundle/delimitMate.vim
-	ignore = all
+  path = active/.vim/bundle/delimitMate.vim
+  ignore = all
 
 [submodule "active/.vim/bundle/npm.vim"]
-	path = active/.vim/bundle/npm.vim
-	ignore = all
+  path = active/.vim/bundle/npm.vim
+  ignore = all
 
 [submodule "active/.vim/bundle/rust.vim"]
-	path = active/.vim/bundle/rust.vim
-	ignore = all
+  path = active/.vim/bundle/rust.vim
+  ignore = all
 
 [submodule "active/.vim/bundle/Tagbar"]
-	path = active/.vim/bundle/Tagbar
-	ignore = all
+  path = active/.vim/bundle/Tagbar
+  ignore = all
 
 [submodule "active/.vim/bundle/YankRing.vim"]
-	path = active/.vim/bundle/YankRing.vim
-	ignore = all
+  path = active/.vim/bundle/YankRing.vim
+  ignore = all
 
 [submodule "active/.vim/bundle/matchit.zip"]
-	path = active/.vim/bundle/matchit.zip
-	ignore = all
+  path = active/.vim/bundle/matchit.zip
+  ignore = all
 
 [submodule "active/.vim/bundle/vim-expand-region"]
-	path = active/.vim/bundle/vim-expand-region
-	ignore = all
+  path = active/.vim/bundle/vim-expand-region
+  ignore = all
 
 [submodule "active/.vim/bundle/vim-multiple-cursors"]
-	path = active/.vim/bundle/vim-multiple-cursors
-	ignore = all
+  path = active/.vim/bundle/vim-multiple-cursors
+  ignore = all
 
 [submodule "active/.vim/bundle/editorconfig-vim"]
-	path = active/.vim/bundle/editorconfig-vim
-	ignore = all
+  path = active/.vim/bundle/editorconfig-vim
+  ignore = all
 
 [submodule "active/.vim/bundle/lightline.vim"]
-	path = active/.vim/bundle/lightline.vim
-	ignore = all
+  path = active/.vim/bundle/lightline.vim
+  ignore = all
 
 [submodule "active/.vim/bundle/tComment"]
-	path = active/.vim/bundle/tComment
-	ignore = all
+  path = active/.vim/bundle/tComment
+  ignore = all
 
 [submodule "active/.vim/bundle/Align"]
-	path = active/.vim/bundle/Align
-	ignore = all
+  path = active/.vim/bundle/Align
+  ignore = all
 
 [submodule "active/.vim/bundle/FuzzyFinder"]
-	path = active/.vim/bundle/FuzzyFinder
-	ignore = all
+  path = active/.vim/bundle/FuzzyFinder
+  ignore = all
 
 [submodule "active/.vim/bundle/L9"]
-	path = active/.vim/bundle/L9
-	ignore = all
+  path = active/.vim/bundle/L9
+  ignore = all
 
 [submodule "active/.vim/bundle/fugitive.vim"]
-	path = active/.vim/bundle/fugitive.vim
-	ignore = all
+  path = active/.vim/bundle/fugitive.vim
+  ignore = all
 
 [submodule "active/.vim/bundle/ragtag.vim"]
-	path = active/.vim/bundle/ragtag.vim
-	ignore = all
+  path = active/.vim/bundle/ragtag.vim
+  ignore = all
 
 [submodule "active/.vim/bundle/rails.vim"]
-	path = active/.vim/bundle/rails.vim
-	ignore = all
+  path = active/.vim/bundle/rails.vim
+  ignore = all
 
 [submodule "active/.vim/bundle/surround.vim"]
-	path = active/.vim/bundle/surround.vim
-	ignore = all
+  path = active/.vim/bundle/surround.vim
+  ignore = all
 
 [submodule "active/.vim/bundle/vundle"]
-	path = active/.vim/bundle/vundle
-	url = https://github.com/gmarik/vundle.git
+  path = active/.vim/bundle/vundle
+  url = https://github.com/gmarik/vundle.git
