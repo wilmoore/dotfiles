@@ -135,20 +135,20 @@ say "List of broken symlinks"
 #  - https://github.com/sorin-ionescu/prezto
 ################################################################################
 
-say "Preparing to install Prezto"
+# say "Preparing to install Prezto"
 
-if [[ -d "$HOME/.zprezto" ]]; then
-  say "directory: ("$HOME/.zprezto") exists; skipping clone"
-else
-  git clone --recursive https://github.com/sorin-ionescu/prezto.git "$HOME/.zprezto" 2>/dev/null || fail "Failed to clone Prezto...aborting!"
-fi
+# if [[ -d "$HOME/.zprezto" ]]; then
+#   say "directory: ("$HOME/.zprezto") exists; skipping clone"
+# else
+#   git clone --recursive https://github.com/sorin-ionescu/prezto.git "$HOME/.zprezto" 2>/dev/null || fail "Failed to clone Prezto...aborting!"
+# fi
 
-say "Preparing to update Prezto"
-
-cd "$HOME/.zprezto"
-git pull 2>/dev/null || fail "failed to update $(pwd)"
-
-pass "Prezto Installed Successfully"
+# say "Preparing to update Prezto"
+#
+# cd "$HOME/.zprezto"
+# git pull 2>/dev/null || fail "failed to update $(pwd)"
+#
+# pass "Prezto Installed Successfully"
 
 ################################################################################
 # set default shell to "ZSH"
