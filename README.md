@@ -1,8 +1,13 @@
-## Management Aliases
+## Setup / Install
+
+    % bash < <(curl -s https://raw.github.com/wilmoore/dotfiles/master/setup)
+
+## Management Commands
 
 - `dfup`: update dotfiles (runs ~/.dotfiles/setup).
 - `dfls`: list dotfiles.
 - `zfup`: zprezto update.
+- `brew bundle-dir`: runs `brew bundle` on all brewfiles found under `$HOME/.brews.d`.
 
 ## TODO
 
