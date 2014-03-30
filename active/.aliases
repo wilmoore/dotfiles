@@ -7,10 +7,19 @@ alias less=$PAGER
 alias zless=$PAGER
 
 #
+# zprezto management
+#
+
+alias zpup='cd ~/.zprezto && git pull && git submodule update --init --recursive'
+
+#
 # dotfile management
 #
 
+# list dotfiles.
 alias dfls='ls -lah ~/.dotfiles/active'
+
+# update dotfiles (idempotent -- run as many times as you like).
 alias dfup='bash ~/.dotfiles/setup'
 
 #

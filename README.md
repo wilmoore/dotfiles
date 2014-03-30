@@ -1,10 +1,10 @@
-Installed vundle with:
+## Management Aliases
 
-  cd ~/.dotfiles/active/.vim
-  mkdir bundle
-  git submodule add https://github.com/gmarik/vundle.git bundle/vundle
+- `dfup`: update dotfiles (runs ~/.dotfiles/setup).
+- `dfls`: list dotfiles.
+- `zfup`: zprezto update.
 
-TODO:
+## TODO
 
 - Try to replicate the last 5% - 10% of https://github.com/boxen/our-boxen with this setup (since this gets us about 90-95% there).
 

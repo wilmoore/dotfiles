@@ -4,12 +4,16 @@
 #
 # Tasks:
 #
-#  - clone/update dotfiles repo
-#  - locate and link linkable files, make backups for existing non-link files
-#  - install/update prezto (assumes prezto configs are already integrated with user's dotfiles)
+#  - clone/update dotfiles repo.
+#  - locate and link linkable files, make backups for existing non-link files.
+#  - list broken symlinks.
+#  - install/update prezto (assumes prezto configs are already integrated with user's dotfiles).
 #
 # This is meant to be invoked via:
 # bash < <(curl -s https://raw.github.com/wilmoore/dotfiles/master/setup)
+#
+# Once installed, use the aliases `dfls` and `dfup` to maintain:
+# https://github.com/wilmoore/dotfiles/blob/master/active/.aliases
 ################################################################################
 
 set -e
@@ -116,6 +120,13 @@ for rcfile in $(linkable_dotfiles $SOURCE); do
 done
 
 ################################################################################
+# show broken symlinks
+################################################################################
+
+say "List of broken symlinks"
+  find -L $HOME -type l -maxdepth 1
+
+################################################################################
 # setup prezto (assume prezto configuration files are linked with dotfiles)
 #
 # Links:
@@ -166,13 +177,6 @@ say "Setting permissions on ($SSH_PATH)"
 chmod 700 $SSH_PATH    || fail "command failed: chmod 700 $SSH_PATH"
 touch $SSH_PATH/config || fail "comamnd failed: touch $SSH_PATH/config"
 chmod 600 $SSH_PATH/*  || fail "comamnd failed: chmod 600 $SSH_PATH/*"
-
-################################################################################
-# show broken links
-################################################################################
-
-say "List of broken links"
-  find -L $HOME -type l -maxdepth 1
 
 ################################################################################
 # fin
