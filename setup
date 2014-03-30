@@ -147,7 +147,7 @@ TARGET_SHELL=zsh
 say "Preparing to set set default shell to $TARGET_SHELL"
 
 [[ -e $(command -v $TARGET_SHELL) ]] || fail "$TARGET_SHELL does not seem to be available...aborting!"
-dscl localhost change /Local/Default/Users/$USER UserShell $SHELL $(command -v $TARGET_SHELL) || fail "Unable to set shell to $TARGET_SHELL"
+sudo dscl localhost change /Local/Default/Users/$USER UserShell $SHELL $(command -v $TARGET_SHELL) || fail "Unable to set shell to $TARGET_SHELL"
 
 ################################################################################
 # ensure proper permissions for ssh files and folders.
