@@ -18,8 +18,8 @@
   path = active/.vim/bundle/delimitMate.vim
   ignore = all
 
-[submodule "active/.vim/bundle/npm.vim"]
-  path = active/.vim/bundle/npm.vim
+[submodule "active/.vim/bundle/vim-go"]
+  path = active/.vim/bundle/vim-go
   ignore = all
 
 [submodule "active/.vim/bundle/rust.vim"]
