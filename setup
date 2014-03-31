@@ -57,7 +57,6 @@ real_file_exists () {
 
 linkable_dotfiles () {
   find "$1" -maxdepth 1 -mindepth 1 \
-    # ! -name '*.d'   \
     ! -name 'setup' \
     ! -name '*.swp' \
     ! -name '*.md'
