@@ -4,6 +4,7 @@
 #
 # This script performs the following tasks:
 #
+#  - set default shell.
 #  - clone/update dotfiles repo.
 #  - locate and link linkable files, make backups for existing non-link files.
 #  - list broken symlinks.
@@ -63,6 +64,20 @@ linkable_dotfiles () {
 }
 
 ################################################################################
+# set default shell to "ZSH"
+################################################################################
+
+TARGET_SHELL=zsh
+say "Preparing to set set default shell to $TARGET_SHELL"
+
+if [[ $TARGET_SHELL -eq $(dscl localhost -read /Local/Default/Users/$USER shell) ]]; then
+  say "$TARGET_SHELL already active...nothing to do!"
+else
+  [[ -e $(command -v $TARGET_SHELL) ]] || fail "$TARGET_SHELL does not seem to be available...aborting!"
+  sudo dscl localhost change /Local/Default/Users/$USER UserShell $SHELL $(command -v $TARGET_SHELL) || fail "Unable to set shell to $TARGET_SHELL"
+fi
+
+################################################################################
 # clone dotfiles repo
 ################################################################################
 
@@ -117,16 +132,6 @@ done
 
 say "List of broken symlinks"
   find -L $HOME -type l -maxdepth 1
-
-################################################################################
-# set default shell to "ZSH"
-################################################################################
-
-TARGET_SHELL=zsh
-say "Preparing to set set default shell to $TARGET_SHELL"
-
-[[ -e $(command -v $TARGET_SHELL) ]] || fail "$TARGET_SHELL does not seem to be available...aborting!"
-sudo dscl localhost change /Local/Default/Users/$USER UserShell $SHELL $(command -v $TARGET_SHELL) || fail "Unable to set shell to $TARGET_SHELL"
 
 ################################################################################
 # fin
