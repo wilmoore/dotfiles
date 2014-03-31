@@ -70,7 +70,7 @@ linkable_dotfiles () {
 TARGET_SHELL=zsh
 say "Preparing to set set default shell to $TARGET_SHELL"
 
-if [[ $TARGET_SHELL -eq $(dscl localhost -read /Local/Default/Users/$USER shell) ]]; then
+if [[ "$(command -v $SHELL)" == "$(command -v $TARGET_SHELL)" ]]; then
   say "$TARGET_SHELL already active...nothing to do!"
 else
   [[ -e $(command -v $TARGET_SHELL) ]] || fail "$TARGET_SHELL does not seem to be available...aborting!"
