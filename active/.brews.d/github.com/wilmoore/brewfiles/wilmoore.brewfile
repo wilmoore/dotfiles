@@ -239,6 +239,7 @@ cask install suspicious-package
 install ag
 install ctags
 cask install geekbench
+install htop-osx
 install jq
 install jsonpp
 cask install jimbojsb/launchrocket/launchrocket
@@ -315,12 +316,6 @@ cask install send-to-kindle
 cask install balsamiq-mockups
 
 #
-# usb/serial drivers
-#
-
-cask install https://github.webapps.rr.com/hnav/homebrew/raw/master/prolific-usb-serial-driver.rb
-
-#
 # localization/translation
 #
 
@@ -337,4 +332,10 @@ install selenium-server-standalone
 #
 
 install sendemail
+
+#
+# usb/serial drivers
+#
+
+cask install https://github.webapps.rr.com/hnav/homebrew/raw/master/prolific-usb-serial-driver.rb
 
