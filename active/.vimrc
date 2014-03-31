@@ -80,7 +80,7 @@ Bundle 'HTML-AutoCloseTag'
 Bundle 'git://github.com/miripiruni/CSScomb-for-Vim.git'
 
 " Programming (language specific) Go
-" Bundle "fatih/vim-go"
+Bundle "fatih/vim-go"
 
 " Error/Exception Debugging & Stack traces
 Bundle "mattboehm/vim-unstack"
