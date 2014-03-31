@@ -129,24 +129,6 @@ say "Preparing to set set default shell to $TARGET_SHELL"
 sudo dscl localhost change /Local/Default/Users/$USER UserShell $SHELL $(command -v $TARGET_SHELL) || fail "Unable to set shell to $TARGET_SHELL"
 
 ################################################################################
-# ensure proper permissions for ssh files and folders.
-################################################################################
-
-SSH_PATH=$HOME/.ssh
-
-say "Preparing $SSH_PATH"
-
-if [[ ! -d $SSH_PATH ]]; then
-  mkdir -p $SSH_PATH || fail "Unable to create directory ($SSH_PATH)...aborting!"
-fi
-
-say "Setting permissions on ($SSH_PATH)"
-
-chmod 700 $SSH_PATH    || fail "command failed: chmod 700 $SSH_PATH"
-touch $SSH_PATH/config || fail "comamnd failed: touch $SSH_PATH/config"
-chmod 600 $SSH_PATH/*  || fail "comamnd failed: chmod 600 $SSH_PATH/*"
-
-################################################################################
 # fin
 ################################################################################
 
