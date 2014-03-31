@@ -34,6 +34,7 @@ path=(
   /usr/libexec               # lots of non-obvious goodies in here (i.e. PlistBuddy)
   $HOME/.homebrew/{bin,sbin} # homebrew@$HOME
   $HOME/.local/bin           # custom binaries & scripts
+  $HOME/.tmux                # tmux sessions
   $path                      # system defaults
 )
 
@@ -52,11 +53,7 @@ export GROOVY_HOME=$(brew --prefix)/opt/groovy/libexec
 #
 
 export GOPATH=$HOME/.go
-
-path=(
-  $GOPATH/bin
-  $path
-)
+path=($GOPATH/bin $path)
 
 ################################################################################
 # homebrew

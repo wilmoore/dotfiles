@@ -13,6 +13,13 @@
 - `zfup`: zprezto update.
 - `brew bundle-dir`: runs `brew bundle` on all brewfiles found under `$HOME/.brews.d`.
 
+## Tmux
+
+- Tmux sessions are invoked via executable shell scripts located at `$HOME/.tmux`.
+- Session scripts are named with a prefix of `@`.
+- ZSH tab completes session script names...just type `@`, then press `<TAB>`.
+- If the selected session is already running, it will not be re-created and you will be attached to it.
+
 ## TODO
 
 - Backup/restore for terminal settings.
