@@ -17,8 +17,9 @@
 
 - Tmux sessions are invoked via executable shell scripts located at `$HOME/.tmux`.
 - Session scripts are named with a prefix of `@`.
+- `$HOME/.tmux` is added to `$PATH` environment variable.
 - ZSH tab completes session script names...just type `@`, then press `<TAB>`.
-- If the selected session is already running, it will not be re-created and you will be attached to it.
+- If the selected session is already running, it will not be re-created -- you will be attached to it.
 
 ## TODO
 

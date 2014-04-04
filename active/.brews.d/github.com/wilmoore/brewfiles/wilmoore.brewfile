@@ -268,8 +268,12 @@ install znc
 # video
 #
 
+cask install chromecast
 install ffmpeg
 cask install miro-video-converter
+cask install vlc
+cask install vlc-remote
+cask install vlcstreamer
 install youtube-dl
 
 #
@@ -308,6 +312,12 @@ cask install pdftk
 install homebrew/binary/kindlegen
 cask install kindle
 cask install send-to-kindle
+
+#
+# mobile development
+#
+
+cask install phinze/cask/pusher
 
 #
 # ui design
