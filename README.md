@@ -21,6 +21,10 @@
 - ZSH tab completes session script names...just type `@`, then press `<TAB>`.
 - If the selected session is already running, it will not be re-created -- you will be attached to it.
 
+## Vim
+
+![](https://cloudup.com/cwu1C7Zi_2k+)
+
 ## TODO
 
 - Backup/restore for terminal settings.
