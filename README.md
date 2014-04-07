@@ -23,7 +23,7 @@
 
 ## Vim
 
-![](https://cloudup.com/cwu1C7Zi_2k+)
+![](https://cloudup.com/clk96MiOHf4+)
 
 ## TODO
 
