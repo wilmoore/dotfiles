@@ -37,11 +37,12 @@ eval "$(gh alias -s)"
 # nvm (Node.js)
 source $(brew --prefix nvm)/nvm.sh
 
-# chruby (Ruby) and default to latest ruby 2.x
-source $(brew --prefix chruby)/share/chruby/chruby.sh && chruby 2
-
 # php-version (PHP)
 source ~/projects/active/php-version/php-version.sh && php-version 5
+
+# ruby
+source $(brew --prefix chruby)/share/chruby/chruby.sh
+chruby 2
 
 #
 # run once per system login
