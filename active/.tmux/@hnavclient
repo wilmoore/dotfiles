@@ -26,5 +26,6 @@ if [ $? != 0 ]; then
 fi
 
 # attach
-tmux attach -t $PROJECT:editor
-
+if [ ${1-""} != "--no-attach" ]; then
+  tmux attach -t $PROJECT:editor
+fi
