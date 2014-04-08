@@ -47,7 +47,6 @@ cask install imageoptim
 cask install inkscape
 cask install kaleidoscope
 cask install ksdiff
-cask install licecap
 cask install limechat
 cask install mailplane
 cask install marked2
@@ -135,15 +134,8 @@ unlink  josegonzalez/php/php55
 
 # ruby
 install chruby
-
-install ruby
-unlink  ruby
-
-install homebrew/versions/ruby192
-unlink  homebrew/versions/ruby192
-
-install homebrew/versions/ruby193
-unlink  homebrew/versions/ruby193
+install ruby-install
+install https://raw.github.com/postmodern/chgems/master/homebrew/chgems.rb
 
 # rust
 install rust
@@ -330,6 +322,12 @@ cask install balsamiq-mockups
 #
 
 install translate-toolkit
+
+#
+# screen capture.
+#
+
+cask install licecap
 
 #
 # acceptance testing
