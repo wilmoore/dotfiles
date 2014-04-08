@@ -21,8 +21,13 @@
 - ZSH tab completes session script names...just type `@`, then press `<TAB>`.
 - If the selected session is already running, it will not be re-created -- you will be attached to it.
 
+## Vim
+
+![](https://cloudup.com/clk96MiOHf4+)
+
 ## TODO
 
 - Backup/restore for terminal settings.
+- Backup/restore for those special hidden files that most projects have (i.e. developer configs, etc.).
 - Try to replicate the last 5% - 10% of https://github.com/boxen/our-boxen with this setup (since this gets us about 90-95% there).
 
