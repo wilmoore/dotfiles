@@ -153,7 +153,7 @@
   credit-author       = !echo '\nPending Commit:\n% git commit -am \"commit message\" --author \"Full Name <name@domain.tld>\"\n\nExisting Commit:\n% git commit --amend --author \"Full Name <name@domain.tld>\" -C HEAD\n'
 
   # consider a topic branch "finished" by deleting it locally and from your "origin" remote (also deletes squash backups).
-  finish              = ![[ -z "$*" ]] && echo 'No branch was provided.' 1>&2 && exit 1 || git branch -d "$*" && git branch -d "__SQUASH_BACKUP_$*" ; git push origin --delete $!
+  finish              = ![[ -z "$*" ]] && echo 'No branch was provided.' 1>&2 && exit 1 || git branch -d "$*" && git push origin --delete $!
 
   # `git finish` all branched emitted by `git merged`
   finish-merged       = !git merged | xargs git finish
