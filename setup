@@ -67,15 +67,15 @@ linkable_dotfiles () {
 # set default shell to "ZSH"
 ################################################################################
 
-TARGET_SHELL=zsh
-say "Preparing to set set default shell to $TARGET_SHELL"
+#TARGET_SHELL=zsh
+#say "Preparing to set set default shell to $TARGET_SHELL"
 
-if [[ "$(command -v $SHELL)" == "$(command -v $TARGET_SHELL)" ]]; then
-  say "$TARGET_SHELL already active...nothing to do!"
-else
-  [[ -e $(command -v $TARGET_SHELL) ]] || fail "$TARGET_SHELL does not seem to be available...aborting!"
-  sudo dscl localhost change /Local/Default/Users/$USER UserShell $SHELL $(command -v $TARGET_SHELL) || fail "Unable to set shell to $TARGET_SHELL"
-fi
+#if [[ "$(command -v $SHELL)" == "$(command -v $TARGET_SHELL)" ]]; then
+#  say "$TARGET_SHELL already active...nothing to do!"
+#else
+#  [[ -e $(command -v $TARGET_SHELL) ]] || fail "$TARGET_SHELL does not seem to be available...aborting!"
+#  sudo dscl localhost change /Local/Default/Users/$USER UserShell $SHELL $(command -v $TARGET_SHELL) || fail "Unable to set shell to $TARGET_SHELL"
+#fi
 
 ################################################################################
 # clone dotfiles repo
