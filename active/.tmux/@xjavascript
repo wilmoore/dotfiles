@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+set -o errtrace
+set -o nounset
+
+declare PROJECT="xjavascript"
+
+# guard against creating existing sessions
+tmux has-session -t $PROJECT 2>/dev/null
+
+if [ $? != 0 ]; then
+  # create session and add an initial window (detached)
+  tmux new-session -s $PROJECT -n editor -d
+  tmux send-keys -t $PROJECT:editor.1 "cd $PROJECT ; clear" C-m
+
+  # create horizontal pane (right column)
+  tmux split-window -h -p 38 -t $PROJECT:editor
+  tmux send-keys -t $PROJECT "cd $PROJECT ; clear" C-m
+
+  # split right pane vertically
+  tmux split-window -v -p 35 -t $PROJECT:editor
+  tmux send-keys -t $PROJECT "cd $PROJECT ; clear ; make test" C-m
+
+  # select first pane of first window
+  tmux select-pane -t $PROJECT:editor.1
+fi
+
+# attach
+if [ ${1-""} != "--no-attach" ]; then
+  tmux attach -t $PROJECT:editor
+fi
