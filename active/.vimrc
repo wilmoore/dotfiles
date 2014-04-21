@@ -62,7 +62,7 @@ let g:syntastic_auto_loc_lis=1
 Bundle 'editorconfig-vim'
 
 " Programming (syntax highlight, indent)
-Bundle 'marijnh/tern_for_vim'
+" Bundle 'marijnh/tern_for_vim'
 Bundle 'jQuery'
 Bundle 'gh:vim-ruby/vim-ruby'
 Bundle 'rails.vim'
@@ -104,10 +104,6 @@ Bundle "file-line"
 Bundle "delimitMate.vim"
 Bundle "tpope/vim-dispatch"
 Bundle "repeat.vim"
-
-" Snippets
-Bundle 'SirVer/ultisnips'
-Bundle 'netmute/vim-simple-snippets'
 
 " server (nginx)
 Bundle "nginx.vim"
@@ -680,4 +676,38 @@ autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 if !exists('g:neocomplete#sources#omni#input_patterns')
   let g:neocomplete#sources#omni#input_patterns = {}
 endif
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Snippets
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"
+" Inspiration
+"
+
+" https://github.com/honza/vim-snippets (lots of snippets)
+" https://gist.github.com/ashb/311512 (CommonJS snippet/template)
+
+"
+" Plugin Installation
+"
+
+Bundle "SirVer/ultisnips"
+let g:UltiSnipsSnippetDirectories=["UltiSnips"]
+
+"
+" Trigger configuration.
+" see: http://vim-settings.googlecode.com/hg/.vim/doc/UltiSnips.txt
+"
+
+let g:UltiSnipsListSnippets        = "<c-m-s>"
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+"
+" If you want :UltiSnipsEdit to split your window.
+"
+
+let g:UltiSnipsEditSplit="vertical"
 
