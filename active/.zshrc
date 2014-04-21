@@ -28,20 +28,25 @@ ulimit -n 4096
 #
 
 # gh alias
-eval "$(gh alias -s)"
+[ $(command -v gh) ] && \
+  eval "$(gh alias -s)"
 
 #
 # programming virtual environments & version managers
 #
 
 # nvm (Node.js)
-source $(brew --prefix nvm)/nvm.sh
-nvm use 0.11 >/dev/null
+[ $(command -v brew) ] && \
+  source $(brew --prefix nvm)/nvm.sh && \
+  nvm use 0.11 >/dev/null
 
 # php-version (PHP)
-source ~/projects/active/php-version/php-version.sh && php-version 5
+[ -f ~/projects/active/php-version/php-version.sh ] && \
+  source ~/projects/active/php-version/php-version.sh && \
+  php-version 5
 
 # ruby
-source $(brew --prefix chruby)/share/chruby/chruby.sh
-chruby 2
+[ $(command -v brew) ] && \
+  source $(brew --prefix chruby)/share/chruby/chruby.sh && \
+  chruby 2
 
