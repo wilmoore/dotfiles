@@ -36,6 +36,7 @@ eval "$(gh alias -s)"
 
 # nvm (Node.js)
 source $(brew --prefix nvm)/nvm.sh
+nvm use 0.11 >/dev/null
 
 # php-version (PHP)
 source ~/projects/active/php-version/php-version.sh && php-version 5

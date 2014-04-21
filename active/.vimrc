@@ -76,9 +76,6 @@ Bundle 'wting/rust.vim'
 Bundle 'jimenezrick/vimerl'
 Bundle 'HTML-AutoCloseTag'
 
-" Programming (language specific) CSS
-Bundle 'git://github.com/miripiruni/CSScomb-for-Vim.git'
-
 " Programming (language specific) Go
 Bundle "fatih/vim-go"
 
