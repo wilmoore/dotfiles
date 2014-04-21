@@ -28,6 +28,7 @@
 ## TODO
 
 - Backup/restore for terminal settings.
+- Backup/restore for projects (i.e. `projects.json` manifest of remote repo urls -- running `projects restore` pulls down each project).
 - Backup/restore for those special hidden files that most projects have (i.e. developer configs, etc.).
 - Try to replicate the last 5% - 10% of https://github.com/boxen/our-boxen with this setup (since this gets us about 90-95% there).
 
