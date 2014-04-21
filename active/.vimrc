@@ -105,6 +105,10 @@ Bundle "delimitMate.vim"
 Bundle "tpope/vim-dispatch"
 Bundle "repeat.vim"
 
+" Snippets
+Bundle 'SirVer/ultisnips'
+Bundle 'netmute/vim-simple-snippets'
+
 " server (nginx)
 Bundle "nginx.vim"
 
