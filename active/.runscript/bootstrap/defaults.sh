@@ -14,7 +14,7 @@
 
 # timezone; see `systemsetup -listtimezones` for other values
 
-systemsetup -settimezone "America/Denver" > /dev/null
+sudo systemsetup -settimezone "America/Denver" > /dev/null
 
 ###############################################################################
 # Display
@@ -183,11 +183,11 @@ defaults write com.apple.LaunchServices LSQuarantine -bool false
 
 # restart automatically if the computer freezes
 
-systemsetup -setrestartfreeze on
+sudo systemsetup -setrestartfreeze on
 
 # disable notification center and remove the menu bar icon
 
-launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
+sudo launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
 
 ###############################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input

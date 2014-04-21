@@ -68,13 +68,16 @@ path=($GOPATH/bin $path)
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 # where are your brew bundles?
-export HOMEBREW_BUNDLES_D="~/.dotfiles/active/.brews.d"
+export HOMEBREW_BUNDLES_D="~/.brews.d"
 
 #
 # man page search paths
 #
 
 # base
+MANPATH=/usr/local/share/man:$MANPATH
+
+# homebrew
 MANPATH=$HOME/.homebrew/share/man:$MANPATH
 
 # erlang is special
@@ -173,28 +176,6 @@ export GH_CONFIG=~/.gh
 # HNav Client
 # TODO: create an ignored "private" file that is sourced (so we can add more private info)
 #
-
-# when set,  grunt/make tasks that open a web browser, will use this instead of system default browser
-export HNAVC_DEFAULT_WEB_BROWSER='Chromium'
-
-# if this is set, always use; otherwise, look up port using nmap (i.e. some people have a standing apache server for whatever reason; some people use the portable NodeJS server -- these tend to have different base paths)
-export HNAVC_DEVELOPER_SERVERURL='http://192.168.0.36:8800'
-
-# required by scripts that need to lookup STB IP address
-export HNAVC_IP805STB_MACADDRESS='B0:77:AC:2F:9F:62'
-
-# IP805 IP address
-export HNAVC_IP805_LAN_IPADDRESS='192.168.0.37'
-
-# required by scripts that need to connect to hydra remotely (bin/client will open desktop
-# `bin/client --local`          (default)
-# `bin/client --remote`         (adds `rewriteIp`)
-# `bin/client --only-desktop`   (only open client on desktop)
-# `bin/client --only-stb`       (only open client on STB)
-export HNAVC_HYDRA_WAN_IPADDRESS='10.243.41.245'
-
-# set this when you want scripts that generate client urls to append something to the query string
-# export HNAVC_DEFAULT_QUERYSTRING='feature.startOverDelay=false'
 
 alias logclient='$(which logclient-32bit) -f ~/Library/Logs/hnavclient.log -l all $HNAVC_IP805_LAN_IPADDRESS'
 

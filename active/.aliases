@@ -13,6 +13,12 @@ alias zless=$PAGER
 alias colors='for i in {0..255} ; do printf "\x1b[38;5;${i}mcolour${i}\n"; done'
 
 #
+# osx system management.
+#
+
+alias osxup='sudo softwareupdate -i -a'
+
+#
 # zprezto management
 #
 

@@ -132,6 +132,9 @@ install josegonzalez/php/php55 --without-pear --without-apache --with-pgsql --wi
 install josegonzalez/php/php55-intl
 unlink  josegonzalez/php/php55
 
+# python
+install python
+
 # ruby
 install chruby
 install ruby-install
@@ -345,5 +348,5 @@ install sendemail
 # usb/serial drivers
 #
 
-cask install https://github.webapps.rr.com/hnav/homebrew/raw/master/prolific-usb-serial-driver.rb
+# cask install https://github.webapps.rr.com/hnav/homebrew/raw/master/prolific-usb-serial-driver.rb
 
