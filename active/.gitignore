@@ -1,3 +1,4 @@
 *~
 *.elc
 *.bak
+*.pending-commit-message.md

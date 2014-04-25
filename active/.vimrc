@@ -1,4 +1,12 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" to review
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"https://github.com/mhinz/vim-startify
+"https://github.com/Shougo/vimshell.vim
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " general
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -25,12 +33,14 @@ filetype off
 " do only when `vim_starting`:
 " mitigates weird reloading errors (i.e. unable to find color schemes)
 if has('vim_starting')
-  set runtimepath+=~/.vim/bundle/vundle/
+  set rtp+=~/.vim/bundle/vundle/
   call vundle#rc()
 endif
 
 " let Vundle manage Vundle (required)
 Bundle 'gmarik/vundle'
+
+" filetype plugin indent on
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" syntax highlighting
@@ -138,8 +148,7 @@ vnoremap // :TComment<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " turn on file type based indentation for all file types
-" filetype plugin indent on
-" disabling this until I can get rid of the "Sourcing html indent"
+filetype plugin indent on
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "" filetype overrides
@@ -420,7 +429,7 @@ augroup END
 " make C-<enter> act like <esc> and C-c (obviously you want to have mapped CAPSLOCK to control)
 :inoremap <C-[> <esc>
 
-" $MYVIMRC reload
+" $MYVIMtC reload
 nmap <Leader>rc :source $MYVIMRC<CR>
 
 " $MYVIMRC open buffer for editing in new tab/buffer
@@ -690,20 +699,26 @@ endif
 
 "
 " Plugin Installation
+" see: https://github.com/SirVer/ultisnips/issues/159#issuecomment-41187390
+" and: https://github.com/gmarik/Vundle.vim/pull/234
 "
 
 Bundle "SirVer/ultisnips"
-let g:UltiSnipsSnippetDirectories=["UltiSnips"]
+
+"
+" General Configuration.
+"
+
+let g:UltiSnipsListSnippets       = "<C-s>"
+let g:UltiSnipsSnippetDirectories = ["UltiSnips"]
 
 "
 " Trigger configuration.
-" see: http://vim-settings.googlecode.com/hg/.vim/doc/UltiSnips.txt
 "
 
-let g:UltiSnipsListSnippets        = "<c-m-s>"
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+let g:UltiSnipsExpandTrigger       = "<C-j>"
+let g:UltiSnipsJumpForwardTrigger  = "<C-j>"
+let g:UltiSnipsJumpBackwardTrigger = "<C-k>"
 
 "
 " If you want :UltiSnipsEdit to split your window.

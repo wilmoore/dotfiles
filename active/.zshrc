@@ -38,7 +38,8 @@ ulimit -n 4096
 # nvm (Node.js)
 [ $(command -v brew) ] && \
   source $(brew --prefix nvm)/nvm.sh && \
-  nvm use 0.11 >/dev/null
+  nvm use 0.11 >/dev/null && \
+  source <(npm completion)
 
 # php-version (PHP)
 [ -f ~/projects/active/php-version/php-version.sh ] && \

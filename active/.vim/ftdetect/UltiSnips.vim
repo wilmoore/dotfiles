@@ -1,0 +1,1 @@
+/Users/wilmoore/.vim/bundle/ultisnips/ftdetect/UltiSnips.vim
