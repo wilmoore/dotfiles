@@ -85,6 +85,7 @@ Bundle 'groenewege/vim-less'
 Bundle 'wting/rust.vim'
 Bundle 'jimenezrick/vimerl'
 Bundle 'HTML-AutoCloseTag'
+Bundle 'elzr/vim-json'
 
 " Programming (language specific) Go
 Bundle "fatih/vim-go"
