@@ -1,0 +1,1 @@
+../bundle/vim-json/ftdetect/json.vim
