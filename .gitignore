@@ -1,4 +1,3 @@
 *.swp
 yankring_history*.txt
 active/.virtualbox
-active/.vim/bundle

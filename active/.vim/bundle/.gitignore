@@ -1,1 +1,4 @@
+*
+!.gitignore
 !vundle
+!neobundle.vim
