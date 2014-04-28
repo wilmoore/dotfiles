@@ -6,11 +6,20 @@
 " plugin and bundle management.
 source ~/.vim/neobundle.vim
 
+" functions.
+source ~/.vim/functions.vim
+
 " settings based on file type.
 source ~/.vim/filetypes.vim
 
+" auto commands.
+source ~/.vim/autocmds.vim
+
 " behaviors.
 source ~/.vim/behaviors.vim
+
+" custom non-plugin key bindings.
+source ~/.vim/keybindings.vim
 
 " user interface.
 source ~/.vim/ui.vim
@@ -21,15 +30,6 @@ source ~/.vim/input.vim
 " formatting options.
 source ~/.vim/formatting.vim
 
-" event handlers.
-source ~/.vim/events.vim
-
 " plugin configuration (plugin specific key bindings).
 source ~/.vim/plugins.vim
-
-" custom non-plugin key bindings.
-source ~/.vim/keybindings.vim
-
-" custom utilties.
-source ~/.vim/utilities.vim
 

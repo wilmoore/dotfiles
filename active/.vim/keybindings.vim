@@ -2,9 +2,6 @@
 " Key Bindings
 " ----------------------------------------
 
-" make C-<enter> act like <esc> and C-c (obviously you want to have mapped CAPSLOCK to control)
-:inoremap <C-[> <esc>
-
 " $MYVIMtC reload
 nmap <Leader>rc :source $MYVIMRC<CR>
 
@@ -25,6 +22,20 @@ nmap <Leader>re :e $MYVIMRC<CR>
 :noremap   <Right>  <nop>
 
 " -------
+" Escape
+" -------
+
+" make C-[ (first/opening square bracket) act like <ESC> and C-c (obviously you want to have mapped CAPSLOCK to control for this to be awesome)
+" :inoremap <C-[> <esc>
+
+" more recently, I found this snippet which allows you to use `jk` for <ESC> (very nice)
+" see: https://github.com/mutewinter/dot_vim/blob/master/mappings.vim#L88-L96
+:inoremap jk <Esc>
+:inoremap JK <Esc>
+:inoremap Jk <Esc>
+:inoremap jK <Esc>
+
+" -------
 " Editing
 " -------
 
@@ -36,6 +47,10 @@ map <leader>pp :setlocal paste!<cr>
 
 " <leader>ss toggles spell checking
 map <leader>ss :setlocal spell!<cr>
+
+" remap U to <C-r> for easier redo
+" from http://vimbits.com/bits/356
+nnoremap U <C-r>
 
 " -------
 " Opening URLS
@@ -76,35 +91,17 @@ map <leader>cd :cd %:p:h<cr>:pwd<cr>
 " Quickfix Toggle
 " -------
 
-" automatically opens the quickfix window after :Ggrep (or any command with `grep` in the name)
-" https://github.com/tpope/vim-fugitive/blob/master/README.markdown#faq
-
-autocmd QuickFixCmdPost *grep* nested cwindow
-
-" automatically close the quick fix window when leaving a file (will close vim if the quickfix window is the only visible window/tab).
-" http://stackoverflow.com/a/7477056/128346
-
-aug QFClose
-  au!
-  au WinEnter * if winnr('$') == 1 && getbufvar(winbufnr(winnr()), "&buftype") == "quickfix"|q|endif
-aug END
-
-" Quick fix toggle
-" http://learnvimscriptthehardway.stevelosh.com/chapters/38.html
-
+" Use <leader>q to toggle quick fix window (http://learnvimscriptthehardway.stevelosh.com/chapters/38.html).
 nnoremap <leader>q :call QuickfixToggle()<cr>
 
-let g:quickfix_is_open = 0
+" -------
+" Navigation
+" -------
 
-function! QuickfixToggle()
-    if g:quickfix_is_open
-        cclose
-        let g:quickfix_is_open = 0
-        execute g:quickfix_return_to_window . "wincmd w"
-    else
-        let g:quickfix_return_to_window = winnr()
-        copen
-        let g:quickfix_is_open = 1
-    endif
-endfunction
+" Page/Scroll UP/DOWN with CTRL + [kj]
+" see: https://github.com/mutewinter/dot_vim/blob/master/mappings.vim#L72-L86
+nnoremap <C-j> 15gjzz
+nnoremap <C-k> 15gkzz
+vnoremap <C-j> 15gjzz
+vnoremap <C-k> 15gkzz
 
