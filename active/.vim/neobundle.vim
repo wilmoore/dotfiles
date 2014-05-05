@@ -35,6 +35,9 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle "kien/ctrlp.vim"
 NeoBundle "mru.vim"
 
+" Status line
+NeoBundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+
 " Visual Selection, Cursors
 "   - https://github.com/terryma/vim-multiple-cursors
 "   - http://www.youtube.com/watch?v=Umb59mMvCxA
@@ -86,9 +89,6 @@ NeoBundle 'elzr/vim-json'
 NeoBundle 'jQuery'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
-"   Ruby, Rails
-NeoBundle 'vim-ruby'
-NeoBundle 'rails.vim'
 "   Go
 NeoBundle 'jnwhiteh/vim-golang'
 NeoBundle "fatih/vim-go"
@@ -115,9 +115,6 @@ NeoBundle "nginx.vim"
 
 " Content (in-file) Searching
 NeoBundle "gmarik/vim-visual-star-search"
-
-NeoBundle 'bling/vim-airline'
-NeoBundle 'paranoida/vim-airlineish'
 
 " Required:
 call neobundle#end()

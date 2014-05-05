@@ -3,39 +3,12 @@
 " ----------------------------------------
 
 " -------
-" Airline
-" -------
-
-" airline plugin
-" custom theme for airline
-" let g:airline_theme = 'airlineish'
-
-" always show status line
-" set laststatus=2
-
-" theme
-" let g:airline_theme = 'dark'
-
-" extensions
-" let g:airline#extensions#tabline#enabled    = 1
-" let g:airline#extensions#branch#enabled     = 1
-" let g:airline#extensions#syntastic#enabled  = 1
-" let g:airline#extensions#bufferline#enabled = 1
-
-" fonts & symbols
-" let g:airline_left_sep          = '▶'
-" let g:airline_right_sep         = '◀'
-" let g:airline_linecolumn_prefix = '§'
-" let g:airline_paste_symbol      = 'Þ'
-" let g:airline_readonly_symbol   = 'Ʀ'
-" let g:airline_fugitive_prefix   = '⎇ '
-
-" -------
 " Powerline
 " -------
 
-source ~/.homebrew/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
+" source ~/.homebrew/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
 set laststatus=2
+let g:Powerline_symbols = 'fancy'
 
 " -------
 " Signify

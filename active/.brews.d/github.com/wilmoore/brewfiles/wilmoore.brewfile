@@ -343,8 +343,9 @@ cask install caskroom/fonts/font-dejavu-sans-mono-for-powerline
 # editor / pager
 #
 
-install vim --with-python --with-ruby --with-perl --with-lua --env-std --override-system-vim
-install macvim --env-std --override-system-vim --with-cscope --with-lua --HEAD
+# install vim --with-python --with-ruby --with-perl --with-lua --env-std --override-system-vim
+# install macvim --env-std --override-system-vim --with-cscope --with-lua --HEAD
+brew install macvim --custom-icons --override-system-vim --with-lua --with-luajit --with-csope
 
 #
 # ui design
