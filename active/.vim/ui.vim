@@ -47,8 +47,8 @@ set t_Co=256
 " should match the setting in your terminal for consistency
 if has("gui_running")
   " (i.e. MacVIM)
-  " set guifont=Monaco:h14
-  set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h12
+  " set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h12
+  set guifont=Sauce\ Code\ Powerline:h12
 endif
 
 " -------
