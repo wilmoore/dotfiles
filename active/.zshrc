@@ -36,8 +36,7 @@ ulimit -n 4096
 #
 
 # nvm (Node.js)
-[ $(command -v brew) ] && \
-  source $(brew --prefix nvm)/nvm.sh && \
+[ -f ~/.homebrew/opt/nvm/nvm.sh ] && source $HOME/.homebrew/opt/nvm/nvm.sh && \
   nvm use 0.11 >/dev/null && \
   source <(npm completion)
 
@@ -47,8 +46,7 @@ ulimit -n 4096
   php-version 5
 
 # ruby
-[ $(command -v brew) ] && \
-  source $(brew --prefix chruby)/share/chruby/chruby.sh && \
+[ -f ~/.homebrew/opt/chruby/share/chruby/chruby.sh ] && source ~/.homebrew/opt/chruby/share/chruby/chruby.sh && \
   chruby 2
 
 #

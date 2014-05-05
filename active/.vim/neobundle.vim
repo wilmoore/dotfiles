@@ -37,6 +37,7 @@ NeoBundle "mru.vim"
 
 " Status line
 NeoBundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+NeoBundle 'stephenmckinney/vim-solarized-powerline'
 
 " Visual Selection, Cursors
 "   - https://github.com/terryma/vim-multiple-cursors
