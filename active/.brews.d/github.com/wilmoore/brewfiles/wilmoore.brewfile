@@ -3,16 +3,20 @@
 # Install these via `brew bundle-dir` (http://git.io/xwPDxA) or `brew bundle`
 ################################################################################
 
+# Update
+update
+upgrade
+
 #
 # taps
 #
 
-# tap homebrew/binary
-# tap homebrew/dupes
-# tap homebrew/headonly
-# tap homebrew/versions
-# tap wilmoore/binaries
-# tap phinze/cask
+tap homebrew/binary || true
+tap homebrew/dupes || true
+tap homebrew/headonly || true
+tap homebrew/versions || true
+tap wilmoore/binaries || true
+tap phinze/cask || true
 
 #
 # homebrew external commands
@@ -43,7 +47,6 @@ cask install google-drive
 cask install growlnotify
 cask install handbrake
 cask install heroku-toolbelt
-cask install imageoptim
 cask install inkscape
 cask install kaleidoscope
 cask install ksdiff
@@ -66,16 +69,14 @@ cask install skype
 cask install smcfancontrol
 cask install sourcetree
 cask install spotify
-cask install the-unarchiver
 cask install xscope
 
 #
-# editor / pager
+# archive
 #
 
-install macvim --with-cscope --with-lua --HEAD
-linkapps
-install vim --with-lua
+cask install the-unarchiver
+install atool
 
 #
 # programming environment
@@ -86,7 +87,9 @@ install autoconf
 install automake
 install cmake
 install gettext
+install global
 install intltool
+install pkg-config
 
 #
 # programming languages
@@ -165,19 +168,32 @@ install protobuf
 #
 
 cask install angry-ip-scanner
-install curl-ca-bundle
+cask install cocoapacketanalyzer
 install fping
 install masscan
 install netcat
 install ngrep
 install nmap
 cask install serf
+cask install speedlimit
+install homebrew/dupes/tcpdump
+install wireshark
+
+#
+# networking/security
+#
+
+install keychain
 install socat
 install ssh-copy-id
 install sshfs
 install stunnel
-install homebrew/dupes/tcpdump
-install wireshark
+
+#
+# http client
+#
+
+cask install cocoarestclient
 
 #
 # remote access & control
@@ -193,6 +209,7 @@ install bzr
 install git
 install jingweno/gh/gh
 install mercurial
+cask install trailer
 
 #
 # web browsers & browser engines
@@ -223,6 +240,7 @@ cask install qlmarkdown
 cask install quicklook-json
 cask install qlprettypatch
 cask install quicklook-csv
+cask install quicklook-json
 cask install betterzipql
 cask install webp-quicklook
 cask install suspicious-package
@@ -234,6 +252,7 @@ cask install suspicious-package
 install ag
 install ctags
 cask install geekbench
+cask install grandperspective
 install htop-osx
 install jq
 install jsonpp
@@ -315,6 +334,19 @@ cask install send-to-kindle
 cask install phinze/cask/pusher
 
 #
+# fonts
+#
+
+cask install caskroom/fonts/font-dejavu-sans-mono-for-powerline
+
+#
+# editor / pager
+#
+
+install vim --with-python --with-ruby --with-perl --with-lua --env-std --override-system-vim
+install macvim --env-std --override-system-vim --with-cscope --with-lua --HEAD
+
+#
 # ui design
 #
 
@@ -331,6 +363,15 @@ install translate-toolkit
 #
 
 cask install licecap
+install webkit2png
+
+#
+# image manipulation
+#
+
+cask install imageoptim
+cask install imagealpha
+cask install texturepacker
 
 #
 # acceptance testing
@@ -343,6 +384,12 @@ install selenium-server-standalone
 #
 
 install sendemail
+
+#
+# productivity
+#
+
+cask install libreoffice
 
 #
 # usb/serial drivers

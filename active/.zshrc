@@ -51,3 +51,10 @@ ulimit -n 4096
   source $(brew --prefix chruby)/share/chruby/chruby.sh && \
   chruby 2
 
+#
+# status line
+#
+
+# powerline
+source ~/.homebrew/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+

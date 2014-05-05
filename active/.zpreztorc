@@ -75,14 +75,8 @@ zstyle ':prezto:module:utility:diff' color 'no'
 # History Substring Search
 #
 
-# Set the query found color.
-zstyle ':prezto:module:history-substring-search:color' found ''
-
-# Set the query not found color.
-zstyle ':prezto:module:history-substring-search:color' not-found ''
-
-# Set the search globbing flags.
-zstyle ':prezto:module:history-substring-search' globbing-flags ''
+# Enable positive result highlighting.
+zstyle ':prezto:module:history-substring-search' color 'yes'
 
 #
 # Pacman
@@ -101,20 +95,10 @@ zstyle ':prezto:module:history-substring-search' globbing-flags ''
 zstyle ':prezto:module:prompt' theme 'sorin'
 
 #
-# Screen
-#
-
-# Auto start a session when Zsh is launched in a local terminal.
-# zstyle ':prezto:module:screen:auto-start' local 'yes'
-
-# Auto start a session when Zsh is launched in a SSH connection.
-# zstyle ':prezto:module:screen:auto-start' remote 'yes'
-
-#
 # SSH
 #
 
-# Set the SSH identities to load into the agent.
+# Set the SSH identities to load into the agent (NOTE: not used on OSX).
 # zstyle ':prezto:module:ssh:load' identities 'id_rsa' 'id_rsa2' 'id_github'
 
 #
@@ -138,19 +122,12 @@ zstyle ':prezto:module:prompt' theme 'sorin'
 #
 
 #
-# Terminal
-#
-
-# Auto set the tab and window titles.
-zstyle ':prezto:module:terminal' auto-title 'yes'
-
-#
 # Tmux
 #
 
 # Auto start a session when Zsh is launched in a local terminal.
-# zstyle ':prezto:module:tmux:auto-start' local 'yes'
+zstyle ':prezto:module:tmux:auto-start' local 'no'
 
 # Auto start a session when Zsh is launched in a SSH connection.
-# zstyle ':prezto:module:tmux:auto-start' remote 'yes'
+zstyle ':prezto:module:tmux:auto-start' remote 'yes'
 

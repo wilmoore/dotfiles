@@ -3,6 +3,41 @@
 " ----------------------------------------
 
 " -------
+" Airline
+" -------
+
+" airline plugin
+" custom theme for airline
+" let g:airline_theme = 'airlineish'
+
+" always show status line
+" set laststatus=2
+
+" theme
+" let g:airline_theme = 'dark'
+
+" extensions
+" let g:airline#extensions#tabline#enabled    = 1
+" let g:airline#extensions#branch#enabled     = 1
+" let g:airline#extensions#syntastic#enabled  = 1
+" let g:airline#extensions#bufferline#enabled = 1
+
+" fonts & symbols
+" let g:airline_left_sep          = '▶'
+" let g:airline_right_sep         = '◀'
+" let g:airline_linecolumn_prefix = '§'
+" let g:airline_paste_symbol      = 'Þ'
+" let g:airline_readonly_symbol   = 'Ʀ'
+" let g:airline_fugitive_prefix   = '⎇ '
+
+" -------
+" Powerline
+" -------
+
+source ~/.homebrew/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
+set laststatus=2
+
+" -------
 " Signify
 " -------
 
@@ -20,6 +55,15 @@ nmap  -  <Plug>(choosewin)
 let g:choosewin_overlay_enable = 1
 
 " -------
+" CTRLP
+" -------
+
+let g:ctrlp_map = '<c-p>'
+
+" Set this to 1 to set searching by filename (as opposed to full path) as the
+let g:ctrlp_by_filename = 0
+
+" -------
 " TComment
 " -------
 
@@ -31,43 +75,30 @@ vnoremap // :TComment<CR>
 " NERDTree
 " -------
 
+" Close all open buffers on entering a window if the only
+" buffer that's left is the NERDTree buffer
+function! CloseIfOnlyNerdTreeLeft()
+  if exists("t:NERDTreeBufName")
+    if bufwinnr(t:NERDTreeBufName) != -1
+      if winnr("$") == 1
+        q
+      endif
+    endif
+  endif
+endfunction
+
 let NERDTreeShowHidden=1
 let NERDTreeShowBookmarks=1
 let NERDTreeWinSize=26
+
+" close nerdtree after using it to open a file/buffer
+let NERDTreeQuitOnOpen = 1
 
 " <leader>f invokes NERDTreeFind
 nmap <leader>f :NERDTreeFind<cr>
 
 " default window size
 let g:NERDTreeWinSize = 40
-
-" -------
-" Airline
-" -------
-
-" airline plugin
-" custom theme for airline
-let g:airline_theme = 'airlineish'
-
-" always show status line
-set laststatus=2
-
-" theme
-let g:airline_theme = 'dark'
-
-" extensions
-let g:airline#extensions#tabline#enabled    = 1
-let g:airline#extensions#branch#enabled     = 1
-let g:airline#extensions#syntastic#enabled  = 1
-let g:airline#extensions#bufferline#enabled = 1
-
-" fonts & symbols
-let g:airline_left_sep          = '▶'
-let g:airline_right_sep         = '◀'
-let g:airline_linecolumn_prefix = '§'
-let g:airline_paste_symbol      = 'Þ'
-let g:airline_readonly_symbol   = 'Ʀ'
-let g:airline_fugitive_prefix   = '⎇ '
 
 " -------
 " Fugitive

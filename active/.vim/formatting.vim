@@ -21,7 +21,14 @@ set linebreak
 " -------
 
 " Set utf8 as standard encoding and en_US as the standard language
-set encoding=utf8
+" set encoding=utf8
+set encoding=utf-8
+
+" -------
+" Fill Characters
+" -------
+
+set fillchars+=stl:\ ,stlnc:\
 
 " -------
 " Indent

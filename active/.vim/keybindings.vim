@@ -25,10 +25,7 @@ nmap <Leader>re :e $MYVIMRC<CR>
 " Escape
 " -------
 
-" make C-[ (first/opening square bracket) act like <ESC> and C-c (obviously you want to have mapped CAPSLOCK to control for this to be awesome)
-" :inoremap <C-[> <esc>
-
-" more recently, I found this snippet which allows you to use `jk` for <ESC> (very nice)
+" use `jk` for <ESC> (very nice) -- NOTE: if you use `set -o vi` in your shell, `jk` does not work there so you should not unbind <Esc> as you'll need it there.
 " see: https://github.com/mutewinter/dot_vim/blob/master/mappings.vim#L88-L96
 :inoremap jk <Esc>
 :inoremap JK <Esc>

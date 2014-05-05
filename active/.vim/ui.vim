@@ -32,10 +32,13 @@ colorscheme solarized
 " Terminal Colors
 " -------
 
+" always use 256 colors.
+set t_Co=256
+
 " when not running in GUI mode
-if !has('gui_running')
-  set t_Co=256
-endif
+" if !has('gui_running')
+"   set t_Co=256
+" endif
 
 " -------
 " Fonts
@@ -44,7 +47,8 @@ endif
 " should match the setting in your terminal for consistency
 if has("gui_running")
   " (i.e. MacVIM)
-  set guifont=Monaco:h14
+  " set guifont=Monaco:h14
+  set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h12
 endif
 
 " -------
