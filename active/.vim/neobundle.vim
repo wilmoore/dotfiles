@@ -63,7 +63,7 @@ NeoBundle "mattn/webapi-vim"
 NeoBundle "mattn/gist-vim"
 
 " Completion
-NeoBundle 'Shougo/neocomplete.vim'
+NeoBundle 'Valloric/YouCompleteMe', { 'build' : { 'mac' : './install.sh', }, }
 
 " Snippets, Templates
 NeoBundle "SirVer/ultisnips"
@@ -90,6 +90,7 @@ NeoBundle 'elzr/vim-json'
 NeoBundle 'jQuery'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
+NeoBundle 'marijnh/tern_for_vim'
 "   Go
 NeoBundle 'jnwhiteh/vim-golang'
 NeoBundle "fatih/vim-go"
