@@ -43,6 +43,7 @@ NeoBundle 'stephenmckinney/vim-solarized-powerline'
 "   - https://github.com/terryma/vim-multiple-cursors
 "   - http://www.youtube.com/watch?v=Umb59mMvCxA
 NeoBundle "terryma/vim-multiple-cursors"
+NeoBundle "myusuf3/numbers.vim"
 
 " Commands
 NeoBundle "tComment"
@@ -63,7 +64,7 @@ NeoBundle "mattn/webapi-vim"
 NeoBundle "mattn/gist-vim"
 
 " Completion
-NeoBundle 'Valloric/YouCompleteMe', { 'build' : { 'mac' : './install.sh', }, }
+NeoBundle 'Valloric/YouCompleteMe', { 'build' : { 'mac' : './install.sh --clang-completer', 'unix' : './install.sh --clang-completer' }}
 
 " Snippets, Templates
 NeoBundle "SirVer/ultisnips"
@@ -90,7 +91,7 @@ NeoBundle 'elzr/vim-json'
 NeoBundle 'jQuery'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
-NeoBundle 'marijnh/tern_for_vim'
+NeoBundle 'marijnh/tern_for_vim', { 'build': { 'others': 'npm install' }}
 "   Go
 NeoBundle 'jnwhiteh/vim-golang'
 NeoBundle "fatih/vim-go"

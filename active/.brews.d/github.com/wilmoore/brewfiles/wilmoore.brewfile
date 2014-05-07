@@ -216,6 +216,7 @@ cask install trailer
 #
 
 # finally this has been bottled
+install browser
 install phantomjs
 install v8
 
@@ -344,7 +345,7 @@ cask install caskroom/fonts/font-dejavu-sans-mono-for-powerline
 # editor / pager
 #
 
-brew install macvim --custom-icons --override-system-vim --with-lua --with-luajit --with-csope
+install macvim --custom-icons --override-system-vim --with-lua --with-luajit --with-csope
 
 #
 # ui design

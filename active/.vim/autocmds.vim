@@ -99,3 +99,13 @@ augroup MyAutoCommands
   autocmd! CmdwinLeave * :call MapCR()
 augroup END
 
+" -------
+" Automatic comment insertion
+" -------
+
+" enable automatic comment insertion.
+augroup auto_common_insertion
+  autocmd!
+  autocmd BufEnter * setlocal formatoptions+=ro
+augroup END
+

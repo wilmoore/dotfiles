@@ -6,6 +6,7 @@
 " Powerline
 " -------
 
+" source ~/.homebrew/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
 set laststatus=2
 let g:Powerline_symbols = 'fancy'
 let g:Powerline_colorscheme='solarized256_dark'
@@ -99,9 +100,18 @@ let g:yankring_history_dir = '~/.vim'
 " Syntastic
 " -------
 
-" When set, this option will automatically open the |location-list| when a buffer has errors.
-" The location list is also closed again when there are no errors.
-let g:syntastic_auto_loc_lis=1
+" When set to 1 the error window will be automatically opened when errors are detected, and closed when none are detected.
+let g:syntastic_auto_loc_list = 1
+
+" When set, this option will automatically check syntax errors on write.
+let g:syntastic_check_on_wq = 1
+
+" When set, syntastic runs all checkers that apply then aggregates errors found by all checkers in a single list.
+let g:syntastic_aggregate_errors = 1
+
+let g:syntastic_json_checkers = ['jsonlint']
+let g:syntastic_javascript_checkers = ['jshint', 'eslint']
+let g:syntastic_python_checkers=['pylint']
 
 " -------
 " UltiSnips

@@ -33,3 +33,6 @@ source ~/.vim/formatting.vim
 " plugin configuration (plugin specific key bindings).
 source ~/.vim/plugins.vim
 
+" project Specific .vimrc Files
+source ~/.vim/exrc.vim
+
