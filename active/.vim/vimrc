@@ -4,35 +4,35 @@
 " ------------------------------------------------------------------------------
 
 " plugin and bundle management.
-source ~/.vim/neobundle.vim
+source ~/.vim/vimrc.d/neobundle.vim
 
 " functions.
-source ~/.vim/functions.vim
+source ~/.vim/vimrc.d/functions.vim
 
 " settings based on file type.
-source ~/.vim/filetypes.vim
+source ~/.vim/vimrc.d/filetypes.vim
 
 " auto commands.
-source ~/.vim/autocmds.vim
+source ~/.vim/vimrc.d/autocmds.vim
 
 " behaviors.
-source ~/.vim/behaviors.vim
+source ~/.vim/vimrc.d/behaviors.vim
 
 " custom non-plugin key bindings.
-source ~/.vim/keybindings.vim
+source ~/.vim/vimrc.d/keybindings.vim
 
 " user interface.
-source ~/.vim/ui.vim
+source ~/.vim/vimrc.d/ui.vim
 
 " input sources.
-source ~/.vim/input.vim
+source ~/.vim/vimrc.d/input.vim
 
 " formatting options.
-source ~/.vim/formatting.vim
+source ~/.vim/vimrc.d/formatting.vim
 
 " plugin configuration (plugin specific key bindings).
-source ~/.vim/plugins.vim
+source ~/.vim/vimrc.d/plugins.vim
 
 " project Specific .vimrc Files
-source ~/.vim/exrc.vim
+source ~/.vim/vimrc.d/exrc.vim
 
