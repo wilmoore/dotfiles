@@ -147,22 +147,6 @@ if [[ -z "$LANG" ]]; then
 fi
 
 ################################################################################
-# temporary Files
-################################################################################
-
-# if [[ ! -d "$TMPDIR" ]]; then
-#   export TMPDIR="/tmp/$USER"
-#   mkdir -p -m 700 "$TMPDIR"
-# fi
-#
-# TMPPREFIX="${TMPDIR%/}/zsh"
-# if [[ ! -d "$TMPPREFIX" ]]; then
-#   mkdir -p "$TMPPREFIX"
-# fi
-
-# export TMPDIR="/private/tmp"
-
-################################################################################
 # git
 ################################################################################
 
@@ -177,7 +161,7 @@ export GITHUB_USER='wilmoore'
 export GITHUB_OAUTH_TOKEN=$__PRIVATE_GITHUB_OAUTH_TOKEN
 
 # gh
-export GH_CONFIG=~/.gh
+export GH_CONFIG=$XDG_CONFIG_HOME/gh/config.private
 
 ################################################################################
 # application development variables
