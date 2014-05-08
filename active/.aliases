@@ -60,3 +60,10 @@ alias clear-logs='sudo rm -rf /private/var/log/asl/*.asl'
 
 alias todo='todo.sh'
 
+#
+# global tool installs.
+#
+
+# these really need to be installed by the system packager!
+alias npm-install-g='npm install -g grunt-cli@latest coffee-script@latest jitsu@latest jshint@0.9.1 browser-repl@latest up@latest bower@latest jasmine-node@latest node-inspector@latest JSON.sh@latest broccoli-cli@latest growl@latest'
+

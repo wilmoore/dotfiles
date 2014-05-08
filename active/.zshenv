@@ -52,6 +52,17 @@ path=(
 ################################################################################
 
 #
+# node/npm (because checking in ~/.npmrc is not safe)
+#
+
+export NPM_CONFIG_EMAIL="wil.moore@wilmoore.com"
+export NPM_CONFIG_INIT_AUTHOR_NAME="Wil Moore III"
+export NPM_CONFIG_INIT_AUTHOR_EMAIl="wil.moore@wilmoore.com"
+export NPM_CONFIG_INIT_AUTHOR_URL="http://github.com/wilmoore"
+export NPM_CONFIG_INIT_LICENSE="MIT"
+export NPM_CONFIG_STRICT_SSL="false"
+
+#
 # groovy
 #
 
