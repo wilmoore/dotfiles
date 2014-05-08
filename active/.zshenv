@@ -14,7 +14,7 @@ setopt sh_word_split
 # http://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html
 ################################################################################
 
-$XDG_CONFIG_HOME=$HOME/.config
+export XDG_CONFIG_HOME="$HOME/.config"
 
 ################################################################################
 # auto `cd` paths
