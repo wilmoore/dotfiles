@@ -32,10 +32,8 @@ let g:choosewin_overlay_enable = 1
 " CTRLP
 " -------
 
-let g:ctrlp_map = '<c-p>'
-
-" Set this to 1 to set searching by filename (as opposed to full path) as the
-let g:ctrlp_by_filename = 0
+" Set this to 1 to set searching by filename (as opposed to full path).
+let g:ctrlp_by_filename = 1
 
 " -------
 " TComment

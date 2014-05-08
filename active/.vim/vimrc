@@ -6,7 +6,7 @@
 " plugin and bundle management.
 source ~/.vim/vimrc.d/neobundle.vim
 
-" functions.
+" reusable functions.
 source ~/.vim/vimrc.d/functions.vim
 
 " settings based on file type.
