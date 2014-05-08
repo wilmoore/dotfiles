@@ -42,7 +42,8 @@
   # use vim as preferred editor and start editing at first line when invoked
   editor              = vim -pc ':normal gg'
 
-  excludesfile        = ~/.gitignore
+  # use $XDG_CONFIG_HOME/git/ignore instead
+  # excludesfile        = ~/.gitignore
 
   filemode            = true
 
