@@ -64,17 +64,18 @@ linkable_dotfiles () {
 }
 
 ################################################################################
-# set default shell to "ZSH"
+# set default shell to "ZSH" (TODO: move to brew-chsh-zsh)
 ################################################################################
 
 #TARGET_SHELL=zsh
 #say "Preparing to set set default shell to $TARGET_SHELL"
 
-#if [[ "$(command -v $SHELL)" == "$(command -v $TARGET_SHELL)" ]]; then
-#  say "$TARGET_SHELL already active...nothing to do!"
+#if [[ "$(brew --prefix $TARGET_SHELL)/bin/$TARGET_SHELL" == "$SHELL" ]]; then
+#  say "$TARGET_SHELL already active as $SHELL...nothing to do!"
 #else
-#  [[ -e $(command -v $TARGET_SHELL) ]] || fail "$TARGET_SHELL does not seem to be available...aborting!"
-#  sudo dscl localhost change /Local/Default/Users/$USER UserShell $SHELL $(command -v $TARGET_SHELL) || fail "Unable to set shell to $TARGET_SHELL"
+#  [[ -e "$(brew --prefix $TARGET_SHELL)/bin/$TARGET_SHELL" ]] || fail "$TARGET_SHELL does not seem to be available...aborting!"
+#  sudo dscl localhost change /Local/Default/Users/$USER UserShell $SHELL $(brew --prefix $TARGET_SHELL)/bin/$TARGET_SHELL || fail "Unable to set shell to $TARGET_SHELL"
+#  say "done...shell is now $SHELL"
 #fi
 
 ################################################################################
