@@ -57,6 +57,13 @@ ulimit -n 4096
 # status line
 #
 
-# powerline
-[ -f ~/.homebrew/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh ] && source ~/.homebrew/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+# install powerline if not installed
+if [[ ! -r ~/.homebrew/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh ]]; then
+  [ $(command -v pip) ] && pip install --user git+git://github.com/Lokaltog/powerline
+fi
+
+# init powerline if installed
+if [[ -r ~/.homebrew/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh ]]; then
+  source ~/.homebrew/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+fi
 
