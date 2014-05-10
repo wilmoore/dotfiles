@@ -6,7 +6,7 @@
 " Powerline
 " -------
 
-" source ~/.homebrew/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
+source ~/Library/Python/2.7/lib/python/site-packages/powerline/bindings/vim/plugin/powerline.vim
 set laststatus=2
 let g:Powerline_symbols = 'fancy'
 let g:Powerline_colorscheme='solarized256_dark'
