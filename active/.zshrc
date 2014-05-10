@@ -58,12 +58,15 @@ ulimit -n 4096
 #
 
 # install powerline if not installed
-if [[ ! -r ~/.homebrew/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh ]]; then
+if [[ ! -r ~/Library/Python/2.7/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh ]]; then
   [ $(command -v pip) ] && pip install --user git+git://github.com/Lokaltog/powerline
+  echo "Your shell will terminal in a few seconds..."
+  sleep 5
+  exit 0
 fi
 
 # init powerline if installed
-if [[ -r ~/.homebrew/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh ]]; then
-  source ~/.homebrew/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+if [[ -r ~/Library/Python/2.7/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh ]]; then
+  source ~/Library/Python/2.7/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
 fi
 
