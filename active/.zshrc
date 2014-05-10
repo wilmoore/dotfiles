@@ -14,6 +14,11 @@ fi
 # core
 #
 
+# homebrew installed ZSH
+unalias run-help
+autoload run-help
+HELPDIR=$HOME/.homebrew/share/zsh/helpfiles
+
 # aliases
 source $HOME/.aliases
 
@@ -46,13 +51,12 @@ ulimit -n 4096
   php-version 5
 
 # ruby
-[ -f ~/.homebrew/opt/chruby/share/chruby/chruby.sh ] && source ~/.homebrew/opt/chruby/share/chruby/chruby.sh && \
-  chruby 2
+[ -f ~/.homebrew/opt/chruby/share/chruby/chruby.sh ] && source ~/.homebrew/opt/chruby/share/chruby/chruby.sh && chruby 2
 
 #
 # status line
 #
 
 # powerline
-source ~/.homebrew/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+[ -f ~/.homebrew/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh ] && source ~/.homebrew/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 

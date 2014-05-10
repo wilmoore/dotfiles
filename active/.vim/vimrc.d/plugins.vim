@@ -36,6 +36,15 @@ let g:choosewin_overlay_enable = 1
 let g:ctrlp_by_filename = 1
 
 " -------
+" Switch
+" -------
+
+nnoremap <Down> :Switch<cr>
+nnoremap <Up> :Switch<cr>
+nnoremap <Left> :Switch<cr>
+nnoremap <Right> :Switch<cr>
+
+" -------
 " TComment
 " -------
 

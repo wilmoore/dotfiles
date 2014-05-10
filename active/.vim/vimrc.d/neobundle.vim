@@ -75,6 +75,7 @@ NeoBundle "delimitMate.vim"
 
 " Editing (Contextual)
 NeoBundle 'AndrewRadev/inline_edit.vim'
+NeoBundle 'AndrewRadev/switch.vim'
 
 " Formatting
 NeoBundle 'Syntastic'
