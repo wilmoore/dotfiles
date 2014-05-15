@@ -34,6 +34,8 @@ let g:choosewin_overlay_enable = 1
 
 " Set this to 1 to set searching by filename (as opposed to full path).
 let g:ctrlp_by_filename = 1
+let g:ctrlp_map = '<c-p>'
+nnoremap <c-p> :CtrlP<cr>
 
 " -------
 " Switch

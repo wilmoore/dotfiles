@@ -35,6 +35,9 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle "kien/ctrlp.vim"
 NeoBundle "mru.vim"
 
+" Ascii values
+NeoBundle "tpope/vim-characterize"
+
 " Status line
 NeoBundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 NeoBundle 'stephenmckinney/vim-solarized-powerline'
@@ -70,7 +73,6 @@ NeoBundle 'Valloric/YouCompleteMe', { 'build' : { 'mac' : './install.sh --clang-
 NeoBundle "SirVer/ultisnips"
 
 " Editing
-NeoBundle "YankRing.vim"
 NeoBundle "delimitMate.vim"
 
 " Editing (Contextual)
