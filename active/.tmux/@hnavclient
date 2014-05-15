@@ -19,10 +19,13 @@ if [ $? != 0 ]; then
 
   # split right pane vertically
   tmux split-window -v -p 35 -t $PROJECT:editor
-  tmux send-keys -t $PROJECT "cd $PROJECT ; clear ; grunt server" C-m
+  tmux send-keys -t $PROJECT "cd $PROJECT ; clear" C-m
 
   # select first pane of first window
   tmux select-pane -t $PROJECT:editor.1
+
+  # create a new window for `grunt server`
+  tmux new-window -d -n "grunt server" "cd $PROJECT ; grunt server"
 fi
 
 # attach
