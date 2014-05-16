@@ -29,12 +29,21 @@ nmap  -  <Plug>(choosewin)
 let g:choosewin_overlay_enable = 1
 
 " -------
-" CTRLP
+" CtrlP
 " -------
 
 " Set this to 1 to set searching by filename (as opposed to full path).
 let g:ctrlp_by_filename = 1
 let g:ctrlp_regexp = 1
+
+" CtrlP Config
+" http://blog.mojotech.com/a-veterans-vimrc/
+let g:ctrlp_map = '<Leader>t'
+let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_custom_ignore = '\v\~$|\.(o|swp|pyc|wav|mp3|ogg|blend)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|__init__\.py'
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_dotfiles = 0
+let g:ctrlp_switch_buffer = 0
 
 " -------
 " Switch
