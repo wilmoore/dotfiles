@@ -7,6 +7,12 @@ alias less=$PAGER
 alias zless=$PAGER
 
 #
+# windows compatibility
+#
+
+alias cls='clear'
+
+#
 # colors
 #
 
