@@ -25,6 +25,9 @@ alias colors='for i in {0..255} ; do printf "\x1b[38;5;${i}mcolour${i}\n"; done'
 alias osxup='sudo softwareupdate -i -a'
 alias nosleep='pmset noidle'
 
+# https://news.ycombinator.com/item?id=7748346
+alias lock='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resources/CGSession -suspend'
+
 #
 # zprezto management
 #
