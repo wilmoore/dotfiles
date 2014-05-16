@@ -251,6 +251,7 @@ cask install suspicious-package
 #
 
 install ag
+install archey
 install ctags
 cask install geekbench
 cask install grandperspective

@@ -11,27 +11,6 @@ augroup quit_if_only_nerdtree
 augroup END
 
 " -------
-" Reload $MYVIMRC
-" -------
-
-" Reload vimrc whenever a vim config file is modified
-augroup reload_vimrc
-  autocmd!
-  autocmd bufwritepost $MYVIMRC source $MYVIMRC
-  autocmd bufwritepost ~/.vim/* source $MYVIMRC
-augroup END
-
-" -------
-" Auto-save
-" -------
-
-" auto-save all vim buffers when focus is lost (http://unix.stackexchange.com/a/75066)
-
-augroup auto_save
-  autocmd BufLeave,FocusLost,VimResized * silent! wall
-augroup END
-
-" -------
 " Quickfix Auto Open
 " -------
 
@@ -64,11 +43,8 @@ augroup MyAutoCommands
   " Idea from http://learnvimscriptthehardway.stevelosh.com/chapters/14.html
   autocmd!
 
-  " No formatting on o key newlines
-  autocmd BufNewFile,BufEnter * set formatoptions-=o
-
   " No more complaining about untitled documents
-  autocmd FocusLost silent! :wa
+  " autocmd FocusLost silent! :wa
 
   " When editing a file, always jump to the last cursor position.
   " This must be after the uncompress commands.

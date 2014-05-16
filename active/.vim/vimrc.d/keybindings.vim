@@ -2,30 +2,17 @@
 " Key Bindings
 " ----------------------------------------
 
-" $MYVIMtC reload
-nmap <Leader>rc :source $MYVIMRC<CR>
+" $MYVIMRC reload.
+nmap <Leader>rcl :source $MYVIMRC<CR>
 
-" $MYVIMRC open buffer for editing in new tab/buffer
-nmap <Leader>rt :tabnew $MYVIMRC<CR>
-
-" $MYVIMRC open buffer for editing in current tab/buffer
-nmap <Leader>re :e $MYVIMRC<CR>
-
-" take off the training wheels
-:inoremap  <Up>     <nop>
-:inoremap  <Down>   <nop>
-:inoremap  <Left>   <nop>
-:inoremap  <Right>  <nop>
-:noremap   <Up>     <nop>
-:noremap   <Down>   <nop>
-:noremap   <Left>   <nop>
-:noremap   <Right>  <nop>
+" $MYVIMRC edit in new tab.
+nmap <Leader>rce :tabnew $MYVIMRC<CR>
 
 " -------
-" Escape
+" Escape (to normal mode)
 " -------
 
-" use `jk` for <ESC> (very nice) -- NOTE: if you use `set -o vi` in your shell, `jk` does not work there so you should not unbind <Esc> as you'll need it there.
+" use `jk` for <ESC> (very nice) -- NOTE: if you use `set -o vi` in your shell, `jk` does not work so use <Esc> or <C-[>.
 " see: https://github.com/mutewinter/dot_vim/blob/master/mappings.vim#L88-L96
 :inoremap jk <Esc>
 :inoremap JK <Esc>
@@ -33,72 +20,38 @@ nmap <Leader>re :e $MYVIMRC<CR>
 :inoremap jK <Esc>
 
 " -------
-" Editing
+" Copy/Paste
 " -------
 
-" <Ctrl-J> -- split line on first space
-nmap <C-J> f r<cr>
+" <Ctrl-A> -- visually select all and copy to system clipboard.
+map <C-A> ggvG$"*y<C-o><C-o>
 
-" <leader>pp toggles paste mode
-map <leader>pp :setlocal paste!<cr>
+" <Ctrl-U> -- unformatted system clipboard paste without need to toggle paste.
+" http://stackoverflow.com/a/3217023/128346
+map <C-U> "+p
 
-" <leader>ss toggles spell checking
-map <leader>ss :setlocal spell!<cr>
+" -------
+" Undo/Redo
+" -------
 
 " remap U to <C-r> for easier redo
 " from http://vimbits.com/bits/356
 nnoremap U <C-r>
 
 " -------
-" Opening URLS
-" -------
-
-" open url under cursor
-map gu :!open <cfile><cr>
-
-" -------
-" Git Conflicts
-" -------
-
-" [goto] Git Conflict
-nmap gc /^<<<<<<< HEAD$<cr>
-
-" -------
 " Tabs
 " -------
 
-" Useful mappings for managing tabs (Vim 7 specific mappings)
-if version >= 700
-  nnoremap <C-t> :tabnew<cr>
-  nnoremap <C-l> :tabnext<cr>
-  nnoremap <C-h> :tabprevious<cr>
-endif
+" [OVERRIDE] (:h gf) enhances intrinsice `gf` by opening in tab instead of current buffer.
+map gf :tabedit <cfile><CR>
 
-" opens a new tab edit the file whose name is under or after the cursor
-:map gt :tabedit <cfile><CR>
-
-" Opens a new tab with the current buffer's path
-" Super useful when editing files in the same directory
-map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
-
-" Switch CWD to the directory of the open buffer
-map <leader>cd :cd %:p:h<cr>:pwd<cr>
+" go to previous tab (same as gT, but easier to type).
+map ggt :tabprevious<CR>
 
 " -------
 " Quickfix Toggle
 " -------
 
-" Use <leader>q to toggle quick fix window (http://learnvimscriptthehardway.stevelosh.com/chapters/38.html).
-nnoremap <leader>q :call QuickfixToggle()<cr>
-
-" -------
-" Navigation
-" -------
-
-" Page/Scroll UP/DOWN with CTRL + [kj]
-" see: https://github.com/mutewinter/dot_vim/blob/master/mappings.vim#L72-L86
-nnoremap <C-j> 15gjzz
-nnoremap <C-k> 15gkzz
-vnoremap <C-j> 15gjzz
-vnoremap <C-k> 15gkzz
+" Use qq to toggle quick fix window (http://learnvimscriptthehardway.stevelosh.com/chapters/38.html).
+nnoremap qq :call QuickfixToggle()<cr>
 

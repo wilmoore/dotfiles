@@ -77,12 +77,6 @@ set viminfo^=%
 set switchbuf=useopen,usetab,newtab
 set stal=2
 
-" Return to last edit position when opening files (You want this!)
-autocmd BufReadPost *
-    \ if line("'\"") > 0 && line("'\"") <= line("$") |
-    \   exe "normal! g`\"" |
-    \ endif
-
 " -------
 " Backup and Swap
 " -------

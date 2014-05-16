@@ -2,11 +2,6 @@
 " Formatting
 " ----------------------------------------
 
-" unix line endings (why would you not?)
-if &modifiable
-  set ff=unix
-endif
-
 " do not wrap
 set nowrap
 

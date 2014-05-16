@@ -24,8 +24,8 @@ source ~/.vim/vimrc.d/keybindings.vim
 " user interface.
 source ~/.vim/vimrc.d/ui.vim
 
-" input sources.
-source ~/.vim/vimrc.d/input.vim
+" mouse.
+source ~/.vim/vimrc.d/mouse.vim
 
 " formatting options.
 source ~/.vim/vimrc.d/formatting.vim
