@@ -20,6 +20,19 @@ nmap <Leader>rce :tabnew $MYVIMRC<CR>
 :inoremap jK <Esc>
 
 " -------
+" Window/Split Navigation
+" -------
+
+" use the standard movement keys (with CTRL modifier) to navigate windows/splits.
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-l> <c-w>l
+map <c-h> <c-w>h
+
+" double-tab to cycle through windows/splits.
+map <Tab><Tab> <C-W>w
+
+" -------
 " Copy/Paste
 " -------
 

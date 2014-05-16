@@ -35,7 +35,7 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle "kien/ctrlp.vim"
 NeoBundle "mru.vim"
 
-" Ascii values
+" ASCII values
 NeoBundle "tpope/vim-characterize"
 
 " Status line
