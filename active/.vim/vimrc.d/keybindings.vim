@@ -2,11 +2,11 @@
 " Key Bindings
 " ----------------------------------------
 
-" $MYVIMRC reload.
+" source $MYVIMRC.
 nmap <Leader>rcl :source $MYVIMRC<CR>
 
-" $MYVIMRC edit in new tab.
-nmap <Leader>rce :tabnew $MYVIMRC<CR>
+" edit $MYVIMRC in new tab.
+nmap <Leader>rce :tabedit $MYVIMRC<CR>
 
 " -------
 " Escape (to normal mode)
@@ -55,7 +55,7 @@ nnoremap U <C-r>
 " Tabs
 " -------
 
-" [OVERRIDE] (:h gf) enhances intrinsice `gf` by opening in tab instead of current buffer.
+" [OVERRIDE] (:h gf) enhances intrinsic `gf` by opening in tab instead of current buffer.
 map gf :tabedit <cfile><CR>
 
 " go to previous tab (same as gT, but easier to type).

@@ -6,7 +6,7 @@
 " Powerline
 " -------
 
-source ~/Library/Python/2.7/lib/python/site-packages/powerline/bindings/vim/plugin/powerline.vim
+" source ~/Library/Python/2.7/lib/python/site-packages/powerline/bindings/vim/plugin/powerline.vim
 set laststatus=2
 let g:Powerline_symbols = 'fancy'
 let g:Powerline_colorscheme='solarized256_dark'
@@ -106,12 +106,6 @@ let g:gist_clip_command = "pbcopy"
 let g:gist_detect_filetype = 1
 let g:gist_open_browser_after_post = 1
 let g:gist_post_private = 1
-
-" -------
-" Yankring
-" -------
-
-let g:yankring_history_dir = '~/.vim'
 
 " -------
 " Syntastic
