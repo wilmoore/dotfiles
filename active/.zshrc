@@ -4,6 +4,7 @@
 
 #
 # prezto
+# https://github.com/sorin-ionescu/prezto
 #
 
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
