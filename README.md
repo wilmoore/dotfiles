@@ -1,3 +1,12 @@
+## Table of Contents
+
+This table of contents is not exhaustive in that it only links directly to configuration files that most people are likely interested.
+
+- [Git](active/.config/git/config)
+- [Homebrew](active/.brews.d)
+- [Tmux](active/.tmux.conf)
+- [Vim](active/.vim)
+
 ## Setup / Install
 
     % bash < <(curl -s https://raw.github.com/wilmoore/dotfiles/master/setup)
