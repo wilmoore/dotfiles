@@ -29,6 +29,16 @@ nmap  -  <Plug>(choosewin)
 let g:choosewin_overlay_enable = 1
 
 " -------
+" SplitJoin
+" -------
+
+let g:splitjoin_split_mapping = ''
+let g:splitjoin_join_mapping = ''
+
+map sjs :SplitjoinSplit<cr>
+nmap sjj :SplitjoinJoin<cr>
+
+" -------
 " CtrlP
 " -------
 

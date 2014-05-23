@@ -10,6 +10,13 @@
 setopt sh_word_split
 
 ################################################################################
+# performance
+################################################################################
+
+# http://blog.borntyping.co.uk/posts/zsh-startup-time.html
+skip_global_compinit=1
+
+################################################################################
 # XDG Base Directory
 # http://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html
 ################################################################################

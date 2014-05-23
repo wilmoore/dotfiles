@@ -1,4 +1,20 @@
 " ----------------------------------------
+" To Evaluate
+" ----------------------------------------
+
+" vim-lion
+" https://github.com/tommcdo/vim-lion
+" http://www.reddit.com/r/vim/comments/267vrv/i_am_tim_pope_crafter_of_plugins_ama/choomfr
+
+" vim-sneak (alternative to easymotion)
+" https://github.com/justinmk/vim-sneak
+" http://www.reddit.com/r/vim/comments/267vrv/i_am_tim_pope_crafter_of_plugins_ama/chol6k2
+
+" targets.vim
+" https://github.com/wellle/targets.vim
+" http://www.reddit.com/r/vim/comments/267vrv/i_am_tim_pope_crafter_of_plugins_ama/chopyo8
+
+" ----------------------------------------
 " NeoBundle
 " ----------------------------------------
 
@@ -34,6 +50,7 @@ NeoBundle 'easymotion'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle "kien/ctrlp.vim"
 NeoBundle "mru.vim"
+NeoBundle "tpope/vim-projectionist"
 
 " ASCII values
 NeoBundle "tpope/vim-characterize"
@@ -74,14 +91,16 @@ NeoBundle "SirVer/ultisnips"
 
 " Editing
 NeoBundle "delimitMate.vim"
+NeoBundle "endwise.vim"
 
 " Editing (Contextual)
 NeoBundle 'AndrewRadev/inline_edit.vim'
 NeoBundle 'AndrewRadev/switch.vim'
 
 " Formatting
-NeoBundle 'Syntastic'
 NeoBundle 'editorconfig-vim'
+NeoBundle 'splitjoin.vim'
+NeoBundle 'Syntastic'
 
 " Search & Replace
 NeoBundle 'epmatsw/ag.vim'

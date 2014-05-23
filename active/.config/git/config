@@ -35,6 +35,7 @@
 
   # always use https
   protocol            = https
+	autoUpdate = never
 
 [core]
   bare                = false

@@ -3,7 +3,7 @@
 # Install these via `brew bundle-dir` (http://git.io/xwPDxA) or `brew bundle`
 ################################################################################
 
-# Update
+# keep up-to-date
 update
 upgrade
 
@@ -251,7 +251,6 @@ cask install suspicious-package
 #
 
 install ag
-install archey
 install ctags
 cask install geekbench
 cask install grandperspective
@@ -260,6 +259,7 @@ install jq
 install jsonpp
 cask install jimbojsb/launchrocket/launchrocket
 install lnav
+install moreutils
 # https://github.com/Homebrew/homebrew-binary/pull/58
 install https://raw.github.com/egrim/homebrew-binary/add-ngrok/ngrok.rb
 install pcre
@@ -393,9 +393,7 @@ install sendemail
 
 cask install libreoffice
 
-#
-# usb/serial drivers
-#
-
-# cask install https://github.webapps.rr.com/hnav/homebrew/raw/master/prolific-usb-serial-driver.rb
+# drop outdated versions.
+cleanup
+cask cleanup
 
