@@ -1,4 +1,4 @@
-[submodule "active/.zprezto"]
-  path = active/.zprezto
+[submodule "active/.config/zsh/.zprezto"]
+	path = active/.config/zsh/.zprezto
   url = https://github.com/sorin-ionescu/prezto.git
 
