@@ -6,42 +6,24 @@
 # General
 #
 
-# Set case-sensitivity for completion, history lookup, etc.
-# zstyle ':prezto:*:*' case-sensitive 'yes'
-
 # Color output (auto set to 'no' on dumb terminals).
 zstyle ':prezto:*:*' color 'yes'
-
-# Set the Zsh modules to load (man zshmodules).
-# zstyle ':prezto:load' zmodule 'attr' 'stat'
-
-# Set the Zsh functions to load (man zshcontrib).
-# zstyle ':prezto:load' zfunction 'zargs' 'zmv'
 
 # Set the Prezto modules to load (browse modules).
 # The order matters.
 zstyle ':prezto:load' pmodule \
+  'environment' \
+  'utility' \
   'completion' \
   'directory' \
   'editor' \
-  'environment' \
-  'git' \
-  'haskell' \
   'history' \
   'history-substring-search' \
-  'homebrew' \
-  'node' \
   'osx' \
-  'prompt' \
-  'python' \
-  'rails' \
-  'rsync' \
-  'ruby' \
   'spectrum' \
   'ssh' \
-  'terminal' \
-  'tmux' \
-  'utility'
+  'python' \
+  'prompt'
 
 #
 # Editor
@@ -50,22 +32,9 @@ zstyle ':prezto:load' pmodule \
 # Set the key mapping style to 'emacs' or 'vi'.
 zstyle ':prezto:module:editor' key-bindings 'vi'
 
-# Auto convert .... to ../..
-zstyle ':prezto:module:editor' dot-expansion 'yes'
-
-#
-# Git
-#
-
-# Ignore submodules when they are 'dirty', 'untracked', 'all', or 'none'.
-# zstyle ':prezto:module:git:status:ignore' submodules 'all'
-
 #
 # GNU Utility
 #
-
-# Set the command prefix on non-GNU systems.
-# zstyle ':prezto:module:gnu-utility' prefix 'g'
 
 # disable color diff as it messes up the intrinsic diff tool which does not work on directories
 # https://github.com/sorin-ionescu/prezto/issues/332
@@ -79,19 +48,10 @@ zstyle ':prezto:module:utility:diff' color 'no'
 zstyle ':prezto:module:history-substring-search' color 'yes'
 
 #
-# Pacman
-#
-
-# Set the Pacman frontend.
-# zstyle ':prezto:module:pacman' frontend 'yaourt'
-
-#
 # Prompt
 #
 
-# Set the prompt theme to load.
 # Setting it to 'random' loads a random theme.
-# Auto set to 'off' on dumb terminals.
 zstyle ':prezto:module:prompt' theme 'sorin'
 
 #
@@ -99,35 +59,5 @@ zstyle ':prezto:module:prompt' theme 'sorin'
 #
 
 # Set the SSH identities to load into the agent (NOTE: not used on OSX).
-# zstyle ':prezto:module:ssh:load' identities 'id_rsa' 'id_rsa2' 'id_github'
-
-#
-# Syntax Highlighting
-#
-
-# Set syntax highlighters.
-# By default, only the main highlighter is enabled.
-# zstyle ':prezto:module:syntax-highlighting' highlighters \
-#   'main' \
-#   'brackets' \
-#   'pattern' \
-#   'cursor' \
-#   'root'
-#
-# Set syntax highlighting styles.
-# zstyle ':prezto:module:syntax-highlighting' styles \
-#   'builtin' 'bg=blue' \
-#   'command' 'bg=blue' \
-#   'function' 'bg=blue'
-#
-
-#
-# Tmux
-#
-
-# Auto start a session when Zsh is launched in a local terminal.
-zstyle ':prezto:module:tmux:auto-start' local 'no'
-
-# Auto start a session when Zsh is launched in a SSH connection.
-zstyle ':prezto:module:tmux:auto-start' remote 'yes'
+zstyle ':prezto:module:ssh:load' identities 'digitalocean.rsa' 'jenkins@hnav02.rsa' 'joyent.rsa' 'root@mongo-devtest'
 

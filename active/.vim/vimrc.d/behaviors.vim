@@ -6,7 +6,7 @@
 " Vim Info
 " -------
 
-set viminfo+=n$HOME/.vim/viminfo
+set viminfo+=%,\"100,'10,/50,:100,h,f0,n$HOME/.vim/viminfo
 
 " -------
 " Sound

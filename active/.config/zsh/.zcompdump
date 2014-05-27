@@ -1,4 +1,4 @@
-#files: 821	version: 5.0.5
+#files: 816	version: 5.0.5
 
 _comps=(
 '-' '_precommand'
@@ -458,12 +458,7 @@ _comps=(
 'git' '_git'
 'git-buildpackage' '_git-buildpackage'
 'git-flow' '_git-flow'
-'git-hub-browse' '_git-hub-browse'
-'git-hub-shorten-url' '_git-hub-shorten-url'
-'git-info' '_git-info'
 'git-pulls' '_git-pulls'
-'git-submodule-move' '_git-submodule-move'
-'git-submodule-remove' '_git-submodule-remove'
 'git-wtf' '_git-wtf'
 'github' '_github'
 'gitk' '_git'
@@ -1523,8 +1518,7 @@ autoload -Uz _SuSEconfig _a2ps _a2utils _aap _ack \
             _generic _genisoimage _genlop _gentoo_packages _gentoolkit \
             _getclip _getconf _getent _getfacl _getmail \
             _gh _gist _git _git-buildpackage _git-flow \
-            _git-hub-browse _git-hub-shorten-url _git-info _git-pulls _git-submodule-move \
-            _git-submodule-remove _git-wtf _github _global _global_tags \
+            _git-pulls _git-wtf _github _global _global_tags \
             _globflags _globqual_delims _globquals _gnome-gv _gnu_generic \
             _gnupod _gnutls _go _google _gpg \
             _gphoto2 _gprof _gqview _gradle _graphicsmagick \
