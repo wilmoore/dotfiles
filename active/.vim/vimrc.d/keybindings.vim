@@ -33,11 +33,24 @@ map <c-h> <c-w>h
 map <Tab><Tab> <C-W>w
 
 " -------
-" Copy/Paste
+" Increment/Decrement
 " -------
 
-" <Ctrl-A> -- visually select all and copy to system clipboard.
-map <C-A> ggvG$"*y<C-o><C-o>
+" support shifted and non-shifted keys. (increment)
+nnoremap + <C-a>
+nnoremap = <C-a>
+nnoremap <Up> <C-a>
+nnoremap <Right> <C-a>
+
+" support shifted and non-shifted keys. (decrement)
+nnoremap - <C-x>
+nnoremap _ <C-x>
+nnoremap <Left> <C-x>
+nnoremap <Down> <C-x>
+
+" -------
+" Paste
+" -------
 
 " <Ctrl-U> -- unformatted system clipboard paste without need to toggle paste.
 " http://stackoverflow.com/a/3217023/128346

@@ -44,8 +44,6 @@ NeoBundle "tpope/vim-dispatch"
 " Navigation, Exploration
 NeoBundle "file-line"
 NeoBundle 'Shougo/unite.vim'
-NeoBundle 'kien/tabman.vim'
-NeoBundle 't9md/vim-choosewin'
 NeoBundle 'easymotion'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle "kien/ctrlp.vim"
@@ -65,6 +63,10 @@ NeoBundle 'stephenmckinney/vim-solarized-powerline'
 NeoBundle "terryma/vim-multiple-cursors"
 NeoBundle "myusuf3/numbers.vim"
 
+" Visual Indicators
+NeoBundle "nathanaelkane/vim-indent-guides"
+NeoBundle "mhinz/vim-signify"
+
 " Commands
 NeoBundle "tComment"
 
@@ -72,8 +74,6 @@ NeoBundle "tComment"
 NeoBundle 'flazz/vim-colorschemes'
 
 " VCS
-"   General
-NeoBundle "mhinz/vim-signify"
 "   Git
 NeoBundle "git.zip"
 NeoBundle 'tpope/vim-fugitive'
@@ -92,10 +92,12 @@ NeoBundle "SirVer/ultisnips"
 " Editing
 NeoBundle "delimitMate.vim"
 NeoBundle "endwise.vim"
+NeoBundle "sjl/gundo.vim"
 
 " Editing (Contextual)
 NeoBundle 'AndrewRadev/inline_edit.vim'
-NeoBundle 'AndrewRadev/switch.vim'
+NeoBundle 'mjbrownie/swapit'
+NeoBundle 'tpope/vim-speeddating'
 
 " Formatting
 NeoBundle 'editorconfig-vim'

@@ -6,7 +6,6 @@
 " Powerline
 " -------
 
-" source ~/Library/Python/2.7/lib/python/site-packages/powerline/bindings/vim/plugin/powerline.vim
 set laststatus=2
 let g:Powerline_symbols = 'fancy'
 let g:Powerline_colorscheme='solarized256_dark'
@@ -17,16 +16,6 @@ let g:Powerline_colorscheme='solarized256_dark'
 
 " http://www.vim.org/scripts/script.php?script_id=4487
 let g:signify_mapping_toggle_highlight = '<leader>gh'
-
-" -------
-" Choose Window
-" -------
-
-" mapping
-nmap  -  <Plug>(choosewin)
-
-" show big letters
-let g:choosewin_overlay_enable = 1
 
 " -------
 " SplitJoin
@@ -54,15 +43,6 @@ let g:ctrlp_custom_ignore = '\v\~$|\.(o|swp|pyc|wav|mp3|ogg|blend)$|(^|[/\\])\.(
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_dotfiles = 0
 let g:ctrlp_switch_buffer = 0
-
-" -------
-" Switch
-" -------
-
-nnoremap <Down> :Switch<cr>
-nnoremap <Up> :Switch<cr>
-nnoremap <Left> :Switch<cr>
-nnoremap <Right> :Switch<cr>
 
 " -------
 " TComment

@@ -246,6 +246,13 @@ cask install betterzipql
 cask install webp-quicklook
 cask install suspicious-package
 
+
+#
+# game development
+#
+
+cask install gamesalad
+
 #
 # utility
 #
