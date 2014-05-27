@@ -53,6 +53,12 @@ nnoremap // :TComment<CR>
 vnoremap // :TComment<CR>
 
 " -------
+" MRU
+" -------
+
+let MRU_File=expand($HOME). "/.vim/.vim_mru_files"
+
+" -------
 " NERDTree
 " -------
 

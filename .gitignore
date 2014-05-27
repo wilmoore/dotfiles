@@ -2,3 +2,6 @@
 .zhistory
 yankring_history*.txt
 active/.virtualbox
+.vim_mru_files
+viminfo
+
