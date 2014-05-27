@@ -15,5 +15,8 @@ export XDG_DATA_HOME="$HOME/.local/share"
 # Bootstrap ZSH Configuration
 ################################################################################
 
+# https://github.com/PaBLoX-CL/dotfiles/blob/master/zshenv
+# http://zsh.sourceforge.net/Intro/intro_3.html
+
 ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 source "$ZDOTDIR"/.zshenv

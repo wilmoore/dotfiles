@@ -86,7 +86,7 @@ path=($GOPATH/bin $path)
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 # where are your brew bundles?
-export HOMEBREW_BUNDLES_D="~/.brews.d"
+export HOMEBREW_BUNDLES_D="$XDG_CONFIG_HOME/brew"
 
 #
 # man page search paths
