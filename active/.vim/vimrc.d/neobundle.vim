@@ -2,10 +2,6 @@
 " To Evaluate
 " ----------------------------------------
 
-" vim-lion
-" https://github.com/tommcdo/vim-lion
-" http://www.reddit.com/r/vim/comments/267vrv/i_am_tim_pope_crafter_of_plugins_ama/choomfr
-
 " vim-sneak (alternative to easymotion)
 " https://github.com/justinmk/vim-sneak
 " http://www.reddit.com/r/vim/comments/267vrv/i_am_tim_pope_crafter_of_plugins_ama/chol6k2
@@ -13,6 +9,9 @@
 " targets.vim
 " https://github.com/wellle/targets.vim
 " http://www.reddit.com/r/vim/comments/267vrv/i_am_tim_pope_crafter_of_plugins_ama/chopyo8
+
+" fzf
+" https://github.com/junegunn/fzf
 
 " ----------------------------------------
 " NeoBundle
@@ -72,6 +71,7 @@ NeoBundle "tComment"
 
 " Color Schemes, Themes
 NeoBundle 'flazz/vim-colorschemes'
+NeoBundle 'CSApprox'
 
 " VCS
 "   Git
@@ -82,6 +82,7 @@ NeoBundle 'gitv'
 "   Github
 NeoBundle "mattn/webapi-vim"
 NeoBundle "mattn/gist-vim"
+NeoBundle 'junegunn/vim-github-dashboard'
 
 " Completion
 NeoBundle 'Valloric/YouCompleteMe', { 'build' : { 'mac' : './install.sh --clang-completer', 'unix' : './install.sh --clang-completer' }}
@@ -103,6 +104,7 @@ NeoBundle 'tpope/vim-speeddating'
 NeoBundle 'editorconfig-vim'
 NeoBundle 'splitjoin.vim'
 NeoBundle 'Syntastic'
+NeoBundle 'junegunn/vim-easy-align'
 
 " Search & Replace
 NeoBundle 'epmatsw/ag.vim'

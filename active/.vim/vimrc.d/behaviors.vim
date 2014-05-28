@@ -3,6 +3,13 @@
 " ----------------------------------------
 
 " -------
+" Sequence Timing
+" -------
+	
+" http://cloudhead.io/2010/04/24/staying-the-hell-out-of-insert-mode/
+set timeoutlen=200
+
+" -------
 " Vim Info
 " -------
 

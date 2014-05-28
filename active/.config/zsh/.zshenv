@@ -17,12 +17,18 @@ setopt sh_word_split
 skip_global_compinit=1
 
 ################################################################################
+# projects
+################################################################################
+
+export ACTIVE_PROJECTS_DIR="$HOME/projects/active"
+
+################################################################################
 # auto `cd` paths
 ################################################################################
 
 cdpath=(
-  $HOME                 # ~/
-  $HOME/projects/active # active projects
+  $HOME                 # home directory
+  $ACTIVE_PROJECTS_DIR  # active projects
   $cdpath               # default
 )
 
