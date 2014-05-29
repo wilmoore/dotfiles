@@ -172,6 +172,9 @@
   # open modified files in your configured editor
   edit-modified       = !$EDITOR $(git status --porcelain | grep -E '[^MARC]' | awk '{print $NF}')
 
+  # name of branch that current branch is based on.
+  fork-point          = !git branch --contains $(git merge-base --fork-point HEAD) | grep -v $(git name-rev --name-only HEAD) | tr -d ' '
+
   # get a fresh start by checking out master and syncing, and cleaning up finished branches.
   fresh-start         = !git checkout master && git sync && git finish-merged
 
