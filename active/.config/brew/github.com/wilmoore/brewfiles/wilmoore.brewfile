@@ -369,10 +369,11 @@ cask install balsamiq-mockups
 install translate-toolkit
 
 #
-# screen capture.
+# screen capture/casting.
 #
 
 cask install licecap
+install ttyrec
 install webkit2png
 
 #

@@ -107,6 +107,13 @@ MANPATH=$HOME/.homebrew/share/man:$MANPATH
 # erlang is special
 MANPATH=$(brew --prefix erlang)/lib/erlang/man:$MANPATH
 
+#
+# packages that are not yet in homebrew
+#
+
+# osx-screencast
+path=($HOME/.local/osx-screencast $path)
+
 ################################################################################
 # terminal
 ################################################################################

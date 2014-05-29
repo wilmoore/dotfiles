@@ -2,6 +2,6 @@
 	path = active/.config/zsh/.zprezto
   url = https://github.com/sorin-ionescu/prezto.git
 
-[submodule "active/.local/osx-screencast"]
-	path = active/.local/osx-screencast
-	url = https://github.com/bpkg/osx-screencast.git
+[submodule "active/.vim/bundle/neobundle.vim"]
+	path = active/.vim/bundle/neobundle.vim
+	url = https://github.com/Shougo/neobundle.vim.git
