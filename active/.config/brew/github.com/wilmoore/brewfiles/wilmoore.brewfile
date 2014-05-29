@@ -86,6 +86,7 @@ install apple-gcc42
 install autoconf
 install automake
 install cmake
+install clib
 install gettext
 install global
 install intltool
@@ -378,6 +379,8 @@ install webkit2png
 # image manipulation
 #
 
+install graphicsmagick
+install imagemagick
 cask install imageoptim
 cask install imagealpha
 cask install texturepacker
