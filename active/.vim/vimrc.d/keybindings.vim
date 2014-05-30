@@ -16,20 +16,11 @@ nmap <Leader>rce :tabedit $MYVIMRC<CR>
 " see: https://github.com/mutewinter/dot_vim/blob/master/mappings.vim#L88-L96
 " http://cloudhead.io/2010/04/24/staying-the-hell-out-of-insert-mode/
 
-:inoremap jk <Esc>
-:inoremap JK <Esc>
-:inoremap Jk <Esc>
-:inoremap jK <Esc>
+inoremap jk <Esc>
 
 " -------
 " Window/Split Navigation
 " -------
-
-" use the standard movement keys (with CTRL modifier) to navigate windows/splits.
-map <c-j> <c-w>j
-map <c-k> <c-w>k
-map <c-l> <c-w>l
-map <c-h> <c-w>h
 
 " double-tab to cycle through windows/splits.
 map <Tab><Tab> <C-W>w
@@ -49,6 +40,15 @@ nnoremap - <C-x>
 nnoremap _ <C-x>
 nnoremap <Left> <C-x>
 nnoremap <Down> <C-x>
+
+" -------
+" Quoting
+" -------
+
+" inspired by: http://learnvimscriptthehardway.stevelosh.com/chapters/09.html
+
+:nnoremap "" viw<esc>a"<esc>hbi"<esc>lel
+:nnoremap '' viw<esc>a'<esc>hbi'<esc>lel
 
 " -------
 " Paste

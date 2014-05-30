@@ -11,6 +11,20 @@ let g:Powerline_symbols = 'fancy'
 let g:Powerline_colorscheme='solarized256_dark'
 
 " -------
+" open-browser
+" -------
+
+let g:netrw_nogx = 1 " disable netrw's gx mapping.
+
+" open url.
+nmap gx <Plug>(openbrowser-open)
+vmap gx <Plug>(openbrowser-open)
+
+" search word.
+nmap gs <Plug>(openbrowser-search)
+vmap gs <Plug>(openbrowser-search)
+
+" -------
 " Signify
 " -------
 
@@ -51,6 +65,15 @@ let g:ctrlp_switch_buffer = 0
 " key bindings
 nnoremap // :TComment<CR>
 vnoremap // :TComment<CR>
+
+" -------
+" Swapit & SpeedDating
+" -------
+
+nmap <Plug>SwapItFallbackIncrement <Plug>SpeedDatingUp
+nmap <Plug>SwapItFallbackDecrement <Plug>SpeedDatingDown
+vmap <Plug>SwapItFallbackIncrement <Plug>SpeedDatingUp
+vmap <Plug>SwapItFallbackDecrement <Plug>SpeedDatingDown
 
 " -------
 " MRU

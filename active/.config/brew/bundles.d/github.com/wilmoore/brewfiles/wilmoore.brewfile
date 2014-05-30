@@ -225,6 +225,8 @@ install v8
 # databases
 #
 
+# install influxdb (https://github.com/influxdb/influxdb.org/issues/28)
+install mongodb
 cask install mysqlworkbench
 install redis
 install rethinkdb
@@ -372,6 +374,7 @@ install translate-toolkit
 # screen capture/casting.
 #
 
+install https://raw.githubusercontent.com/sickill/asciinema/master/packaging/homebrew/asciinema.rb
 cask install licecap
 install ttyrec
 install webkit2png
@@ -385,6 +388,13 @@ install imagemagick
 cask install imageoptim
 cask install imagealpha
 cask install texturepacker
+cask install xee
+
+#
+# logging / graphing
+#
+
+install rrdtool
 
 #
 # acceptance testing

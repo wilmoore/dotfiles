@@ -2,6 +2,9 @@
 " To Evaluate
 " ----------------------------------------
 
+" vim-testdrive
+" https://github.com/monokrome/vim-testdrive
+
 " vim-sneak (alternative to easymotion)
 " https://github.com/justinmk/vim-sneak
 " http://www.reddit.com/r/vim/comments/267vrv/i_am_tim_pope_crafter_of_plugins_ama/chol6k2
@@ -48,6 +51,7 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle "kien/ctrlp.vim"
 NeoBundle "mru.vim"
 NeoBundle "tpope/vim-projectionist"
+NeoBundle "open-browser.vim"
 
 " ASCII values
 NeoBundle "tpope/vim-characterize"
@@ -97,6 +101,7 @@ NeoBundle "sjl/gundo.vim"
 
 " Editing (Contextual)
 NeoBundle 'AndrewRadev/inline_edit.vim'
+NeoBundle 'chrisbra/NrrwRgn'
 NeoBundle 'mjbrownie/swapit'
 NeoBundle 'tpope/vim-speeddating'
 

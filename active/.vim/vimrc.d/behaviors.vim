@@ -7,13 +7,13 @@
 " -------
 	
 " http://cloudhead.io/2010/04/24/staying-the-hell-out-of-insert-mode/
-set timeoutlen=200
+" set timeoutlen=200
 
 " -------
 " Vim Info
 " -------
 
-set viminfo+=%,\"100,'10,/50,:100,h,f0,n$HOME/.vim/viminfo
+" set viminfo+=%,\"100,'10,/50,:100,h,f0,n$HOME/.vim/viminfo
 
 " -------
 " Sound
