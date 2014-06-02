@@ -176,6 +176,7 @@ install netcat
 install ngrep
 install nmap
 cask install serf
+install socat
 cask install speedlimit
 install homebrew/dupes/tcpdump
 install wireshark
@@ -311,10 +312,11 @@ cask install vagrant
 cask install virtualbox
 
 #
-# documentation
+# shell
 #
 
 # zsh
+install zsh-completions
 install zsh-lovers
 install zsh
 
@@ -391,12 +393,6 @@ cask install texturepacker
 cask install xee
 
 #
-# logging / graphing
-#
-
-install rrdtool
-
-#
 # acceptance testing
 #
 
@@ -414,7 +410,9 @@ install sendemail
 
 cask install libreoffice
 
-# drop outdated versions.
+# keep things tidy.
 cleanup
 cask cleanup
+prune
+
 

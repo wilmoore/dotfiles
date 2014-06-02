@@ -49,6 +49,7 @@ nnoremap <Down> <C-x>
 
 :nnoremap "" viw<esc>a"<esc>hbi"<esc>lel
 :nnoremap '' viw<esc>a'<esc>hbi'<esc>lel
+:nnoremap `` viw<esc>a`<esc>hbi`<esc>lel
 
 " -------
 " Paste

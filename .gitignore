@@ -2,6 +2,6 @@
 .zhistory
 yankring_history*.txt
 active/.virtualbox
+active/.config/robomongo/robomongo.json
 .vim_mru_files
 viminfo
-

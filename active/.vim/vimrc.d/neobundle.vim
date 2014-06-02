@@ -122,6 +122,7 @@ NeoBundle 'elzr/vim-json'
 NeoBundle 'jQuery'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
+NeoBundle 'moll/vim-node'
 NeoBundle 'marijnh/tern_for_vim', { 'build': { 'others': 'npm install' }}
 "   Go
 NeoBundle 'jnwhiteh/vim-golang'
