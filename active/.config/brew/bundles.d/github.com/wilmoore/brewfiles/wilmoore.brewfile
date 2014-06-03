@@ -28,7 +28,6 @@ install brew-cask
 # GUI Mac applications (free)
 #
 
-cask install adium
 cask install alfred
 cask alfred link
 cask install calibre
@@ -50,26 +49,29 @@ cask install heroku-toolbelt
 cask install inkscape
 cask install kaleidoscope
 cask install ksdiff
-cask install limechat
 cask install mailplane
 cask install marked2
-cask install mysql-workbench
 cask install node-webkit
 cask install onepassword
 cask install opera
-cask install pgadmin3
 cask install poedit
-cask install postgres
-cask install redis-desktop-manager
-cask install robomongo
+
 cask install screenhero
 cask install sequel-pro
 cask install sizeup
-cask install skype
 cask install smcfancontrol
 cask install sourcetree
 cask install spotify
 cask install xscope
+
+#
+# chat, IM, irc
+#
+
+cask install adium
+cask install limechat
+cask install skype
+cask install slack
 
 #
 # archive
@@ -226,19 +228,25 @@ install v8
 # databases
 #
 
-# install influxdb (https://github.com/influxdb/influxdb.org/issues/28)
+# https://github.com/influxdb/influxdb.org/issues/28
+# install influxdb
 install mongodb
+cask install mysql-workbench
 cask install mysqlworkbench
+cask install pgadmin3
+cask install postgres
 install redis
+cask install redis-desktop-manager
 install rethinkdb
 install riak
+cask install robomongo
 install sqlite3
 
 #
 # quick look plugins
 #
 
-cask install phinze/cask/cert-quicklook
+cask install cert-quicklook
 cask install qlcolorcode
 cask install qlstephen
 cask install qlmarkdown
@@ -276,6 +284,7 @@ install https://raw.github.com/egrim/homebrew-binary/add-ngrok/ngrok.rb
 install pcre
 install reattach-to-user-namespace
 install terminal-notifier
+install gnu-time
 install todo-txt
 install tmux
 install tree
@@ -345,7 +354,7 @@ cask install send-to-kindle
 # mobile development
 #
 
-cask install phinze/cask/pusher
+cask install pusher
 
 #
 # fonts

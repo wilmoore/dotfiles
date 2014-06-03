@@ -81,5 +81,5 @@ alias todo='todo.sh'
 #
 
 # these really need to be installed by the system packager!
-alias npm-install-g='npm install -g grunt-cli@latest jshint@0.9.1 browser-repl@latest up@latest node-inspector@latest JSON.sh@latest'
+alias npm-install-g='npm install -g vimdebug@latest grunt-cli@latest jshint@0.9.1 browser-repl@latest up@latest node-inspector@latest JSON.sh@latest'
 
