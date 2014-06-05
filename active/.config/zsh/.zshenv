@@ -33,7 +33,7 @@ cdpath=(
 )
 
 ################################################################################
-# program search path
+# programs and manual page search paths
 ################################################################################
 
 typeset -gU cdpath fpath mailpath path
@@ -50,6 +50,13 @@ path=(
   $HOME/.tmux                # tmux sessions
   $path                      # system defaults
 )
+
+#
+# paths searched for manual pages.
+#
+
+# user installed programs.
+MANPATH=/usr/local/share/man:$MANPATH
 
 ################################################################################
 # programming languages
@@ -98,10 +105,7 @@ export BUNDLE_DIR="$XDG_CONFIG_HOME/brew/bundles.d"
 # man page search paths
 #
 
-# base
-MANPATH=/usr/local/share/man:$MANPATH
-
-# homebrew
+# homebrew installed program man pages
 MANPATH=$HOME/.homebrew/share/man:$MANPATH
 
 # erlang is special
