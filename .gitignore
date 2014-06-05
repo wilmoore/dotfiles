@@ -1,4 +1,5 @@
 *.swp
+*.DS_Store
 .zhistory
 yankring_history*.txt
 active/.virtualbox

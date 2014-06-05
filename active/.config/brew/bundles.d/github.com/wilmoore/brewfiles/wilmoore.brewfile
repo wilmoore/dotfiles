@@ -271,8 +271,7 @@ cask install gamesalad
 #
 
 install vitetris
-# install netris
-install gnuchess
+install gnu-chess
 
 #
 # utility
@@ -415,6 +414,12 @@ cask install xee
 #
 
 install selenium-server-standalone
+
+#
+# web servers
+#
+
+install nginx
 
 #
 # email
