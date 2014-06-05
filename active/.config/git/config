@@ -193,6 +193,10 @@
   # last 5 files commited
   last-commited       = !git log --pretty=format: --name-only | grep -vE '^$' | head -n 5 | sort -u
 
+  # list release tags for:
+  list-releases       = tag --list
+  list-releases-beta  = tag --list *-BETA
+
   # list commits not yet pushed to remote
   local               = log --branches --not --remotes
 
@@ -223,9 +227,6 @@
 
   # github style pull request against origin regarding current branch (FYI, make sure you are using an `https` origin url; otherwise, this won't work)
   pr                  = !git web--browse $(git config --get remote.origin.url | sed 's/.git$//')/pull/new/$(git name-rev --name-only HEAD)
-
-  # list tags for beta releases
-  releases-beta       = tag --list *-BETA
 
   # stage file after resolving a merge conflict (like svn, hg)
   resolve             = stage --

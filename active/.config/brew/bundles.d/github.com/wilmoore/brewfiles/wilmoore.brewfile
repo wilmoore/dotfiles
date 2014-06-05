@@ -13,6 +13,7 @@ upgrade
 
 tap homebrew/binary || true
 tap homebrew/dupes || true
+tap homebrew/games || true
 tap homebrew/headonly || true
 tap homebrew/versions || true
 tap wilmoore/binaries || true
@@ -264,6 +265,14 @@ cask install suspicious-package
 #
 
 cask install gamesalad
+
+#
+# games
+#
+
+install vitetris
+# install netris
+install gnuchess
 
 #
 # utility
