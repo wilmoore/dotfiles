@@ -17,6 +17,7 @@ nmap <Leader>rce :tabedit $MYVIMRC<CR>
 " http://cloudhead.io/2010/04/24/staying-the-hell-out-of-insert-mode/
 
 inoremap jk <Esc>
+inoremap JK <Esc>
 
 " -------
 " Window/Split Navigation
