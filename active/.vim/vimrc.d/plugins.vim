@@ -87,7 +87,7 @@ let MRU_File=expand($HOME). "/.vim/.vim_mru_files"
 " -------
 
 " fl invokes NERDTreeFind
-nmap fl :NERDTreeFind<cr>
+nmap ff :NERDTreeFind<cr>
 
 " Close all open buffers on entering a window if the only
 " buffer that's left is the NERDTree buffer

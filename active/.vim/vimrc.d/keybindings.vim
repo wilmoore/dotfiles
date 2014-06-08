@@ -6,12 +6,12 @@
 " Escape (to normal mode)
 " -------
 
-" use `jk` for <ESC> (very nice) -- NOTE: if you use `set -o vi` in your shell, `jk` does not work so use <Esc> or <C-[>.
+" use `jj` for <ESC> (very nice) -- NOTE: if you use `set -o vi` in your shell, `jk` does not work so use <Esc> or <C-[>.
 " see: https://github.com/mutewinter/dot_vim/blob/master/mappings.vim#L88-L96
 " http://cloudhead.io/2010/04/24/staying-the-hell-out-of-insert-mode/
 
-inoremap jk <Esc>
-inoremap JK <Esc>
+inoremap jj <Esc>
+inoremap JJ <Esc>
 
 " -------
 " Window/Split Navigation
