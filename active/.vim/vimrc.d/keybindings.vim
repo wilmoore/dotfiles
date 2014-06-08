@@ -3,6 +3,14 @@
 " ----------------------------------------
 
 " -------
+" Leader
+" -------
+
+" use <Space> as leader (thanks: http://sheerun.net/2014/03/21/how-to-boost-your-vim-productivity).
+" NOTE: YOU MUST map 'caps lock' to 'control' for this to be useful, otherwise it is quite painful.
+let mapleader = "\<Space>"
+
+" -------
 " Escape (to normal mode)
 " -------
 
@@ -14,6 +22,15 @@
 
 " Why <C-[> instead of <ESC>?
 " Because <C-[> is much more natural for my fingers to reach.
+" NOTE: YOU MUST map 'caps lock' to 'control' for this to be useful, otherwise it is quite painful.
+
+" -------
+" Navigation
+" -------
+
+" Makes `j` and `k` behave as you would expect even on wrapped line.
+nnoremap j gj
+nnoremap k gk
 
 " -------
 " Paste
@@ -42,10 +59,17 @@ map <Tab><Tab> <C-W>w
 " Inspired by Steve Losh's tutorial; however, enhanced to handle punctuated content and adds "`" quoting.
 " http://learnvimscriptthehardway.stevelosh.com/chapters/09.html
 
-:nnoremap "" viW<esc>a"<esc>hBi"<esc>lel " example.com => "example.com"
-:nnoremap '' viW<esc>a'<esc>hBi'<esc>lel " example.com => 'example.com'
-:nnoremap `` viW<esc>a`<esc>hBi`<esc>lel " example.com => `example.com`
-:nnoremap {{ viW<esc>a}<esc>hBi{<esc>lel " example.com => {example.com}
+" example.com => "example.com"
+:noremap "" <esc>Ea"<esc>Bi"<esc>
+
+" example.com => 'example.com'
+:noremap '' <esc>Ea'<esc>Bi'<esc>
+
+" example.com => `example.com`
+:noremap `` <esc>Ea`<esc>Bi`<esc>
+
+" example.com => {example.com}
+:noremap {{ <esc>Ea}<esc>Bi{<esc>
 
 " Use something like "tpope/vim-surround" if you need:
 "
