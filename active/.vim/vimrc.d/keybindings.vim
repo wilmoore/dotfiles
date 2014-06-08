@@ -2,12 +2,6 @@
 " Key Bindings
 " ----------------------------------------
 
-" source $MYVIMRC.
-nmap <Leader>rcl :source $MYVIMRC<CR>
-
-" edit $MYVIMRC in new tab.
-nmap <Leader>rce :tabedit $MYVIMRC<CR>
-
 " -------
 " Escape (to normal mode)
 " -------

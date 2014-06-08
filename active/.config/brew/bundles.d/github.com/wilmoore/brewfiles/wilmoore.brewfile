@@ -284,7 +284,7 @@ cask install grandperspective
 install htop-osx
 install jq
 install jsonpp
-cask install jimbojsb/launchrocket/launchrocket
+cask install launchrocket
 install lnav
 install moreutils
 # https://github.com/Homebrew/homebrew-binary/pull/58
@@ -382,6 +382,8 @@ install macvim --custom-icons --override-system-vim --with-lua --with-luajit --w
 #
 
 cask install balsamiq-mockups
+cask install sketch
+cask install sketch-tool
 
 #
 # localization/translation

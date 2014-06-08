@@ -64,11 +64,13 @@ NeoBundle 'stephenmckinney/vim-solarized-powerline'
 "   - https://github.com/terryma/vim-multiple-cursors
 "   - http://www.youtube.com/watch?v=Umb59mMvCxA
 NeoBundle "terryma/vim-multiple-cursors"
-NeoBundle "myusuf3/numbers.vim"
+" NeoBundle "myusuf3/numbers.vim"
+NeoBundle "RelOps"
 
 " Visual Indicators
 NeoBundle "nathanaelkane/vim-indent-guides"
 NeoBundle "mhinz/vim-signify"
+NeoBundle "kien/rainbow_parentheses.vim"
 
 " Commands
 NeoBundle "tComment"

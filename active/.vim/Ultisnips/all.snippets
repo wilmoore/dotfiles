@@ -1,10 +1,47 @@
 # This file contains snippets that are always defined. I personally
 # have snippets for signatures and often needed texts
 
-# sligthly lower priority than everything else since specialized versions
+# slightly lower priority than everything else since specialized versions
 # should overwrite. The user needs to adjust her priority in her snippets to
 # ~-55 so that other filetypes will still overwrite.
 priority -60
+
+###################
+#  SCRIPT HELPERS #
+###################
+
+snippet sh "Shell Hash-Bang" b
+#!/usr/bin/env ${1:bash}
+endsnippet
+
+###########
+#  FOLDS  #
+###########
+
+snippet fold "Insert a vim fold marker" b
+`!p snip.rv = _get_comment_format()[0]` ${1:Fold description} `!p snip.rv = foldmarker()[0]`${2:1} `!p snip.rv = _get_comment_format()[2]`
+endsnippet
+
+snippet foldc "Insert a vim fold close marker" b
+`!p snip.rv = _get_comment_format()[0]` ${2:1}`!p snip.rv = foldmarker()[1]` `!p snip.rv = _get_comment_format()[2]`
+endsnippet
+
+snippet foldp "Insert a vim fold marker pair" b
+`!p snip.rv = _get_comment_format()[0]` ${1:Fold description} `!p snip.rv = foldmarker()[0]` `!p snip.rv = _get_comment_format()[2]`
+${2:${VISUAL:Content}}
+`!p snip.rv = _get_comment_format()[0]` `!p snip.rv = foldmarker()[1]` $1 `!p snip.rv = _get_comment_format()[2]`
+endsnippet
+
+##########################
+# LOREM IPSUM GENERATORS #
+##########################
+
+snippet lorem "Lorem Ipsum - 50 Words" b
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
+vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+no sea takimata sanctus est Lorem ipsum dolor sit amet.
+endsnippet
 
 ##############
 # NICE BOXES #
@@ -94,38 +131,6 @@ snip.rv = box[0] + '\n' + box[1]
 box = make_box(len(t[1]), width)
 snip.rv = box[2] + '\n' + box[3]`
 $0
-endsnippet
-
-snippet fold "Insert a vim fold marker" b
-`!p snip.rv = _get_comment_format()[0]` ${1:Fold description} `!p snip.rv = foldmarker()[0]`${2:1} `!p snip.rv = _get_comment_format()[2]`
-endsnippet
-
-snippet foldc "Insert a vim fold close marker" b
-`!p snip.rv = _get_comment_format()[0]` ${2:1}`!p snip.rv = foldmarker()[1]` `!p snip.rv = _get_comment_format()[2]`
-endsnippet
-
-snippet foldp "Insert a vim fold marker pair" b
-`!p snip.rv = _get_comment_format()[0]` ${1:Fold description} `!p snip.rv = foldmarker()[0]` `!p snip.rv = _get_comment_format()[2]`
-${2:${VISUAL:Content}}
-`!p snip.rv = _get_comment_format()[0]` `!p snip.rv = foldmarker()[1]` $1 `!p snip.rv = _get_comment_format()[2]`
-endsnippet
-
-##########################
-# LOREM IPSUM GENERATORS #
-##########################
-snippet lorem "Lorem Ipsum - 50 Words" b
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-no sea takimata sanctus est Lorem ipsum dolor sit amet.
-endsnippet
-
-###################
-#  SHELL HELPERS  #
-###################
-
-snippet #! "Shell Hash-Bang" b
-#!/usr/bin/env ${1:bash}
 endsnippet
 
 # vim:ft=snippets:

@@ -26,10 +26,11 @@ vmap gs <Plug>(openbrowser-search)
 
 " -------
 " Signify
+" http://www.vim.org/scripts/script.php?script_id=4487
 " -------
 
-" http://www.vim.org/scripts/script.php?script_id=4487
-let g:signify_mapping_toggle_highlight = '<leader>gh'
+" Enable line highlighting in addition to using signs by default.
+let g:signify_line_highlight = 1
 
 " -------
 " SplitJoin
@@ -51,7 +52,7 @@ let g:ctrlp_regexp = 1
 
 " CtrlP Config
 " http://blog.mojotech.com/a-veterans-vimrc/
-let g:ctrlp_map = '<Leader>t'
+let g:ctrlp_map = 'fs'
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_custom_ignore = '\v\~$|\.(o|swp|pyc|wav|mp3|ogg|blend)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|__init__\.py'
 let g:ctrlp_working_path_mode = 0
@@ -85,6 +86,9 @@ let MRU_File=expand($HOME). "/.vim/.vim_mru_files"
 " NERDTree
 " -------
 
+" fl invokes NERDTreeFind
+nmap fl :NERDTreeFind<cr>
+
 " Close all open buffers on entering a window if the only
 " buffer that's left is the NERDTree buffer
 function! CloseIfOnlyNerdTreeLeft()
@@ -103,9 +107,6 @@ let NERDTreeWinSize=26
 
 " close nerdtree after using it to open a file/buffer
 let NERDTreeQuitOnOpen = 1
-
-" <leader>f invokes NERDTreeFind
-nmap <leader>f :NERDTreeFind<cr>
 
 " default window size
 let g:NERDTreeWinSize = 40
