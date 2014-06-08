@@ -23,7 +23,8 @@ zstyle ':prezto:load' pmodule \
   'spectrum' \
   'ssh' \
   'python' \
-  'prompt'
+  'prompt' \
+  'tmux'
 
 #
 # Editor
@@ -60,4 +61,12 @@ zstyle ':prezto:module:prompt' theme 'sorin'
 
 # Set the SSH identities to load into the agent (NOTE: not used on OSX).
 zstyle ':prezto:module:ssh:load' identities 'digitalocean.rsa' 'jenkins@hnav02.rsa' 'joyent.rsa' 'root@mongo-devtest'
+
+#
+# TMUX
+#
+
+# Always be in tmux.
+zstyle ':prezto:module:tmux:auto-start' local 'yes'
+zstyle ':prezto:module:tmux:auto-start' remote 'yes'
 
