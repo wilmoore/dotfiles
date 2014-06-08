@@ -5,6 +5,10 @@
 " vim-testdrive
 " https://github.com/monokrome/vim-testdrive
 
+" vim-vroom
+" https://github.com/skalnik/vim-vroom
+" http://sheerun.net/2014/03/21/how-to-boost-your-vim-productivity
+
 " vim-sneak (alternative to easymotion)
 " https://github.com/justinmk/vim-sneak
 " http://www.reddit.com/r/vim/comments/267vrv/i_am_tim_pope_crafter_of_plugins_ama/chol6k2
@@ -31,19 +35,24 @@ endif
 " Required:
 call neobundle#begin(expand('~/.vim/bundle'))
 
-" -------
-" Plugins
-" -------
+" ----------------------------------------
+" NeoBundle
+" ----------------------------------------
 
-" NeoBundle manages NeoBundle
 NeoBundleFetch "shougo/neobundle.vim"
 
+" ----------------------------------------
 " Shell, Terminal, Multiplex
+" ----------------------------------------
+
 NeoBundle "shougo/vimproc", {'build': {'windows': 'make -f make_mingw32.mak', 'cygwin': 'make -f make_cygwin.mak', 'mac': 'make -f make_mac.mak', 'unix': 'make -f make_unix.mak'}}
 NeoBundle "shougo/vimshell"
 NeoBundle "tpope/vim-dispatch"
 
+" ----------------------------------------
 " Navigation, Exploration
+" ----------------------------------------
+
 NeoBundle "file-line"
 NeoBundle "Shougo/unite.vim"
 NeoBundle "easymotion"
@@ -53,60 +62,96 @@ NeoBundle "mru.vim"
 NeoBundle "tpope/vim-projectionist"
 NeoBundle "open-browser.vim"
 
+" ----------------------------------------
 " ASCII values
+" ----------------------------------------
+
 NeoBundle "tpope/vim-characterize"
 
+" ----------------------------------------
 " Status line
+" ----------------------------------------
+
 NeoBundle "Lokaltog/powerline", {'rtp': 'powerline/bindings/vim/'}
 NeoBundle "stephenmckinney/vim-solarized-powerline"
 
+" ----------------------------------------
 " Visual Selection, Cursors
-"   - https://github.com/terryma/vim-multiple-cursors
-"   - http://www.youtube.com/watch?v=Umb59mMvCxA
+" ----------------------------------------
+
+" https://github.com/terryma/vim-multiple-cursors
+" http://www.youtube.com/watch?v=Umb59mMvCxA
 NeoBundle "terryma/vim-multiple-cursors"
 NeoBundle "myusuf3/numbers.vim"
 
+" ----------------------------------------
 " Visual Indicators
+" ----------------------------------------
+
 NeoBundle "nathanaelkane/vim-indent-guides"
 NeoBundle "mhinz/vim-signify"
 NeoBundle "kien/rainbow_parentheses.vim"
 
+" ----------------------------------------
 " Color Schemes, Themes
+" ----------------------------------------
+
 NeoBundle "flazz/vim-colorschemes"
 NeoBundle "CSApprox"
 
+" ----------------------------------------
+" Completion
+" ----------------------------------------
+
+NeoBundle "Valloric/YouCompleteMe", { 'build' : { 'mac' : './install.sh --clang-completer', 'unix' : './install.sh --clang-completer' }}
+NeoBundle "gitignore"
+
+" ----------------------------------------
 " VCS
-"   Git
+" ----------------------------------------
+
+" Git
 NeoBundle "git.zip"
 NeoBundle "tpope/vim-fugitive"
 NeoBundle "int3/vim-extradite"
 NeoBundle "gitv"
-"   Github
+
+" Github
 NeoBundle "mattn/webapi-vim"
 NeoBundle "mattn/gist-vim"
 NeoBundle "junegunn/vim-github-dashboard"
 
-" Completion
-NeoBundle "Valloric/YouCompleteMe", { 'build' : { 'mac' : './install.sh --clang-completer', 'unix' : './install.sh --clang-completer' }}
-
+" ----------------------------------------
 " Snippets, Templates
+" ----------------------------------------
+
 NeoBundle "SirVer/ultisnips"
 
+" ----------------------------------------
 " Commands
+" ----------------------------------------
+
 NeoBundle "tpope/vim-repeat"
 
+" ----------------------------------------
 " Content Search & Selection (within file)
+" ----------------------------------------
+
 NeoBundle "gmarik/vim-visual-star-search"
 NeoBundle "terryma/vim-expand-region"
 
+" ----------------------------------------
 " Editing
+" ----------------------------------------
+
+" General
 NeoBundle "tpope/vim-commentary"
 NeoBundle "delimitMate.vim"
 NeoBundle "endwise.vim"
 NeoBundle "sjl/gundo.vim"
 NeoBundle "tpope/vim-surround"
 
-" Editing (Contextual)
+" Contextual
 NeoBundle "AndrewRadev/inline_edit.vim"
 NeoBundle "chrisbra/NrrwRgn"
 NeoBundle "mjbrownie/swapit"
@@ -121,40 +166,56 @@ NeoBundle "junegunn/vim-easy-align"
 " Search & Replace
 NeoBundle "epmatsw/ag.vim"
 
-" Programming (languages)
-"   Javascript, JSON
-NeoBundle "walm/jshint.vim"
-NeoBundle "tpope/vim-jdaddy"
-NeoBundle "elzr/vim-json"
-NeoBundle "jQuery"
-NeoBundle "pangloss/vim-javascript"
-NeoBundleLazy "jelera/vim-javascript-syntax", {'autoload':{'filetypes':['javascript']}}
-NeoBundle "moll/vim-node"
-NeoBundle "ahayman/vim-nodejs-complete"
-NeoBundle "marijnh/tern_for_vim", { 'build': { 'others': 'npm install' }}
-"   Go
-NeoBundle "jnwhiteh/vim-golang"
-NeoBundle "fatih/vim-go"
-"   CSS
-NeoBundle "skammer/vim-css-color"
-"   LESS
-NeoBundle "groenewege/vim-less"
-"   Rust
-NeoBundle "wting/rust.vim"
-"   Erlang
-NeoBundle "jimenezrick/vimerl"
-"   HTML
-NeoBundle "HTML-AutoCloseTag"
-
-" Programming (debugging)
-NeoBundle "mattboehm/vim-unstack"
+" ----------------------------------------
+" Documentation
+" ----------------------------------------
 
 " Markdown
 NeoBundle "Markdown"
 NeoBundle "itspriddle/vim-marked"
 
-" Web Servers
-NeoBundle "nginx.vim"
+" ----------------------------------------
+" Programming (languages)
+" ----------------------------------------
+
+" Common
+NeoBundle "tpope/vim-endwise"
+
+" Javascript, JSON
+NeoBundle "walm/jshint.vim"
+NeoBundle "tpope/vim-jdaddy"
+NeoBundle "elzr/vim-json"
+NeoBundle "jQuery"
+NeoBundle "pangloss/vim-javascript"
+NeoBundle "moll/vim-node"
+NeoBundle "ahayman/vim-nodejs-complete"
+NeoBundleLazy "marijnh/tern_for_vim", { 'build': { 'others': 'npm install' }}
+NeoBundleLazy "jelera/vim-javascript-syntax", {'autoload':{'filetypes':['javascript']}}
+
+" Go
+NeoBundle "jnwhiteh/vim-golang"
+NeoBundle "fatih/vim-go"
+
+" CSS
+NeoBundle "skammer/vim-css-color"
+
+" LESS
+NeoBundle "groenewege/vim-less"
+
+" Rust
+NeoBundle "wting/rust.vim"
+
+" Erlang
+NeoBundle "jimenezrick/vimerl"
+
+" HTML
+NeoBundle "HTML-AutoCloseTag"
+
+" ----------------------------------------
+" Programming (debugging)
+" ----------------------------------------
+
+NeoBundle "mattboehm/vim-unstack"
 
 " Required:
 call neobundle#end()

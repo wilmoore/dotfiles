@@ -35,6 +35,26 @@ map <C-U> "+p
 map <Tab><Tab> <C-W>w
 
 " -------
+" Quoting
+" -------
+
+" A simple alternative to "surround" plugins (though, not a complete replacement).
+" Inspired by Steve Losh's tutorial; however, enhanced to handle punctuated content and adds "`" quoting.
+" http://learnvimscriptthehardway.stevelosh.com/chapters/09.html
+
+:nnoremap "" viW<esc>a"<esc>hBi"<esc>lel " example.com => "example.com"
+:nnoremap '' viW<esc>a'<esc>hBi'<esc>lel " example.com => 'example.com'
+:nnoremap `` viW<esc>a`<esc>hBi`<esc>lel " example.com => `example.com`
+:nnoremap {{ viW<esc>a}<esc>hBi{<esc>lel " example.com => {example.com}
+
+" Use something like "tpope/vim-surround" if you need:
+"
+" - support for swapping surrounding charaters
+" - un-surrounding
+" - support for complex surrounds like `<em>`
+" - or support arbitrary motions and object you should try
+
+" -------
 " Increment/Decrement
 " -------
 
@@ -49,16 +69,6 @@ nnoremap - <C-x>
 nnoremap _ <C-x>
 nnoremap <Left> <C-x>
 nnoremap <Down> <C-x>
-
-" -------
-" Quoting
-" -------
-
-" inspired by: http://learnvimscriptthehardway.stevelosh.com/chapters/09.html
-
-:nnoremap "" viw<esc>a"<esc>hbi"<esc>lel
-:nnoremap '' viw<esc>a'<esc>hbi'<esc>lel
-:nnoremap `` viw<esc>a`<esc>hbi`<esc>lel
 
 " -------
 " Undo/Redo

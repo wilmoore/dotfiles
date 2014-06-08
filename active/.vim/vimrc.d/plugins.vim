@@ -46,18 +46,16 @@ nmap sjj :SplitjoinJoin<cr>
 " CtrlP
 " -------
 
+" Type `fs` to activate.
+let g:ctrlp_map = 'fs'
+
 " Set this to 1 to set searching by filename (as opposed to full path).
 let g:ctrlp_by_filename = 1
 let g:ctrlp_regexp = 1
 
-" CtrlP Config
-" http://blog.mojotech.com/a-veterans-vimrc/
-let g:ctrlp_map = 'fs'
-let g:ctrlp_working_path_mode = 'ra'
-let g:ctrlp_custom_ignore = '\v\~$|\.(o|swp|pyc|wav|mp3|ogg|blend)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|__init__\.py'
-let g:ctrlp_working_path_mode = 0
-let g:ctrlp_dotfiles = 0
-let g:ctrlp_switch_buffer = 0
+" Make Ctrl-P plugin a lot faster for Git projects (thanks: http://sheerun.net/2014/03/21/how-to-boost-your-vim-productivity)
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
+let g:ctrlp_use_caching = 0
 
 " -------
 " TComment
