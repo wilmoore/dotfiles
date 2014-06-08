@@ -53,8 +53,8 @@ let g:ctrlp_map = 'fs'
 let g:ctrlp_by_filename = 1
 let g:ctrlp_regexp = 1
 
-" Make Ctrl-P plugin a lot faster for Git projects (thanks: http://sheerun.net/2014/03/21/how-to-boost-your-vim-productivity)
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
+" Make Ctrl-P plugin a lot faster for Git projects (http://dougblack.io/words/a-good-vimrc.html)
+let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 let g:ctrlp_use_caching = 0
 
 " -------
