@@ -6,12 +6,26 @@
 " Escape (to normal mode)
 " -------
 
-" use `jj` for <ESC> (very nice) -- NOTE: if you use `set -o vi` in your shell, `jk` does not work so use <Esc> or <C-[>.
-" see: https://github.com/mutewinter/dot_vim/blob/master/mappings.vim#L88-L96
-" http://cloudhead.io/2010/04/24/staying-the-hell-out-of-insert-mode/
+" Instead of a custom mapping, I am going back to the default of <C-[> for the following reasons:
 
-inoremap jj <Esc>
-inoremap JJ <Esc>
+" 1. There is a painful pause whenever you want to type a literal `j`.
+" 2. If you use `set -o vi` in your shell (I do) the custom mapping is not available so you have to get used to multiple mappings.
+" 3. When pair programming with another VIM you'll have to remember the default mapping anyhow.
+
+" Why <C-[> instead of <ESC>?
+" Because <C-[> is much more natural for my fingers to reach.
+
+" -------
+" Paste
+" -------
+
+" When pasting over visually selected content, do not overwrite the paste buffer.
+" http://stackoverflow.com/a/10723838/128346
+vnoremap p "_dP"
+
+" <Ctrl-U> -- unformatted system clipboard paste without need to toggle paste.
+" http://stackoverflow.com/a/3217023/128346
+map <C-U> "+p
 
 " -------
 " Window/Split Navigation
@@ -45,14 +59,6 @@ nnoremap <Down> <C-x>
 :nnoremap "" viw<esc>a"<esc>hbi"<esc>lel
 :nnoremap '' viw<esc>a'<esc>hbi'<esc>lel
 :nnoremap `` viw<esc>a`<esc>hbi`<esc>lel
-
-" -------
-" Paste
-" -------
-
-" <Ctrl-U> -- unformatted system clipboard paste without need to toggle paste.
-" http://stackoverflow.com/a/3217023/128346
-map <C-U> "+p
 
 " -------
 " Undo/Redo
