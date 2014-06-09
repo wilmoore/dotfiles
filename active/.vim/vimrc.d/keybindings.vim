@@ -71,6 +71,9 @@ map <Tab><Tab> <C-W>w
 " example.com => {example.com}
 :noremap {{ <esc>Ea}<esc>Bi{<esc>
 
+" example.com => (example.com)
+:noremap (( <esc>Ea)<esc>Bi(<esc>
+
 " Use something like "tpope/vim-surround" if you need:
 "
 " - support for swapping surrounding charaters

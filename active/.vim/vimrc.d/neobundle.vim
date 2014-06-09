@@ -176,47 +176,32 @@ NeoBundle "Markdown"
 NeoBundle "itspriddle/vim-marked"
 
 " ----------------------------------------
+" Programming (common)
+" ----------------------------------------
+
+" Auto formatting
+NeoBundle "tpope/vim-endwise"
+NeoBundle "HTML-AutoCloseTag"
+
+" Debugging
+NeoBundle "mattboehm/vim-unstack"
+
+" ----------------------------------------
 " Programming (languages)
 " ----------------------------------------
 
-" Common
-NeoBundle "tpope/vim-endwise"
+" Polyglot (lots of languages)
+NeoBundle "sheerun/vim-polyglot"
 
-" Javascript, JSON
-NeoBundle "walm/jshint.vim"
+" JSON
 NeoBundle "tpope/vim-jdaddy"
-NeoBundle "elzr/vim-json"
-NeoBundle "jQuery"
-NeoBundle "pangloss/vim-javascript"
-NeoBundle "moll/vim-node"
-NeoBundle "ahayman/vim-nodejs-complete"
+
+" JavaScript (common)
 NeoBundleLazy "marijnh/tern_for_vim", { 'build': { 'others': 'npm install' }}
 NeoBundleLazy "jelera/vim-javascript-syntax", {'autoload':{'filetypes':['javascript']}}
 
-" Go
-NeoBundle "jnwhiteh/vim-golang"
-NeoBundle "fatih/vim-go"
-
-" CSS
-NeoBundle "skammer/vim-css-color"
-
-" LESS
-NeoBundle "groenewege/vim-less"
-
-" Rust
-NeoBundle "wting/rust.vim"
-
-" Erlang
-NeoBundle "jimenezrick/vimerl"
-
-" HTML
-NeoBundle "HTML-AutoCloseTag"
-
-" ----------------------------------------
-" Programming (debugging)
-" ----------------------------------------
-
-NeoBundle "mattboehm/vim-unstack"
+" JavaScript (Node)
+NeoBundle "moll/vim-node"
 
 " Required:
 call neobundle#end()
