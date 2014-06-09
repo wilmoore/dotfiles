@@ -85,8 +85,20 @@ export GROOVY_HOME=$(brew --prefix)/opt/groovy/libexec
 # go
 #
 
-export GOPATH=$HOME/.go
-path=($GOPATH/bin $path)
+# global go path.
+export GO_GLOBALS_PATH=$HOME/.go
+
+# active go projects in development.
+export GO_PROJECT_PATH=$ACTIVE_PROJECTS_DIR/go
+
+# ordered list of go source paths.
+export GOPATH="$GO_GLOBALS_PATH:$GO_PROJECT_PATH"
+
+# add global go binaries to the search path.
+path=($GO_GLOBALS_PATH/bin $path)
+
+# auto `cd` to my go projects.
+cdpath=($GO_PROJECT_PATH/src/github.com/wilmoore $cdpath)
 
 ################################################################################
 # homebrew

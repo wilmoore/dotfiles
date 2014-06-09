@@ -109,8 +109,8 @@ nnoremap U <C-r>
 " Tabs
 " -------
 
-" [OVERRIDE] (:h gf) enhances intrinsic `gf` by opening in tab instead of current buffer.
-map gf :tabedit <cfile><CR>
+" same as `gf` but opens file in tab rather than inline (better than pressing <C-t>gf).
+map tgf :tabedit <cfile><CR>
 
 " go to previous tab (same as gT, but easier to type).
 map ggt :tabprevious<CR>
