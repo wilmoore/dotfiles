@@ -147,6 +147,7 @@ NeoBundle "terryma/vim-expand-region"
 " General
 NeoBundle "tpope/vim-commentary"
 NeoBundle "delimitMate.vim"
+NeoBundle "tpope/vim-eunuch"
 NeoBundle "endwise.vim"
 NeoBundle "sjl/gundo.vim"
 NeoBundle "tpope/vim-surround"

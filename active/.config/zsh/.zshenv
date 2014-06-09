@@ -47,6 +47,8 @@ path=(
   /usr/libexec               # lots of non-obvious goodies in here (i.e. PlistBuddy)
   $HOME/.homebrew/{bin,sbin} # homebrew@$HOME
   $HOME/.local/bin           # custom binaries & scripts
+  $HOME/.cabal/bin           # haskell binaries
+# $GOPATH/bin                # purposefully commented out as $GOPATH is set further down in GO section.
   $HOME/.tmux                # tmux sessions
   $path                      # system defaults
 )
