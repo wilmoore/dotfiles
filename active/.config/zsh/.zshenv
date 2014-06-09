@@ -86,7 +86,7 @@ export GROOVY_HOME=$(brew --prefix)/opt/groovy/libexec
 #
 
 # global go path.
-export GO_GLOBALS_PATH=$HOME/.go
+export GO_GLOBALS_PATH=$XDG_DATA_HOME/go
 
 # active go projects in development.
 export GO_PROJECT_PATH=$ACTIVE_PROJECTS_DIR/go
