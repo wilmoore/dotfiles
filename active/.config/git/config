@@ -188,7 +188,7 @@
   ignored             = !git status --ignored | grep -F 'Ignored files:' -A100
 
   # navigate to the JIRA story corresponding to the current branch (`git set-jira-domain your domain` to configure.
-  jira-branch         = !git web--browse $(git config --get jira.serverurl)/browse/$(git name-rev --name-only HEAD) >/dev/null 2>/dev/null || echo 'To set your Jira Server Url: `git config --replace-all jira.serverurl http://...`'
+  jira-branch         = !git web--browse $(git config --get jira.serverurl)/browse/$(git name-rev --name-only HEAD) >/dev/null 2>&1 || echo 'To set your Jira Server Url: `git config --replace-all jira.serverurl http://...`'
 
   # last 5 files commited
   last-commited       = !git log --pretty=format: --name-only | grep -vE '^$' | head -n 5 | sort -u
