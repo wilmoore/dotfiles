@@ -257,3 +257,7 @@
 
   # list untracked files
   untracked           = ls-files -o
+
+  # add a remote named upstream
+  upstream            = remote add upstream
+

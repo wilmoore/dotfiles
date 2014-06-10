@@ -24,13 +24,13 @@ tap jingweno/gh || true
 # homebrew external commands
 #
 
-install brew-cask
+install brew-cask || true
 
 #
 # Windowing systems
 #
 
-cask install xquartz
+cask install xquartz || true
 
 #
 # GUI Mac applications (free)
@@ -63,14 +63,19 @@ cask install node-webkit || true
 cask install onepassword || true
 cask install opera || true
 cask install poedit || true
-
 cask install screenhero || true
 cask install sequel-pro || true
-cask install sizeup || true
 cask install smcfancontrol || true
 cask install sourcetree || true
 cask install spotify || true
 cask install xscope || true
+
+#
+# Window Management
+#
+
+cask install sizeup || true
+cask install slate || true
 
 #
 # chat, IM, irc

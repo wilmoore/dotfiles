@@ -3,17 +3,15 @@
 " ----------------------------------------
 
 " -------
-" Sequence Timing
-" -------
-	
-" http://cloudhead.io/2010/04/24/staying-the-hell-out-of-insert-mode/
-" set timeoutlen=200
-
-" -------
-" Vim Info
+" Find
 " -------
 
-" set viminfo+=%,\"100,'10,/50,:100,h,f0,n$HOME/.vim/viminfo
+" make :find awesome
+" SEE: http://www.reddit.com/r/vim/comments/26tayb/what_are_some_simple_builtin_alternatives_to/chubh0k
+" SEE: http://vimeo.com/65250028
+
+set path+=**
+set suffixesadd+=.c,.coffee,.erl,ex,.go,.h,.js,.ls,.php,.phpt,.pl,.py,.rb,.scala,.sh,.zsh
 
 " -------
 " Sound
@@ -47,7 +45,7 @@ set hidden
 " Keywords
 " -------
 
-" Add extra characters that are valid parts of variables""
+" Add extra characters that are valid parts of variables
 set iskeyword+=\$,-
 
 " -------

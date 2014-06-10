@@ -104,7 +104,6 @@ NeoBundle "CSApprox"
 " ----------------------------------------
 
 NeoBundle "Valloric/YouCompleteMe", { 'build' : { 'mac' : './install.sh --clang-completer', 'unix' : './install.sh --clang-completer' }}
-NeoBundle "gitignore"
 
 " ----------------------------------------
 " VCS
@@ -199,9 +198,6 @@ NeoBundle "tpope/vim-jdaddy"
 " JavaScript (common)
 NeoBundleLazy "marijnh/tern_for_vim", { 'build': { 'others': 'npm install' }}
 NeoBundleLazy "jelera/vim-javascript-syntax", {'autoload':{'filetypes':['javascript']}}
-
-" JavaScript (Node)
-NeoBundle "moll/vim-node"
 
 " Required:
 call neobundle#end()
