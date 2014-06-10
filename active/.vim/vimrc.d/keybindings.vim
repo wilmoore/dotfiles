@@ -52,7 +52,7 @@ map <C-U> "+p
 map <Tab><Tab> <C-W>w
 
 " -------
-" Quoting (quick surround bindings)
+" Surround Companion (for quoting stuff)
 " -------
 
 " A companion to "tpope/vim-surround" (and similar) plugins.
@@ -73,27 +73,27 @@ map <Tab><Tab> <C-W>w
 :no "" <esc>Ea"<esc>Bi"<esc>
 :vn "" "1c"<esc>"1pa"<esc>
 
-" example.com => 'example.com'
+"example.com => 'example.com'
 :no '' <esc>Ea'<esc>Bi'<esc>
 :vn '' "1c'<esc>"1pa'<esc>
 
-" example.com => `example.com`
+"example.com => `example.com`
 :no `` <esc>Ea`<esc>Bi`<esc>
 :vn `` "1c`<esc>"1pa`<esc>
 
-" example.com => {example.com}
+"example.com => {example.com}
 :no {{ <esc>Ea}<esc>Bi{<esc>
 :no }} <esc>Ea}<esc>Bi{<esc>
 :vn {{ "1c{<esc>"1pa}<esc>
 :vn }} "1c{<esc>"1pa}<esc>
 
-" example.com => (example.com)
+"example.com => (example.com)
 :no (( <esc>Ea)<esc>Bi(<esc>
 :no )) <esc>Ea)<esc>Bi(<esc>
 :vn (( "1c(<esc>"1pa)<esc>
 :vn )) "1c(<esc>"1pa)<esc>
 
-" example.com => <example.com>
+"example.com => <example.com>
 :no << <esc>Ea><esc>Bi<<esc>
 :no >> <esc>Ea><esc>Bi<<esc>
 :vn << "1c<<esc>"1pa><esc>
