@@ -115,6 +115,9 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 # where are your brew bundles?
 export BUNDLE_DIR="$XDG_CONFIG_HOME/brew/bundles.d"
 
+# `brew info mactex`.
+eval `/usr/libexec/path_helper -s`
+
 #
 # man page search paths
 #

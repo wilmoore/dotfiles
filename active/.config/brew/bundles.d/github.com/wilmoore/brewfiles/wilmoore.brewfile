@@ -18,6 +18,7 @@ tap homebrew/headonly || true
 tap homebrew/versions || true
 tap wilmoore/binaries || true
 tap phinze/cask || true
+tap jingweno/gh || true
 
 #
 # homebrew external commands
@@ -26,204 +27,210 @@ tap phinze/cask || true
 install brew-cask
 
 #
+# Windowing systems
+#
+
+cask install xquartz
+
+#
 # GUI Mac applications (free)
 #
 
-cask install alfred
-cask alfred link
-cask install calibre
-cask install charles
-cask install cheatsheet
-cask install chromecast
-cask install chromium
-cask install cloudup
-cask install colors
-cask install cyberduck
-cask install firefox
-cask install evernote
-cask install gfxcardstatus
-cask install google-chrome
-cask install google-drive
-cask install growlnotify
-cask install handbrake
-cask install heroku-toolbelt
-cask install inkscape
-cask install kaleidoscope
-cask install ksdiff
-cask install mailplane
-cask install marked2
-cask install node-webkit
-cask install onepassword
-cask install opera
-cask install poedit
+cask install alfred || true
+cask alfred link || true
+cask install calibre || true
+cask install charles || true
+cask install cheatsheet || true
+cask install chromecast || true
+cask install chromium || true
+cask install cloudup || true
+cask install colors || true
+cask install cyberduck || true
+cask install firefox || true
+cask install evernote || true
+cask install gfxcardstatus || true
+cask install google-chrome || true
+cask install google-drive || true
+cask install growlnotify || true
+cask install handbrake || true
+cask install heroku-toolbelt || true
+cask install inkscape || true
+cask install kaleidoscope || true
+cask install ksdiff || true
+cask install mailplane || true
+cask install marked2 || true
+cask install node-webkit || true
+cask install onepassword || true
+cask install opera || true
+cask install poedit || true
 
-cask install screenhero
-cask install sequel-pro
-cask install sizeup
-cask install smcfancontrol
-cask install sourcetree
-cask install spotify
-cask install xscope
+cask install screenhero || true
+cask install sequel-pro || true
+cask install sizeup || true
+cask install smcfancontrol || true
+cask install sourcetree || true
+cask install spotify || true
+cask install xscope || true
 
 #
 # chat, IM, irc
 #
 
-cask install adium
-cask install limechat
-cask install skype
-cask install slack
+cask install adium || true
+cask install limechat || true
+cask install skype || true
+cask install slack || true
 
 #
 # archive
 #
 
-cask install the-unarchiver
-install atool
+cask install the-unarchiver || true
+install atool || true
 
 #
 # programming environment
 #
 
-install apple-gcc42
-install autoconf
-install automake
-install cmake
-install clib
-install gettext
-install global
-install intltool
-install pkg-config
+install apple-gcc42 || true
+install autoconf || true
+install automake || true
+install cmake || true
+install clib || true
+install gettext || true
+install global || true
+install intltool || true
+install pkg-config || true
 
 #
 # programming languages
 #
 
 # clojure
-install leiningen
+install leiningen || true
 
 # dart
-install dart
+install dart || true
 
 # erlang
-install erlang
-install elixir --HEAD
-install rebar
-install wilmoore/binaries/expm
+install erlang || true
+install elixir --HEAD || true
+install rebar || true
+install wilmoore/binaries/expm || true
 
 # go
-install go
+install go || true
 
 # groovy
-install groovy
+install groovy || true
 
 # haskell
-install haskell-platform
+install haskell-platform || true
 
 # lua
-install lua
+install lua || true
 
 # mono (.net)
-cask install mono-mdk
-cask install mono-mre
+cask install mono-mdk || true
+cask install mono-mre || true
 
 # node
-install nvm
+install nvm || true
 
 # ocaml
-install ocaml
+install ocaml || true
 
 # php
 
-install josegonzalez/php/php55 --without-pear --without-apache --with-pgsql --with-fpm --with-intl --with-gmp --with-homebrew-curl --with-homebrew-openssl --with-homebrew-libxslt --with-imap --with-pgsql
-install josegonzalez/php/php55-intl
-unlink  josegonzalez/php/php55
+install josegonzalez/php/php55 --without-pear --without-apache --with-pgsql --with-fpm --with-intl --with-gmp --with-homebrew-curl --with-homebrew-openssl --with-homebrew-libxslt --with-imap --with-pgsql || true
+install josegonzalez/php/php55-intl || true
+unlink  josegonzalez/php/php55 || true
 
 # python
-install python
+install python || true
 
 # ruby
-install chruby
-install ruby-install
-install https://raw.github.com/postmodern/chgems/master/homebrew/chgems.rb
+install chruby || true
+install ruby-install || true
+install https://raw.github.com/postmodern/chgems/master/homebrew/chgems.rb || true
 
 # rust
-install rust
+install rust || true
 
 # scala
-install sbt
-install scala
-install giter8
+install sbt || true
+install scala || true
+install giter8 || true
 
 #
 # web development
 #
 
-install sassc
+install sassc || true
 
 #
 # serialization
 #
 
-install protobuf
+install protobuf || true
 
 #
 # networking
 #
 
-cask install angry-ip-scanner
-cask install cocoapacketanalyzer
-install fping
-install masscan
-install netcat
-install ngrep
-install nmap
-cask install serf
-install socat
-cask install speedlimit
-install homebrew/dupes/tcpdump
-install wireshark
+cask install angry-ip-scanner || true
+cask install cocoapacketanalyzer || true
+install fping || true
+install masscan || true
+install netcat || true
+install ngrep || true
+install nmap || true
+cask install serf || true
+install socat || true
+cask install speedlimit || true
+install homebrew/dupes/tcpdump || true
+install wireshark || true
 
 #
 # networking/security
 #
 
-install keychain
-install socat
-install ssh-copy-id
-install sshfs
-install stunnel
+install keychain || true
+install socat || true
+install ssh-copy-id || true
+install sshfs || true
+install stunnel || true
 
 #
 # http client
 #
 
-cask install cocoarestclient
+cask install cocoarestclient || true
 
 #
 # remote access & control
 #
 
-cask install cord
+cask install cord || true
 
 #
 # vcs
 #
 
-install bzr
-install git
-install jingweno/gh/gh
-install mercurial
-cask install trailer
+install bzr || true
+install git || true
+install gh || true
+install mercurial || true
+cask install trailer || true
 
 #
 # web browsers & browser engines
 #
 
 # finally this has been bottled
-install browser
-install phantomjs
-install v8
+install browser || true
+install phantomjs || true
+install v8 || true
 
 #
 # databases
@@ -231,120 +238,120 @@ install v8
 
 # https://github.com/influxdb/influxdb.org/issues/28
 # install influxdb
-install mongodb
-cask install mysql-workbench
-cask install mysqlworkbench
-cask install pgadmin3
-cask install postgres
-install redis
-cask install redis-desktop-manager
-install rethinkdb
-install riak
-cask install robomongo
-install sqlite3
+install mongodb || true
+cask install mysql-workbench || true
+cask install mysqlworkbench || true
+cask install pgadmin3 || true
+cask install postgres || true
+install redis || true
+cask install redis-desktop-manager || true
+install rethinkdb || true
+install riak || true
+cask install robomongo || true
+install sqlite3 || true
 
 #
 # quick look plugins
 #
 
-cask install cert-quicklook
-cask install qlcolorcode
-cask install qlstephen
-cask install qlmarkdown
-cask install quicklook-json
-cask install qlprettypatch
-cask install quicklook-csv
-cask install quicklook-json
-cask install betterzipql
-cask install webp-quicklook
-cask install suspicious-package
+cask install cert-quicklook || true
+cask install qlcolorcode || true
+cask install qlstephen || true
+cask install qlmarkdown || true
+cask install quicklook-json || true
+cask install qlprettypatch || true
+cask install quicklook-csv || true
+cask install quicklook-json || true
+cask install betterzipql || true
+cask install webp-quicklook || true
+cask install suspicious-package || true
 
 
 #
 # game development
 #
 
-cask install gamesalad
+cask install gamesalad || true
 
 #
 # games
 #
 
-install vitetris
-install gnu-chess
+install vitetris || true
+install gnu-chess || true
 
 #
 # utility
 #
 
-install ag
-install ctags
-cask install geekbench
-cask install grandperspective
-install htop-osx
-install jq
-install jsonpp
-cask install launchrocket
-install lnav
-install moreutils
+install ag || true
+install ctags || true
+cask install geekbench || true
+cask install grandperspective || true
+install htop-osx || true
+install jq || true
+install jsonpp || true
+cask install launchrocket || true
+install lnav || true
+install moreutils || true
 # https://github.com/Homebrew/homebrew-binary/pull/58
-install https://raw.github.com/egrim/homebrew-binary/add-ngrok/ngrok.rb
-install pcre
-install reattach-to-user-namespace
-install terminal-notifier
-install gnu-time
-install todo-txt
-install tmux
-install tree
-install unrar
-install watch
-install watchman
-install wget
+install https://raw.github.com/egrim/homebrew-binary/add-ngrok/ngrok.rb || true
+install pcre || true
+install reattach-to-user-namespace || true
+install terminal-notifier || true
+install gnu-time || true
+install todo-txt || true
+install tmux || true
+install tree || true
+install unrar || true
+install watch || true
+install watchman || true
+install wget || true
 
 #
 # irc / instant message
 #
 
-install bitlbee
-install znc
+install bitlbee || true
+install znc || true
 
 #
 # video
 #
 
-cask install chromecast
-install ffmpeg
-cask install miro-video-converter
-cask install vlc
-cask install vlc-remote
-cask install vlcstreamer
-install youtube-dl
+cask install chromecast || true
+install ffmpeg || true
+cask install miro-video-converter || true
+cask install vlc || true
+cask install vlc-remote || true
+cask install vlcstreamer || true
+install youtube-dl || true
 
 #
 # virtualization
 #
 
-install docker
-cask install vagrant
-cask install virtualbox
+install docker || true
+cask install vagrant || true
+cask install virtualbox || true
 
 #
 # shell
 #
 
 # zsh
-install zsh-completions
-install zsh-lovers
-install zsh
+install zsh-completions || true
+install zsh-lovers || true
+install zsh || true
 
 # developer docs
-cask install dash
+cask install dash || true
 
 #
 # writing
 #
 
-cask install pdftk
+cask install pdftk || true
 
 #
 # audio/video
@@ -354,90 +361,92 @@ cask install pdftk
 # reading
 #
 
-install homebrew/binary/kindlegen
-cask install kindle
-cask install send-to-kindle
+install homebrew/binary/kindlegen || true
+cask install kindle || true
+cask install send-to-kindle || true
 
 #
 # mobile development
 #
 
-cask install pusher
+cask install pusher || true
 
 #
 # fonts
 #
 
-cask install caskroom/fonts/font-sauce-code-powerline
-cask install caskroom/fonts/font-dejavu-sans-mono-for-powerline
+cask install caskroom/fonts/font-sauce-code-powerline || true
+cask install caskroom/fonts/font-dejavu-sans-mono-for-powerline || true
 
 #
 # editor / pager
 #
 
-install macvim --custom-icons --override-system-vim --with-lua --with-luajit --with-csope
+install macvim --custom-icons --override-system-vim --with-lua --with-luajit --with-csope || true
 
 #
 # ui design
 #
 
-cask install balsamiq-mockups
-cask install sketch
-cask install sketch-tool
+cask install balsamiq-mockups || true
+cask install sketch || true
+cask install sketch-tool || true
 
 #
 # localization/translation
 #
 
-install translate-toolkit
+install translate-toolkit || true
 
 #
 # screen capture/casting.
 #
 
-install https://raw.githubusercontent.com/sickill/asciinema/master/packaging/homebrew/asciinema.rb
-cask install licecap
-install ttyrec
-install webkit2png
+install https://raw.githubusercontent.com/sickill/asciinema/master/packaging/homebrew/asciinema.rb || true
+cask install licecap || true
+install ttyrec || true
+install webkit2png || true
 
 #
 # image manipulation
 #
 
-install graphicsmagick
-install imagemagick
-cask install imageoptim
-cask install imagealpha
-cask install texturepacker
-cask install xee
+# install ghostscript || true
+install graphicsmagick || true
+install imagemagick || true
+cask install imageoptim || true
+cask install imagealpha || true
+cask install mactex || true
+install poppler || true
+cask install texturepacker || true
+cask install xee || true
 
 #
 # acceptance testing
 #
 
-install selenium-server-standalone
+install selenium-server-standalone || true
 
 #
 # web servers
 #
 
-install nginx
+install nginx || true
 
 #
 # email
 #
 
-install sendemail
+install sendemail || true
 
 #
 # productivity
 #
 
-cask install libreoffice
+cask install libreoffice || true
 
 # keep things tidy.
 cleanup
 cask cleanup
 prune
-
 

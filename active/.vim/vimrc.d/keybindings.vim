@@ -52,34 +52,59 @@ map <C-U> "+p
 map <Tab><Tab> <C-W>w
 
 " -------
-" Quoting
+" Quoting (quick surround bindings)
 " -------
 
-" A simple alternative to "surround" plugins (though, not a complete replacement).
-" Inspired by Steve Losh's tutorial; however, enhanced to handle punctuated content and adds "`" quoting.
-" http://learnvimscriptthehardway.stevelosh.com/chapters/09.html
+" A companion to "tpope/vim-surround" (and similar) plugins.
+" Inspired by Steve Losh's tutorial (http://learnvimscriptthehardway.stevelosh.com/chapters/09.html); however, enhanced to handle:
+"
+" 1. punctuated content (i.e. URLs, IP addresses, etc.).
+" 2. punctuated content and adds "`" quoting.
+" 3. support for ", ', `, {}, (), and <>.
+"
+" Why use this if you are already using "surround"?
+"
+" Surround is great if you want to change surrounding content or if you need to add complex surrounding content;
+" however, if you just want to quickly add quotes or brackets, having a quick, hard to forget key sequence is nice.
+"
+" This was prompted by a discussion on reddit.com/r/vim (http://redd.it/26tayb).
 
-" example.com => "example.com"
-:noremap "" <esc>Ea"<esc>Bi"<esc>
+" example.com =>   example.com
+:no "" <esc>Ea"<esc>Bi"<esc>
+:vn "" "1c"<esc>"1pa"<esc>
 
 " example.com => 'example.com'
-:noremap '' <esc>Ea'<esc>Bi'<esc>
+:no '' <esc>Ea'<esc>Bi'<esc>
+:vn '' "1c'<esc>"1pa'<esc>
 
 " example.com => `example.com`
-:noremap `` <esc>Ea`<esc>Bi`<esc>
+:no `` <esc>Ea`<esc>Bi`<esc>
+:vn `` "1c`<esc>"1pa`<esc>
 
 " example.com => {example.com}
-:noremap {{ <esc>Ea}<esc>Bi{<esc>
+:no {{ <esc>Ea}<esc>Bi{<esc>
+:no }} <esc>Ea}<esc>Bi{<esc>
+:vn {{ "1c{<esc>"1pa}<esc>
+:vn }} "1c{<esc>"1pa}<esc>
 
 " example.com => (example.com)
-:noremap (( <esc>Ea)<esc>Bi(<esc>
+:no (( <esc>Ea)<esc>Bi(<esc>
+:no )) <esc>Ea)<esc>Bi(<esc>
+:vn (( "1c(<esc>"1pa)<esc>
+:vn )) "1c(<esc>"1pa)<esc>
 
-" Use something like "tpope/vim-surround" if you need:
+" example.com => <example.com>
+:no << <esc>Ea><esc>Bi<<esc>
+:no >> <esc>Ea><esc>Bi<<esc>
+:vn << "1c<<esc>"1pa><esc>
+:vn >> "1c<<esc>"1pa><esc>
+
+" What you get with something like "tpope/vim-surround":
 "
-" - support for swapping surrounding charaters
-" - un-surrounding
-" - support for complex surrounds like `<em>`
-" - or support arbitrary motions and object you should try
+" - support for swapping current surrounding content for new surrounding content.
+" - support for removing current surrounding content (i.e. un-surrounding).
+" - support for complex/arbitrary surrounding content (i.e. `<em>`).
+" - support for arbitrary motions and text objects.
 
 " -------
 " Increment/Decrement
