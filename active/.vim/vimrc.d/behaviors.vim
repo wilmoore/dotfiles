@@ -16,8 +16,26 @@ set path+=**
 " ignore case (mostly for rediculous camel-cased idioms).
 set wildignorecase
 
-" filenames to tack on.
-set suffixesadd+=.c,.coffee,.erl,ex,.go,.h,.js,.json,.ls,.php,.phpt,.pl,.py,.rb,.scala,.sh,.zsh
+" file extensions to append.
+set suffixesadd+=.c
+set suffixesadd+=.coffee
+set suffixesadd+=.erl
+set suffixesadd+=.ex
+set suffixesadd+=.go
+set suffixesadd+=.h
+set suffixesadd+=.html
+set suffixesadd+=.js
+set suffixesadd+=.json
+set suffixesadd+=.ls
+set suffixesadd+=.php
+set suffixesadd+=.phpt
+set suffixesadd+=.pl
+set suffixesadd+=py
+set suffixesadd+=.rb
+set suffixesadd+=.scala
+set suffixesadd+=.sh
+set suffixesadd+=.xml
+set suffixesadd+=.zsh
 
 " -------
 " Sound
