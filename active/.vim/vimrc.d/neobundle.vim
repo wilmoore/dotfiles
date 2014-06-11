@@ -120,6 +120,9 @@ NeoBundle "mattn/webapi-vim"
 NeoBundle "mattn/gist-vim"
 NeoBundle "junegunn/vim-github-dashboard"
 
+" Mercurial
+NeoBundle "hgrev"
+
 " ----------------------------------------
 " Snippets, Templates
 " ----------------------------------------

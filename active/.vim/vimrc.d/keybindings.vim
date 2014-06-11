@@ -33,12 +33,15 @@ nnoremap j gj
 nnoremap k gk
 
 " -------
-" Paste
+" Yank
 " -------
 
-" When pasting over visually selected content, do not overwrite the paste buffer.
-" http://stackoverflow.com/a/10723838/128346
-vnoremap p "_dP"
+" Yank entire buffer.
+map <leader>y :%y+<cr>
+
+" -------
+" Paste
+" -------
 
 " <Ctrl-U> -- unformatted system clipboard paste without need to toggle paste.
 " http://stackoverflow.com/a/3217023/128346
@@ -70,34 +73,34 @@ map <Tab><Tab> <C-W>w
 " This was prompted by a discussion on reddit.com/r/vim (http://redd.it/26tayb).
 
 " example.com =>   example.com
-:no "" <esc>Ea"<esc>Bi"<esc>
-:vn "" "1c"<esc>"1pa"<esc>
+:no <leader>" <esc>Ea"<esc>Bi"<esc>
+:vn <leader>" "1c"<esc>"1pa"<esc>
 
 "example.com => 'example.com'
-:no '' <esc>Ea'<esc>Bi'<esc>
-:vn '' "1c'<esc>"1pa'<esc>
+:no <leader>' <esc>Ea'<esc>Bi'<esc>
+:vn <leader>' "1c'<esc>"1pa'<esc>
 
 "example.com => `example.com`
-:no `` <esc>Ea`<esc>Bi`<esc>
-:vn `` "1c`<esc>"1pa`<esc>
+:no <leader>` <esc>Ea`<esc>Bi`<esc>
+:vn <leader>` "1c`<esc>"1pa`<esc>
 
 "example.com => {example.com}
-:no {{ <esc>Ea}<esc>Bi{<esc>
-:no }} <esc>Ea}<esc>Bi{<esc>
-:vn {{ "1c{<esc>"1pa}<esc>
-:vn }} "1c{<esc>"1pa}<esc>
+:no <leader>{ <esc>Ea}<esc>Bi{<esc>
+:no <leader>} <esc>Ea}<esc>Bi{<esc>
+:vn <leader>{ "1c{<esc>"1pa}<esc>
+:vn <leader>} "1c{<esc>"1pa}<esc>
 
 "example.com => (example.com)
-:no (( <esc>Ea)<esc>Bi(<esc>
-:no )) <esc>Ea)<esc>Bi(<esc>
-:vn (( "1c(<esc>"1pa)<esc>
-:vn )) "1c(<esc>"1pa)<esc>
+:no <leader>( <esc>Ea)<esc>Bi(<esc>
+:no <leader>) <esc>Ea)<esc>Bi(<esc>
+:vn <leader>( "1c(<esc>"1pa)<esc>
+:vn <leader>) "1c(<esc>"1pa)<esc>
 
 "example.com => <example.com>
-:no << <esc>Ea><esc>Bi<<esc>
-:no >> <esc>Ea><esc>Bi<<esc>
-:vn << "1c<<esc>"1pa><esc>
-:vn >> "1c<<esc>"1pa><esc>
+:no <leader>< <esc>Ea><esc>Bi<<esc>
+:no <leader>> <esc>Ea><esc>Bi<<esc>
+:vn <leader>< "1c<<esc>"1pa><esc>
+:vn <leader>> "1c<<esc>"1pa><esc>
 
 " What you get with something like "tpope/vim-surround":
 "
@@ -134,9 +137,6 @@ nnoremap U <C-r>
 " Tabs
 " -------
 
-" same as `gf` but opens file in tab rather than inline (better than pressing <C-t>gf).
-map tgf :tabedit <cfile><CR>
-
 " go to previous tab (same as gT, but easier to type).
 map ggt :tabprevious<CR>
 
@@ -144,6 +144,6 @@ map ggt :tabprevious<CR>
 " Quickfix Toggle
 " -------
 
-" Use qq to toggle quick fix window (http://learnvimscriptthehardway.stevelosh.com/chapters/38.html).
-nnoremap qq :call QuickfixToggle()<cr>
+" Use <tab>x3 (three tabs) to toggle quick fix window.
+nnoremap <tab><tab><tab> :call QuickfixToggle()<cr>
 

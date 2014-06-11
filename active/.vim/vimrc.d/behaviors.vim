@@ -10,8 +10,14 @@
 " SEE: http://www.reddit.com/r/vim/comments/26tayb/what_are_some_simple_builtin_alternatives_to/chubh0k
 " SEE: http://vimeo.com/65250028
 
+" search all the things.
 set path+=**
-set suffixesadd+=.c,.coffee,.erl,ex,.go,.h,.js,.ls,.php,.phpt,.pl,.py,.rb,.scala,.sh,.zsh
+
+" ignore case (mostly for rediculous camel-cased idioms).
+set wildignorecase
+
+" filenames to tack on.
+set suffixesadd+=.c,.coffee,.erl,ex,.go,.h,.js,.json,.ls,.php,.phpt,.pl,.py,.rb,.scala,.sh,.zsh
 
 " -------
 " Sound

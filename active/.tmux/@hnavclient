@@ -26,6 +26,9 @@ if [ $? != 0 ]; then
 
   # create a new window for `grunt server`
   tmux new-window -d -n "grunt server" "cd $PROJECT ; grunt server"
+
+  # create a new window for `eventlog-service`
+  tmux new-window -d -n "eventlog service" "cd $PROJECT ; ./bin/eventlog-service.js --directory ~/Library/Logs"
 fi
 
 # attach
