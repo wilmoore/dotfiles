@@ -154,6 +154,9 @@
   # give someone else credit for a commit
   credit-author       = !echo '\nPending Commit:\n% git commit -am \"commit message\" --author \"Full Name <name@domain.tld>\"\n\nExisting Commit:\n% git commit --amend --author \"Full Name <name@domain.tld>\" -C HEAD\n'
 
+  # list current branch.
+  current-branch      = name-rev --name-only HEAD
+
   # consider a topic branch "finished" by deleting it locally and from your "origin" remote (also deletes squash backups).
   finish              = ![[ -z "$*" ]] && echo 'No branch was provided.' 1>&2 && exit 1 || git branch -d "$*" && git push origin --delete $!
 
@@ -228,6 +231,9 @@
   # github style pull request against origin regarding current branch (FYI, make sure you are using an `https` origin url; otherwise, this won't work)
   pr                  = !git web--browse $(git config --get remote.origin.url | sed 's/.git$//')/pull/new/$(git name-rev --name-only HEAD)
 
+  # repo hosting url
+  repo-url            = !git web--browse http://$(git config --get remote.origin.url | sed -e 's/[.]git$//g' -e 's/.*@//g' -e 's@^http[s]?//@@g' | tr ':' '/')
+
   # stage file after resolving a merge conflict (like svn, hg)
   resolve             = stage --
 
@@ -260,4 +266,5 @@
 
   # add a remote named upstream
   upstream            = remote add upstream
+
 

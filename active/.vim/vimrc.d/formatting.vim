@@ -8,9 +8,6 @@ set nowrap
 " Wrap lines at convenient points
 set linebreak
 
-" continue comment markers on new line
-:set formatoptions+=ro
-
 " -------
 " Encodings
 " -------

@@ -10,6 +10,12 @@ set laststatus=2
 let g:Powerline_symbols = 'fancy'
 let g:Powerline_colorscheme='solarized256_dark'
 
+" -------
+" commentary
+" -------
+
+" use `>` as comment prefix in markdown files.
+autocmd FileType markdown set commentstring=>\ %s
 
 " -------
 " open-browser
@@ -93,8 +99,8 @@ let MRU_File=expand($HOME). "/.vim/.vim_mru_files"
 " NERDTree
 " -------
 
-" fl invokes NERDTreeFind
-nmap ff :NERDTreeFind<cr>
+" fe (file explore) invokes NERDTreeFind
+nmap fe :NERDTreeFind<cr>
 
 " Close all open buffers on entering a window if the only
 " buffer that's left is the NERDTree buffer
@@ -117,6 +123,11 @@ let NERDTreeQuitOnOpen = 1
 
 " default window size
 let g:NERDTreeWinSize = 40
+
+" Quit vim if only Nerdtree is left.
+augroup quit_if_only_nerdtree
+  autocmd WinEnter * :call CloseIfOnlyNerdTreeLeft()
+augroup END
 
 " -------
 " Fugitive

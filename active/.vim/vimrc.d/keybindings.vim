@@ -61,9 +61,8 @@ map <Tab><Tab> <C-W>w
 " A companion to "tpope/vim-surround" (and similar) plugins.
 " Inspired by Steve Losh's tutorial (http://learnvimscriptthehardway.stevelosh.com/chapters/09.html); however, enhanced to handle:
 "
-" 1. punctuated content (i.e. URLs, IP addresses, etc.).
-" 2. punctuated content and adds "`" quoting.
-" 3. support for ", ', `, {}, (), and <>.
+" 1. supports punctuated content (i.e. URLs, IP addresses, etc.).
+" 2. supports ", ', `, {}, (), and <>.
 "
 " Why use this if you are already using "surround"?
 "
@@ -143,6 +142,20 @@ map ggt :tabprevious<CR>
 " -------
 " Quickfix Toggle
 " -------
+
+let g:quickfix_is_open = 0
+
+function! QuickfixToggle()
+    if g:quickfix_is_open
+        cclose
+        let g:quickfix_is_open = 0
+        execute g:quickfix_return_to_window . "wincmd w"
+    else
+        let g:quickfix_return_to_window = winnr()
+        copen
+        let g:quickfix_is_open = 1
+    endif
+endfunction
 
 " Use <tab>x3 (three tabs) to toggle quick fix window.
 nnoremap <tab><tab><tab> :call QuickfixToggle()<cr>

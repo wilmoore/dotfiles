@@ -2,6 +2,9 @@
 " To Evaluate
 " ----------------------------------------
 
+" vim-markdown
+" https://github.com/gabrielelana/vim-markdown
+
 " vim-testdrive
 " https://github.com/monokrome/vim-testdrive
 
