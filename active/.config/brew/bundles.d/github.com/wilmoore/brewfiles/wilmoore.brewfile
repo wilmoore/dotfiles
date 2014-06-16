@@ -17,6 +17,7 @@ tap homebrew/games || true
 tap homebrew/headonly || true
 tap homebrew/versions || true
 tap wilmoore/binaries || true
+tap josegonzalez/php || true
 # tap phinze/cask || true
 
 #
@@ -30,6 +31,12 @@ tap wilmoore/binaries || true
 #
 
 cask install xquartz || true
+
+#
+# productivity
+#
+
+cask install bee || true
 
 #
 # GUI Mac applications (free)
@@ -146,9 +153,9 @@ install ocaml || true
 
 # php
 
-install josegonzalez/php/php55 --without-pear --without-apache --with-pgsql --with-fpm --with-intl --with-gmp --with-homebrew-curl --with-homebrew-openssl --with-homebrew-libxslt --with-imap --with-pgsql || true
-install josegonzalez/php/php55-intl || true
-unlink  josegonzalez/php/php55 || true
+install php56 --without-pear --without-apache --with-pgsql --with-fpm --with-intl --with-gmp --with-homebrew-curl --with-homebrew-openssl --with-homebrew-libxslt --with-imap --with-pgsql || true
+install php56-intl || true
+unlink  php56 || true
 
 # python
 install python || true

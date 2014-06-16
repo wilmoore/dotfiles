@@ -194,7 +194,7 @@ fi
 ################################################################################
 
 get-secret-for () {
-  security find-internet-password -gs $1 -a $2 2>&1 | perl -e 'if (<STDIN> =~ m/password: "(.*)"$/ ) { print $1; }'
+  ((security find-internet-password -gs $1 -a $2 1>&3) 2>&1 | cut -d'"' -f2) 3>&1 | tail -1
 }
 
 ################################################################################

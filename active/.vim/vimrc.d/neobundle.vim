@@ -70,6 +70,7 @@ NeoBundle "scrooloose/nerdtree"
 NeoBundle "tyru/open-browser.vim"
 NeoBundle "tpope/vim-projectionist"
 NeoBundle "mkitt/tabline.vim"
+NeoBundle "tpope/vim-unimpaired"
 NeoBundle "Shougo/unite.vim"
 
 " ----------------------------------------
