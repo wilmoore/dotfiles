@@ -271,19 +271,27 @@ defaults write com.google.Chrome ExtensionInstallSources -array "https://*.githu
 defaults write com.google.Chrome.canary ExtensionInstallSources -array "https://*.github.com/*" "http://userscripts.org/*"
 
 ###############################################################################
-# SizeUp.app
+# xtest
+###############################################################################
+
+# http://stackoverflow.com/a/16243275/128346
+defaults write org.x.X11 enable_test_extensions -boolean true
+defaults write org.macosforge.xquartz.X11 enable_test_extensions -boolean true
+
+###############################################################################
+# SizeUp.app (currently not using)
 ###############################################################################
 
 # start at login
 
-defaults write com.irradiatedsoftware.SizeUp StartAtLogin -bool true
+# defaults write com.irradiatedsoftware.SizeUp StartAtLogin -bool true
 
 # don’t show the preferences window on next start
 
-defaults write com.irradiatedsoftware.SizeUp ShowPrefsOnNextStart -bool false
+# defaults write com.irradiatedsoftware.SizeUp ShowPrefsOnNextStart -bool false
 
 # restart
 
-killall "SizeUp" > /dev/null 2>&1
-open -a "Sizeup"
+# killall "SizeUp" > /dev/null 2>&1
+# open -a "Sizeup"
 

@@ -17,14 +17,13 @@ tap homebrew/games || true
 tap homebrew/headonly || true
 tap homebrew/versions || true
 tap wilmoore/binaries || true
-tap phinze/cask || true
-tap jingweno/gh || true
+# tap phinze/cask || true
 
 #
 # homebrew external commands
 #
 
-install brew-cask || true
+# install brew-cask || true
 
 #
 # Windowing systems
@@ -167,6 +166,9 @@ install sbt || true
 install scala || true
 install giter8 || true
 
+# uml / diagramming
+install plantuml
+
 #
 # web development
 #
@@ -183,6 +185,7 @@ install protobuf || true
 # networking
 #
 
+install arp-scan || true
 cask install angry-ip-scanner || true
 cask install cocoapacketanalyzer || true
 install fping || true
@@ -312,6 +315,7 @@ install unrar || true
 install watch || true
 install watchman || true
 install wget || true
+install xdotool || true
 
 #
 # irc / instant message
@@ -326,6 +330,7 @@ install znc || true
 
 cask install chromecast || true
 install ffmpeg || true
+cask install mactubes || true
 cask install miro-video-converter || true
 cask install vlc || true
 cask install vlc-remote || true
@@ -375,6 +380,7 @@ cask install send-to-kindle || true
 #
 
 cask install pusher || true
+install ios-webkit-debug-proxy || true
 
 #
 # fonts

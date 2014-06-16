@@ -25,27 +25,27 @@ let mapleader = "\<Space>"
 " NOTE: YOU MUST map 'caps lock' to 'control' for this to be useful, otherwise it is quite painful.
 
 " -------
-" Navigation
-" -------
-
-" Makes `j` and `k` behave as you would expect even on wrapped line.
-nnoremap j gj
-nnoremap k gk
-
-" -------
 " Yank
 " -------
 
-" Yank entire buffer.
+" Yank (copy) entire buffer.
 map <leader>y :%y+<cr>
+map <leader>a :%y+<cr>
 
 " -------
 " Paste
 " -------
 
-" <Ctrl-U> -- unformatted system clipboard paste without need to toggle paste.
+" <leader>p -- unformatted system clipboard paste without need to toggle paste.
 " http://stackoverflow.com/a/3217023/128346
-map <C-U> "+p
+map <leader>p <esc>"+p
+
+" -------
+" Forward To Next ...
+" -------
+
+" forward to next boolean.
+map <leader>fb :nohlsearch<cr>/true\\|false/i<cr>
 
 " -------
 " Window/Split Navigation
@@ -53,6 +53,27 @@ map <C-U> "+p
 
 " double-tab to cycle through windows/splits.
 map <Tab><Tab> <C-W>w
+
+" -------
+" Help
+" -------
+
+" get help for the word under the cursor.
+map <leader>h :execute ":help " . expand("<cword>")<cr>
+
+" -------
+" Open files (find, tab edit, mru)
+" -------
+
+" `:find` prompt.
+map fo :find 
+
+" `:tabe` prompt.
+map to :tabe 
+
+" `:Mru` prompt.
+map mo :Mru<cr>
+map mro :Mru<cr>
 
 " -------
 " Surround Companion (for quoting stuff)
@@ -69,35 +90,54 @@ map <Tab><Tab> <C-W>w
 " Surround is great if you want to change surrounding content or if you need to add complex surrounding content;
 " however, if you just want to quickly add quotes or brackets, having a quick, hard to forget key sequence is nice.
 "
-" This was prompted by a discussion on reddit.com/r/vim (http://redd.it/26tayb).
+" This was prompted by a "discussion @ http://redd.it/26tayb
 
-" example.com =>   example.com
-:no <leader>" <esc>Ea"<esc>Bi"<esc>
+" example.com => "example.com"
+:no <leader>" gEwi"<esc>Ea"<esc>
 :vn <leader>" "1c"<esc>"1pa"<esc>
 
-"example.com => 'example.com'
-:no <leader>' <esc>Ea'<esc>Bi'<esc>
+" example.com => 'example.com'
+:no <leader>' gEwi'<esc>Ea'<esc>
 :vn <leader>' "1c'<esc>"1pa'<esc>
 
-"example.com => `example.com`
-:no <leader>` <esc>Ea`<esc>Bi`<esc>
+" example.com => `example.com`
+:no <leader>` gEwi`<esc>Ea`<esc>
 :vn <leader>` "1c`<esc>"1pa`<esc>
 
-"example.com => {example.com}
-:no <leader>{ <esc>Ea}<esc>Bi{<esc>
-:no <leader>} <esc>Ea}<esc>Bi{<esc>
+" example.com => *example.com*
+:no <leader>* gEwi*<esc>Ea*<esc>
+:vn <leader>* "1c*<esc>"1pa*<esc>
+
+" example.com => **example.com**
+:no <leader>** gEwi**<esc>Ea**<esc>
+:vn <leader>** "1c**<esc>"1pa**<esc>
+
+" example.com => _example.com_
+:no <leader>_ gEwi_<esc>Ea_<esc>
+:vn <leader>_ "1c_<esc>"1pa_<esc>
+
+" example.com => {example.com}
+:no <leader>{ gEwi{<esc>Ea}<esc>
+:no <leader>} gEwi{<esc>Ea}<esc>
 :vn <leader>{ "1c{<esc>"1pa}<esc>
 :vn <leader>} "1c{<esc>"1pa}<esc>
 
-"example.com => (example.com)
-:no <leader>( <esc>Ea)<esc>Bi(<esc>
-:no <leader>) <esc>Ea)<esc>Bi(<esc>
+" 3+3 => #{3+3}
+" user.name => #{user.name}
+" user_name => #{user_name}
+:no <leader># gEwi#{<esc>Ea}<esc>
+" 3 + 3 => #{3 + 3}
+:vn <leader># "1c#{<esc>"1pa}<esc>
+
+" example.com => (example.com)
+:no <leader>( gEwi(<esc>Ea)<esc>
+:no <leader>) gEwi(<esc>Ea)<esc>
 :vn <leader>( "1c(<esc>"1pa)<esc>
 :vn <leader>) "1c(<esc>"1pa)<esc>
 
-"example.com => <example.com>
-:no <leader>< <esc>Ea><esc>Bi<<esc>
-:no <leader>> <esc>Ea><esc>Bi<<esc>
+" example.com => <example.com>
+:no <leader>< gEwi<<esc>Ea><esc>
+:no <leader>> gEwi<<esc>Ea><esc>
 :vn <leader>< "1c<<esc>"1pa><esc>
 :vn <leader>> "1c<<esc>"1pa><esc>
 
@@ -108,21 +148,38 @@ map <Tab><Tab> <C-W>w
 " - support for complex/arbitrary surrounding content (i.e. `<em>`).
 " - support for arbitrary motions and text objects.
 
+" Surround-like plugins
+"
+" tpop/vim-surround: https://github.com/tpope/vim-surround
+" rhysd/vim-operator-surround: https://github.com/rhysd/vim-operator-surround
+" vim-addon-surround: https://github.com/MarcWeber/vim-addon-surround
+" http://stackoverflow.com/a/2148055/128346
+
 " -------
 " Increment/Decrement
 " -------
 
 " support shifted and non-shifted keys. (increment)
-nnoremap + <C-a>
-nnoremap = <C-a>
-nnoremap <Up> <C-a>
-nnoremap <Right> <C-a>
+map + <c-a>
+map = <c-a>
+map <up> <c-a>
+map <right> <c-a>
 
 " support shifted and non-shifted keys. (decrement)
-nnoremap - <C-x>
-nnoremap _ <C-x>
-nnoremap <Left> <C-x>
-nnoremap <Down> <C-x>
+map - <c-x>
+map _ <c-x>
+map <left> <c-x>
+map <down> <c-x>
+
+" -------
+" Search
+" -------
+
+" clear search highlight
+nnoremap <leader>HH :nohlsearch<CR>
+
+" turn on search highlight
+nnoremap <leader>H :set hlsearch<CR>
 
 " -------
 " Undo/Redo
@@ -131,32 +188,4 @@ nnoremap <Down> <C-x>
 " remap U to <C-r> for easier redo
 " from http://vimbits.com/bits/356
 nnoremap U <C-r>
-
-" -------
-" Tabs
-" -------
-
-" go to previous tab (same as gT, but easier to type).
-map ggt :tabprevious<CR>
-
-" -------
-" Quickfix Toggle
-" -------
-
-let g:quickfix_is_open = 0
-
-function! QuickfixToggle()
-    if g:quickfix_is_open
-        cclose
-        let g:quickfix_is_open = 0
-        execute g:quickfix_return_to_window . "wincmd w"
-    else
-        let g:quickfix_return_to_window = winnr()
-        copen
-        let g:quickfix_is_open = 1
-    endif
-endfunction
-
-" Use <tab>x3 (three tabs) to toggle quick fix window.
-nnoremap <tab><tab><tab> :call QuickfixToggle()<cr>
 

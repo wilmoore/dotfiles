@@ -81,15 +81,6 @@ vmap v <Plug>(expand_region_expand)
 vmap <C-v> <Plug>(expand_region_shrink)
 
 " -------
-" Swapit & SpeedDating
-" -------
-
-nmap <Plug>SwapItFallbackIncrement <Plug>SpeedDatingUp
-nmap <Plug>SwapItFallbackDecrement <Plug>SpeedDatingDown
-vmap <Plug>SwapItFallbackIncrement <Plug>SpeedDatingUp
-vmap <Plug>SwapItFallbackDecrement <Plug>SpeedDatingDown
-
-" -------
 " MRU
 " -------
 

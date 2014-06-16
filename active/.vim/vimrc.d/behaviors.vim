@@ -10,11 +10,51 @@
 filetype plugin indent on
 
 " -------
+" Syntax Highlighting
+" -------
+
+" enable/disable syntax highlighting
+syntax enable
+
+" -------
+" Timeout
+" -------
+
+set ttimeoutlen=10
+
+" -------
+" Tabs
+" -------
+
+" Maximum number of tabs to display
+set tabpagemax=50
+
+" -------
+" Clipboard
+" -------
+
+" Use system clipboard
+set clipboard=unnamed
+
+" -------
 " File Formats
 " -------
 
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
+
+" -------
+" Completion
+" -------
+
+" Show command completion menu (Enable ctrl-n and ctrl-p or tab to scroll thru matches)
+set wildmenu
+
+" set wildmode
+set wildmode=longest:full,list:full
+
+" stuff to ignore when tab completing
+set wildignore+=*.o,*.obj,*~,*.egg-info/**,node_modules/**,dist/**,build/**
 
 " -------
 " Find
@@ -52,83 +92,6 @@ set suffixesadd+=.xml
 set suffixesadd+=.zsh
 
 " -------
-" Common
-" -------
-
-" When editing a file, always jump to the last cursor position.
-" This must be after the uncompress commands.
-augroup jump_to_last_position_on_open
-  autocmd!
-  autocmd BufReadPost *
-        \ if line("'\"") > 1 && line ("'\"") <= line("$") |
-        \   exe "normal! g`\"" |
-        \ endif
-augroup END
-
-" Fix trailing whitespace in my most used programming langauges
-augroup fix_trailing_whitespace
-  autocmd!
-  autocmd BufWritePre *.py,*.coffee,*.js,*.rb,*.erb,*.md,*.scss,*.vim,Cakefile,
-        \*.hbs
-        \ silent! :StripTrailingWhiteSpace
-augroup END
-
-" Help mode bindings
-" <enter> to follow tag, <bs> to go back, and q to quit.
-" From http://ctoomey.com/posts/an-incremental-approach-to-vim/
-augroup help_mode_bindings
-  autocmd!
-  autocmd filetype help nnoremap <buffer><cr> <c-]>
-  autocmd filetype help nnoremap <buffer><bs> <c-T>
-  autocmd filetype help nnoremap <buffer>q :q<CR>
-augroup END
-
-" Fix accidental indentation in html files (this should probably go into an ftplugin)
-" from http://morearty.com/blog/2013/01/22/fixing-vims-indenting-of-html-files.html
-augroup fix_html_indentation
-  autocmd!
-  autocmd FileType html setlocal indentkeys-=*<Return>
-augroup END
-
-" Leave the return key alone when in command line windows, since it's used to run commands there.
-augroup fix_return_in_cmdline
-  autocmd!
-  autocmd! CmdwinEnter * :unmap <cr>
-  autocmd! CmdwinLeave * :call MapCR()
-augroup END
-
-" -------
-" Comments
-" -------
-
-" enable automatic comment insertion.
-augroup auto_common_insertion
-  autocmd!
-  autocmd BufEnter * setlocal formatoptions+=ro
-augroup END
-
-" -------
-" Quickfix
-" -------
-
-" automatically opens the quickfix window when invoking :Ggrep (or any command with `grep` in the name)
-" https://github.com/tpope/vim-fugitive/blob/master/README.markdown#faq
-
-augroup quickfix_auto_open
-  autocmd!
-  autocmd QuickFixCmdPost *grep* nested cwindow
-  autocmd QuickFixCmdPost *ag* nested cwindow
-augroup END
-
-" automatically close the quick fix window when leaving a file (will close vim if the quickfix window is the only visible window/tab).
-" http://stackoverflow.com/a/7477056/128346
-
-augroup quickfix_auto_close
-  autocmd WinEnter * if winnr('$') == 1 && getbufvar(winbufnr(winnr()), "&buftype") == "quickfix"|q|endif
-augroup END
-
-
-" -------
 " Sound
 " -------
 
@@ -157,41 +120,6 @@ set cf
 set hidden
 
 " -------
-" Keywords
-" -------
-
-" Add extra characters that are valid parts of variables
-set iskeyword+=\$,-
-
-" -------
-" Timeout
-" -------
-
-set ttimeoutlen=50
-
-" -------
-" Syntax Highlighting
-" -------
-
-" enable/disable syntax highlighting
-syntax on
-syntax enable
-
-" -------
-" Tabs
-" -------
-
-" Maximum number of tabs to display
-set tabpagemax=50
-
-" -------
-" Clipboard
-" -------
-
-" Use system clipboard
-set clipboard=unnamed
-
-" -------
 " Buffers
 " -------
 
@@ -216,9 +144,8 @@ set noswapfile
 " Search
 " -------
 
-set hlsearch
+set nohlsearch
 set incsearch
-
-" clear search highlight
-nnoremap <space> :nohlsearch<CR>
+set ignorecase
+set smartcase
 

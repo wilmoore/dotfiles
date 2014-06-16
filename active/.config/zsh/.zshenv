@@ -190,6 +190,14 @@ if [[ -z "$LANG" ]]; then
 fi
 
 ################################################################################
+# common functions
+################################################################################
+
+get-secret-for () {
+  security find-internet-password -gs $1 -a $2 2>&1 | perl -e 'if (<STDIN> =~ m/password: "(.*)"$/ ) { print $1; }'
+}
+
+################################################################################
 # git
 ################################################################################
 
@@ -200,11 +208,11 @@ export GIT_AUTHOR_NAME="Wil Moore III"
 export GIT_AUTHOR_EMAIL="wil.moore@wilmoore.com"
 
 # github
-export GITHUB_USER='wilmoore'
-export GITHUB_OAUTH_TOKEN=$__PRIVATE_GITHUB_OAUTH_TOKEN
+export GITHUB_USER="wilmoore"
+export GITHUB_OAUTH_TOKEN="$(get-secret-for github.com GITHUB_OAUTH_TOKEN)"
 
 # gh
-export GH_CONFIG=$XDG_CONFIG_HOME/gh/config.private
+export GH_CONFIG="~/Documents/private/config/gh/config"
 
 ################################################################################
 # application development variables
@@ -212,7 +220,6 @@ export GH_CONFIG=$XDG_CONFIG_HOME/gh/config.private
 
 #
 # HNav Client
-# TODO: create an ignored "private" file that is sourced (so we can add more private info)
 #
 
 alias logclient='$(which logclient-32bit) -f ~/Library/Logs/hnavclient.log -l all $HNAVC_IP805_LAN_IPADDRESS'

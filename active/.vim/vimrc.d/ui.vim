@@ -67,19 +67,3 @@ set scrolloff=0
 set sidescrolloff=15
 set sidescroll=1
 
-" -------
-" Wild Menu
-" -------
-
-" Turn on WiLd menu
-set wildmenu
-
-set wildmode=longest,list,full
-
-" show command complition menu (Enable ctrl-n and ctrl-p to scroll thru matches)
-set wildmenu
-
-" stuff to ignore when tab completing
-set wildignore=*.o,*.obj,*~
-set wildignore+=*vim/backups*
-

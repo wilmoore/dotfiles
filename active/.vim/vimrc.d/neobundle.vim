@@ -2,8 +2,14 @@
 " To Evaluate
 " ----------------------------------------
 
+" taboo.vim
+" https://github.com/gcmt/taboo.vim
+
 " vim-markdown
 " https://github.com/gabrielelana/vim-markdown
+
+" vim-markdown (plasticboy)
+" https://github.com/plasticboy/vim-markdown
 
 " vim-testdrive
 " https://github.com/monokrome/vim-testdrive
@@ -56,14 +62,15 @@ NeoBundle "tpope/vim-dispatch"
 " Navigation, Exploration
 " ----------------------------------------
 
-NeoBundle "file-line"
-NeoBundle "Shougo/unite.vim"
-NeoBundle "easymotion"
-NeoBundle "scrooloose/nerdtree"
 NeoBundle "kien/ctrlp.vim"
-NeoBundle "mru.vim"
+NeoBundle "Lokaltog/vim-easymotion"
+NeoBundle "bogado/file-line"
+NeoBundle "yegappan/mru"
+NeoBundle "scrooloose/nerdtree"
+NeoBundle "tyru/open-browser.vim"
 NeoBundle "tpope/vim-projectionist"
-NeoBundle "open-browser.vim"
+NeoBundle "mkitt/tabline.vim"
+NeoBundle "Shougo/unite.vim"
 
 " ----------------------------------------
 " ASCII values
@@ -100,7 +107,7 @@ NeoBundle "kien/rainbow_parentheses.vim"
 " ----------------------------------------
 
 NeoBundle "flazz/vim-colorschemes"
-NeoBundle "CSApprox"
+NeoBundle "godlygeek/csapprox"
 
 " ----------------------------------------
 " Completion
@@ -113,18 +120,15 @@ NeoBundle "Valloric/YouCompleteMe", { 'build' : { 'mac' : './install.sh --clang-
 " ----------------------------------------
 
 " Git
-NeoBundle "git.zip"
+NeoBundle "tpope/vim-git"
 NeoBundle "tpope/vim-fugitive"
 NeoBundle "int3/vim-extradite"
-NeoBundle "gitv"
+NeoBundle "gregsexton/gitv"
 
 " Github
 NeoBundle "mattn/webapi-vim"
 NeoBundle "mattn/gist-vim"
 NeoBundle "junegunn/vim-github-dashboard"
-
-" Mercurial
-NeoBundle "hgrev"
 
 " ----------------------------------------
 " Snippets, Templates
@@ -151,9 +155,9 @@ NeoBundle "terryma/vim-expand-region"
 
 " General
 NeoBundle "tpope/vim-commentary"
-NeoBundle "delimitMate.vim"
+NeoBundle "Raimondi/delimitMate"
+NeoBundle "tpope/vim-endwise"
 NeoBundle "tpope/vim-eunuch"
-NeoBundle "endwise.vim"
 NeoBundle "sjl/gundo.vim"
 NeoBundle "tpope/vim-surround"
 
@@ -161,23 +165,29 @@ NeoBundle "tpope/vim-surround"
 NeoBundle "AndrewRadev/inline_edit.vim"
 NeoBundle "chrisbra/NrrwRgn"
 NeoBundle "mjbrownie/swapit"
-NeoBundle "tpope/vim-speeddating"
 
 " Formatting
-NeoBundle "editorconfig-vim"
-NeoBundle "splitjoin.vim"
-NeoBundle "Syntastic"
-NeoBundle "junegunn/vim-easy-align"
+NeoBundle "editorconfig/editorconfig-vim"
+NeoBundle "AndrewRadev/splitjoin.vim"
+NeoBundle "scrooloose/syntastic"
 
 " Search & Replace
 NeoBundle "epmatsw/ag.vim"
+
+" ----------------------------------------
+" Text Objects
+" ----------------------------------------
+
+NeoBundle "kana/vim-textobj-user"
+NeoBundle "kana/vim-textobj-function"
+NeoBundle "kana/vim-textobj-underscore"
 
 " ----------------------------------------
 " Documentation
 " ----------------------------------------
 
 " Markdown
-NeoBundle "Markdown"
+NeoBundle "gabrielelana/vim-markdown"
 NeoBundle "itspriddle/vim-marked"
 
 " ----------------------------------------
@@ -204,6 +214,12 @@ NeoBundle "tpope/vim-jdaddy"
 " JavaScript (common)
 NeoBundleLazy "marijnh/tern_for_vim", { 'build': { 'others': 'npm install' }}
 NeoBundleLazy "jelera/vim-javascript-syntax", {'autoload':{'filetypes':['javascript']}}
+
+" PHP
+NeoBundle "spf13/PIV"
+
+" UML / diagramming
+NeoBundleLazy "aklt/plantuml-syntax"
 
 " Required:
 call neobundle#end()
