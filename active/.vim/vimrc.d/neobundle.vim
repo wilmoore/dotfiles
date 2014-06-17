@@ -5,12 +5,6 @@
 " taboo.vim
 " https://github.com/gcmt/taboo.vim
 
-" vim-markdown
-" https://github.com/gabrielelana/vim-markdown
-
-" vim-markdown (plasticboy)
-" https://github.com/plasticboy/vim-markdown
-
 " vim-testdrive
 " https://github.com/monokrome/vim-testdrive
 
@@ -70,7 +64,6 @@ NeoBundle "scrooloose/nerdtree"
 NeoBundle "tyru/open-browser.vim"
 NeoBundle "tpope/vim-projectionist"
 NeoBundle "mkitt/tabline.vim"
-NeoBundle "tpope/vim-unimpaired"
 NeoBundle "Shougo/unite.vim"
 
 " ----------------------------------------

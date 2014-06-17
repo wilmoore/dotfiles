@@ -193,8 +193,9 @@ fi
 # common functions
 ################################################################################
 
-get-secret-for () {
-  ((security find-internet-password -gs $1 -a $2 1>&3) 2>&1 | cut -d'"' -f2) 3>&1 | tail -1
+keychain-secret-for () {
+  local domain="$(echo $1 | cut -d'/' -f3)"
+  ((security find-internet-password -gs $domain -a $2 1>&3) 2>&1 | cut -d'"' -f2) 3>&1 | tail -1
 }
 
 ################################################################################
@@ -209,7 +210,7 @@ export GIT_AUTHOR_EMAIL="wil.moore@wilmoore.com"
 
 # github
 export GITHUB_USER="wilmoore"
-export GITHUB_OAUTH_TOKEN="$(get-secret-for github.com GITHUB_OAUTH_TOKEN)"
+export GITHUB_OAUTH_TOKEN="$(keychain-secret-for api.github.com GITHUB_OAUTH_TOKEN)"
 
 # gh
 export GH_CONFIG="~/Documents/private/config/gh/config"
