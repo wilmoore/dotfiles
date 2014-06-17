@@ -54,6 +54,12 @@ map <leader>fb :nohlsearch<cr>/true\\|false/i<cr>
 " double-tab to cycle through windows/splits.
 map <Tab><Tab> <C-W>w
 
+" Resize windows with arrows
+map <up>    :resize -5<cr>
+map <down>  :resize +5<cr>
+map <right> :vertical resize +5<cr>
+map <left>  :vertical resize -5<cr>
+
 " -------
 " Help
 " -------
@@ -74,6 +80,12 @@ map to :tabe
 " `:Mru` prompt.
 map mo :Mru<cr>
 map mro :Mru<cr>
+
+" -------
+" Surround (custom surrounds)
+" -------
+
+" TBD (see: http://www.reddit.com/r/vim/comments/26mszm/what_is_everyones_favorite_commenting_plugin_and/chtembl)
 
 " -------
 " Surround Companion (for quoting stuff)
@@ -162,14 +174,10 @@ map mro :Mru<cr>
 " support shifted and non-shifted keys. (increment)
 map + <c-a>
 map = <c-a>
-map <up> <c-a>
-map <right> <c-a>
 
 " support shifted and non-shifted keys. (decrement)
 map - <c-x>
 map _ <c-x>
-map <left> <c-x>
-map <down> <c-x>
 
 " -------
 " Search

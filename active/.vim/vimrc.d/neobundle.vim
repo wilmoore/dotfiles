@@ -2,6 +2,9 @@
 " To Evaluate
 " ----------------------------------------
 
+" supertab
+" https://github.com/ervandew/supertab
+
 " taboo.vim
 " https://github.com/gcmt/taboo.vim
 
@@ -161,6 +164,7 @@ NeoBundle "chrisbra/NrrwRgn"
 NeoBundle "mjbrownie/swapit"
 
 " Formatting
+NeoBundle "Chiel92/vim-autoformat"
 NeoBundle "editorconfig/editorconfig-vim"
 NeoBundle "AndrewRadev/splitjoin.vim"
 NeoBundle "scrooloose/syntastic"
@@ -173,6 +177,7 @@ NeoBundle "epmatsw/ag.vim"
 " ----------------------------------------
 
 NeoBundle "kana/vim-textobj-user"
+NeoBundle "glts/vim-textobj-comment"
 NeoBundle "kana/vim-textobj-function"
 NeoBundle "kana/vim-textobj-underscore"
 
