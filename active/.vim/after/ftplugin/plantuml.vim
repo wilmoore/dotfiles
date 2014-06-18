@@ -1,2 +1,2 @@
-set autowrite
-set makeprg=plantuml\ %
+setlocal autowrite
+setlocal makeprg=plantuml\ %

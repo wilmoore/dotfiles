@@ -1,1 +1,1 @@
-set autowrite
+setlocal autowrite
