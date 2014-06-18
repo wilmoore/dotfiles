@@ -19,7 +19,7 @@ source ~/.vim/vimrc.d/ui.vim
 source ~/.vim/vimrc.d/mouse.vim
 
 " quickfix.
-source ~/.vim/vimrc.d/quickfix.vim
+" source ~/.vim/vimrc.d/quickfix.vim
 
 " formatting options.
 source ~/.vim/vimrc.d/formatting.vim

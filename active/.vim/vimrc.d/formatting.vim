@@ -24,10 +24,7 @@ set encoding=utf-8
 set com=s1:/*,mb:*,ex:*/,://,b:#,:%,:XCOMM,n:>,b:-
 
 " enable automatic comment insertion.
-augroup auto_common_insertion
-  autocmd!
-  autocmd BufEnter * setlocal formatoptions+=ro
-augroup END
+set formatoptions+=ro
 
 " -------
 " Fill Characters

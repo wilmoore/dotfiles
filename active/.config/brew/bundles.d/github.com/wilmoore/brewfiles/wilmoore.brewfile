@@ -210,6 +210,7 @@ install wireshark || true
 # networking/security
 #
 
+cask install gpgtools || true
 install keychain || true
 install socat || true
 install ssh-copy-id || true
@@ -429,7 +430,7 @@ install webkit2png || true
 # image manipulation
 #
 
-# install ghostscript || true
+install ghostscript || true
 install graphicsmagick || true
 install imagemagick || true
 cask install imageoptim || true

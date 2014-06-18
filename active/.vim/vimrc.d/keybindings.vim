@@ -41,13 +41,6 @@ map <leader>a :%y+<cr>
 map <leader>p <esc>"+p
 
 " -------
-" Forward To Next ...
-" -------
-
-" forward to next boolean.
-map <leader>fb :nohlsearch<cr>/true\\|false/i<cr>
-
-" -------
 " Window/Split Navigation
 " -------
 
@@ -59,6 +52,13 @@ map <up>    :resize -5<cr>
 map <down>  :resize +5<cr>
 map <right> :vertical resize +5<cr>
 map <left>  :vertical resize -5<cr>
+
+" -------
+" Text Objects (not really, but fake it)
+" -------
+
+" next boolean.
+map <leader>fb :nohlsearch<cr>/true\\|false/i<cr>
 
 " -------
 " Help
@@ -173,11 +173,9 @@ map mro :Mru<cr>
 
 " support shifted and non-shifted keys. (increment)
 map + <c-a>
-map = <c-a>
 
 " support shifted and non-shifted keys. (decrement)
 map - <c-x>
-map _ <c-x>
 
 " -------
 " Search
