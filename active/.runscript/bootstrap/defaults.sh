@@ -147,6 +147,7 @@ sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo Hos
 # screenshot save location
 
 defaults write com.apple.screencapture location ~/Documents/screenshots
+killall SystemUIServer
 
 # disable checking spelling while typing
 

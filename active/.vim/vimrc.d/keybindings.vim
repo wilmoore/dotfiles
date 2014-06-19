@@ -41,6 +41,13 @@ map <leader>a :%y+<cr>
 map <leader>p <esc>"+p
 
 " -------
+" Tabs
+" -------
+
+" <SHIFT>+<TAB> to cycle through tabs.
+map <S-Tab> :tabnext<cr>
+
+" -------
 " Window/Split Navigation
 " -------
 

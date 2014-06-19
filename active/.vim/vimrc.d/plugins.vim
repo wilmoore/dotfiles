@@ -11,11 +11,23 @@ let g:Powerline_symbols = 'fancy'
 let g:Powerline_colorscheme='solarized256_dark'
 
 " -------
-" commentary
+" TComment
 " -------
 
-" use `>` as comment prefix in markdown files.
-autocmd FileType markdown set commentstring=>\ %s
+" press // to comment current line and/or visually selected line(s).
+" NOTE: vim-commentary did not handle visually selected lines well.
+
+map // :TComment<cr>
+
+" -------
+" vim-markdown
+" -------
+
+" drop comments
+let g:markdown_drop_empty_blockquotes = 1
+
+" turn off folding (it is slow).
+let g:markdown_enable_folding = 0
 
 " -------
 " open-browser
@@ -63,14 +75,6 @@ let g:ctrlp_regexp = 1
 " Make Ctrl-P plugin a lot faster for Git projects (http://dougblack.io/words/a-good-vimrc.html)
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 let g:ctrlp_use_caching = 0
-
-" -------
-" TComment
-" -------
-
-" key bindings
-nmap // <Plug>CommentaryLine
-vmap // <Plug>CommentaryLine
 
 " -------
 " Expand Region

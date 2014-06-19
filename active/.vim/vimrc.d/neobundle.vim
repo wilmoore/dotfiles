@@ -2,6 +2,9 @@
 " To Evaluate
 " ----------------------------------------
 
+" SearchParty
+" https://github.com/dahu/SearchParty
+
 " supertab
 " https://github.com/ervandew/supertab
 
@@ -151,7 +154,7 @@ NeoBundle "terryma/vim-expand-region"
 " ----------------------------------------
 
 " General
-NeoBundle "tpope/vim-commentary"
+NeoBundle "tomtom/tcomment_vim"
 NeoBundle "Raimondi/delimitMate"
 NeoBundle "tpope/vim-endwise"
 NeoBundle "tpope/vim-eunuch"
