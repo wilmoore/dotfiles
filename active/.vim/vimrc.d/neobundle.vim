@@ -59,6 +59,12 @@ NeoBundle "shougo/vimshell"
 NeoBundle "tpope/vim-dispatch"
 
 " ----------------------------------------
+" Buffer Settings
+" ----------------------------------------
+
+NeoBundle "tpope/vim-sleuth"
+
+" ----------------------------------------
 " Navigation, Exploration
 " ----------------------------------------
 
@@ -128,6 +134,7 @@ NeoBundle "gregsexton/gitv"
 " Github
 NeoBundle "mattn/webapi-vim"
 NeoBundle "mattn/gist-vim"
+NeoBundle "tpope/vim-rhubarb"
 NeoBundle "junegunn/vim-github-dashboard"
 
 " ----------------------------------------

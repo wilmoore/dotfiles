@@ -169,9 +169,9 @@ install https://raw.github.com/postmodern/chgems/master/homebrew/chgems.rb || tr
 install rust || true
 
 # scala
+install giter8 || true
 install sbt || true
 install scala || true
-install giter8 || true
 
 # uml / diagramming
 install plantuml
@@ -227,6 +227,7 @@ cask install cocoarestclient || true
 # remote access & control
 #
 
+cask install remote-desktop-connection || true
 cask install cord || true
 
 #
@@ -235,7 +236,7 @@ cask install cord || true
 
 install bzr || true
 install git || true
-install gh || true
+install --HEAD gh || true
 install mercurial || true
 cask install trailer || true
 
@@ -374,6 +375,8 @@ cask install pdftk || true
 #
 # audio/video
 #
+
+cask install audacity || true
 
 #
 # reading

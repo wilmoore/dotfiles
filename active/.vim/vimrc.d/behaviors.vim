@@ -81,6 +81,7 @@ set suffixesadd+=.html
 set suffixesadd+=.js
 set suffixesadd+=.json
 set suffixesadd+=.ls
+set suffixesadd+=.md
 set suffixesadd+=.php
 set suffixesadd+=.phpt
 set suffixesadd+=.pl

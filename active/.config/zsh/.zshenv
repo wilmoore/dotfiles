@@ -213,7 +213,7 @@ export GITHUB_USER="wilmoore"
 export GITHUB_OAUTH_TOKEN="$(keychain-secret-for api.github.com GITHUB_OAUTH_TOKEN)"
 
 # gh
-export GH_CONFIG="~/Documents/private/config/gh/config"
+export GH_CONFIG="$HOME/Documents/private/config/gh/config"
 
 ################################################################################
 # application development variables
