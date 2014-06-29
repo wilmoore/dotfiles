@@ -4,8 +4,9 @@
 ################################################################################
 
 # keep up-to-date
-update
-upgrade
+update || true
+upgrade || true
+upgrade brew-cask || true
 
 #
 # taps
@@ -18,13 +19,13 @@ tap homebrew/headonly || true
 tap homebrew/versions || true
 tap wilmoore/binaries || true
 tap josegonzalez/php || true
-# tap phinze/cask || true
+tap caskroom/cask || true
 
 #
 # homebrew external commands
 #
 
-# install brew-cask || true
+install brew-cask || true
 
 #
 # Windowing systems

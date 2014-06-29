@@ -221,6 +221,9 @@
   # resolve conflicts by keeping only the incoming changes for a file throwing away your own changes.
   only-theirs         = checkout --theirs --
 
+  # add a remote named origin
+  origin              = remote add origin
+
   # navigate to help on installing `git-credential-osxkeychain`
   osxkeychain-help    = web--browse http://git.io/dz-m6w
 

@@ -5,6 +5,12 @@
 " SearchParty
 " https://github.com/dahu/SearchParty
 
+" switch.vim
+" https://www.youtube.com/watch?v=zIOOLZJb87U
+
+" drawit.vim
+" http://www.thegeekstuff.com/2009/12/how-to-create-ascii-drawings-in-vim-editor-draw-boxes-lines-ellipses-arrows-inside-text-file/#more-2732
+
 " supertab
 " https://github.com/ervandew/supertab
 
