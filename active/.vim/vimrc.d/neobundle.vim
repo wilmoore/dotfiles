@@ -2,11 +2,15 @@
 " To Evaluate
 " ----------------------------------------
 
+" taboo.vim
+" https://github.com/gcmt/taboo.vim
+
+" vim-sneak (alternative to easymotion)
+" https://github.com/justinmk/vim-sneak
+" http://www.reddit.com/r/vim/comments/267vrv/i_am_tim_pope_crafter_of_plugins_ama/chol6k2
+
 " SearchParty
 " https://github.com/dahu/SearchParty
-
-" switch.vim
-" https://www.youtube.com/watch?v=zIOOLZJb87U
 
 " drawit.vim
 " http://www.thegeekstuff.com/2009/12/how-to-create-ascii-drawings-in-vim-editor-draw-boxes-lines-ellipses-arrows-inside-text-file/#more-2732
@@ -14,26 +18,12 @@
 " supertab
 " https://github.com/ervandew/supertab
 
-" taboo.vim
-" https://github.com/gcmt/taboo.vim
-
 " vim-testdrive
 " https://github.com/monokrome/vim-testdrive
 
 " vim-vroom
 " https://github.com/skalnik/vim-vroom
 " http://sheerun.net/2014/03/21/how-to-boost-your-vim-productivity
-
-" vim-sneak (alternative to easymotion)
-" https://github.com/justinmk/vim-sneak
-" http://www.reddit.com/r/vim/comments/267vrv/i_am_tim_pope_crafter_of_plugins_ama/chol6k2
-
-" targets.vim
-" https://github.com/wellle/targets.vim
-" http://www.reddit.com/r/vim/comments/267vrv/i_am_tim_pope_crafter_of_plugins_ama/chopyo8
-
-" fzf
-" https://github.com/junegunn/fzf
 
 " ----------------------------------------
 " NeoBundle
@@ -192,10 +182,7 @@ NeoBundle "epmatsw/ag.vim"
 " Text Objects
 " ----------------------------------------
 
-NeoBundle "kana/vim-textobj-user"
-NeoBundle "glts/vim-textobj-comment"
-NeoBundle "kana/vim-textobj-function"
-NeoBundle "kana/vim-textobj-underscore"
+NeoBundle "paradigm/TextObjectify"
 
 " ----------------------------------------
 " Documentation
