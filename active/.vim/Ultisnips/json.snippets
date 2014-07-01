@@ -16,6 +16,7 @@ snippet package.json "CommonJS package.json (package)"
   "man" : ["man/$1.1"],
   "scripts": {
     "test": "tape test.js",
+    "testling": "browserify test.js | testling",
     "start": "nodemon server.js",
     "build": "browserify --entry index.js --outfile $1.js --standalone $1",
     "clint": "jsonlint --quiet package.json",
@@ -39,6 +40,7 @@ snippet package.json "CommonJS package.json (package)"
   },
   "devDependencies": {
     "tape": "latest",
+    "testling": "latest",
     "browserify": "latest",
     "nodemon": "latest",
     "jsonlint": "latest",
@@ -50,7 +52,17 @@ snippet package.json "CommonJS package.json (package)"
   },
   "dependencies": {},
   "config" : {},
-  "licenses": ["MIT"]
+  "licenses": ["MIT"],
+  "testling": {
+    "scripts": ["test.js"],
+    "browsers": {
+      "chrome":   [25],
+      "iexplore": [6, 7, 8, 9, 10],
+      "firefox":  [3.6, 19],
+      "opera":    [10.5, 11.6, 12.0],
+      "safari":   [5.1, 6.0]
+    }
+  }
 }
 endsnippet
 

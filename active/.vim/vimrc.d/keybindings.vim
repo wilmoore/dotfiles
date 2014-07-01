@@ -141,6 +141,12 @@ map mro :Mru<cr>
 :vn <leader>{ "1c{<esc>"1pa}<esc>
 :vn <leader>} "1c{<esc>"1pa}<esc>
 
+" example.com => example.com
+:no <leader>[ gEwi[<esc>Ea]<esc>
+:no <leader>] gEwi[<esc>Ea]<esc>
+:vn <leader>[ "1c[<esc>"1pa]<esc>
+:vn <leader>] "1c[<esc>"1pa]<esc>
+
 " 3+3 => #{3+3}
 " user.name => #{user.name}
 " user_name => #{user_name}
@@ -201,4 +207,24 @@ nnoremap <leader>H :set hlsearch<CR>
 " remap U to <C-r> for easier redo
 " from http://vimbits.com/bits/356
 nnoremap U <C-r>
+
+" -------
+"  SmartEnter (auto-end empty single-line comments)
+"  http://superuser.com/a/668667/40400
+" -------
+
+function! s:IsOnlyComment(getlineArg)
+  let commentRegex = '^\s*' . substitute(&commentstring, '%s', '\\s*', '') . '$'
+  return strlen(matchstr(getline(a:getlineArg), commentRegex)) > 0
+endfunction
+
+function! SmartEnter()
+  if s:IsOnlyComment('.')
+    return "\<Esc>S"
+  else
+    return "\<CR>"
+  endif
+endfunction
+
+inoremap <expr> <CR> SmartEnter()
 

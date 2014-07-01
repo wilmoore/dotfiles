@@ -2,6 +2,9 @@
 " To Evaluate
 " ----------------------------------------
 
+" autoformat (attempt to configure golang)
+" https://github.com/Chiel92/vim-autoformat
+
 " taboo.vim
 " https://github.com/gcmt/taboo.vim
 
