@@ -76,6 +76,12 @@ export NPM_CONFIG_INIT_LICENSE="MIT"
 export NPM_CONFIG_STRICT_SSL="false"
 
 #
+# tell node programs that use the `update-notifier` package not to store anything.
+#
+
+export NO_UPDATE_NOTIFIER=1
+
+#
 # groovy
 #
 
