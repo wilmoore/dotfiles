@@ -75,11 +75,11 @@ export NPM_CONFIG_INIT_AUTHOR_URL="http://github.com/wilmoore"
 export NPM_CONFIG_INIT_LICENSE="MIT"
 export NPM_CONFIG_STRICT_SSL="false"
 
-#
 # tell node programs that use the `update-notifier` package not to store anything.
-#
-
 export NO_UPDATE_NOTIFIER=1
+
+# nvm will use the following directory for node versions.
+export NVM_DIR=$XDG_DATA_HOME/node
 
 #
 # groovy

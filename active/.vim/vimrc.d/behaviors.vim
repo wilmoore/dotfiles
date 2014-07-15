@@ -20,7 +20,8 @@ syntax enable
 " Timeout
 " -------
 
-set ttimeoutlen=10
+set timeoutlen=2000
+set ttimeoutlen=0
 
 " -------
 " Tabs
