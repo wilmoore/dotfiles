@@ -3,7 +3,7 @@
 This table of contents is not exhaustive in that it only links directly to configuration files that most people are likely interested.
 
 - [Git](active/.config/git/config)
-- [Homebrew](active/.brews.d/github.com/wilmoore/brewfiles/wilmoore.brewfile)
+- [Homebrew](active/.config/brew/bundles.d/github.com/wilmoore/brewfiles/wilmoore.brewfile)
 - [Tmux](active/.tmux.conf)
 - [Vim](active/.vim)
 - [Zsh](active/.config/zsh)
