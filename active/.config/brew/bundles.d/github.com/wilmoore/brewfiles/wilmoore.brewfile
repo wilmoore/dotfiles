@@ -240,10 +240,16 @@ cask install cord || true
 # vcs
 #
 
+# Bazaar
 install bzr || true
+
+# mercurial
+install mercurial || true
+
+# git / github
+install --HEAD gerrit-tools || true
 install git || true
 install --HEAD gh || true
-install mercurial || true
 cask install trailer || true
 
 #
@@ -308,6 +314,7 @@ install gnu-chess || true
 #
 
 install ag || true
+install --HEAD choose || true
 install ctags || true
 cask install geekbench || true
 cask install grandperspective || true

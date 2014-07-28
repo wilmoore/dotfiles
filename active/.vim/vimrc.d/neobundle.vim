@@ -94,9 +94,6 @@ NeoBundle "stephenmckinney/vim-solarized-powerline"
 " Visual Selection, Cursors
 " ----------------------------------------
 
-" https://github.com/terryma/vim-multiple-cursors
-" http://www.youtube.com/watch?v=Umb59mMvCxA
-NeoBundle "terryma/vim-multiple-cursors"
 NeoBundle "myusuf3/numbers.vim"
 
 " ----------------------------------------
@@ -186,6 +183,7 @@ NeoBundle "epmatsw/ag.vim"
 " ----------------------------------------
 
 NeoBundle "paradigm/TextObjectify"
+NeoBundle "machakann/vim-textobj-delimited"
 
 " ----------------------------------------
 " Documentation
@@ -225,6 +223,21 @@ NeoBundle "spf13/PIV"
 
 " UML / diagramming
 NeoBundleLazy "aklt/plantuml-syntax"
+
+" ----------------------------------------
+" Games
+" ----------------------------------------
+
+NeoBundle "mattn/flappyvird-vim"
+
+" ----------------------------------------
+" Sublime Text Features
+" ----------------------------------------
+
+" https://github.com/terryma/vim-multiple-cursors
+" http://www.youtube.com/watch?v=Umb59mMvCxA
+NeoBundle "terryma/vim-multiple-cursors"
+NeoBundle "severin-lemaignan/vim-minimap"
 
 " Required:
 call neobundle#end()

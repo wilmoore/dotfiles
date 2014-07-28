@@ -106,13 +106,17 @@ autocmd GUIEnter * set visualbell t_vb=
 " Visual Editor Indicators
 " -------
 
-set cursorline
+" look & feel of visual line/column indicator(s).
 highlight CursorLine term=underline cterm=underline gui=underline
 
-" When this option is set, the screen will not be redrawn while
-" executing macros, registers and other commands that have not been
-" typed. Also, updating the window title is postponed. To force an
-" update use :redraw
+" show current line indicator.
+set cursorline
+
+" show current column indicator.
+set cursorcolumn
+
+" When this option is set, the screen will not be redrawn while executing macros, registers and other commands that have not been
+" typed. Also, updating the window title is postponed. To force an update use :redraw.
 set lazyredraw
 
 " Enable error files & error jumping.
