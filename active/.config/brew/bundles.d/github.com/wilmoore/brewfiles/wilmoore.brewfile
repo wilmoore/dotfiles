@@ -62,8 +62,6 @@ cask install growlnotify || true
 cask install handbrake || true
 cask install heroku-toolbelt || true
 cask install inkscape || true
-cask install kaleidoscope || true
-cask install ksdiff || true
 cask install mailplane || true
 cask install marked2 || true
 cask install node-webkit || true
@@ -99,6 +97,12 @@ cask install slack || true
 
 cask install the-unarchiver || true
 install atool || true
+
+#
+# software development utilities
+#
+
+cask install kaleidoscope || true
 
 #
 # programming environment

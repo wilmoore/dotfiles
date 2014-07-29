@@ -5,6 +5,9 @@
 " autoformat (attempt to configure golang)
 " https://github.com/Chiel92/vim-autoformat
 
+" a pair
+" http://www.vim.org/scripts/script.php?script_id=4991
+
 " taboo.vim
 " https://github.com/gcmt/taboo.vim
 
