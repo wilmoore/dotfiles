@@ -141,10 +141,17 @@ set stal=2
 " Backup and Swap
 " -------
 
-" Turn backup off, since most stuff is in source control
-set nobackup
-set nowb
-set noswapfile
+" set swap directory
+set directory=~/.local/share/vim/swap//
+
+" set backup directory
+set backupdir=~/.local/share/vim/back//
+
+" set undo directory
+set undodir=~/.local/share/vim/undo//
+
+" enable backups
+set backup
 
 " -------
 " Search

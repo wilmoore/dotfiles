@@ -438,11 +438,12 @@ cask install sketch-tool || true
 install translate-toolkit || true
 
 #
-# screen capture/casting.
+# screen capture/casting
 #
 
 install https://raw.githubusercontent.com/sickill/asciinema/master/packaging/homebrew/asciinema.rb || true
 cask install licecap || true
+cask install paparazzi || true
 install ttyrec || true
 install webkit2png || true
 
