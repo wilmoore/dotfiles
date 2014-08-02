@@ -79,8 +79,9 @@ cask install xscope || true
 # Window Management
 #
 
-cask install sizeup || true
+# cask install sizeup || true
 cask install slate || true
+# cask install spectacle || true
 
 #
 # chat, IM, irc
