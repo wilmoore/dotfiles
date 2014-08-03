@@ -21,10 +21,10 @@ autoload run-help
 HELPDIR=$HOME/.homebrew/share/zsh/helpfiles
 
 # aliases
-source $HOME/.aliases
+source $XDG_CONFIG_HOME/aliases
 
 # keybindings
-source $HOME/.bindkey
+source $XDG_CONFIG_HOME/bindkey
 
 # widely accepted ulimit setting
 ulimit -n 4096

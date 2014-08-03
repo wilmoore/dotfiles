@@ -221,13 +221,3 @@ export GITHUB_OAUTH_TOKEN="$(keychain-secret-for api.github.com GITHUB_OAUTH_TOK
 # gh
 export GH_CONFIG="$HOME/Documents/private/config/gh/config"
 
-################################################################################
-# application development variables
-################################################################################
-
-#
-# HNav Client
-#
-
-alias logclient='$(which logclient-32bit) -f ~/Library/Logs/hnavclient.log -l all $HNAVC_IP805_LAN_IPADDRESS'
-

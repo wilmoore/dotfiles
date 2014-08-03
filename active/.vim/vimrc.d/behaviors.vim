@@ -142,13 +142,16 @@ set stal=2
 " -------
 
 " set swap directory
-set directory=~/.local/share/vim/swap//
+set directory=$XDG_CACHE_HOME/vim,/tmp
 
 " set backup directory
-set backupdir=~/.local/share/vim/back//
+set backupdir=$XDG_CACHE_HOME/vim,/tmp
 
 " set undo directory
-set undodir=~/.local/share/vim/undo//
+set undodir=$XDG_CACHE_HOME/vim,/tmp
+
+" set viminfo directory
+set viminfo+=n$XDG_CACHE_HOME/vim/viminfo
 
 " enable backups
 set backup

@@ -24,6 +24,6 @@ source ~/.vim/vimrc.d/formatting.vim
 " plugin configuration (plugin specific key bindings).
 source ~/.vim/vimrc.d/plugins.vim
 
-" project Specific .vimrc Files
+" project Specific .vimrc Files.
 source ~/.vim/vimrc.d/exrc.vim
 

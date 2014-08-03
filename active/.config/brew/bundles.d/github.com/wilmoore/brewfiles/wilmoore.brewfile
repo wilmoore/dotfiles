@@ -492,3 +492,9 @@ cleanup
 cask cleanup
 prune
 
+#
+# desktop publishing / book authoring
+#
+
+cask install gitbook || true
+
