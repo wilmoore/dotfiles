@@ -3,14 +3,14 @@
 # Install these via `brew bundle-dir` or `brew bundle`
 ################################################################################
 
-# keep up-to-date
+# @keep up-to-date
 update || true
 upgrade || true
 upgrade brew-cask || true
 
-#
-# taps
-#
+###############################################
+# @taps
+###############################################
 
 tap homebrew/binary || true
 tap homebrew/dupes || true
@@ -21,93 +21,293 @@ tap wilmoore/binaries || true
 tap josegonzalez/php || true
 tap caskroom/cask || true
 
-#
-# homebrew external commands
-#
+##################################################
+# @homebrew external commands
+##################################################
 
 install brew-cask || true
 
-#
-# Windowing systems
-#
+##################################################
+# acceptance testing
+##################################################
 
-cask install xquartz || true
+install selenium-server-standalone || true
 
-#
-# productivity
-#
+##################################################
+# archive
+##################################################
 
-cask install bee || true
+install atool || true
+cask install the-unarchiver || true
+install unrar || true
 
-#
-# GUI Mac applications (free)
-#
+##################################################
+# audio editor
+##################################################
 
-cask install alfred || true
-cask alfred link || true
+cask install audacity || true
+
+##################################################
+# backup and restore
+##################################################
+
+cask install chronosync || true
+
+##################################################
+# books / reading
+##################################################
+
 cask install calibre || true
-cask install charles || true
-cask install cheatsheet || true
-cask install chromecast || true
-cask install chromium || true
-cask install cloudup || true
-cask install colors || true
-cask install cyberduck || true
-cask install firefox || true
-cask install evernote || true
-cask install gfxcardstatus || true
-cask install google-chrome || true
-cask install google-drive || true
-cask install growlnotify || true
-cask install handbrake || true
-cask install heroku-toolbelt || true
-cask install inkscape || true
-cask install mailplane || true
-cask install marked2 || true
-cask install node-webkit || true
-cask install onepassword || true
-cask install opera || true
-cask install poedit || true
-cask install screenhero || true
-cask install sequel-pro || true
-cask install smcfancontrol || true
-cask install sourcetree || true
-cask install spotify || true
-cask install xscope || true
+install homebrew/binary/kindlegen || true
+cask install kindle || true
+cask install send-to-kindle || true
 
-#
-# Window Management
-#
-
-# cask install sizeup || true
-cask install slate || true
-# cask install spectacle || true
-
-#
+##################################################
 # chat, IM, irc
-#
+##################################################
 
 cask install adium || true
+cask install hipchat || true
 cask install limechat || true
 cask install skype || true
 cask install slack || true
 
-#
-# archive
-#
+##################################################
+# cloud file management
+##################################################
 
-cask install the-unarchiver || true
-install atool || true
+cask install cloudup || true
+cask install dropbox || true
+cask install google-drive || true
 
-#
+##################################################
+# databases
+##################################################
+
+install influxdb
+cask install postgres || true
+install redis || true
+install sqlite3 || true
+
+##################################################
+# database management
+##################################################
+
+# GUI apps
+cask install mysqlworkbench || true
+cask install pgadmin3 || true
+cask install redis-desktop-manager || true
+cask install robomongo || true
+cask install sequel-pro || true
+
+##################################################
+# design
+##################################################
+
+cask install colors || true
+cask install xscope || true
+
+##################################################
+# desktop publishing / book authoring
+##################################################
+
+cask install gitbook || true
+
+##################################################
+# diagnostic
+##################################################
+
+cask install gfxcardstatus || true
+cask install smcfancontrol || true
+
+##################################################
+# editor / pager
+##################################################
+
+install macvim --custom-icons --override-system-vim --with-lua --with-luajit --with-csope || true
+
+##################################################
+# email
+##################################################
+
+install sendemail || true
+
+##################################################
+# entertainment
+##################################################
+
+cask install chromecast || true
+
+##################################################
+# fonts
+##################################################
+
+cask install caskroom/fonts/font-sauce-code-powerline || true
+cask install caskroom/fonts/font-dejavu-sans-mono-for-powerline || true
+
+###############################################
+# http/rest client
+###############################################
+
+cask install cocoarestclient || true
+
+##################################################
+# image manipulation
+##################################################
+
+install dcraw || true
+install exiftool || true
+install ghostscript || true
+install graphicsmagick || true
+install imagemagick || true
+cask install imageoptim || true
+cask install imagealpha || true
+cask install mactex || true
+install poppler || true
+cask install texturepacker || true
+install ufraw || true
+cask install xee || true
+
+##################################################
+# internationalization, localization, translation
+###############################################
+
+cask install poedit || true
+install translate-toolkit || true
+
+##################################################
+# irc / instant message
+##################################################
+
+install bitlbee || true
+install znc || true
+
+###############################################
+# mobile development
+###############################################
+
+cask install pusher || true
+install ios-webkit-debug-proxy || true
+
+###############################################
+# music
+###############################################
+
+cask install spotify || true
+
+###############################################
+# networking
+###############################################
+
+install arp-scan || true
+cask install angry-ip-scanner || true
+cask install charles || true
+cask install cocoapacketanalyzer || true
+cask install debookee || true
+install fping || true
+cask install iconping || true
+install masscan || true
+install netcat || true
+install ngrep || true
+install nmap || true
+cask install serf || true
+install ssh-copy-id || true
+install sshfs || true
+install socat || true
+install stunnel || true
+cask install speedlimit || true
+install tcpdump || true
+install wireshark || true
+
+###############################################
+# pair programming
+###############################################
+
+cask install screenhero || true
+
+###############################################
+# pdf
+###############################################
+
+cask install pdftk || true
+
+###############################################
+# productivity
+###############################################
+
+cask install alfred || true
+cask alfred link || true
+cask install cheatsheet || true
+cask install evernote || true
+cask install libreoffice || true
+cask install mailplane || true
+cask install marked2 || true
+
+##################################################
+# quick look plugins
+##################################################
+
+cask install cert-quicklook || true
+cask install qlcolorcode || true
+cask install qlstephen || true
+cask install qlmarkdown || true
+cask install quicklook-json || true
+cask install qlprettypatch || true
+cask install quicklook-csv || true
+cask install quicklook-json || true
+cask install betterzipql || true
+cask install webp-quicklook || true
+cask install suspicious-package || true
+
+##################################################
+# remote access & control
+##################################################
+
+cask install remote-desktop-connection || true
+cask install cord || true
+
+##################################################
+# screen capture/casting
+##################################################
+
+install https://raw.githubusercontent.com/sickill/asciinema/master/packaging/homebrew/asciinema.rb || true
+cask install licecap || true
+cask install paparazzi || true
+install ttyrec || true
+install webkit2png || true
+
+###############################################
+# security
+###############################################
+
+cask install gpgtools || true
+install keychain || true
+cask install onepassword || true
+
+###############################################
+# serialization
+###############################################
+
+install protobuf || true
+
+##################################################
+# shell
+##################################################
+
+# zsh
+install zsh-completions || true
+install zsh-lovers || true
+install zsh || true
+
+###############################################
 # software development utilities
-#
+###############################################
 
 cask install kaleidoscope || true
 
-#
-# programming environment
-#
+###############################################
+# software development environment
+###############################################
 
 install apple-gcc42 || true
 install autoconf || true
@@ -119,12 +319,15 @@ install global || true
 install intltool || true
 install pkg-config || true
 
-#
-# programming languages
-#
+###############################################
+# software development programming languages
+###############################################
 
 # clojure
 install leiningen || true
+
+# css/sass
+install sassc || true
 
 # dart
 install dart || true
@@ -133,7 +336,6 @@ install dart || true
 install erlang || true
 install elixir --HEAD || true
 install rebar || true
-install wilmoore/binaries/expm || true
 
 # go
 install go || true
@@ -185,65 +387,12 @@ cask install scratch || true
 # uml / diagramming
 install plantuml
 
-#
-# web development
-#
+##################################################
+# source control
+##################################################
 
-install sassc || true
-
-#
-# serialization
-#
-
-install protobuf || true
-
-#
-# networking
-#
-
-install arp-scan || true
-cask install angry-ip-scanner || true
-cask install cocoapacketanalyzer || true
-cask install debookee || true
-install fping || true
-cask install iconping || true
-install masscan || true
-install netcat || true
-install ngrep || true
-install nmap || true
-cask install serf || true
-install socat || true
-cask install speedlimit || true
-install homebrew/dupes/tcpdump || true
-install wireshark || true
-
-#
-# networking/security
-#
-
-cask install gpgtools || true
-install keychain || true
-install socat || true
-install ssh-copy-id || true
-install sshfs || true
-install stunnel || true
-
-#
-# http client
-#
-
-cask install cocoarestclient || true
-
-#
-# remote access & control
-#
-
-cask install remote-desktop-connection || true
-cask install cord || true
-
-#
-# vcs
-#
+# GUI apps
+cask install sourcetree || true
 
 # Bazaar
 install bzr || true
@@ -257,80 +406,29 @@ install git || true
 install --HEAD gh || true
 cask install trailer || true
 
-#
-# web browsers & browser engines
-#
+##################################################
+# ui design
+##################################################
 
-# finally this has been bottled
-install browser || true
-install phantomjs || true
-install v8 || true
+cask install balsamiq-mockups || true
+cask install sketch || true
+cask install sketch-tool || true
 
-#
-# databases
-#
-
-# https://github.com/influxdb/influxdb.org/issues/28
-# install influxdb
-install mongodb || true
-cask install mysql-workbench || true
-cask install mysqlworkbench || true
-cask install pgadmin3 || true
-cask install postgres || true
-install redis || true
-cask install redis-desktop-manager || true
-install rethinkdb || true
-install riak || true
-cask install robomongo || true
-install sqlite3 || true
-
-#
-# quick look plugins
-#
-
-cask install cert-quicklook || true
-cask install qlcolorcode || true
-cask install qlstephen || true
-cask install qlmarkdown || true
-cask install quicklook-json || true
-cask install qlprettypatch || true
-cask install quicklook-csv || true
-cask install quicklook-json || true
-cask install betterzipql || true
-cask install webp-quicklook || true
-cask install suspicious-package || true
-
-
-#
-# game development
-#
-
-cask install gamesalad || true
-
-#
-# games
-#
-
-install vitetris || true
-install gnu-chess || true
-
-#
+##################################################
 # utility
-#
+##################################################
 
 install ag || true
 install --HEAD choose || true
 install ctags || true
 cask install geekbench || true
-cask install grandperspective || true
 install htop-osx || true
 install jq || true
 install jsonpp || true
 cask install launchrocket || true
 install lnav || true
 install moreutils || true
-# https://github.com/Homebrew/homebrew-binary/pull/58
-install https://raw.github.com/egrim/homebrew-binary/add-ngrok/ngrok.rb || true
+install ngrok || true
 install pcre || true
 install reattach-to-user-namespace || true
 install terminal-notifier || true
@@ -338,25 +436,17 @@ install gnu-time || true
 install todo-txt || true
 install tmux || true
 install tree || true
-install unrar || true
 install watch || true
 install watchman || true
 install wget || true
 install xdotool || true
 
-#
-# irc / instant message
-#
-
-install bitlbee || true
-install znc || true
-
-#
+##################################################
 # video
-#
+##################################################
 
 cask install chromecast || true
-install ffmpeg || true
+install ffmpeg --use-clang --with-libvorbis --with-libvpx --use-gcc || true
 cask install mactubes || true
 cask install miro-video-converter || true
 cask install vlc || true
@@ -364,137 +454,52 @@ cask install vlc-remote || true
 cask install vlcstreamer || true
 install youtube-dl || true
 
-#
+##################################################
+# video transcoding
+##################################################
+
+cask install handbrake || true
+
+##################################################
 # virtualization
-#
+##################################################
 
 install docker || true
 cask install vagrant || true
 cask install virtualbox || true
 
-#
-# shell
-#
+##################################################
+# web browsers & browser engines
+##################################################
 
-# zsh
-install zsh-completions || true
-install zsh-lovers || true
-install zsh || true
+install browser || true
+cask install chromium || true
+cask install firefox || true
+cask install google-chrome || true
+cask install node-webkit || true
+cask install opera || true
+install phantomjs || true
+install v8 || true
 
-# developer docs
-cask install dash || true
-
-#
-# writing
-#
-
-cask install pdftk || true
-
-#
-# audio/video
-#
-
-cask install audacity || true
-
-#
-# reading
-#
-
-install homebrew/binary/kindlegen || true
-cask install kindle || true
-cask install send-to-kindle || true
-
-#
-# mobile development
-#
-
-cask install pusher || true
-install ios-webkit-debug-proxy || true
-
-#
-# fonts
-#
-
-cask install caskroom/fonts/font-sauce-code-powerline || true
-cask install caskroom/fonts/font-dejavu-sans-mono-for-powerline || true
-
-#
-# editor / pager
-#
-
-install macvim --custom-icons --override-system-vim --with-lua --with-luajit --with-csope || true
-
-#
-# ui design
-#
-
-cask install balsamiq-mockups || true
-cask install sketch || true
-cask install sketch-tool || true
-
-#
-# localization/translation
-#
-
-install translate-toolkit || true
-
-#
-# screen capture/casting
-#
-
-install https://raw.githubusercontent.com/sickill/asciinema/master/packaging/homebrew/asciinema.rb || true
-cask install licecap || true
-cask install paparazzi || true
-install ttyrec || true
-install webkit2png || true
-
-#
-# image manipulation
-#
-
-install ghostscript || true
-install graphicsmagick || true
-install imagemagick || true
-cask install imageoptim || true
-cask install imagealpha || true
-cask install mactex || true
-install poppler || true
-cask install texturepacker || true
-cask install xee || true
-
-#
-# acceptance testing
-#
-
-install selenium-server-standalone || true
-
-#
+##################################################
 # web servers
-#
+##################################################
 
 install nginx || true
 
-#
-# email
-#
+###############################################
+# Window Management
+###############################################
 
-install sendemail || true
+# cask install sizeup || true
+cask install slate || true
+# cask install spectacle || true
 
-#
-# productivity
-#
+###############################################
+# @keep things tidy.
+###############################################
 
-cask install invisionsync || true
-cask install libreoffice || true
-
-# keep things tidy.
 cleanup
 cask cleanup
 prune
-
-#
-# desktop publishing / book authoring
-#
-
-cask install gitbook || true
 
