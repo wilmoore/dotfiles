@@ -151,8 +151,12 @@
   # count modified files
   count-modified      = !echo $(git status --porcelain | grep -E '[^MARC]' | wc -l | awk '{ print $1 }') files modified
 
-  # give someone else credit for a commit
-  credit-author       = !echo '\nPending Commit:\n% git commit -am \"commit message\" --author \"Full Name <name@domain.tld>\"\n\nExisting Commit:\n% git commit --amend --author \"Full Name <name@domain.tld>\" -C HEAD\n'
+  # templates for giving credit to another author
+  credit-author       = !echo 'Pending Commit:' && \
+			 echo '% git commit -am "commit message" --author "Full Name <name@domain.tld>"' && \
+			 echo '' && \
+			 echo 'Existing Commit:' && \
+			 echo '% git commit --amend --author "Full Name <name@domain.tld>" -C HEAD'
 
   # list current branch.
   current-branch      = name-rev --name-only HEAD
