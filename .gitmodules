@@ -1,6 +1,6 @@
 [submodule "active/.config/zsh/.zprezto"]
 	path = active/.config/zsh/.zprezto
-  url = https://github.com/sorin-ionescu/prezto.git
+	url = https://github.com/sorin-ionescu/prezto.git
 
 [submodule "active/.vim/bundle/neobundle.vim"]
 	path = active/.vim/bundle/neobundle.vim
