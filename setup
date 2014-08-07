@@ -52,6 +52,11 @@ real_file_exists () {
   return 1
 }
 
+real_dir_exists () {
+  [[ -d "$1" && ! -L "$1" ]] && return 0
+  return 1
+}
+
 #
 # list linkable dotfiles
 #
@@ -92,6 +97,7 @@ if [[ -d $DOTFILES_ROOT_PATH ]]; then
   say "current directory: $(pwd)"
 
   git pull 2>/dev/null || fail "command failed: [git pull]...aborting!"
+  git submodule update --init --recursive 2>/dev/null || fail "command failed: [git submodule update --init --recursive]...aborting!"
 
   cd -
 
@@ -119,8 +125,8 @@ for rcfile in $(linkable_dotfiles $SOURCE); do
 
   say "Preparing to link ($rcfile) ==> ($linkpath)."
 
-  if real_file_exists "$linkpath"; then
-    say "REAL FILE EXISTS: ($linkpath) -- creating backup file ($backpath)."
+  if real_file_exists "$linkpath" || real_dir_exists "$linkpath"; then
+    say "REAL FILE/DIR EXISTS: ($linkpath) -- creating backup file ($backpath)."
     cp "$linkpath" "$backpath"
   fi
 

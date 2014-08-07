@@ -118,7 +118,9 @@ NeoBundle "godlygeek/csapprox"
 " Completion
 " ----------------------------------------
 
-NeoBundle "Valloric/YouCompleteMe", { 'build' : { 'mac' : './install.sh --clang-completer', 'unix' : './install.sh --clang-completer' }}
+" I want to like it; however, it seems to be more trouble than it is worth so
+" for now, I am disabling it.
+" NeoBundle "Valloric/YouCompleteMe", { 'build' : { 'mac' : './install.sh --clang-completer', 'unix' : './install.sh --clang-completer' }}
 
 " ----------------------------------------
 " VCS
