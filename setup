@@ -134,6 +134,13 @@ for rcfile in $(linkable_dotfiles $SOURCE); do
 done
 
 ################################################################################
+# remove unwanted dotfiles
+################################################################################
+
+say "removing extra superfluous dotfiles"
+rm -rf ~/.{gitignore_global,hgignore_global,bzr.log,DS_Store,CFUserTextEncoding,bash_history,gnupg,pearrc,rnd,subversion}
+
+################################################################################
 # show broken symlinks
 ################################################################################
 
