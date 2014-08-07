@@ -127,7 +127,7 @@ for rcfile in $(linkable_dotfiles $SOURCE); do
 
   if real_file_exists "$linkpath" || real_dir_exists "$linkpath"; then
     say "REAL FILE/DIR EXISTS: ($linkpath) -- creating backup file ($backpath)."
-    cp "$linkpath" "$backpath"
+    mv "$linkpath" "$backpath"
   fi
 
   ln -nfs "$rcfile" "$linkpath" && pass "created link: ($linkpath)"
