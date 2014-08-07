@@ -431,7 +431,6 @@ install tree || true
 install watch || true
 install watchman || true
 install wget || true
-install xdotool || true
 
 ##################################################
 # video
