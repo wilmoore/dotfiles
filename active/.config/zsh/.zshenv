@@ -116,7 +116,7 @@ cdpath=($GO_PROJECT_PATH/src/github.com/wilmoore $cdpath)
 
 # ensure homebrew cask links applications into `/Applications` (I like to see everything in one place)
 # obviously you would not do this on a multi-user system as this could cause confusion.
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+export HOMEBREW_CASK_OPTS="--appdir=/Applications --binarydir=$HOME/.local/bin"
 
 # where are your brew bundles?
 export BUNDLE_DIR="$XDG_CONFIG_HOME/brew/bundles.d"
