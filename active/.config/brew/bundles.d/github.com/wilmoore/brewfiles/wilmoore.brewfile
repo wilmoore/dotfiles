@@ -254,7 +254,7 @@ cask install quicklook-csv || true
 cask install quicklook-json || true
 cask install betterzipql || true
 cask install webp-quicklook || true
-cask install suspicious-package || true
+#cask install suspicious-package || true
 
 ##################################################
 # remote access & control
@@ -300,7 +300,6 @@ install zsh || true
 # software development utilities
 ###############################################
 
-cask install ksdiff || true
 cask install kaleidoscope || true
 
 ###############################################
@@ -320,6 +319,9 @@ install pkg-config || true
 ###############################################
 # software development programming languages
 ###############################################
+
+# adobe air
+cask install adobe-air || true
 
 # clojure
 install leiningen || true
@@ -350,9 +352,6 @@ cask install mono-mre || true
 
 # node
 install nvm || true
-
-# ocaml
-install ocaml || true
 
 # php
 
