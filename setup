@@ -145,7 +145,7 @@ rm -rf ~/.{gitignore_global,hgignore_global,bzr.log,DS_Store,CFUserTextEncoding,
 ################################################################################
 
 say "List of broken symlinks"
-  find -L $HOME -type l -maxdepth 1
+find -L $HOME -type l -maxdepth 1
 
 ################################################################################
 # notes

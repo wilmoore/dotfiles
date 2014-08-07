@@ -42,7 +42,7 @@ defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 
 # empty trash securely by default
 
-defaults write com.apple.finder EmptyTrashSecurely -bool true
+# defaults write com.apple.finder EmptyTrashSecurely -bool true
 
 # finder: show all filename extensions
 
@@ -74,7 +74,6 @@ defaults write com.apple.finder QLEnableTextSelection -bool TRUE
 defaults write com.apple.Finder FXPreferredViewStyle clmv
 
 # restart
-
 killall "Finder" > /dev/null 2>&1
 
 ###############################################################################
@@ -135,32 +134,15 @@ killall "Safari" > /dev/null 2>&1
 # General UI/UX
 ###############################################################################
 
-# enable/disable app auto-termination
-# http://osxdaily.com/2012/05/15/disable-automatic-termination-of-apps-in-mac-os-x/
-
-defaults write -g NSDisableAutomaticTermination -bool yes
-
-# show system info at the login screen
-
-sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
-
 # screenshot save location
 
 defaults write com.apple.screencapture location ~/Documents/screenshots
 killall SystemUIServer
 
-# disable checking spelling while typing
-
-defaults write -g NSAllowContinuousSpellChecking -bool false
-
-# disable auto-correct
-
-defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
-
 # menu bar: show remaining battery time (on pre-10.8); hide percentage
 
-defaults write com.apple.menuextra.battery ShowPercent -string "NO"
-defaults write com.apple.menuextra.battery ShowTime -string "YES"
+defaults write com.apple.menuextra.battery ShowPercent -string "YES"
+defaults write com.apple.menuextra.battery ShowTime -string "NO"
 
 # menu bar: hide the time machine and volume icons
 
@@ -186,19 +168,9 @@ defaults write com.apple.LaunchServices LSQuarantine -bool false
 
 sudo systemsetup -setrestartfreeze on
 
-# disable notification center and remove the menu bar icon
-
-sudo launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
-
 ###############################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input
 ###############################################################################
-
-# trackpad: enable tap to click for this user and for the login screen
-
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
-defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
-defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
 # enable full keyboard access for all controls
 # (e.g. enable Tab in modal dialogs)
@@ -237,13 +209,6 @@ killall "Mail" > /dev/null 2>&1
 
 defaults write com.apple.terminal StringEncodings -array 4
 
-# "focus follows mouse" for Terminal.app and all X11 apps
-# i.e. hover over a window and start typing in it without clicking first
-
-defaults write com.apple.terminal FocusFollowsMouse -string false
-defaults write org.x.X11 wm_ffm -bool false
-defaults write org.x.X11 wm_click_through -bool true
-
 # Use a modified version of the Pro theme by default in Terminal.app
 # open "${HOME}/init/Mathias.terminal"
 # sleep 1 # Wait a bit to make sure the theme is loaded
@@ -258,10 +223,6 @@ defaults write org.x.X11 wm_click_through -bool true
 
 defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 
-# disable local time machine backups
-
-hash tmutil &> /dev/null && sudo tmutil disablelocal
-
 ###############################################################################
 # Google Chrome & Google Chrome Canary
 ###############################################################################
@@ -270,29 +231,4 @@ hash tmutil &> /dev/null && sudo tmutil disablelocal
 
 defaults write com.google.Chrome ExtensionInstallSources -array "https://*.github.com/*" "http://userscripts.org/*"
 defaults write com.google.Chrome.canary ExtensionInstallSources -array "https://*.github.com/*" "http://userscripts.org/*"
-
-###############################################################################
-# xtest
-###############################################################################
-
-# http://stackoverflow.com/a/16243275/128346
-defaults write org.x.X11 enable_test_extensions -boolean true
-defaults write org.macosforge.xquartz.X11 enable_test_extensions -boolean true
-
-###############################################################################
-# SizeUp.app (currently not using)
-###############################################################################
-
-# start at login
-
-# defaults write com.irradiatedsoftware.SizeUp StartAtLogin -bool true
-
-# don’t show the preferences window on next start
-
-# defaults write com.irradiatedsoftware.SizeUp ShowPrefsOnNextStart -bool false
-
-# restart
-
-# killall "SizeUp" > /dev/null 2>&1
-# open -a "Sizeup"
 
