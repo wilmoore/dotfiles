@@ -1,3 +1,5 @@
+# general stuff
+
 *.swp
 *.DS_Store
 .zhistory
@@ -7,3 +9,11 @@ active/.config/robomongo/robomongo.json
 active/.config/gh-update
 .vim_mru_files
 viminfo
+
+# binary symlinks should not be tracked.
+
+active/.local/bin/ksdiff
+active/.local/bin/sketchtool
+active/.local/bin/sketchtool resources.bundle
+active/.local/bin/stree
+
