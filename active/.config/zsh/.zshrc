@@ -52,7 +52,9 @@ ulimit -n 4096
   php-version 5
 
 # ruby
-[ -f ~/.homebrew/opt/chruby/share/chruby/chruby.sh ] && source ~/.homebrew/opt/chruby/share/chruby/chruby.sh && chruby 2
+[ -f ~/.homebrew/opt/chruby/share/chruby/chruby.sh ] && source ~/.homebrew/opt/chruby/share/chruby/chruby.sh
+RUBIES=($XDG_DATA_HOME/rubies/*)
+chruby 2
 
 #
 # status line

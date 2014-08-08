@@ -239,7 +239,7 @@ cask install cheatsheet || true
 cask install evernote || true
 cask install libreoffice || true
 cask install mailplane || true
-cask install marked2 || true
+cask install marked || true
 
 ##################################################
 # quick look plugins

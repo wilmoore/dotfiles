@@ -8,3 +8,8 @@ Some of these are currently installed to `~/.local/opt` and linked to `~/.local/
 - [ ] jasmine-node
 - [ ] up
 
+## Extra Stuff
+
+- [ ] Symlink the keychain directory.
+- [ ] Copy Terminal Settings (see mathias dotfiles)
+
