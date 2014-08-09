@@ -182,6 +182,12 @@ install bitlbee || true
 install znc || true
 
 ###############################################
+# media players
+###############################################
+
+cask install flash-player || true
+
+###############################################
 # mobile development
 ###############################################
 
@@ -455,6 +461,7 @@ cask install handbrake || true
 # virtualization
 ##################################################
 
+install boot2docker || true
 install docker || true
 cask install vagrant || true
 cask install virtualbox || true
