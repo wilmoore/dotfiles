@@ -292,6 +292,9 @@ install chruby || true
 install ruby-install || true
 install https://raw.github.com/postmodern/chgems/master/homebrew/chgems.rb || true
 
+# titanium
+titanium-studio
+
 # uml / diagramming
 install plantuml
 
