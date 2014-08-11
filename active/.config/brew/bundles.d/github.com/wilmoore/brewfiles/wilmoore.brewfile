@@ -389,12 +389,6 @@ install plantuml
 # source control
 ##################################################
 
-# GUI apps
-cask install sourcetree || true
-
-# Bazaar
-install bzr || true
-
 # mercurial
 install mercurial || true
 
@@ -409,8 +403,6 @@ cask install trailer || true
 ##################################################
 
 cask install balsamiq-mockups || true
-cask install sketch || true
-cask install sketch-tool || true
 
 ##################################################
 # utility
@@ -489,9 +481,7 @@ install nginx || true
 # Window Management
 ###############################################
 
-# cask install sizeup || true
 cask install slate || true
-# cask install spectacle || true
 
 ###############################################
 # @keep things tidy.
