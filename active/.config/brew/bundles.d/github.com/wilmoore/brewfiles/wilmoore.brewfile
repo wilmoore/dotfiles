@@ -98,18 +98,6 @@ cask install smcfancontrol || true
 install macvim --custom-icons --override-system-vim --with-lua --with-luajit --with-csope || true
 
 ##################################################
-# email
-##################################################
-
-install sendemail || true
-
-##################################################
-# entertainment
-##################################################
-
-cask install chromecast || true
-
-##################################################
 # fonts
 ##################################################
 
@@ -355,14 +343,8 @@ install wget || true
 # video
 ##################################################
 
-cask install chromecast || true
 install ffmpeg --use-clang --with-libvorbis --with-libvpx --use-gcc || true
-cask install mactubes || true
-cask install miro-video-converter || true
 cask install vlc || true
-cask install vlc-remote || true
-cask install vlcstreamer || true
-install youtube-dl || true
 
 ##################################################
 # virtualization
