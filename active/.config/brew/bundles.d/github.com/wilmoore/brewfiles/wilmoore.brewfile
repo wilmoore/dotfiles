@@ -15,11 +15,8 @@ upgrade brew-cask || true
 
 tap homebrew/binary || true
 tap homebrew/dupes || true
-tap homebrew/games || true
 tap homebrew/headonly || true
 tap homebrew/versions || true
-tap wilmoore/binaries || true
-tap josegonzalez/php || true
 tap caskroom/cask || true
 
 ##################################################
@@ -43,43 +40,17 @@ cask install the-unarchiver || true
 install unrar || true
 
 ##################################################
-# audio editor
-##################################################
-
-cask install audacity || true
-
-##################################################
-# backup and restore
-##################################################
-
-cask install chronosync || true
-
-##################################################
-# books / reading
-##################################################
-
-cask install calibre || true
-install homebrew/binary/kindlegen || true
-cask install kindle || true
-cask install send-to-kindle || true
-
-##################################################
 # chat, IM, irc
 ##################################################
 
-cask install adium || true
 cask install hipchat || true
-cask install limechat || true
-cask install skype || true
 cask install slack || true
 
 ##################################################
-# cloud file management
+# file sharing
 ##################################################
 
 cask install cloudup || true
-cask install dropbox || true
-cask install google-drive || true
 
 ##################################################
 # databases
@@ -94,7 +65,6 @@ install sqlite3 || true
 # database management
 ##################################################
 
-# GUI apps
 cask install mysqlworkbench || true
 cask install pgadmin3 || true
 cask install redis-desktop-manager || true
@@ -174,19 +144,6 @@ cask install xee || true
 cask install poedit || true
 install translate-toolkit || true
 
-##################################################
-# irc / instant message
-##################################################
-
-install bitlbee || true
-install znc || true
-
-###############################################
-# media players
-###############################################
-
-cask install flash-player || true
-
 ###############################################
 # mobile development
 ###############################################
@@ -239,12 +196,8 @@ cask install pdftk || true
 # productivity
 ###############################################
 
-cask install alfred || true
-cask alfred link || true
 cask install cheatsheet || true
 cask install evernote || true
-cask install libreoffice || true
-cask install mailplane || true
 cask install marked || true
 
 ##################################################
@@ -261,7 +214,6 @@ cask install quicklook-csv || true
 cask install quicklook-json || true
 cask install betterzipql || true
 cask install webp-quicklook || true
-#cask install suspicious-package || true
 
 ##################################################
 # remote access & control
@@ -274,10 +226,7 @@ cask install cord || true
 # screen capture/casting
 ##################################################
 
-install https://raw.githubusercontent.com/sickill/asciinema/master/packaging/homebrew/asciinema.rb || true
 cask install licecap || true
-cask install paparazzi || true
-install ttyrec || true
 install webkit2png || true
 
 ###############################################
@@ -336,9 +285,6 @@ install leiningen || true
 # css/sass
 install sassc || true
 
-# dart
-install dart || true
-
 # erlang
 install erlang || true
 install elixir --HEAD || true
@@ -347,24 +293,8 @@ install rebar || true
 # go
 install go || true
 
-# groovy
-install groovy || true
-
-# lua
-install lua || true
-
-# mono (.net)
-cask install mono-mdk || true
-cask install mono-mre || true
-
 # node
 install nvm || true
-
-# php
-
-install php56 --without-pear --without-apache --with-pgsql --with-fpm --with-intl --with-gmp --with-homebrew-curl --with-homebrew-openssl --with-homebrew-libxslt --with-imap --with-pgsql || true
-install php56-intl || true
-unlink  php56 || true
 
 # python
 install python || true
@@ -373,14 +303,6 @@ install python || true
 install chruby || true
 install ruby-install || true
 install https://raw.github.com/postmodern/chgems/master/homebrew/chgems.rb || true
-
-# scala
-install giter8 || true
-install sbt || true
-install scala || true
-
-# scratch
-cask install scratch || true
 
 # uml / diagramming
 install plantuml
@@ -415,7 +337,6 @@ cask install geekbench || true
 install htop-osx || true
 install jq || true
 install jsonpp || true
-cask install launchrocket || true
 install lnav || true
 install moreutils || true
 install ngrok || true
@@ -442,12 +363,6 @@ cask install vlc || true
 cask install vlc-remote || true
 cask install vlcstreamer || true
 install youtube-dl || true
-
-##################################################
-# video transcoding
-##################################################
-
-cask install handbrake || true
 
 ##################################################
 # virtualization
