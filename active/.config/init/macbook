@@ -1,3 +1,5 @@
+cd $(dirname $0)
+
 # executable shell scripts
 if [ -d ./macbook-scripts ]; then
   for i in ./macbook-scripts/*.sh; do
