@@ -1,0 +1,19 @@
+# executable shell scripts
+if [ -d ./macbook-scripts ]; then
+  for i in ./macbook-scripts/*.sh; do
+    if [ -x $i ]; then
+      . $i
+    fi
+  done
+  unset i
+fi
+
+# apple scripts
+if [ -d ./macbook-scripts ]; then
+  for i in ./macbook-scripts/*.scpt; do
+    if [ -r $i ]; then
+      osascript $i
+    fi
+  done
+  unset i
+fi
