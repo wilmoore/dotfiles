@@ -109,6 +109,7 @@ cask install caskroom/fonts/font-dejavu-sans-mono-for-powerline || true
 ###############################################
 
 cask install cocoarestclient || true
+install axel || true
 
 ##################################################
 # image manipulation
@@ -293,7 +294,7 @@ install ruby-install || true
 install https://raw.github.com/postmodern/chgems/master/homebrew/chgems.rb || true
 
 # titanium
-titanium-studio
+cask install titanium-studio || true
 
 # uml / diagramming
 install plantuml
