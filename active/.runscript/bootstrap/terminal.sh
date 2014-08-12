@@ -3,7 +3,7 @@
 # props: https://github.com/mathiasbynens/dotfiles/blob/master/.osx
 #
 
-TERM_PROFILE='Solarized Dark xterm-256color'
+TERM_PROFILE='solarized-dark-xterm-256-source-code-pro-powerline'
 CURRENT_PROFILE="$(defaults read com.apple.terminal 'Default Window Settings')"
 
 if [ "${CURRENT_PROFILE}" != "${TERM_PROFILE}" ]; then
