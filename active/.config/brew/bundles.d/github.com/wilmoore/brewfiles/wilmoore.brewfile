@@ -47,6 +47,13 @@ cask install hipchat || true
 cask install slack || true
 
 ##################################################
+# documenation generation
+##################################################
+
+# http://apiblueprint.org/#get-started
+install --HEAD https://gist.githubusercontent.com/wilmoore/e62c529bdc719c971802/raw/snowcrash.rb
+
+##################################################
 # file sharing
 ##################################################
 
