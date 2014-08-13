@@ -20,7 +20,7 @@ skip_global_compinit=1
 # projects
 ################################################################################
 
-export ACTIVE_PROJECTS_DIR="$HOME/projects/active"
+export PROJECTS_DIR="$HOME/projects"
 
 ################################################################################
 # auto `cd` paths
@@ -28,7 +28,7 @@ export ACTIVE_PROJECTS_DIR="$HOME/projects/active"
 
 cdpath=(
   $HOME                 # home directory
-  $ACTIVE_PROJECTS_DIR  # active projects
+  $PROJECTS_DIR  # active projects
   $cdpath               # default
 )
 
@@ -50,6 +50,7 @@ path=(
   $HOME/.cabal/bin           # haskell binaries
 # $GOPATH/bin                # purposefully commented out as $GOPATH is set further down in GO section.
   $HOME/.tmux                # tmux sessions
+  /Applications/Postgres.app/Contents/Versions/9.3/bin # postgres.app command line tools
   $path                      # system defaults
 )
 
@@ -96,7 +97,7 @@ export GROOVY_HOME=$(brew --prefix)/opt/groovy/libexec
 export GO_GLOBALS_PATH=$XDG_DATA_HOME/go
 
 # active go projects in development.
-export GO_PROJECT_PATH=$ACTIVE_PROJECTS_DIR/go
+export GO_PROJECT_PATH=$PROJECTS_DIR/go
 
 # ordered list of go source paths.
 export GOPATH="$GO_GLOBALS_PATH:$GO_PROJECT_PATH"

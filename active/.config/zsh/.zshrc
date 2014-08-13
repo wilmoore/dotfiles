@@ -41,6 +41,9 @@ ulimit -n 4096
 # programming virtual environments & version managers
 #
 
+# node default environment
+export NODE_ENV=development
+
 # nvm (Node.js)
 [ -f ~/.homebrew/opt/nvm/nvm.sh ] && source $HOME/.homebrew/opt/nvm/nvm.sh && \
   nvm use 0.11 >/dev/null && \
