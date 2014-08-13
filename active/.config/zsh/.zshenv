@@ -27,9 +27,9 @@ export PROJECTS_DIR="$HOME/projects"
 ################################################################################
 
 cdpath=(
-  $HOME                 # home directory
+  $HOME          # home directory
   $PROJECTS_DIR  # active projects
-  $cdpath               # default
+  $cdpath        # default
 )
 
 ################################################################################
@@ -43,15 +43,15 @@ typeset -gU cdpath fpath mailpath path
 #
 
 path=(
-  /usr/local/{bin,sbin}      # obviously :)
-  /usr/libexec               # lots of non-obvious goodies in here (i.e. PlistBuddy)
-  $HOME/.homebrew/{bin,sbin} # homebrew@$HOME
-  $HOME/.local/bin           # custom binaries & scripts
-  $HOME/.cabal/bin           # haskell binaries
-# $GOPATH/bin                # purposefully commented out as $GOPATH is set further down in GO section.
-  $HOME/.tmux                # tmux sessions
-  /Applications/Postgres.app/Contents/Versions/9.3/bin # postgres.app command line tools
-  $path                      # system defaults
+# $GOPATH/bin                                           # purposefully commented out as $GOPATH is set further down in GO section.
+  /usr/local/{bin,sbin}                                 # obviously :)
+  /usr/libexec                                          # lots of non-obvious goodies in here (i.e. PlistBuddy)
+  $HOME/.homebrew/{bin,sbin}                            # homebrew@$HOME
+  $HOME/.local/bin                                      # custom binaries & scripts
+  $HOME/.cabal/bin                                      # haskell binaries
+  $XDG_CONFIG_HOME/tmux/sessions                        # tmux sessions
+  /Applications/Postgres.app/Contents/Versions/9.3/bin  # postgres.app command line tools
+  $path                                                 # system default
 )
 
 #
