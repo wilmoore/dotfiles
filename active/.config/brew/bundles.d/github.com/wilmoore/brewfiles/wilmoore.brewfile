@@ -275,6 +275,10 @@ install pkg-config || true
 # adobe air
 cask install adobe-air || true
 
+# andoid
+cask install android-studio || true
+cask install genymotion || true
+
 # clojure
 install leiningen || true
 

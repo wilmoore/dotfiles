@@ -118,8 +118,7 @@ NeoBundle "godlygeek/csapprox"
 " Completion
 " ----------------------------------------
 
-" I want to like it; however, it seems to be more trouble than it is worth so
-" for now, I am disabling it.
+" I want to like it; however, it seems to be more trouble than it is worth so. It takes a while to install, it crashes from time-to-time, and it makese loading vim slower.
 " NeoBundle "Valloric/YouCompleteMe", { 'build' : { 'mac' : './install.sh --clang-completer', 'unix' : './install.sh --clang-completer' }}
 
 " ----------------------------------------
