@@ -1,2 +1,0 @@
-browsers=<?xml version\="1.0" encoding\="UTF-8"?>\n<web-browsers current\="0">\n<system/>\n<external location\="/Applications/Firefox.app" name\="Firefox"/>\n<external location\="/Applications/Firefox.app/Contents/MacOS/firefox-bin" name\="Firefox"/>\n<external location\="/Applications/Safari.app/Contents/MacOS/Safari" name\="Safari"/>\n<external location\="/Applications/Opera.app/Contents/MacOS/Opera" name\="Opera"/>\n<external location\="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" name\="Chrome"/>\n</web-browsers>
-eclipse.preferences.version=1
