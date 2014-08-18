@@ -64,6 +64,7 @@ cask install cloudup || true
 ##################################################
 
 install influxdb
+install elasticsearch || true
 cask install postgres || true
 install redis || true
 install sqlite3 || true
@@ -123,6 +124,7 @@ install axel || true
 ##################################################
 
 install dcraw || true
+install install exif || true
 install exiftool || true
 install ghostscript || true
 install graphicsmagick || true
@@ -293,6 +295,9 @@ install rebar || true
 # go
 install go || true
 
+# java
+cask install java || true
+
 # node
 install nvm || true
 
@@ -322,6 +327,13 @@ install --HEAD gerrit-tools || true
 install git || true
 install --HEAD gh || true
 cask install trailer || true
+
+##################################################
+# system services
+##################################################
+
+cask install launchcontrol || true
+cask install launchrocket || true
 
 ##################################################
 # ui design

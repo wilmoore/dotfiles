@@ -1,0 +1,49 @@
+!SESSION 2014-08-14 20:43:46.511 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_65
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/wil.moore/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86 -keyring /Users/wil.moore/.eclipse_keyring -consoleLog -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2014-08-14 20:44:30.909
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.ui 2 0 2014-08-14 20:44:31.134
+!MESSAGE Warnings while parsing the images from the 'org.eclipse.ui.commandImages' extension point.
+!SUBENTRY 1 org.eclipse.ui 2 0 2014-08-14 20:44:31.134
+!MESSAGE Cannot bind to an undefined command: plug-in='com.appcelerator.titanium.android.ui', id='com.appcelerator.titanium.mobile.command.run_on_device.android'
+!SUBENTRY 1 org.eclipse.ui 2 0 2014-08-14 20:44:31.134
+!MESSAGE Cannot bind to an undefined command: plug-in='com.appcelerator.titanium.android.ui', id='com.appcelerator.titanium.mobile.command.debug_on_device.android'
+
+!ENTRY org.eclipse.osgi 2 1 2014-08-14 20:44:33.095
+!MESSAGE NLS missing message: LaunchAppToolbarContribution_NoSelectedProjects in: com.appcelerator.titanium.ui.messages
+
+!ENTRY com.aptana.core 4 1 2014-08-14 20:56:06.351
+!MESSAGE sudo: a password is required
+
+!ENTRY com.appcelerator.titanium.core 4 0 2014-08-14 21:01:59.092
+!MESSAGE (Build 3.3.0.201407100905) [ERROR]  Unable to locate the CLI executable. Please restart Studio or use Help > Check for Titanium Updates to install Titanium CLI.
+!SESSION 2014-08-15 09:07:59.508 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_65
+java.vendor=Apple Inc.
+BootLoader constants: OS=macosx, ARCH=x86, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/wil.moore/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86 -keyring /Users/wil.moore/.eclipse_keyring -consoleLog -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2014-08-15 09:08:01.430
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.ui 2 0 2014-08-15 09:08:01.592
+!MESSAGE Warnings while parsing the images from the 'org.eclipse.ui.commandImages' extension point.
+!SUBENTRY 1 org.eclipse.ui 2 0 2014-08-15 09:08:01.593
+!MESSAGE Cannot bind to an undefined command: plug-in='com.appcelerator.titanium.android.ui', id='com.appcelerator.titanium.mobile.command.run_on_device.android'
+!SUBENTRY 1 org.eclipse.ui 2 0 2014-08-15 09:08:01.593
+!MESSAGE Cannot bind to an undefined command: plug-in='com.appcelerator.titanium.android.ui', id='com.appcelerator.titanium.mobile.command.debug_on_device.android'
+
+!ENTRY org.eclipse.osgi 2 1 2014-08-15 09:08:04.015
+!MESSAGE NLS missing message: LaunchAppToolbarContribution_NoSelectedProjects in: com.appcelerator.titanium.ui.messages
+
+!ENTRY com.aptana.core 4 1 2014-08-15 09:08:17.205
+!MESSAGE sudo: a password is required

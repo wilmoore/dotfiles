@@ -78,9 +78,9 @@
 [color]
   ui                  = true
 
-[branch]
-  # automatically link new branch to start-point branch (upstream)
-  autosetupmerge      = true
+[pull]
+  # so we can just write `git pull` instead of `git pull --rebase`
+  rebase              = true
 
 [push]
   # safe handling when no refspec is given (i.e `git push`). The default in Git 2.x is 'simple'.
