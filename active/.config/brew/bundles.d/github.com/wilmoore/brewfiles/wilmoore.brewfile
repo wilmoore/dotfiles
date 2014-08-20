@@ -44,6 +44,7 @@ install unrar || true
 ##################################################
 
 cask install hipchat || true
+cask install skype || true
 cask install slack || true
 
 ##################################################
@@ -99,11 +100,23 @@ cask install gitbook || true
 cask install gfxcardstatus || true
 cask install smcfancontrol || true
 
+###############################################
+# documentation viewers
+###############################################
+
+cask install marked || true
+
 ##################################################
 # editor / pager
 ##################################################
 
 install macvim --custom-icons --override-system-vim --with-lua --with-luajit --with-csope || true
+
+##################################################
+# email
+##################################################
+
+cask install mailplane
 
 ##################################################
 # fonts
@@ -196,7 +209,6 @@ cask install pdftk || true
 
 cask install cheatsheet || true
 cask install evernote || true
-cask install marked || true
 
 ##################################################
 # quick look plugins
