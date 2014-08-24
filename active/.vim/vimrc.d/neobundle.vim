@@ -53,6 +53,18 @@ call neobundle#begin(expand('~/.vim/bundle'))
 NeoBundleFetch "shougo/neobundle.vim"
 
 " ----------------------------------------
+" Data / Database
+" ----------------------------------------
+
+NeoBundle "chrisbra/csv.vim"
+
+" ----------------------------------------
+" Documentation
+" ----------------------------------------
+
+NeoBundle "rizzatti/dash.vim"
+
+" ----------------------------------------
 " Shell, Terminal, Multiplex
 " ----------------------------------------
 
@@ -133,7 +145,7 @@ NeoBundle "gregsexton/gitv"
 
 " Github
 NeoBundle "mattn/webapi-vim"
-NeoBundle "mattn/gist-vim"
+" NeoBundle "mattn/gist-vim"
 NeoBundle "tpope/vim-rhubarb"
 NeoBundle "junegunn/vim-github-dashboard"
 

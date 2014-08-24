@@ -48,17 +48,19 @@ cask install skype || true
 cask install slack || true
 
 ##################################################
+# cloud file management / file sharing
+##################################################
+
+cask install bittorrent-sync || true
+cask install cloudup || true
+install s3cmd || true
+
+##################################################
 # documenation generation
 ##################################################
 
 # http://apiblueprint.org/#get-started
 install --HEAD https://gist.githubusercontent.com/wilmoore/e62c529bdc719c971802/raw/snowcrash.rb
-
-##################################################
-# file sharing
-##################################################
-
-cask install cloudup || true
 
 ##################################################
 # databases
@@ -104,13 +106,14 @@ cask install smcfancontrol || true
 # documentation viewers
 ###############################################
 
+cask install dash || true
 cask install marked || true
 
 ##################################################
 # editor / pager
 ##################################################
 
-install macvim --custom-icons --override-system-vim --with-lua --with-luajit --with-csope || true
+install macvim --custom-icons --env-std --override-system-vim --with-lua --with-luajit --with-csope || true
 
 ##################################################
 # email
@@ -314,7 +317,7 @@ cask install java || true
 install nvm || true
 
 # python
-install python || true
+install python --universal || true
 
 # ruby
 install chruby || true

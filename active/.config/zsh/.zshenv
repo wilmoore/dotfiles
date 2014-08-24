@@ -219,6 +219,7 @@ export GIT_AUTHOR_EMAIL="wil.moore@wilmoore.com"
 # github
 export GITHUB_USER="wilmoore"
 export GITHUB_OAUTH_TOKEN="$(keychain-secret-for api.github.com GITHUB_OAUTH_TOKEN)"
+export GH_TOKEN=$GITHUB_OAUTH_TOKEN
 
 # gh
 export GH_CONFIG="$HOME/Documents/private/config/gh/config"
