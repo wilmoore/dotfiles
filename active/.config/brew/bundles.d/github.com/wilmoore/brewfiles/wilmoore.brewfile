@@ -29,7 +29,7 @@ install brew-cask || true
 # application launchers
 ##################################################
 
-cask install launchbar || true
+cask install alfred || true
 
 ##################################################
 # acceptance testing
