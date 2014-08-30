@@ -66,7 +66,7 @@ install s3cmd || true
 ##################################################
 
 # http://apiblueprint.org/#get-started
-install --HEAD https://gist.githubusercontent.com/wilmoore/e62c529bdc719c971802/raw/snowcrash.rb
+install --HEAD https://raw.github.com/apiaryio/snowcrash/master/tools/homebrew/snowcrash.rb
 
 ##################################################
 # databases
