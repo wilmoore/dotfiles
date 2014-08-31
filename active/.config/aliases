@@ -83,6 +83,12 @@ alias clear-logs='sudo rm -rf /private/var/log/asl/*.asl'
 alias todo='todo.sh'
 
 #
+# tmux
+#
+
+alias tmux-edit-sessions='$EDITOR $XDG_CONFIG_HOME/tmux/sessions'
+
+#
 # global tool installs.
 #
 

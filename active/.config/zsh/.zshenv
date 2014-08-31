@@ -123,9 +123,6 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications --binarydir=$HOME/.local/bin"
 # where are your brew bundles?
 export BUNDLE_DIR="$XDG_CONFIG_HOME/brew/bundles.d"
 
-# `brew info mactex`.
-#eval `/usr/libexec/path_helper -s`
-
 #
 # man page search paths
 #
@@ -135,13 +132,6 @@ MANPATH=$HOME/.homebrew/share/man:$MANPATH
 
 # erlang is special
 MANPATH=$(brew --prefix erlang)/lib/erlang/man:$MANPATH
-
-#
-# packages that are not yet in homebrew
-#
-
-# osx-screencast
-path=($HOME/.local/osx-screencast $path)
 
 ################################################################################
 # terminal

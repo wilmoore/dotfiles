@@ -123,6 +123,10 @@
   # brew cask install ksdiff
   cmd                 = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 
+[url "https://"]
+  # see: https://coderwall.com/p/sitezg
+  insteadOf	      = git://
+
 [alias]
   # locate commit where a particular file was introduced
   added-file          = log --diff-filter=A --
@@ -273,5 +277,4 @@
 
   # add a remote named upstream
   upstream            = remote add upstream
-
 
