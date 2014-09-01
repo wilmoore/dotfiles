@@ -61,7 +61,7 @@ alias dfup='bash ~/.dotfiles/setup'
 # servers
 #
 
-alias serve='python -m SimpleHTTPServer'
+alias http-serve='python -m SimpleHTTPServer'
 
 #
 # path utilities
