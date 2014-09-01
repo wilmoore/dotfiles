@@ -2,6 +2,9 @@
 " To Evaluate
 " ----------------------------------------
 
+" Vim Plugins I Use:
+" http://mirnazim.org/writings/vim-plugins-i-use/'
+
 " autoformat (attempt to configure golang)
 " https://github.com/Chiel92/vim-autoformat
 
@@ -20,9 +23,6 @@
 
 " drawit.vim
 " http://www.thegeekstuff.com/2009/12/how-to-create-ascii-drawings-in-vim-editor-draw-boxes-lines-ellipses-arrows-inside-text-file/#more-2732
-
-" supertab
-" https://github.com/ervandew/supertab
 
 " vim-testdrive
 " https://github.com/monokrome/vim-testdrive
@@ -130,8 +130,7 @@ NeoBundle "godlygeek/csapprox"
 " Completion
 " ----------------------------------------
 
-" I want to like it; however, it seems to be more trouble than it is worth so. It takes a while to install, it crashes from time-to-time, and it makese loading vim slower.
-" NeoBundle "Valloric/YouCompleteMe", { 'build' : { 'mac' : './install.sh --clang-completer', 'unix' : './install.sh --clang-completer' }}
+NeoBundle "Shougo/neocomplete.vim"
 
 " ----------------------------------------
 " VCS
@@ -154,6 +153,7 @@ NeoBundle "junegunn/vim-github-dashboard"
 " ----------------------------------------
 
 NeoBundle "SirVer/ultisnips"
+NeoBundle "honza/vim-snippets"
 
 " ----------------------------------------
 " Commands
@@ -227,12 +227,11 @@ NeoBundle "mattboehm/vim-unstack"
 " Polyglot (lots of languages)
 NeoBundle "sheerun/vim-polyglot"
 
+" JavaScript
+NeoBundle "marijnh/tern_for_vim", { "build": { "mac": "npm install" } }
+
 " JSON
 NeoBundle "tpope/vim-jdaddy"
-
-" JavaScript (common)
-NeoBundleLazy "marijnh/tern_for_vim", { 'build': { 'others': 'npm install' }}
-NeoBundleLazy "jelera/vim-javascript-syntax", {'autoload':{'filetypes':['javascript']}}
 
 " PHP
 NeoBundle "spf13/PIV"
@@ -241,19 +240,12 @@ NeoBundle "spf13/PIV"
 NeoBundleLazy "aklt/plantuml-syntax"
 
 " ----------------------------------------
-" Games
-" ----------------------------------------
-
-NeoBundle "mattn/flappyvird-vim"
-
-" ----------------------------------------
 " Sublime Text Features
 " ----------------------------------------
 
 " https://github.com/terryma/vim-multiple-cursors
 " http://www.youtube.com/watch?v=Umb59mMvCxA
 NeoBundle "terryma/vim-multiple-cursors"
-NeoBundle "severin-lemaignan/vim-minimap"
 
 " Required:
 call neobundle#end()
