@@ -66,6 +66,7 @@ cask install slack || true
 
 cask install bittorrent-sync || true
 cask install cloudup || true
+cask install google-drive || true
 install s3cmd || true
 
 ##################################################
