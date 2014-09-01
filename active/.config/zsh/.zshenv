@@ -156,7 +156,7 @@ fi
 #
 
 export EDITOR='vim -p'
-export VISUAL='vim -p'
+export VISUAL='mvim -p'
 
 #
 # default pager
