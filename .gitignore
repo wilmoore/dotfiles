@@ -10,6 +10,9 @@ active/.config/gh-update
 .vim_mru_files
 viminfo
 
+active/.config/zsh/.zcompdump
+active/.config/zsh/.zcompdump.zwc
+
 # binary symlinks should not be tracked.
 
 active/.local/bin/ksdiff
