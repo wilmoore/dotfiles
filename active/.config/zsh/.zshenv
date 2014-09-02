@@ -27,10 +27,11 @@ export PROJECTS_DIR="$HOME/projects"
 ################################################################################
 
 cdpath=(
-  $HOME                   # home directory
-  $PROJECTS_DIR           # active projects
-  $PROJECTS_DIR/welltok   # active projects (welltok)
-  $cdpath                 # default
+  $HOME                                     # home directory
+  $PROJECTS_DIR                             # active projects
+  $PROJECTS_DIR/welltok                     # active projects (welltok)
+  $PROJECTS_DIR/@archived/time-warner-cable # active project (time-warner-cable)
+  $cdpath                                   # default
 )
 
 ################################################################################
