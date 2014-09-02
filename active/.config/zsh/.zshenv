@@ -27,9 +27,10 @@ export PROJECTS_DIR="$HOME/projects"
 ################################################################################
 
 cdpath=(
-  $HOME          # home directory
-  $PROJECTS_DIR  # active projects
-  $cdpath        # default
+  $HOME                   # home directory
+  $PROJECTS_DIR           # active projects
+  $PROJECTS_DIR/welltok   # active projects (welltok)
+  $cdpath                 # default
 )
 
 ################################################################################

@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
 set -o errtrace
-# set -o nounset
+set -o nounset
 
-PROJECT_NAME="$(basename $0 | tr -d '@')"
+declare PROJECT_NAME="$(basename $0 | tr -d '@')"
 
 # guard against creating existing sessions.
 tmux has-session -t $PROJECT_NAME 2>/dev/null
@@ -11,7 +11,7 @@ tmux has-session -t $PROJECT_NAME 2>/dev/null
 # proceed if we don't already have a session named per the project.
 if [ $? != 0 ]; then
   # create session and add an initial window (detached)
-  tmux new-session -s $PROJECT_NAME -n editor -d
+  TMUX= tmux new-session -s $PROJECT_NAME -n editor -d
   tmux send-keys -t $PROJECT_NAME:editor.1 "cd $PROJECT_NAME ; clear" C-m
 
   # create horizontal pane (right column)
@@ -26,11 +26,10 @@ if [ $? != 0 ]; then
   tmux select-pane -t $PROJECT_NAME:editor.1
 
   # create a new window for `redis-server`
-  tmux new-window -d -n "redis-server" "cd $PROJECT ; redis-server $(brew --prefix)/etc/redis.conf"
+  tmux new-window -d -n "redis-server" "cd $PROJECT_NAME ; redis-server $(brew --prefix)/etc/redis.conf"
 fi
 
 # attach
 if [ ${1-""} != "--no-attach" ]; then
-  tmux attach -t $PROJECT_NAME:editor
+  tmux switch-client -t $PROJECT_NAME:editor
 fi
-

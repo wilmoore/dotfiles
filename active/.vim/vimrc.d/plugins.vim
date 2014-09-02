@@ -166,39 +166,36 @@ let g:syntastic_python_checkers=['pylint']
 " https://gist.github.com/ashb/311512 (CommonJS snippet/template)
 
 " General Configuration.
-let g:UltiSnipsListSnippets       = "<C-s>"
+let g:UltiSnipsListSnippets       = "<C-Tab>"
 let g:UltiSnipsSnippetDirectories = ["bundle/vim-snippets/UltiSnips", "snippets/custom"]
 
 " Trigger configuration.
-let g:UltiSnipsExpandTrigger       = "<Tab>"
-let g:UltiSnipsJumpForwardTrigger  = "<Tab>"
-let g:UltiSnipsJumpBackwardTrigger = "<S-Tab>"
+let g:UltiSnipsExpandTrigger       = "<C-J>"
+let g:UltiSnipsJumpForwardTrigger  = "<C-J>"
+let g:UltiSnipsJumpBackwardTrigger = "<C-K>"
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
 
 " -------
-" Neocomplete
+" neocomplete
 " -------
 
-" Disable AutoComplPop.
 let g:acp_enableAtStartup = 0
-
+let g:neocomplete#enable_auto_select = 0
 let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#enable_smart_case = 1
 let g:neocomplete#enable_underbar_completion = 1
 let g:neocomplete#enable_auto_close_preview = 1
 let g:neocomplete#enable_prefetch = 1
+let g:neocomplete#enable_auto_delimiter = 1
+let g:neocomplete#enable_refresh_always = 1
 let g:neocomplete#sources#syntax#min_keyword_length = 3
+let g:neocomplete#auto_completion_start_length = 3
 
 " <TAB>: completion.
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><S-TAB>  pumvisible() ? "\<C-p>" : "\<TAB>"
-
-" <CR>: close popup
-" <s-CR>: close popup and save indent.
-" inoremap <expr><CR> pumvisible() ? neocomplete#close_popup() : "\<CR>"
-" inoremap <expr><s-CR> pumvisible() ? neocomplete#close_popup()"\<CR>" : "\<CR>"
 
 " <CR>: close popup
 inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
@@ -206,7 +203,7 @@ function! s:my_cr_function()
   return pumvisible() ? neocomplete#close_popup() : "\<CR>"
 endfunction
 
-" <s-CR>: close popup and save indent.
+" <S-CR>: close popup and save indent.
 inoremap <silent> <s-CR> <C-r>=<SID>my_scr_function()<CR>
 function! s:my_scr_function()
   return pumvisible() ? neocomplete#close_popup()"\<CR>" : "\<CR>"

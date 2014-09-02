@@ -46,19 +46,38 @@ cask install the-unarchiver || true
 install unrar || true
 
 ##################################################
+# audio editor
+##################################################
+
+cask install audacity || true
+
+##################################################
 # backup & sync
 ##################################################
 
 cask install bittorrent-sync || true
+cask install chronosync || true
+
+##################################################
+# books / reading
+##################################################
+
+cask install calibre || true
+install homebrew/binary/kindlegen || true
+cask install kindle || true
+cask install send-to-kindle || true
 
 ##################################################
 # chat, IM, irc
 ##################################################
 
+cask install adium || true
+install bitlbee --with-finch --with-libotr || true
 cask install hipchat || true
 cask install limechat || true
 cask install skype || true
 cask install slack || true
+install znc || true
 
 ##################################################
 # cloud file management / file sharing
@@ -66,6 +85,7 @@ cask install slack || true
 
 cask install bittorrent-sync || true
 cask install cloudup || true
+cask install dropbox || true
 cask install google-drive || true
 install s3cmd || true
 
@@ -141,6 +161,12 @@ install macvim --custom-icons --env-std --override-system-vim --with-lua --with-
 ##################################################
 
 cask install mailplane
+
+##################################################
+# entertainment
+##################################################
+
+cask install chromecast || true
 
 ##################################################
 # fonts
@@ -233,6 +259,7 @@ cask install pdftk || true
 
 cask install cheatsheet || true
 cask install evernote || true
+cask install libreoffice || true
 
 ##################################################
 # quick look plugins
@@ -260,7 +287,9 @@ cask install cord || true
 # screen capture/casting
 ##################################################
 
+install https://raw.githubusercontent.com/sickill/asciinema/master/packaging/homebrew/asciinema.rb || true
 cask install licecap || true
+cask install paparazzi || true
 install webkit2png || true
 
 ###############################################
@@ -331,8 +360,14 @@ install rebar || true
 # go
 install go || true
 
+# groovy
+install groovy || true
+
 # java
 cask install java || true
+
+# lua
+install lua || true
 
 # node
 install nvm || true
@@ -344,6 +379,9 @@ install python --universal || true
 install chruby || true
 install ruby-install || true
 install https://raw.github.com/postmodern/chgems/master/homebrew/chgems.rb || true
+
+# scratch
+cask install scratch || true
 
 # titanium
 cask install titanium-studio || true
@@ -362,14 +400,12 @@ install mercurial || true
 install --HEAD gerrit-tools || true
 install git || true
 install --HEAD gh || true
-cask install trailer || true
 
 ##################################################
 # system services
 ##################################################
 
 cask install launchcontrol || true
-cask install launchrocket || true
 
 ##################################################
 # ui design
@@ -407,7 +443,18 @@ install wget || true
 ##################################################
 
 install ffmpeg --use-clang --with-libvorbis --with-libvpx --use-gcc || true
+cask install mactubes || true
+cask install miro-video-converter || true
 cask install vlc || true
+cask install vlc-remote || true
+cask install vlcstreamer || true
+install youtube-dl || true
+
+##################################################
+# video transcoding
+##################################################
+
+cask install handbrake || true
 
 ##################################################
 # virtualization
@@ -438,7 +485,7 @@ install v8 || true
 install nginx || true
 
 ###############################################
-# Window Management
+# window Management
 ###############################################
 
 cask install slate || true

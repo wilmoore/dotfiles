@@ -10,7 +10,7 @@ tmux has-session -t $PROJECT 2>/dev/null
 
 if [ $? != 0 ]; then
   # create session and add an initial window (detached)
-  tmux new-session -s $PROJECT -n editor -d
+  TMUX= tmux new-session -s $PROJECT -n editor -d
   tmux send-keys -t $PROJECT:editor.1 "cd $PROJECT ; clear" C-m
 
   # create horizontal pane (right column)
@@ -33,5 +33,5 @@ fi
 
 # attach
 if [ ${1-""} != "--no-attach" ]; then
-  tmux attach -t $PROJECT:editor
+  tmux switch-client -t $PROJECT_NAME:editor
 fi
