@@ -43,8 +43,8 @@
   # use vim as preferred editor and start editing at first line when invoked
   editor              = vim -pc ':normal gg'
 
-  # while `$XDG_CONFIG_HOME/git/ignore` is the default, we define it anyhow because some programs (cough, souretree) do weird and rude things when this is blank.
-  excludesfile        = $XDG_CONFIG_HOME/git/ignore
+  # while `~/.config/git/ignore` is the default, we define it anyhow because some programs (cough, souretree) do weird and rude things when this is blank.
+  excludesfile        = ~/.config/git/ignore
 
   filemode            = true
 

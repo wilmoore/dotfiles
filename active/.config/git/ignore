@@ -1,4 +1,10 @@
+# common
+
 *.elc
 *.bak
 *.pending-commit-message.md
 *.private
+
+# ruby (vendored bundler deps)
+
+vendor/bundle/
