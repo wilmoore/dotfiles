@@ -50,6 +50,7 @@ path=(
   /usr/libexec                                          # lots of non-obvious goodies in here (i.e. PlistBuddy)
   $HOME/.homebrew/{bin,sbin}                            # homebrew@$HOME
   $HOME/.local/bin                                      # custom binaries & scripts
+  $XDG_DATA_HOME/node/bin                               # node (npm) installed programs
   $HOME/.cabal/bin                                      # haskell binaries
   $XDG_CONFIG_HOME/tmux/sessions                        # tmux sessions
   /Applications/Postgres.app/Contents/Versions/9.3/bin  # postgres.app command line tools
@@ -78,6 +79,7 @@ export NPM_CONFIG_INIT_AUTHOR_URL="http://github.com/wilmoore"
 export NPM_CONFIG_INIT_LICENSE="MIT"
 export NPM_CONFIG_STRICT_SSL="false"
 export NPM_CONFIG_CACHE="~/.cache/npm"
+export NPM_CONFIG_PREFIX="$XDG_DATA_HOME/node"
 
 # tell node programs that use the `update-notifier` package not to store anything.
 export NO_UPDATE_NOTIFIER=1
