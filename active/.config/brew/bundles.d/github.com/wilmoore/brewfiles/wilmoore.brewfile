@@ -88,6 +88,7 @@ cask install cloudup || true
 cask install dropbox || true
 cask install google-drive || true
 install s3cmd || true
+install aws-elasticbeanstalk || true
 
 ##################################################
 # documenation generation
@@ -376,9 +377,8 @@ install nvm || true
 install python --universal || true
 
 # ruby
-install chruby || true
-install ruby-install || true
-install https://raw.github.com/postmodern/chgems/master/homebrew/chgems.rb || true
+install rbenv
+install ruby-build
 
 # scratch
 cask install scratch || true
