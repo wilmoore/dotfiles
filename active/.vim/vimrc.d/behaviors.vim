@@ -151,7 +151,11 @@ set backupdir=$XDG_CACHE_HOME/vim,/tmp
 set undodir=$XDG_CACHE_HOME/vim,/tmp
 
 " set viminfo directory
-set viminfo+=n$XDG_CACHE_HOME/vim/viminfo
+if empty(expand($XDG_CACHE_HOME))
+  set viminfo+=n/tmp/viminfo
+else
+  set viminfo+=n$XDG_CACHE_HOME/vim/viminfo
+endif
 
 " enable backups
 set backup

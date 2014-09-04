@@ -88,7 +88,11 @@ vmap <C-v> <Plug>(expand_region_shrink)
 " MRU
 " -------
 
-let MRU_File=expand($XDG_CACHE_HOME). "/vim/vim_mru_files"
+if empty(expand($XDG_CACHE_HOME))
+  let MRU_File="/tmp/vim_mru_files"
+else
+  let MRU_File=expand($XDG_CACHE_HOME). "/vim/vim_mru_files"
+endif
 
 " -------
 " NERDTree

@@ -8,6 +8,7 @@ active/.virtualbox
 active/.config/robomongo/robomongo.json
 active/.config/gh-update
 .vim_mru_files
+.zcompcache
 viminfo
 
 active/.config/zsh/.zcompdump

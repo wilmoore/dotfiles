@@ -130,6 +130,9 @@
   # list aliases
   aliases             = !git config --get-regexp '^alias.' | awk -F '[. ]' '{ print $2 }'
 
+  # backup current branch
+  backup-branch       = !OB=$(git name-rev --name-only HEAD) && BB=__SQUASH_BACKUP_$OB && git branch -M $OB $BB && git checkout -b $OB && git branch
+
   # list git sub-commands (lots of gems in there)
   bin                 = !find $(git --exec-path) -type f | xargs basename -a | $(git config --get core.pager)
 
@@ -244,8 +247,8 @@
   # stage file after resolving a merge conflict (like svn, hg)
   resolve             = stage --
 
-  # backup then `git merge --squash` current branch
-  squash              = !TB=$(git name-rev --name-only HEAD) && BB=__SQUASH_BACKUP_$TB && git branch -M $TB $BB && git fetch upstream master && git checkout -b $TB upstream/master && git merge --squash $BB
+  # `git merge --squash` current branch
+  squash              = merge --squash
 
   # stage all outstanding changes found within the entire project
   stage-everything    = add --all :/
