@@ -1,10 +1,12 @@
 # common
-
 *.elc
 *.bak
+*.DS_Store
 *.pending-commit-message.md
 *.private
 
-# ruby (vendored bundler deps)
+# npm
+npm-debug.log
 
+# ruby (vendored bundler deps)
 vendor/bundle/

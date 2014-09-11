@@ -3,7 +3,7 @@
 # Wil Moore III <wil.moore@wilmoore.com>
 #
 # Most of the aliases can be cherry-picked (see what I did there); however; a
-# small few have dependencies on other aliases (i.e. sync*, fresh*, finish*).
+# small few have dependencies on other aliases (i.e. sync*, finish*).
 #
 # Always up-to-date @:
 # - http://git.io/Y1Ad2g
@@ -185,9 +185,6 @@
   # name of branch that current branch is based on.
   fork-point          = !git branch --contains $(git merge-base --fork-point HEAD) | grep -v $(git name-rev --name-only HEAD) | tr -d ' '
 
-  # get a fresh start by checking out master and syncing, and cleaning up finished branches.
-  fresh-start         = !git checkout master && git sync && git finish-merged
-
   # group grep search results (much more readable this way)
   grep-group          = grep --break --heading --line-number
 
@@ -254,13 +251,13 @@
   stage-everything    = add --all :/
 
   # a more convenient way to say `git sync-rebase`
-  sync                = !git sync-rebase
+  # sync                = !git sync-rebase
 
   # fetch and rebase, first from origin/HEAD, then from upstream/HEAD; finally, push (force) to origin/HEAD
-  sync-rebase         = !git pull --rebase --ff origin HEAD && git pull --rebase --ff upstream master && git push -u origin +HEAD
+  # sync-rebase         = !git pull --rebase --ff origin HEAD && git pull --rebase --ff upstream master && git push -u origin +HEAD
 
   # same as `git sync`; however, do not rebase and does not force push
-  sync-no-rebase      = !git pull --no-rebase --ff origin HEAD && git pull --no-rebase --ff upstream master && git push -u origin HEAD
+  # sync-no-rebase      = !git pull --no-rebase --ff origin HEAD && git pull --no-rebase --ff upstream master && git push -u origin HEAD
 
   # decorated graph view of one liner summarized commits from all branches. (inspired by git-extras)
   tree                = log --all --graph --decorate --oneline --simplify-by-decoration

@@ -41,13 +41,6 @@ map <leader>a :%y+<cr>
 map <leader>p <esc>"+p
 
 " -------
-" Tabs
-" -------
-
-" <SHIFT>+<TAB> to cycle through tabs.
-map <S-Tab> :tabnext<cr>
-
-" -------
 " Window/Split Navigation
 " -------
 
@@ -59,13 +52,6 @@ map <up>    :resize -5<cr>
 map <down>  :resize +5<cr>
 map <right> :vertical resize +5<cr>
 map <left>  :vertical resize -5<cr>
-
-" -------
-" Text Objects (not really, but fake it)
-" -------
-
-" next boolean.
-map <leader>fb :nohlsearch<cr>/true\\|false/i<cr>
 
 " -------
 " Help
@@ -204,27 +190,7 @@ nnoremap <leader>H :set hlsearch<CR>
 " Undo/Redo
 " -------
 
-" remap U to <C-r> for easier redo
+" remap U to <C-r> for easier REDO (remember, `r` is for replace, not redo)
 " from http://vimbits.com/bits/356
 nnoremap U <C-r>
-
-" -------
-"  SmartEnter (auto-end empty single-line comments)
-"  http://superuser.com/a/668667/40400
-" -------
-
-function! s:IsOnlyComment(getlineArg)
-  let commentRegex = '^\s*' . substitute(&commentstring, '%s', '\\s*', '') . '$'
-  return strlen(matchstr(getline(a:getlineArg), commentRegex)) > 0
-endfunction
-
-function! SmartEnter()
-  if s:IsOnlyComment('.')
-    return "\<Esc>S"
-  else
-    return "\<CR>"
-  endif
-endfunction
-
-inoremap <expr> <CR> SmartEnter()
 

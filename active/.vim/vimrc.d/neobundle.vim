@@ -2,6 +2,9 @@
 " To Evaluate
 " ----------------------------------------
 
+" browserlink
+" https://github.com/jaxbot/browserlink.vim
+
 " a_indent
 " http://www.vim.org/scripts/script.php?script_id=5008
 
@@ -169,7 +172,6 @@ NeoBundle "tpope/vim-repeat"
 " ----------------------------------------
 
 NeoBundle "gmarik/vim-visual-star-search"
-NeoBundle "terryma/vim-expand-region"
 
 " ----------------------------------------
 " Editing

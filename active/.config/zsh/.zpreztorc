@@ -23,7 +23,8 @@ zstyle ':prezto:load' pmodule \
   'ssh' \
   'python' \
   'prompt' \
-  'tmux'
+  'tmux' \
+  'utility'
 
 #
 # Editor

@@ -9,6 +9,9 @@ source ~/.vim/vimrc.d/neobundle.vim
 " behaviors.
 source ~/.vim/vimrc.d/behaviors.vim
 
+" comments.
+source ~/.vim/vimrc.d/comments.vim
+
 " custom non-plugin key bindings.
 source ~/.vim/vimrc.d/keybindings.vim
 

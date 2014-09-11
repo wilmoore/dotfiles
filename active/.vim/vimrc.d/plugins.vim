@@ -27,7 +27,7 @@ map // :TComment<cr>
 let g:markdown_drop_empty_blockquotes = 1
 
 " turn off folding (it is slow).
-let g:markdown_enable_folding = 0
+let g:markdown_enable_folding = 1
 
 " -------
 " open-browser
@@ -77,14 +77,6 @@ let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 let g:ctrlp_use_caching = 0
 
 " -------
-" Expand Region
-" -------
-
-" key bindings (thanks to: http://sheerun.net/2014/03/21/how-to-boost-your-vim-productivity)
-vmap v <Plug>(expand_region_expand)
-vmap <C-v> <Plug>(expand_region_shrink)
-
-" -------
 " MRU
 " -------
 
@@ -129,20 +121,13 @@ augroup quit_if_only_nerdtree
 augroup END
 
 " -------
-" Fugitive
-" -------
-
-" Github domains configuration
-let g:fugitive_github_domains = ['http://github.webapps.rr.com']
-
-" -------
 " Gist
 " -------
 
-let g:gist_clip_command = "pbcopy"
-let g:gist_detect_filetype = 1
-let g:gist_open_browser_after_post = 1
-let g:gist_post_private = 1
+" let g:gist_clip_command = "pbcopy"
+" let g:gist_detect_filetype = 1
+" let g:gist_open_browser_after_post = 1
+" let g:gist_post_private = 1
 
 " -------
 " Syntastic
