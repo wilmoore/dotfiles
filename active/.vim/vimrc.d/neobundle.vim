@@ -2,33 +2,14 @@
 " To Evaluate
 " ----------------------------------------
 
-" browserlink
-" https://github.com/jaxbot/browserlink.vim
-
-" a_indent
-" http://www.vim.org/scripts/script.php?script_id=5008
-
 " Vim Plugins I Use:
 " http://mirnazim.org/writings/vim-plugins-i-use/'
-
-" autoformat (attempt to configure golang)
-" https://github.com/Chiel92/vim-autoformat
-
-" a pair
-" http://www.vim.org/scripts/script.php?script_id=4991
-
-" taboo.vim
-" https://github.com/gcmt/taboo.vim
-
-" vim-sneak (alternative to easymotion)
-" https://github.com/justinmk/vim-sneak
-" http://www.reddit.com/r/vim/comments/267vrv/i_am_tim_pope_crafter_of_plugins_ama/chol6k2
 
 " SearchParty
 " https://github.com/dahu/SearchParty
 
-" drawit.vim
-" http://www.thegeekstuff.com/2009/12/how-to-create-ascii-drawings-in-vim-editor-draw-boxes-lines-ellipses-arrows-inside-text-file/#more-2732
+" autoformat (attempt to configure golang)
+" https://github.com/Chiel92/vim-autoformat
 
 " vim-testdrive
 " https://github.com/monokrome/vim-testdrive
@@ -57,6 +38,15 @@ call neobundle#begin(expand('~/.vim/bundle'))
 " ----------------------------------------
 
 NeoBundleFetch "shougo/neobundle.vim"
+
+" ----------------------------------------
+" Experiments
+" ----------------------------------------
+
+NeoBundle "gcmt/taboo.vim"
+set guioptions-=e
+set sessionoptions+=tabpages,globals
+let g:taboo_tab_format = "(%N) %f%m"
 
 " ----------------------------------------
 " Data / Database
