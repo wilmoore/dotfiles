@@ -207,6 +207,12 @@ cask install poedit || true
 install translate-toolkit || true
 
 ###############################################
+# mapping
+###############################################
+
+cask install mapbox-studio
+
+###############################################
 # mobile development
 ###############################################
 
