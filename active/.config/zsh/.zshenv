@@ -78,7 +78,7 @@ export NPM_CONFIG_INIT_AUTHOR_EMAIl="wil.moore@wilmoore.com"
 export NPM_CONFIG_INIT_AUTHOR_URL="http://github.com/wilmoore"
 export NPM_CONFIG_INIT_LICENSE="MIT"
 export NPM_CONFIG_STRICT_SSL="false"
-export NPM_CONFIG_CACHE="~/.cache/npm"
+export NPM_CONFIG_CACHE="$HOME/.cache/npm"
 export NPM_CONFIG_PREFIX="$XDG_DATA_HOME/node"
 
 # tell node programs that use the `update-notifier` package not to store anything.

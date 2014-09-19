@@ -215,6 +215,9 @@ NeoBundle "HTML-AutoCloseTag"
 " Debugging
 NeoBundle "mattboehm/vim-unstack"
 
+" Inflections
+NeoBundle "tpope/vim-abolish"
+
 " ----------------------------------------
 " Programming (languages)
 " ----------------------------------------
@@ -230,6 +233,9 @@ NeoBundle "tpope/vim-jdaddy"
 
 " PHP
 NeoBundle "spf13/PIV"
+
+" Ruby
+NeoBundle "tpope/vim-rails"
 
 " UML / diagramming
 NeoBundleLazy "aklt/plantuml-syntax"

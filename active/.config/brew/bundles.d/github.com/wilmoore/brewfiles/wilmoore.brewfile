@@ -111,6 +111,9 @@ install sqlite3 || true
 # database management
 ##################################################
 
+# @x-database
+cask install toad-mac || true
+
 # mysql
 cask install mysqlworkbench || true
 cask install sequel-pro || true
@@ -237,6 +240,7 @@ cask install debookee || true
 install fping || true
 cask install iconping || true
 install masscan || true
+install mitmproxy || true
 install netcat || true
 install ngrep || true
 install nmap || true
