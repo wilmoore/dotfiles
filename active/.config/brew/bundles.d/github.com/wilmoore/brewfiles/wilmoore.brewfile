@@ -80,6 +80,12 @@ cask install slack || true
 install znc || true
 
 ##################################################
+# cloud deployment
+##################################################
+
+install heroku-toolbelt || true
+
+##################################################
 # cloud file management / file sharing
 ##################################################
 
@@ -310,6 +316,7 @@ install webkit2png || true
 cask install gpgtools || true
 install keychain || true
 cask install onepassword || true
+install keybase || true
 
 ###############################################
 # serialization
