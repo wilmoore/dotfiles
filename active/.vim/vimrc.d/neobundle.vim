@@ -2,6 +2,15 @@
 " To Evaluate
 " ----------------------------------------
 
+" vim-better-whitespace
+" https://github.com/ntpeters/vim-better-whitespace
+
+" dbext.vim
+" http://www.vim.org/scripts/script.php?script_id=356
+
+" SQLUtilities
+" http://www.vim.org/scripts/script.php?script_id=492
+
 " Vim Plugins I Use:
 " http://mirnazim.org/writings/vim-plugins-i-use/'
 
