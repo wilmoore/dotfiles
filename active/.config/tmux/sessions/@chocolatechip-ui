@@ -1,27 +1,26 @@
 #!/usr/bin/env bash
 
 set -o errtrace
-# set -o nounset
+set -o nounset
 
-PROJECT_NAME="$(basename $0 | tr -d '@')"
-PROJECT_PATH="$ACTIVE_PROJECTS_DIR/$PROJECT_NAME"
+declare PROJECT_NAME="$(basename $0 | tr -d '@')"
 
 # guard against creating existing sessions.
-tmux has-session -t $PROJECT_NAME 2>/dev/null
+tmux list-sessions | cut -d: -f1 | grep -E "^$PROJECT_NAME\$" >/dev/null
 
 # proceed if we don't already have a session named per the project.
 if [ $? != 0 ]; then
   # create session and add an initial window (detached)
   TMUX= tmux new-session -s $PROJECT_NAME -n editor -d
-  tmux send-keys -t $PROJECT_NAME:editor.1 "cd $PROJECT_PATH ; clear" C-m
+  tmux send-keys -t $PROJECT_NAME:editor.1 "cd $PROJECT_NAME ; clear" C-m
 
   # create horizontal pane (right column)
   tmux split-window -h -p 38 -t $PROJECT_NAME:editor
-  tmux send-keys -t $PROJECT_NAME "cd $PROJECT_PATH ; clear" C-m
+  tmux send-keys -t $PROJECT_NAME "cd $PROJECT_NAME ; clear" C-m
 
   # split right pane vertically
   tmux split-window -v -p 35 -t $PROJECT_NAME:editor
-  tmux send-keys -t $PROJECT_NAME "cd $PROJECT_PATH ; clear ; make test" C-m
+  tmux send-keys -t $PROJECT_NAME "cd $PROJECT_NAME ; clear ; make test" C-m
 
   # select first pane of first window
   tmux select-pane -t $PROJECT_NAME:editor.1
@@ -31,4 +30,3 @@ fi
 if [ ${1-""} != "--no-attach" ]; then
   tmux switch-client -t $PROJECT_NAME:editor
 fi
-

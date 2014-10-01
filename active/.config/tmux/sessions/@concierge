@@ -6,7 +6,7 @@ set -o nounset
 declare PROJECT_NAME="$(basename $0 | tr -d '@')"
 
 # guard against creating existing sessions.
-tmux has-session -t $PROJECT_NAME 2>/dev/null
+tmux list-sessions | cut -d: -f1 | grep -E "^$PROJECT_NAME\$" >/dev/null
 
 # proceed if we don't already have a session named per the project.
 if [ $? != 0 ]; then
