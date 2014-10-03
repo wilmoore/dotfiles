@@ -98,58 +98,77 @@ map mro :Mru<cr>
 " This was prompted by a "discussion @ http://redd.it/26tayb
 
 " example.com => "example.com"
-:no <leader>" gEwi"<esc>Ea"<esc>
+:no <leader><leader>" gEwi"<esc>Ea"<esc>
+:no <leader>" Bi"<esc>ea"<esc>
 :vn <leader>" "1c"<esc>"1pa"<esc>
 
 " example.com => 'example.com'
-:no <leader>' gEwi'<esc>Ea'<esc>
+:no <leader><leader>' gEwi'<esc>Ea'<esc>
+:no <leader>' gEwi'<esc>ea'<esc>
 :vn <leader>' "1c'<esc>"1pa'<esc>
 
 " example.com => `example.com`
-:no <leader>` gEwi`<esc>Ea`<esc>
+:no <leader><leader>` gEwi`<esc>Ea`<esc>
+:no <leader>` gEwi`<esc>ea`<esc>
 :vn <leader>` "1c`<esc>"1pa`<esc>
 
 " example.com => *example.com*
-:no <leader>* gEwi*<esc>Ea*<esc>
+:no <leader><leader>* gEwi*<esc>Ea*<esc>
+:no <leader>* gEwi*<esc>ea*<esc>
 :vn <leader>* "1c*<esc>"1pa*<esc>
 
 " example.com => **example.com**
-:no <leader>** gEwi**<esc>Ea**<esc>
+:no <leader><leader>** gEwi**<esc>Ea**<esc>
+:no <leader>** gEwi**<esc>ea**<esc>
 :vn <leader>** "1c**<esc>"1pa**<esc>
 
 " example.com => _example.com_
-:no <leader>_ gEwi_<esc>Ea_<esc>
+:no <leader><leader>_ gEwi_<esc>Ea_<esc>
+:no <leader>_ gEwi_<esc>ea_<esc>
 :vn <leader>_ "1c_<esc>"1pa_<esc>
 
 " example.com => {example.com}
-:no <leader>{ gEwi{<esc>Ea}<esc>
-:no <leader>} gEwi{<esc>Ea}<esc>
+:no <leader><leader>{ gEwi{<esc>Ea}<esc>
+:no <leader>{ gEwi{<esc>ea}<esc>
 :vn <leader>{ "1c{<esc>"1pa}<esc>
+
+:no <leader><leader>} gEwi{<esc>Ea}<esc>
+:no <leader>} gEwi{<esc>ea}<esc>
 :vn <leader>} "1c{<esc>"1pa}<esc>
 
 " example.com => example.com
-:no <leader>[ gEwi[<esc>Ea]<esc>
-:no <leader>] gEwi[<esc>Ea]<esc>
+:no <leader><leader>[ gEwi[<esc>Ea]<esc>
+:no <leader>[ gEwi[<esc>ea]<esc>
 :vn <leader>[ "1c[<esc>"1pa]<esc>
+
+:no <leader><leader>] gEwi[<esc>Ea]<esc>
+:no <leader>] gEwi[<esc>ea]<esc>
 :vn <leader>] "1c[<esc>"1pa]<esc>
 
 " 3+3 => #{3+3}
 " user.name => #{user.name}
 " user_name => #{user_name}
-:no <leader># gEwi#{<esc>Ea}<esc>
+:no <leader><leader># gEwi#{<esc>Ea}<esc>
+:no <leader># gEwi#{<esc>ea}<esc>
 " 3 + 3 => #{3 + 3}
 :vn <leader># "1c#{<esc>"1pa}<esc>
 
 " example.com => (example.com)
-:no <leader>( gEwi(<esc>Ea)<esc>
-:no <leader>) gEwi(<esc>Ea)<esc>
+:no <leader><leader>( gEwi(<esc>Ea)<esc>
+:no <leader>( gEwi(<esc>ea)<esc>
 :vn <leader>( "1c(<esc>"1pa)<esc>
+
+:no <leader><leader>) gEwi(<esc>Ea)<esc>
+:no <leader>) gEwi(<esc>ea)<esc>
 :vn <leader>) "1c(<esc>"1pa)<esc>
 
 " example.com => <example.com>
-:no <leader>< gEwi<<esc>Ea><esc>
-:no <leader>> gEwi<<esc>Ea><esc>
+:no <leader><leader>< gEwi<<esc>Ea><esc>
+:no <leader>< gEwi<<esc>ea><esc>
 :vn <leader>< "1c<<esc>"1pa><esc>
+
+:no <leader><leader>> gEwi<<esc>Ea><esc>
+:no <leader>> gEwi<<esc>ea><esc>
 :vn <leader>> "1c<<esc>"1pa><esc>
 
 " What you get with something like "tpope/vim-surround":

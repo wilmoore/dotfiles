@@ -1,8 +1,54 @@
 #######################################################################
+#                                Common                               #
+#######################################################################
+
+snippet require "Import (require) a package."
+var $1 = require('$1');
+endsnippet
+
+#######################################################################
+#                                Node.JS                              #
+#######################################################################
+
+snippet node-module "Node.JS CommonJS Module"
+'use strict';
+
+/*!
+ * expose \`$1\`
+ */
+
+module.exports = $1;
+
+/*!
+ * Module dependencies.
+ */
+
+var debug = require('debug')('$1');
+
+/**
+ * \`$1\`.
+ *
+ * ### Example
+ *
+ *    $1()
+ *    //=> ...
+ *
+ * @param  {String} string
+ * example input.
+ *
+ * @return {String}
+ * return a string.
+ */
+
+function example(string) {
+}
+endsnippet
+
+#######################################################################
 #                                HNav                                 #
 #######################################################################
 
-snippet umd "HNav UMD Module Header (humd)"
+snippet humd "HNav UMD Module Header (humd)"
 /*!
  * COPYRIGHT 2014.  ALL RIGHTS RESERVED.  THIS MODULE CONTAINS
  * TIME WARNER CABLE CONFIDENTIAL AND PROPRIETARY INFORMATION.

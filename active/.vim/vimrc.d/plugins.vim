@@ -154,8 +154,10 @@ let g:syntastic_python_checkers=['pylint']
 " https://github.com/honza/vim-snippets (lots of snippets)
 " https://gist.github.com/ashb/311512 (CommonJS snippet/template)
 
-" General Configuration.
-let g:UltiSnipsListSnippets       = "<C-Tab>"
+" list all available snippets in the current expand context (you need to be in `insert` mode.
+let g:UltiSnipsListSnippets = "<c-l>"
+
+" Snippet directories.
 let g:UltiSnipsSnippetDirectories = ["bundle/vim-snippets/UltiSnips", "snippets/custom"]
 
 " Trigger configuration.
@@ -163,8 +165,11 @@ let g:UltiSnipsExpandTrigger       = "<C-J>"
 let g:UltiSnipsJumpForwardTrigger  = "<C-J>"
 let g:UltiSnipsJumpBackwardTrigger = "<C-K>"
 
-" If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
+" split window type for :UltiSnipsEdit.
+let g:UltiSnipsEditSplit = "vertical"
+
+" key binding for :UltiSnipsEdit.
+noremap <leader>se :UltiSnipsEdit<cr>
 
 " -------
 " neocomplete

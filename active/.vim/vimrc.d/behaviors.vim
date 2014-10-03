@@ -74,6 +74,7 @@ set wildignorecase
 " file extensions to append.
 set suffixesadd+=.c
 set suffixesadd+=.coffee
+set suffixesadd+=.css
 set suffixesadd+=.erl
 set suffixesadd+=.ex
 set suffixesadd+=.go

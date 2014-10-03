@@ -397,6 +397,9 @@ install python --universal || true
 install rbenv
 install ruby-build
 
+# rust
+install rust
+
 # scratch
 cask install scratch || true
 
