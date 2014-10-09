@@ -2,6 +2,15 @@
 " To Evaluate
 " ----------------------------------------
 
+" indexer
+" http://www.vim.org/scripts/script.php?script_id=3221
+
+" colorv
+" https://github.com/Rykka/colorv.vim
+
+" easytags
+" http://peterodding.com/code/vim/easytags/
+
 " vim-better-whitespace
 " https://github.com/ntpeters/vim-better-whitespace
 
@@ -244,7 +253,9 @@ NeoBundle "tpope/vim-jdaddy"
 NeoBundle "spf13/PIV"
 
 " Ruby
+NeoBundle "tpope/vim-bundler"
 NeoBundle "tpope/vim-rails"
+NeoBundle "tpope/vim-rake"
 
 " UML / diagramming
 NeoBundleLazy "aklt/plantuml-syntax"

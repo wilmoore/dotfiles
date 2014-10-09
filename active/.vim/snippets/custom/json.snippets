@@ -15,17 +15,18 @@ snippet package.json "CommonJS package.json (package)"
   "bin": { "$1": "bin/$1" },
   "man" : ["man/$1.1"],
   "scripts": {
-    "test": "tape test.js",
-    "testling": "browserify test.js | testling",
-    "start": "nodemon server.js",
-    "build": "browserify --entry index.js --outfile $1.js --standalone $1",
-    "clint": "jsonlint --quiet package.json",
-    "bootstrap": "test -d node_modules || git init >/dev/null ; npm update --save-dev"
+    "testnode": "tape test.js test/**/*.js | faucet",
+    "testling": "testling | faucet",
+    "test": "npm run jsonlint && npm run testnode && npm run testling",
+    "start": "test -d node_modules || npm install ; npm run watch",
+    "watch": "watch-cli",
+    "build": "browserify-standalone",
+    "jsonlint": "jsonlint-dir ."
   },
   "pre-commit": ["clint", "test", "build"],
-  "files": ["$1.js", "$1.min.js", "package.json", "license", "history.md", ".editorconfig", "index.js", "readme.md"],
+  "files": ["$1.js", "package.json", "license", "changelog.md", ".editorconfig", "index.js", "readme.md"],
   "main": "index.js",
-  "browser": "$1.js",
+  "browser": "index.js",
   "directories": {
     "example": "examples"
   },
@@ -41,11 +42,8 @@ snippet package.json "CommonJS package.json (package)"
   "devDependencies": {
     "tape": "latest",
     "testling": "latest",
-    "browserify": "latest",
-    "nodemon": "latest",
-    "jsonlint": "latest",
-    "uglify-js": "latest",
-    "pre-commit": "latest"
+    "browserify-standalone": "latest",
+    "jsonlint-dir": "latest"
   },
   "volo": {
     "url": "https://raw.github.com/wilmoore/$1/v{version}/$1.js"
@@ -54,14 +52,17 @@ snippet package.json "CommonJS package.json (package)"
   "config" : {},
   "licenses": ["MIT"],
   "testling": {
-    "scripts": ["test.js"],
-    "browsers": {
-      "chrome":   [25],
-      "iexplore": [6, 7, 8, 9, 10],
-      "firefox":  [3.6, 19],
-      "opera":    [10.5, 11.6, 12.0],
-      "safari":   [5.1, 6.0]
-    }
+    "files": "test.js",
+    "browsers": [
+      "ie/6..latest",
+      "chrome/22..latest",
+      "firefox/16..latest",
+      "safari/latest",
+      "opera/11.0..latest",
+      "iphone/6",
+      "ipad/6",
+      "android-browser/latest"
+    ]
   }
 }
 endsnippet

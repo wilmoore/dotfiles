@@ -215,6 +215,16 @@ export GITHUB_USER="wilmoore"
 export GITHUB_OAUTH_TOKEN="$(keychain-secret-for api.github.com GITHUB_OAUTH_TOKEN)"
 export GH_TOKEN=$GITHUB_OAUTH_TOKEN
 
+# un-authenticated Homebrew gitHub API requests have a low rate limit which is easily exceeded
+# Authenticated requests get a higher rate limit.
+export HOMEBREW_GITHUB_API_TOKEN=$GITHUB_OAUTH_TOKEN
+
 # gh
 export GH_CONFIG="$HOME/Documents/private/config/gh/config"
+
+################################################################################
+# terminal-notifier
+################################################################################
+
+export SYS_NOTIFIER=$(brew --prefix terminal-notifier)/bin/terminal-notifier
 

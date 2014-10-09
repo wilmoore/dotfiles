@@ -23,7 +23,6 @@ zstyle ':prezto:load' pmodule \
   'ssh' \
   'python' \
   'prompt' \
-  'tmux' \
   'utility'
 
 #
@@ -61,11 +60,3 @@ zstyle ':prezto:module:prompt' theme 'peepcode'
 
 # Set the SSH identities to load into the agent (NOTE: not used on OSX).
 zstyle ':prezto:module:ssh:load' identities 'digitalocean.rsa' 'jenkins@hnav02.rsa' 'joyent.rsa' 'root@mongo-devtest'
-
-#
-# Tmux
-#
-
-# start a tmux session automatically (session is named prezto)
-zstyle ':prezto:module:tmux:auto-start' local 'yes'
-

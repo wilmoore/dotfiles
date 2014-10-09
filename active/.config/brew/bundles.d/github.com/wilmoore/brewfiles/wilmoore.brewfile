@@ -14,6 +14,7 @@ upgrade brew-cask || true
 ###############################################
 
 tap homebrew/binary || true
+tap homebrew/completions || true
 tap homebrew/dupes || true
 tap homebrew/headonly || true
 tap homebrew/versions || true
@@ -24,6 +25,19 @@ tap caskroom/cask || true
 ##################################################
 
 install brew-cask || true
+
+##################################################
+# @homebrew completions
+##################################################
+
+install bundler-completion || true
+install docker-completion || true
+install gem-completion || true
+install grunt-completion || true
+install rails-completion || true
+install pip-completion || true
+install rake-completion || true
+install ruby-completion || true
 
 ##################################################
 # application launchers
@@ -189,8 +203,9 @@ cask install caskroom/fonts/font-dejavu-sans-mono-for-powerline || true
 # http/rest client
 ###############################################
 
-cask install cocoarestclient || true
 install axel || true
+cask install cocoarestclient || true
+install resty || true
 
 ##################################################
 # image manipulation
@@ -204,6 +219,7 @@ install graphicsmagick || true
 install imagemagick || true
 cask install imageoptim || true
 cask install imagealpha || true
+cask install seashore || true
 cask install texturepacker || true
 install ufraw || true
 cask install xee || true
@@ -276,6 +292,7 @@ cask install pdftk || true
 
 cask install cheatsheet || true
 cask install evernote || true
+install hr || true
 cask install libreoffice || true
 
 ##################################################
@@ -329,9 +346,10 @@ install protobuf || true
 ##################################################
 
 # zsh
+install zsh || true
 install zsh-completions || true
 install zsh-lovers || true
-install zsh || true
+install --HEAD https://gist.githubusercontent.com/wilmoore/1cebe3c57e2fde2aa7d6/raw/zsh-notify.rb
 
 ###############################################
 # software development utilities
@@ -394,11 +412,11 @@ install nvm || true
 install python --universal || true
 
 # ruby
-install rbenv
-install ruby-build
+install rbenv || true
+install ruby-build || true
 
 # rust
-install rust
+cask install rust || true
 
 # scratch
 cask install scratch || true
@@ -407,7 +425,7 @@ cask install scratch || true
 cask install titanium-studio || true
 
 # uml / diagramming
-install plantuml
+install plantuml || true
 
 ##################################################
 # source control

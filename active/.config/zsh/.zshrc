@@ -12,6 +12,14 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 #
+# ZSH plugins
+#
+
+if [[ -s "${ZDOTDIR:-$HOME}/.zshplugins" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zshplugins"
+fi
+
+#
 # core
 #
 

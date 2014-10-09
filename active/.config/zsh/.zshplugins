@@ -1,0 +1,27 @@
+#
+# ZSH plugins
+#
+
+# zsh-notify
+source $(brew --prefix zsh-notify)/notify.plugin.zsh
+
+# zsh-tmux-autostart (zsh-tmux-autostart is currently defined inline below)
+if [[ -z "$TMUX" && -z "$EMACS" && -z "$VIM" ]]; then
+  tmux start-server
+
+  # initialize active projects
+  @hdf-data 2>/dev/null
+  @healthydishes-http-api 2>/dev/null
+  @book-of-modern-frontend-tooling 2>/dev/null
+  @concierge 2>/dev/null
+  @concierge-mobile 2>/dev/null
+  @concierge-postman 2>/dev/null
+  @homebrew 2>/dev/null
+
+  # initialize launcher
+  @launcher
+
+  # attach to last session.
+  exec tmux attach-session
+fi
+

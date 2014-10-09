@@ -93,7 +93,7 @@ alias tmux-edit-sessions='$EDITOR $XDG_CONFIG_HOME/tmux/sessions'
 #
 
 # these really need to be installed by the system packager!
-alias npm-install-g='npm install -g finch@latest vimdebug@latest grunt-cli@latest jshint@0.9.1 browser-repl@latest up@latest node-inspector@latest JSON.sh@latest'
+alias npm-install-g='npm install -g node-inspector@latest finch@latest vimdebug@latest grunt-cli@latest jshint@0.9.1 browser-repl@latest up@latest node-inspector@latest JSON.sh@latest'
 
 #
 # open files.
