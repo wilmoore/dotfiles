@@ -1,0 +1,19 @@
+# add tmux session scripts to search path.
+export PATH=$XDG_CONFIG_HOME/tmux/sessions:$PATH
+
+# zsh-tmux-autostart (zsh-tmux-autostart is currently defined inline below)
+if [[ -z "$TMUX" && -z "$EMACS" && -z "$VIM" ]]; then
+  tmux start-server
+
+  # initialize always active projects
+  @hdf-data 2>/dev/null
+  @concierge 2>/dev/null
+  @concierge-mobile 2>/dev/null
+  @concierge-postman 2>/dev/null
+
+  # initialize launcher
+  @launcher
+
+  # attach to last session.
+  exec tmux attach-session
+fi

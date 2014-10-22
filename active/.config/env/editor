@@ -1,0 +1,3 @@
+# default editor
+export EDITOR='vim -p'
+export VISUAL='mvim -p'

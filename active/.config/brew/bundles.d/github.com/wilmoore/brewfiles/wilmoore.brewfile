@@ -118,6 +118,12 @@ install aws-elasticbeanstalk || true
 install --HEAD https://raw.github.com/apiaryio/snowcrash/master/tools/homebrew/snowcrash.rb
 
 ##################################################
+# data integration
+##################################################
+
+cask install pentaho-data-integration
+
+##################################################
 # databases
 ##################################################
 
@@ -294,6 +300,7 @@ cask install cheatsheet || true
 cask install evernote || true
 install hr || true
 cask install libreoffice || true
+cask install omnigraffle || true
 
 ##################################################
 # quick look plugins
@@ -356,6 +363,7 @@ install --HEAD https://gist.githubusercontent.com/wilmoore/1cebe3c57e2fde2aa7d6/
 ###############################################
 
 cask install kaleidoscope || true
+cask install ccmenu || true
 
 ###############################################
 # software development environment
@@ -500,6 +508,7 @@ cask install handbrake || true
 
 install boot2docker || true
 install docker || true
+install fig || true
 cask install vagrant || true
 cask install virtualbox || true
 

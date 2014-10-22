@@ -1,0 +1,2 @@
+# homebrew provided erlang puts man pages here:
+MANPATH=$(brew --prefix erlang)/lib/erlang/man:$MANPATH

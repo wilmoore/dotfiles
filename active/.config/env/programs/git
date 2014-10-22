@@ -1,0 +1,14 @@
+# USER SETUP
+export GIT_COMMITTER_NAME="Wil Moore III"
+export GIT_COMMITTER_EMAIL="wil.moore@wilmoore.com"
+export GIT_AUTHOR_NAME="Wil Moore III"
+export GIT_AUTHOR_EMAIL="wil.moore@wilmoore.com"
+
+# github
+export GITHUB_USER="wilmoore"
+export GITHUB_OAUTH_TOKEN="$(keychain-secret-for api.github.com GITHUB_OAUTH_TOKEN)"
+export GH_TOKEN=$GITHUB_OAUTH_TOKEN
+
+# un-authenticated Homebrew gitHub API requests have a low rate limit which is easily exceeded
+# Authenticated requests get a higher rate limit.
+export HOMEBREW_GITHUB_API_TOKEN=$GITHUB_OAUTH_TOKEN

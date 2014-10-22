@@ -1,0 +1,2 @@
+# terminal-notifier
+export SYS_NOTIFIER=$(brew --prefix terminal-notifier)/bin/terminal-notifier

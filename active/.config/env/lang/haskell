@@ -1,0 +1,2 @@
+# add global haskell binaries to the search path.
+export PATH=$HOME/.cabal/bin:$PATH

@@ -1,0 +1,27 @@
+# nvm will use the following directory for node versions.
+export NVM_DIR=$XDG_DATA_HOME/node
+
+# nvm startup
+source ~/.homebrew/opt/nvm/nvm.sh
+nvm use 0.11 >/dev/null
+
+# npm (because checking in ~/.npmrc is not safe)
+export NPM_CONFIG_EMAIL="wil.moore@wilmoore.com"
+export NPM_CONFIG_INIT_MODULE="$XDG_CONFIG_HOME/npm/init.js"
+export NPM_CONFIG_INIT_AUTHOR_NAME="Wil Moore III"
+export NPM_CONFIG_INIT_AUTHOR_EMAIl="wil.moore@wilmoore.com"
+export NPM_CONFIG_INIT_AUTHOR_URL="http://github.com/wilmoore"
+export NPM_CONFIG_INIT_LICENSE="MIT"
+export NPM_CONFIG_STRICT_SSL="false"
+export NPM_CONFIG_CACHE="$HOME/.cache/npm"
+export NPM_CONFIG_PREFIX="$XDG_DATA_HOME/node"
+source <(npm completion)
+
+# where are global node modules installed?
+export NODE_PATH=$NODE_PATH:$NPM_CONFIG_PREFIX/lib/node_modules
+
+# node (npm) installed programs (bins).
+export PATH=$XDG_DATA_HOME/node/bin:$PATH
+
+# tell node programs that use the `update-notifier` package not to store anything.
+export NO_UPDATE_NOTIFIER=1

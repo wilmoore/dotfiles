@@ -1,0 +1,2 @@
+# widely accepted ulimit setting
+ulimit -n 4096

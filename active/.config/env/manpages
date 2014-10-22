@@ -1,0 +1,2 @@
+# user installed programs.
+MANPATH=/usr/local/share/man:$MANPATH

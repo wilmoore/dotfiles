@@ -3,7 +3,7 @@
 set -o errtrace
 set -o nounset
 
-declare PROJECT_NAME="$(basename $0 | tr -d '@' | tr '.' '_')"
+declare PROJECT_NAME="$(basename $0 | tr -d '@' | tr '.' '-')"
 declare PROJECT_CDTO="$(basename $0 | tr -d '@')"
 
 # guard against creating existing sessions.
