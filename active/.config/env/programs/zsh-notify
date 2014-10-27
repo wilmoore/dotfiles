@@ -1,2 +1,0 @@
-# zsh-notify
-source $(brew --prefix zsh-notify)/notify.plugin.zsh

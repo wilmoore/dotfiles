@@ -26,6 +26,6 @@ source $XDG_CONFIG_HOME/env/lang/ruby
 source $XDG_CONFIG_HOME/env/programs/docker
 source $XDG_CONFIG_HOME/env/programs/git
 source $XDG_CONFIG_HOME/env/programs/gh
+source $XDG_CONFIG_HOME/env/programs/postgres.app
 source $XDG_CONFIG_HOME/env/programs/terminal-notifier
 source $XDG_CONFIG_HOME/env/programs/tmux
-source $XDG_CONFIG_HOME/env/programs/zsh-notify

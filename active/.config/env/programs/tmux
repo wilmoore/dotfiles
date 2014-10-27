@@ -8,6 +8,7 @@ if [[ -z "$TMUX" && -z "$EMACS" && -z "$VIM" ]]; then
   # initialize always active projects
   @hdf-data 2>/dev/null
   @concierge 2>/dev/null
+  @concierge-admin 2>/dev/null
   @concierge-mobile 2>/dev/null
   @concierge-postman 2>/dev/null
 
