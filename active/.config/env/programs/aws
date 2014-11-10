@@ -1,0 +1,5 @@
+# tell `aws` where to find config file.
+export AWS_CONFIG_FILE=~/Documents/private/config/aws/config
+
+# aws command completion
+source $(brew --prefix)/share/zsh/site-functions/_aws

@@ -233,6 +233,9 @@ NeoBundle "machakann/vim-textobj-delimited"
 " Documentation
 " ----------------------------------------
 
+" API Blueprint
+NeoBundle "kylef/apiblueprint.vim"
+
 " Markdown
 NeoBundle "gabrielelana/vim-markdown"
 NeoBundle "itspriddle/vim-marked"

@@ -97,6 +97,7 @@ install znc || true
 # cloud deployment
 ##################################################
 
+install awscli || true
 install heroku-toolbelt || true
 
 ##################################################
@@ -419,9 +420,8 @@ install nvm || true
 # python
 install python --universal || true
 
-# ruby
-install rbenv || true
-install ruby-build || true
+# ruby (install RVM manually)
+# curl -sSL https://get.rvm.io | bash -s stable
 
 # rust
 cask install rust || true
@@ -444,8 +444,8 @@ install mercurial || true
 
 # git / github
 install --HEAD gerrit-tools || true
-install git || true
 install --HEAD gh || true
+install git || true
 
 ##################################################
 # system services

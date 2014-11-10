@@ -23,11 +23,11 @@ map // :TComment<cr>
 " vim-markdown
 " -------
 
-" drop comments
+" drop comments.
 let g:markdown_drop_empty_blockquotes = 1
 
-" turn off folding (it is slow).
-let g:markdown_enable_folding = 1
+" folding.
+let g:markdown_enable_folding = 0
 
 " -------
 " open-browser

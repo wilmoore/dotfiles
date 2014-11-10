@@ -1,0 +1,7 @@
+fpath=(
+  $(brew --prefix zsh-completions)/share/zsh-completions
+  $XDG_CONFIG_HOME/completions/zsh
+  $fpath
+)
+
+compinit
