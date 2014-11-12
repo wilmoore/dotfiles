@@ -16,7 +16,6 @@
 
 [user]
   name                = Wil Moore III
-
   email               = wil.moore@wilmoore.com
 
 [credential]
@@ -29,9 +28,6 @@
 
 [gh]
   # for use with [gh: GitHub command line client](https://github.com/jingweno/gh)
-
-  # twc github instance
-  host                = github.webapps.rr.com
 
   # always use https
   protocol            = https
