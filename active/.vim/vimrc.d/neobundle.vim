@@ -276,6 +276,7 @@ NeoBundle "tpope/vim-rails"
 NeoBundle "tpope/vim-rake"
 
 " UML / diagramming
+" https://github.com/aklt/plantuml-syntax
 NeoBundleLazy "aklt/plantuml-syntax"
 
 " ----------------------------------------

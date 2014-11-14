@@ -436,6 +436,13 @@ cask install titanium-studio || true
 install plantuml || true
 
 ##################################################
+# service discovery
+##################################################
+
+install etcd || true
+install etcdctl || true
+
+##################################################
 # source control
 ##################################################
 
