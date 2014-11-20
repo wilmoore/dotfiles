@@ -159,6 +159,7 @@ cask install redis-desktop-manager || true
 ##################################################
 
 cask install colors || true
+cask install colorpicker-skalacolor || true
 cask install xscope || true
 
 ##################################################
@@ -292,6 +293,7 @@ cask install screenhero || true
 ###############################################
 
 cask install pdftk || true
+install wkhtmltopdf || true
 
 ###############################################
 # productivity
@@ -453,6 +455,7 @@ install mercurial || true
 install --HEAD gerrit-tools || true
 install --HEAD gh || true
 install git || true
+install github-release || true
 
 ##################################################
 # system services
