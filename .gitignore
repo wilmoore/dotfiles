@@ -1,18 +1,16 @@
 # general stuff
 
-*.swp
 *.DS_Store
-.zhistory
-yankring_history*.txt
-active/.virtualbox
-active/.config/robomongo/robomongo.json
-active/.config/gh-update
+*.swp
 .vim_mru_files
 .zcompcache
+.zcompdump*
+.zhistory
+active/.config/gh-update
+active/.config/robomongo/robomongo.json
+active/.virtualbox
 viminfo
-
-active/.config/zsh/.zcompdump
-active/.config/zsh/.zcompdump.zwc
+yankring_history*.txt
 
 # binary symlinks should not be tracked.
 
@@ -20,4 +18,3 @@ active/.local/bin/ksdiff
 active/.local/bin/sketchtool
 active/.local/bin/sketchtool resources.bundle
 active/.local/bin/stree
-
