@@ -1,7 +1,9 @@
 ################################################################################
 # http://git.io/vrgfLw
 # Install these via `brew bundle-dir` or `brew bundle`
-# NOTE: these are deprecated and going to be removed soon (https://github.com/Homebrew/homebrew/pull/30749, https://github.com/caskroom/homebrew-cask/issues/5427)
+# 
+# % brew install https://raw.githubusercontent.com/Homebrew/homebrew-boneyard/master/cmd/brew-bundle-dir.rb
+# % brew bundle-dir
 ################################################################################
 
 # @keep up-to-date
