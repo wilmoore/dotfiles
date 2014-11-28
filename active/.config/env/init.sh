@@ -15,7 +15,7 @@ source $XDG_CONFIG_HOME/env/manpages
 source $XDG_CONFIG_HOME/env/editor
 source $XDG_CONFIG_HOME/env/pager
 source $XDG_CONFIG_HOME/env/terminal
-source $XDG_CONFIG_HOME/env/powerline
+# source $XDG_CONFIG_HOME/env/powerline
 
 # programming languages
 source $XDG_CONFIG_HOME/env/lang/erlang

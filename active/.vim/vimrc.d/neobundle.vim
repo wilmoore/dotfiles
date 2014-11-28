@@ -131,8 +131,8 @@ NeoBundle "tpope/vim-characterize"
 " Status line
 " ----------------------------------------
 
-NeoBundle "Lokaltog/powerline", {'rtp': 'powerline/bindings/vim/'}
-NeoBundle "stephenmckinney/vim-solarized-powerline"
+" NeoBundle "Lokaltog/powerline", {'rtp': 'powerline/bindings/vim/'}
+" NeoBundle "stephenmckinney/vim-solarized-powerline"
 
 " ----------------------------------------
 " Visual Selection, Cursors

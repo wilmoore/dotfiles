@@ -1,1 +1,16 @@
-source $HOME/.rvm/scripts/rvm
+# set default ruby version.
+export RBENV_VERSION=2.1.5
+
+# enable rbenv, shims and autocompletion.
+export RBENV_ROOT=$(brew --prefix)/var/rbenv
+
+if [ -d $RBENV_ROOT ]; then
+  export PATH="$RBENV_ROOT/bin:$PATH"
+fi
+
+if which rbenv > /dev/null; then
+  eval "$(rbenv init -)"
+fi
+
+# to install a ruby:
+# RUBY_CONFIGURE_OPTS="--without-gcc --disable-install-rdoc" rbenv install 2.1.5

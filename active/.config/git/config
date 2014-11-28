@@ -231,6 +231,16 @@
   # TODO: ZSH compatibility (currently BASH-only)
   project-name        = config --replace-all project.info.name
 
+  # push current HEAD to `origin` remote setting upstream.
+  push-origin-head    = push --set-upstream origin HEAD
+  # shortcut to `push-origin-head`
+  poh		      = push-origin-head
+
+  # push current HEAD to `upstream` remote setting upstream.
+  push-upstream-head  = push --set-upstream upstream HEAD
+  # shortcut to `push-upstream-head`
+  puh		      = push-upstream-head
+
   # github style pull request against origin regarding current branch (FYI, make sure you are using an `https` origin url; otherwise, this won't work)
   pr                  = !git web--browse $(git config --get remote.origin.url | sed 's/.git$//')/pull/new/$(git name-rev --name-only HEAD)
 

@@ -19,6 +19,7 @@ tap homebrew/dupes || true
 tap homebrew/headonly || true
 tap homebrew/versions || true
 tap caskroom/cask || true
+tap caskroom/versions || true
 
 ##################################################
 # @homebrew external commands
@@ -410,6 +411,10 @@ install go || true
 # groovy
 install groovy || true
 
+# haskell
+install ghc || true
+install cabal-install || true
+
 # java
 cask install java || true
 
@@ -422,11 +427,17 @@ install nvm || true
 # python
 install python --universal || true
 
-# ruby (install RVM manually)
-# curl -sSL https://get.rvm.io | bash -s stable
+# ruby
+install ruby-build || true
+install rbenv || true
+install rbenv-default-gems || true
+install rbenv-gem-rehash || true
 
 # rust
 cask install rust || true
+cask install cargo || true
+install cargo-completion || true
+install rustc-completion || true
 
 # scratch
 cask install scratch || true
