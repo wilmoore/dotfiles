@@ -128,13 +128,6 @@ NeoBundle "Shougo/unite.vim"
 NeoBundle "tpope/vim-characterize"
 
 " ----------------------------------------
-" Status line
-" ----------------------------------------
-
-" NeoBundle "Lokaltog/powerline", {'rtp': 'powerline/bindings/vim/'}
-" NeoBundle "stephenmckinney/vim-solarized-powerline"
-
-" ----------------------------------------
 " Visual Selection, Cursors
 " ----------------------------------------
 
@@ -152,6 +145,8 @@ NeoBundle "kien/rainbow_parentheses.vim"
 " Color Schemes, Themes
 " ----------------------------------------
 
+NeoBundle "chriskempson/base16-vim"
+NeoBundle "chriskempson/vim-tomorrow-theme"
 NeoBundle "flazz/vim-colorschemes"
 NeoBundle "godlygeek/csapprox"
 

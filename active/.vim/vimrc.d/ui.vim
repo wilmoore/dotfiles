@@ -7,7 +7,7 @@
 " -------
 
 " Don't show the mode since Powerline shows it
-set noshowmode
+" set noshowmode
 
 " display tabs and trailing spaces visually
 set list listchars=tab:\ \ ,trail:·
@@ -20,15 +20,6 @@ if has("gui_running")
 endif
 
 " -------
-" General Color Scheme
-" -------
-
-let g:solarized_termcolors=256
-let g:solarized_termtrans=1
-set background=dark
-colorscheme solarized
-
-" -------
 " Terminal Colors
 " -------
 
@@ -36,9 +27,22 @@ colorscheme solarized
 set t_Co=256
 
 " when not running in GUI mode
-" if !has('gui_running')
-"   set t_Co=256
-" endif
+if !has('gui_running')
+  set t_Co=256
+endif
+
+" -------
+" General Color Scheme
+" -------
+
+" general
+set background=dark
+
+" base16 setup (set for base16-based themes)
+let base16colorspace=256
+
+" Tomorrow Night Eighties
+colorscheme Tomorrow-Night-Eighties
 
 " -------
 " Fonts
@@ -48,7 +52,8 @@ set t_Co=256
 if has("gui_running")
   " (i.e. MacVIM)
   " set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h12
-  set guifont=Sauce\ Code\ Powerline:h12
+  " set guifont=Sauce\ Code\ Powerline:h12
+  set guifont=Droid\ Sans\ Mono\ for\ Powerline:h18
 endif
 
 " -------

@@ -2,15 +2,10 @@
 # Sets Prezto options.
 #
 
-#
-# General
-#
-
 # Color output (auto set to 'no' on dumb terminals).
 zstyle ':prezto:*:*' color 'yes'
 
-# Set the Prezto modules to load (browse modules).
-# The order matters.
+# Set the Prezto modules to load (browse modules). Order matters.
 zstyle ':prezto:load' pmodule \
   'environment' \
   'completion' \
@@ -25,38 +20,14 @@ zstyle ':prezto:load' pmodule \
   'prompt' \
   'utility'
 
-#
-# Editor
-#
-
 # Set the key mapping style to 'emacs' or 'vi'.
 zstyle ':prezto:module:editor' key-bindings 'vi'
 
-#
-# GNU Utility
-#
-
-# disable color diff as it messes up the intrinsic diff tool which does not work on directories
-# https://github.com/sorin-ionescu/prezto/issues/332
+# disable color diff as it messes up the intrinsic diff tool which does not work on directories (https://github.com/sorin-ionescu/prezto/issues/332)
 zstyle ':prezto:module:utility:diff' color 'no'
-
-#
-# History Substring Search
-#
 
 # Enable positive result highlighting.
 zstyle ':prezto:module:history-substring-search' color 'yes'
 
-#
 # Prompt
-#
-
-# Setting it to 'random' loads a random theme.
-zstyle ':prezto:module:prompt' theme 'peepcode'
-
-#
-# SSH
-#
-
-# Set the SSH identities to load into the agent (NOTE: not used on OSX).
-zstyle ':prezto:module:ssh:load' identities 'digitalocean.rsa' 'jenkins@hnav02.rsa' 'joyent.rsa' 'root@mongo-devtest'
+zstyle ':prezto:module:prompt' theme 'pure'

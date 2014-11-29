@@ -7,3 +7,7 @@ setopt sh_word_split
 # performance
 # http://blog.borntyping.co.uk/posts/zsh-startup-time.html
 skip_global_compinit=1
+
+# Base16 Shell (https://github.com/chriskempson/base16-shell)
+BASE16_SHELL="$HOME/.config/base16-shell/base16-solarized.dark.sh"
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
