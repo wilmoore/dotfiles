@@ -102,6 +102,12 @@ NeoBundle "shougo/vimshell"
 NeoBundle "tpope/vim-dispatch"
 
 " ----------------------------------------
+" Status Line
+" ----------------------------------------
+
+NeoBundle "bling/vim-airline"
+
+" ----------------------------------------
 " Buffer Settings
 " ----------------------------------------
 

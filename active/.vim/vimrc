@@ -24,6 +24,9 @@ source ~/.vim/vimrc.d/mouse.vim
 " formatting options.
 source ~/.vim/vimrc.d/formatting.vim
 
+" status line.
+source ~/.vim/vimrc.d/status.vim
+
 " plugin configuration (plugin specific key bindings).
 source ~/.vim/vimrc.d/plugins.vim
 

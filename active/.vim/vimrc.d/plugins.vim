@@ -3,12 +3,14 @@
 " ----------------------------------------
 
 " -------
-" Powerline
+" airline
 " -------
 
-" set laststatus=2
-" let g:Powerline_symbols = 'fancy'
-" let g:Powerline_colorscheme='solarized256_dark'
+" use powerline fonts.
+let g:airline_powerline_fonts = 1
+
+" disable `fileencoding` and `fileformat`.
+let g:airline_section_y = ''
 
 " -------
 " TComment
