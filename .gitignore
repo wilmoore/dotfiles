@@ -18,3 +18,4 @@ active/.local/bin/ksdiff
 active/.local/bin/sketchtool
 active/.local/bin/sketchtool resources.bundle
 active/.local/bin/stree
+active/.local/bin/*deploy

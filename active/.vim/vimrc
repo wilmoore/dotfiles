@@ -6,17 +6,20 @@
 " plugin and bundle management.
 source ~/.vim/vimrc.d/neobundle.vim
 
+" user interface.
+source ~/.vim/vimrc.d/ui.vim
+
 " behaviors.
 source ~/.vim/vimrc.d/behaviors.vim
+
+" plugin configuration (plugin specific key bindings).
+source ~/.vim/vimrc.d/plugins.vim
 
 " comments.
 source ~/.vim/vimrc.d/comments.vim
 
 " custom non-plugin key bindings.
 source ~/.vim/vimrc.d/keybindings.vim
-
-" user interface.
-source ~/.vim/vimrc.d/ui.vim
 
 " mouse.
 source ~/.vim/vimrc.d/mouse.vim
@@ -26,9 +29,6 @@ source ~/.vim/vimrc.d/formatting.vim
 
 " status line.
 source ~/.vim/vimrc.d/status.vim
-
-" plugin configuration (plugin specific key bindings).
-source ~/.vim/vimrc.d/plugins.vim
 
 " source code related.
 source ~/.vim/vimrc.d/sourcecode.vim

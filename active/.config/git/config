@@ -87,6 +87,7 @@
   # - http://shop.oreilly.com/product/0636920024774.do
   # - http://git-scm.com/2010/03/08/rerere.html
   enabled             = true
+  autoupdate	      = true
 
 [merge]
   # see: https://git-scm.com/docs/git-merge
@@ -249,6 +250,9 @@
 
   # stage file after resolving a merge conflict (like svn, hg)
   resolve             = stage --
+
+  # show the path to root directory of git repo
+  root		      = rev-parse --show-toplevel
 
   # `git merge --squash` current branch
   squash              = merge --squash

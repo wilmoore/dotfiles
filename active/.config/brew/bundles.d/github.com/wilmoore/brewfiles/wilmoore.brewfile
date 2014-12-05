@@ -153,6 +153,7 @@ cask install robomongo || true
 
 # postgres
 cask install pg-commander || true
+cask install psequel || true
 
 # redis
 cask install redis-desktop-manager || true

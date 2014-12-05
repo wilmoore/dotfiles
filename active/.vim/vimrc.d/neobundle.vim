@@ -174,9 +174,7 @@ NeoBundle "gregsexton/gitv"
 
 " Github
 NeoBundle "mattn/webapi-vim"
-" NeoBundle "mattn/gist-vim"
 NeoBundle "tpope/vim-rhubarb"
-NeoBundle "junegunn/vim-github-dashboard"
 
 " ----------------------------------------
 " Snippets, Templates

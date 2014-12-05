@@ -107,9 +107,6 @@ autocmd GUIEnter * set visualbell t_vb=
 " Visual Editor Indicators
 " -------
 
-" look & feel of visual line/column indicator(s).
-highlight CursorLine term=underline cterm=underline gui=underline
-
 " show current line indicator.
 set cursorline
 
@@ -125,6 +122,11 @@ set cf
 
 " Change buffer - without saving
 set hidden
+
+" look & feel of visual line/column indicator(s).
+highlight CursorLine term=underline cterm=underline gui=underline
+highlight CursorLine guibg=#303000 ctermbg=234
+highlight CursorColumn guibg=#303000 ctermbg=234
 
 " -------
 " Buffers
