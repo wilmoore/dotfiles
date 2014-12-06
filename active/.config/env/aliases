@@ -45,7 +45,7 @@ alias say-dum='say -v cellos "Dum dum dum dum dum dum dum he he he ho ho ho fa l
 # zprezto management
 #
 
-alias zpup='cd $XDG_CONFIG_HOME/zsh/.zprezto && git checkout master 2>/dev/null && git pull --no-rebase && git submodule update --init --recursive && cd -'
+alias zpup='cd $XDG_CONFIG_HOME/zsh/.zprezto && git checkout master 2>/dev/null && git pull --no-rebase && git submodule update --init --recursive && cd - && exec $SHELL'
 
 #
 # dotfile management
