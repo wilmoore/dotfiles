@@ -100,6 +100,7 @@ install znc || true
 # cloud deployment
 ##################################################
 
+install aws-elasticbeanstalk || true
 install awscli || true
 install heroku-toolbelt || true
 
@@ -112,7 +113,7 @@ cask install cloudup || true
 cask install dropbox || true
 cask install google-drive || true
 install s3cmd || true
-install aws-elasticbeanstalk || true
+install https://gist.githubusercontent.com/wilmoore/14c3f12cdd4706e74dc3/raw/6249017ee0a4f5fbcea2b24d3caac9b346a93316/transfer.rb || true
 
 ##################################################
 # documenation generation
