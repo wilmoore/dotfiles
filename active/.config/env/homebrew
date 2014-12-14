@@ -1,4 +1,7 @@
-# ensure homebrew cask links applications into `/Applications`
+# wondering why this is not the default???
+export HOMEBREW_CACHE=$XDG_CACHE_HOME/homebrew
+
+# ensure homebrew cask links applications into `/Applications`.
 export HOMEBREW_CASK_OPTS="--appdir=/Applications --binarydir=$HOME/.local/bin"
 
 # where are your brew bundles?
@@ -8,5 +11,5 @@ export BUNDLE_DIR="$XDG_CONFIG_HOME/brew/bundles.d"
 export PATH=$HOME/.homebrew/bin:$PATH
 export PATH=$HOME/.homebrew/sbin:$PATH
 
-# homebrew installed program man pages
+# homebrew installed program man pages.
 MANPATH=$HOME/.homebrew/share/man:$MANPATH

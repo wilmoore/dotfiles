@@ -234,8 +234,8 @@
 
   # push current HEAD to `origin` remote setting upstream.
   push-origin-head    = push --set-upstream origin HEAD
-  # shortcut to `push-origin-head`
-  poh		      = push-origin-head
+  # push current HEAD to `origin` remote setting upstream.
+  poh		      = push --set-upstream origin HEAD
 
   # push current HEAD to `upstream` remote setting upstream.
   push-upstream-head  = push --set-upstream upstream HEAD
