@@ -1,4 +1,4 @@
 # php-version (PHP)
-[ -f ~/projects/active/php-version/php-version.sh ] && \
-  source ~/projects/active/php-version/php-version.sh && \
+[ -f $(brew --prefix php-version)/php-version.sh ] && \
+  source $(brew --prefix php-version)/php-version.sh && \
   php-version 5

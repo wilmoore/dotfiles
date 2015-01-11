@@ -32,6 +32,12 @@ let g:markdown_drop_empty_blockquotes = 1
 let g:markdown_enable_folding = 0
 
 " -------
+" smartpairs
+" -------
+
+let g:smartpairs_uber_mode = 1
+
+" -------
 " open-browser
 " -------
 

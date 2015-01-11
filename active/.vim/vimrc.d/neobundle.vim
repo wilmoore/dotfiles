@@ -138,6 +138,7 @@ NeoBundle "tpope/vim-characterize"
 " ----------------------------------------
 
 NeoBundle "myusuf3/numbers.vim"
+NeoBundle "gorkunov/smartpairs.vim"
 
 " ----------------------------------------
 " Visual Indicators
@@ -259,6 +260,7 @@ NeoBundle "tpope/vim-abolish"
 
 " Polyglot (lots of languages)
 NeoBundle "sheerun/vim-polyglot"
+NeoBundle "calebsmith/vim-lambdify"
 
 " JavaScript
 NeoBundle "marijnh/tern_for_vim", { "build": { "mac": "npm install" } }

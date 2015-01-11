@@ -12,4 +12,4 @@ export PATH=$HOME/.homebrew/bin:$PATH
 export PATH=$HOME/.homebrew/sbin:$PATH
 
 # homebrew installed program man pages.
-MANPATH=$HOME/.homebrew/share/man:$MANPATH
+export MANPATH=$HOME/.homebrew/share/man:$MANPATH

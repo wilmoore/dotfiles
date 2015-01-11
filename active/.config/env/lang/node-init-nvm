@@ -1,0 +1,9 @@
+# set before initializing `nvm`. Node.js verions will be installed here:
+export NVM_DIR=$XDG_DATA_HOME/node
+
+# initialize `nvm`.
+[[ -r $(brew --prefix nvm)/nvm.sh ]] && . $(brew --prefix nvm)/nvm.sh
+[[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
+
+# always use the latest verison of node available via `nvm install *`.
+nvm use 0 >/dev/null

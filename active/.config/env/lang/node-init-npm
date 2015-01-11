@@ -1,0 +1,13 @@
+# npm command completion (great to use for `npm run <tab>`).
+source <(npm completion)
+
+# ...since putting `~/.npmrc` in source control is non-safe.
+export NPM_CONFIG_EMAIL="wil.moore@wilmoore.com"
+export NPM_CONFIG_INIT_MODULE=""
+export NPM_CONFIG_INIT_AUTHOR_NAME="Wil Moore III"
+export NPM_CONFIG_INIT_AUTHOR_EMAIl="wil.moore@wilmoore.com"
+export NPM_CONFIG_INIT_AUTHOR_URL="http://github.com/wilmoore"
+export NPM_CONFIG_INIT_LICENSE="MIT"
+export NPM_CONFIG_STRICT_SSL="false"
+export NPM_CONFIG_CACHE="$HOME/.cache/npm"
+export NPM_CONFIG_PREFIX="$XDG_DATA_HOME/node"

@@ -43,10 +43,31 @@ install rake-completion || true
 install ruby-completion || true
 
 ##################################################
-# application launchers
+# @system bootstrap
 ##################################################
 
+# application launchers
 cask install alfred || true
+
+# window management
+cask install slate || true
+
+# powerline fonts.
+cask install caskroom/fonts/font-anonymous-pro-for-powerline || true
+cask install caskroom/fonts/font-dejavu-sans-mono-for-powerline || true
+cask install caskroom/fonts/font-droid-sans-mono-for-powerline || true
+cask install caskroom/fonts/font-liberation-mono-for-powerline || true
+cask install caskroom/fonts/font-meslo-lg-for-powerline || true
+cask install caskroom/fonts/font-sauce-code-powerline || true
+
+# email
+cask install mailplane
+
+# productivity
+cask install evernote || true
+
+# security
+cask install 1password || true
 
 ##################################################
 # acceptance testing
@@ -123,12 +144,6 @@ install https://gist.githubusercontent.com/wilmoore/14c3f12cdd4706e74dc3/raw/624
 install --HEAD https://raw.github.com/apiaryio/snowcrash/master/tools/homebrew/snowcrash.rb
 
 ##################################################
-# data integration
-##################################################
-
-cask install pentaho-data-integration
-
-##################################################
 # databases
 ##################################################
 
@@ -194,28 +209,10 @@ cask install marked || true
 install macvim --custom-icons --env-std --override-system-vim --with-lua --with-luajit --with-csope || true
 
 ##################################################
-# email
-##################################################
-
-cask install mailplane
-
-##################################################
 # entertainment
 ##################################################
 
 cask install chromecast || true
-
-##################################################
-# fonts
-##################################################
-
-# powerline fonts.
-cask install caskroom/fonts/font-anonymous-pro-for-powerline || true
-cask install caskroom/fonts/font-dejavu-sans-mono-for-powerline || true
-cask install caskroom/fonts/font-droid-sans-mono-for-powerline || true
-cask install caskroom/fonts/font-liberation-mono-for-powerline || true
-cask install caskroom/fonts/font-meslo-lg-for-powerline || true
-cask install caskroom/fonts/font-sauce-code-powerline || true
 
 ###############################################
 # http/rest client
@@ -310,7 +307,6 @@ install wkhtmltopdf || true
 ###############################################
 
 cask install cheatsheet || true
-cask install evernote || true
 install hr || true
 cask install libreoffice || true
 cask install omnigraffle || true
@@ -352,7 +348,6 @@ install webkit2png || true
 
 cask install gpgtools || true
 install keychain || true
-cask install onepassword || true
 install keybase || true
 
 ###############################################
@@ -560,12 +555,6 @@ install v8 || true
 ##################################################
 
 install nginx || true
-
-###############################################
-# window Management
-###############################################
-
-cask install slate || true
 
 ###############################################
 # @keep things tidy.
