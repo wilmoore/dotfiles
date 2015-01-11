@@ -20,8 +20,6 @@ source $XDG_CONFIG_HOME/env/terminal
 source $XDG_CONFIG_HOME/env/lang/erlang
 source $XDG_CONFIG_HOME/env/lang/go
 source $XDG_CONFIG_HOME/env/lang/haskell
-source $XDG_CONFIG_HOME/env/lang/node-init-nvm
-source $XDG_CONFIG_HOME/env/lang/node-init-npm
 source $XDG_CONFIG_HOME/env/lang/node
 source $XDG_CONFIG_HOME/env/lang/php
 source $XDG_CONFIG_HOME/env/lang/ruby
