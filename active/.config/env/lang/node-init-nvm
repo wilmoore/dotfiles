@@ -5,5 +5,5 @@ export NVM_DIR=$XDG_DATA_HOME/node
 [[ -r $(brew --prefix nvm)/nvm.sh ]] && . $(brew --prefix nvm)/nvm.sh
 [[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
 
-# always use the latest verison of node available via `nvm install *`.
+# ensures the latest installed node (via `nvm install ...`) is in play in new shells.
 nvm use 0 >/dev/null
