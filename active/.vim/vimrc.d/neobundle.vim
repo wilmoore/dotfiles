@@ -112,6 +112,7 @@ NeoBundle "bling/vim-airline"
 " ----------------------------------------
 
 NeoBundle "tpope/vim-sleuth"
+NeoBundle "dietsche/vim-lastplace"
 
 " ----------------------------------------
 " Navigation, Exploration
@@ -287,6 +288,15 @@ NeoBundleLazy "aklt/plantuml-syntax"
 " https://github.com/terryma/vim-multiple-cursors
 " http://www.youtube.com/watch?v=Umb59mMvCxA
 NeoBundle "terryma/vim-multiple-cursors"
+
+" ----------------------------------------
+" Tmux Integration
+" ----------------------------------------
+
+NeoBundle "AdrianSchneider/vim-tdd"
+
+" ----------------------------------------
+" ----------------------------------------
 
 " Required:
 call neobundle#end()

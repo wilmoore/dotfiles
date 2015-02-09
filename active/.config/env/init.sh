@@ -9,10 +9,11 @@ source $XDG_CONFIG_HOME/env/aliases
 source $XDG_CONFIG_HOME/env/bindkey
 source $XDG_CONFIG_HOME/env/browser
 source $XDG_CONFIG_HOME/env/completions
+source $XDG_CONFIG_HOME/env/editor
 source $XDG_CONFIG_HOME/env/language
 source $XDG_CONFIG_HOME/env/limits
 source $XDG_CONFIG_HOME/env/manpages
-source $XDG_CONFIG_HOME/env/editor
+source $XDG_CONFIG_HOME/env/osx
 source $XDG_CONFIG_HOME/env/pager
 source $XDG_CONFIG_HOME/env/terminal
 

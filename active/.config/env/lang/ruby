@@ -2,15 +2,10 @@
 export RBENV_VERSION=2.1.5
 
 # enable rbenv, shims and autocompletion.
-export RBENV_ROOT=$(brew --prefix)/var/rbenv
+eval "$(rbenv init -)"
 
-if [ -d $RBENV_ROOT ]; then
-  export PATH="$RBENV_ROOT/bin:$PATH"
-fi
-
-if which rbenv > /dev/null; then
-  eval "$(rbenv init -)"
-fi
+# setup default gem(s) (i.e. bundler)
+# echo bundler > ${RBENV_ROOT}/default-gems
 
 # to install a ruby:
 # RUBY_CONFIGURE_OPTS="--without-gcc --disable-install-rdoc" rbenv install 2.1.5

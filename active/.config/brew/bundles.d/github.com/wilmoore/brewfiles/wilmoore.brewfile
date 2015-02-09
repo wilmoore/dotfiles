@@ -179,6 +179,7 @@ cask install redis-desktop-manager || true
 ##################################################
 
 cask install colors || true
+cask install colorpicker-hex || true
 cask install colorpicker-skalacolor || true
 cask install xscope || true
 
@@ -436,6 +437,7 @@ install ruby-build || true
 install rbenv || true
 install rbenv-default-gems || true
 install rbenv-gem-rehash || true
+# echo bundler > ${RBENV_ROOT}/default-gems
 
 # rust
 cask install rust || true

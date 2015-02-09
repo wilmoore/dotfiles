@@ -4,6 +4,7 @@
 *.DS_Store
 *.pending-commit-message.md
 *.private
+*.vimrc
 
 # npm
 npm-debug.log
