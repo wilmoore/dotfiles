@@ -15,6 +15,7 @@ upgrade brew-cask || true
 # @taps
 ###############################################
 
+tap aspnet/k || true
 tap homebrew/binary || true
 tap homebrew/completions || true
 tap homebrew/dupes || true
@@ -169,6 +170,7 @@ cask install robomongo || true
 
 # postgres
 cask install pg-commander || true
+install pgcli || true
 cask install psequel || true
 
 # redis
@@ -396,7 +398,9 @@ install pkg-config || true
 cask install adobe-air || true
 
 # andoid
-cask install android-studio || true
+install android-platform-tools || true
+# install android-sdk || true
+# cask install android-studio || true
 cask install genymotion || true
 
 # clojure
@@ -404,6 +408,9 @@ install leiningen || true
 
 # css/sass
 install sassc || true
+
+# dotnet
+install kvm || true
 
 # erlang
 install erlang || true
@@ -528,6 +535,8 @@ install youtube-dl || true
 ##################################################
 
 cask install handbrake || true
+cask install makemkv || true
+cask install mkvtools || true
 
 ##################################################
 # virtualization
