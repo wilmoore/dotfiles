@@ -22,6 +22,7 @@ tap homebrew/dupes || true
 tap homebrew/headonly || true
 tap homebrew/versions || true
 tap caskroom/cask || true
+tap caskroom/unofficial || true
 tap caskroom/versions || true
 
 ##################################################
@@ -293,6 +294,12 @@ install tcpdump || true
 install wireshark || true
 
 ###############################################
+# airplay
+###############################################
+
+cask install reflector || true
+
+###############################################
 # pair programming
 ###############################################
 
@@ -491,7 +498,9 @@ cask install launchcontrol || true
 # ui design
 ##################################################
 
+# cask install affinity-designer || true
 cask install balsamiq-mockups || true
+cask install sketch || true
 
 ##################################################
 # utility

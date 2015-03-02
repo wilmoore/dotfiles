@@ -2,5 +2,5 @@
 export NO_UPDATE_NOTIFIER=1
 
 # initialize
-source $(dirname $0)/node-init-nvm
 source $(dirname $0)/node-init-npm
+source $(dirname $0)/node-init-nvm

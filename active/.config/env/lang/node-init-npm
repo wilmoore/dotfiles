@@ -17,3 +17,6 @@ export NODE_PATH=$NPM_CONFIG_PREFIX/lib/node_modules
 
 # node (npm) installed programs (bins).
 export PATH=$NPM_CONFIG_PREFIX/bin:$PATH
+
+# attempt to use the non-nvm installed `npm`.
+alias npm="$(which -a npm | sort -u | head -1)"

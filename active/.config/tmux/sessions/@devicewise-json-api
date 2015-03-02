@@ -13,15 +13,15 @@ tmux list-sessions | cut -d: -f1 | grep -E "^$PROJECT_NAME\$" >/dev/null
 if [ $? != 0 ]; then
   # create session and add an initial window (detached)
   TMUX= tmux new-session -s $PROJECT_NAME -n editor -d
-  tmux send-keys -t $PROJECT_NAME:editor.1 "cd $PROJECT_CDTO ; nvm use 0.10 ; clear" C-m
+  tmux send-keys -t $PROJECT_NAME:editor.1 "cd $PROJECT_CDTO ; clear" C-m
 
   # create horizontal pane (right column)
   tmux split-window -h -p 38 -t $PROJECT_NAME:editor
-  tmux send-keys -t $PROJECT_NAME "cd $PROJECT_CDTO ; nvm use 0.10 ; clear" C-m
+  tmux send-keys -t $PROJECT_NAME "cd $PROJECT_CDTO ; clear" C-m
 
   # split right pane vertically
   tmux split-window -v -p 35 -t $PROJECT_NAME:editor
-  tmux send-keys -t $PROJECT_NAME "cd $PROJECT_CDTO ; nvm use 0.10 ; clear" C-m
+  tmux send-keys -t $PROJECT_NAME "cd $PROJECT_CDTO ; clear" C-m
 
   # select first pane of first window
   tmux select-pane -t $PROJECT_NAME:editor.1
@@ -31,4 +31,3 @@ fi
 if [ ${1-""} != "--no-attach" ]; then
   tmux switch-client -t $PROJECT_NAME:editor
 fi
-
