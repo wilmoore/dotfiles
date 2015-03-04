@@ -8,6 +8,9 @@ if [[ -z "$TMUX" && -z "$EMACS" && -z "$VIM" ]]; then
   # initialize launcher
   @launcher 2>/dev/null
 
+  # initialize in-progress apps/libs
+  @node-require-globs
+
   # attach to last session.
   exec tmux attach-session
 fi

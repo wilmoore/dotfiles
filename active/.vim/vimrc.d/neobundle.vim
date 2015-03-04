@@ -2,39 +2,11 @@
 " To Evaluate
 " ----------------------------------------
 
-" indexer
-" http://www.vim.org/scripts/script.php?script_id=3221
+" A Whirlwind Tour of my Vimrc - Part 1 of 2
+" https://www.youtube.com/watch?v=xZuy4gBghho
 
-" colorv
-" https://github.com/Rykka/colorv.vim
-
-" easytags
-" http://peterodding.com/code/vim/easytags/
-
-" vim-better-whitespace
-" https://github.com/ntpeters/vim-better-whitespace
-
-" dbext.vim
-" http://www.vim.org/scripts/script.php?script_id=356
-
-" SQLUtilities
-" http://www.vim.org/scripts/script.php?script_id=492
-
-" Vim Plugins I Use:
-" http://mirnazim.org/writings/vim-plugins-i-use/'
-
-" SearchParty
-" https://github.com/dahu/SearchParty
-
-" autoformat (attempt to configure golang)
-" https://github.com/Chiel92/vim-autoformat
-
-" vim-testdrive
-" https://github.com/monokrome/vim-testdrive
-
-" vim-vroom
-" https://github.com/skalnik/vim-vroom
-" http://sheerun.net/2014/03/21/how-to-boost-your-vim-productivity
+" A Whirlwind Tour of my Vimrc - Part 2 of 2
+" https://www.youtube.com/watch?v=MQHc0Vj0IsE
 
 " ----------------------------------------
 " NeoBundle
@@ -86,6 +58,7 @@ map g# <Plug>(incsearch-nohl-g#)
 " ----------------------------------------
 
 NeoBundle "chrisbra/csv.vim"
+NeoBundle "SQLUtilities"
 
 " ----------------------------------------
 " Documentation
@@ -215,6 +188,7 @@ NeoBundle "chrisbra/NrrwRgn"
 NeoBundle "mjbrownie/swapit"
 
 " Formatting
+NeoBundle "Align"
 NeoBundle "Chiel92/vim-autoformat"
 NeoBundle "editorconfig/editorconfig-vim"
 NeoBundle "AndrewRadev/splitjoin.vim"
@@ -255,6 +229,9 @@ NeoBundle "mattboehm/vim-unstack"
 " Inflections
 NeoBundle "tpope/vim-abolish"
 
+" TDD
+NeoBundle "monokrome/vim-testdrive"
+
 " ----------------------------------------
 " Programming (languages)
 " ----------------------------------------
@@ -276,6 +253,9 @@ NeoBundle "spf13/PIV"
 NeoBundle "tpope/vim-bundler"
 NeoBundle "tpope/vim-rails"
 NeoBundle "tpope/vim-rake"
+
+" Swift
+NeoBundle "Keithbsmiley/swift.vim"
 
 " UML / diagramming
 " https://github.com/aklt/plantuml-syntax

@@ -150,6 +150,12 @@ augroup END
 " let g:gist_post_private = 1
 
 " -------
+" SQLUtilities
+" -------
+
+vmap <silent>sf <Plug>SQLUFormatter<CR>
+
+" -------
 " Syntastic
 " -------
 

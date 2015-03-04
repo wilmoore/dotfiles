@@ -518,6 +518,7 @@ install moreutils || true
 install ngrok || true
 install pcre || true
 install reattach-to-user-namespace || true
+install sysdig || true
 install terminal-notifier || true
 install gnu-time || true
 install todo-txt || true
