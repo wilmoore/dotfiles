@@ -240,8 +240,14 @@ NeoBundle "monokrome/vim-testdrive"
 NeoBundle "sheerun/vim-polyglot"
 NeoBundle "calebsmith/vim-lambdify"
 
+" Cocoa
+NeoBundle "msanders/cocoa.vim"
+
 " JavaScript
 NeoBundle "marijnh/tern_for_vim", { "build": { "mac": "npm install" } }
+
+" JavaScript (React/JSX)
+NeoBundle "mxw/vim-jsx"
 
 " JSON
 NeoBundle "tpope/vim-jdaddy"
@@ -253,9 +259,6 @@ NeoBundle "spf13/PIV"
 NeoBundle "tpope/vim-bundler"
 NeoBundle "tpope/vim-rails"
 NeoBundle "tpope/vim-rake"
-
-" Swift
-NeoBundle "Keithbsmiley/swift.vim"
 
 " UML / diagramming
 " https://github.com/aklt/plantuml-syntax
@@ -283,5 +286,5 @@ call neobundle#end()
 
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
-NeoBundleCheck
+" NeoBundleCheck
 

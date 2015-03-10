@@ -1,6 +1,3 @@
-# npm command completion (great to use for `npm run <tab>`).
-source <(npm completion)
-
 # ...since putting `~/.npmrc` in source control is non-safe.
 export NPM_CONFIG_EMAIL="wil.moore@wilmoore.com"
 export NPM_CONFIG_INIT_MODULE=""
@@ -18,5 +15,8 @@ export NODE_PATH=$NPM_CONFIG_PREFIX/lib/node_modules
 # node (npm) installed programs (bins).
 export PATH=$NPM_CONFIG_PREFIX/bin:$PATH
 
-# attempt to use the non-nvm installed `npm`.
+# use the globally installed (non-nvm) installed `npm`.
 alias npm="$(which -a npm | sort -u | head -1)"
+
+# npm command completion (i.e. `npm run <tab>`).
+source <(npm completion)

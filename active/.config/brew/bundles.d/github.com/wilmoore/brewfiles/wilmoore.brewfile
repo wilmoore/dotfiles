@@ -149,18 +149,16 @@ install --HEAD https://raw.github.com/apiaryio/snowcrash/master/tools/homebrew/s
 # databases
 ##################################################
 
-install influxdb
+# install influxdb || true
 install elasticsearch || true
 cask install postgres || true
 install redis || true
 install sqlite3 || true
+link sqlite3 --force || true
 
 ##################################################
 # database management
 ##################################################
-
-# @x-database
-cask install toad-mac || true
 
 # mysql
 cask install mysqlworkbench || true
@@ -173,9 +171,6 @@ cask install robomongo || true
 cask install pg-commander || true
 install pgcli || true
 cask install psequel || true
-
-# redis
-cask install redis-desktop-manager || true
 
 ##################################################
 # design
@@ -260,8 +255,10 @@ cask install mapbox-studio
 # mobile development
 ###############################################
 
+install https://raw.githubusercontent.com/Homebrew/homebrew/7988deef06d203e9899ba16d094dab805ad74ff4/Library/Formula/fruitstrap.rb || true
 cask install pusher || true
 install ios-webkit-debug-proxy || true
+install ios-sim || true
 
 ###############################################
 # music
@@ -280,6 +277,7 @@ cask install cocoapacketanalyzer || true
 cask install debookee || true
 install fping || true
 cask install iconping || true
+install knock || true
 install masscan || true
 install mitmproxy || true
 install netcat || true
@@ -554,7 +552,7 @@ cask install mkvtools || true
 
 install boot2docker || true
 install docker || true
-install fig || true
+install docker-compose || true
 cask install vagrant || true
 cask install virtualbox || true
 
