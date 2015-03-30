@@ -9,7 +9,7 @@ export PROJECTS_DIR="$HOME/projects"
 cdpath=(
   $HOME                 # home directory
   $PROJECTS_DIR         # active projects
-  $PROJECTS_DIR/{devicewise,dfit,welltok}
+  $PROJECTS_DIR/@{devicewise,dfit,welltok} # organizations
   $cdpath               # default
 )
 

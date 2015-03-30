@@ -125,7 +125,9 @@ install znc || true
 
 install aws-elasticbeanstalk || true
 install awscli || true
+install azukiapp/azk/azk || true
 install heroku-toolbelt || true
+install terraform || true
 
 ##################################################
 # cloud file management / file sharing
@@ -219,6 +221,7 @@ cask install chromecast || true
 
 install axel || true
 cask install cocoarestclient || true
+cask install paw || true
 install resty || true
 
 ##################################################
@@ -255,6 +258,7 @@ cask install mapbox-studio
 # mobile development
 ###############################################
 
+install carthage
 install https://raw.githubusercontent.com/Homebrew/homebrew/7988deef06d203e9899ba16d094dab805ad74ff4/Library/Formula/fruitstrap.rb || true
 cask install pusher || true
 install ios-webkit-debug-proxy || true
@@ -487,6 +491,12 @@ install git || true
 install github-release || true
 
 ##################################################
+# static analysis
+##################################################
+
+install flow || true
+
+##################################################
 # system services
 ##################################################
 
@@ -553,8 +563,8 @@ cask install mkvtools || true
 install boot2docker || true
 install docker || true
 install docker-compose || true
-cask install vagrant || true
-cask install virtualbox || true
+cask install kitematic || true
+cask install virtualbox --appdir=/Applications || true
 
 ##################################################
 # web browsers & browser engines

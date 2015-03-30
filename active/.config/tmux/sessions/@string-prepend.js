@@ -21,13 +21,10 @@ if [ $? != 0 ]; then
 
   # split right pane vertically
   tmux split-window -v -p 35 -t $PROJECT_NAME:editor
-  tmux send-keys -t $PROJECT_NAME "cd $PROJECT_CDTO ; npm run develop" C-m
+  tmux send-keys -t $PROJECT_NAME "cd $PROJECT_CDTO ; clear" C-m
 
   # select first pane of first window
   tmux select-pane -t $PROJECT_NAME:editor.1
-
-  # create a new window for `redis-server`
-  tmux new-window -t $PROJECT_NAME -d -n "redis-server" "cd $PROJECT_CDTO ; redis-server $(brew --prefix)/etc/redis.conf"
 fi
 
 # attach

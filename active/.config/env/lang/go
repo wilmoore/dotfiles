@@ -4,11 +4,12 @@ export GO_GLOBALS_PATH=$XDG_DATA_HOME/go
 # active go projects in development.
 export GO_PROJECT_PATH=$PROJECTS_DIR/go
 
-# ordered list of go source paths.
+# add to GOPATH globally installed projects and personal projects so they are not intermingled.
+# FYI, I hate that go works like this.
 export GOPATH="$GO_GLOBALS_PATH:$GO_PROJECT_PATH"
 
 # add global go binaries to the search path.
 path=($GO_GLOBALS_PATH/bin $path)
 
 # auto `cd` to my go projects.
-cdpath=($GO_PROJECT_PATH/src/github.com/wilmoore $cdpath)
+cdpath=($GO_PROJECT_PATH/github.com/wilmoore $cdpath)
