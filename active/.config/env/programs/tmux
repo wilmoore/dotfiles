@@ -10,7 +10,10 @@ if [[ -z "$TMUX" && -z "$EMACS" && -z "$VIM" ]]; then
 
   # initialize in-progress apps/libs
   @node-require-globs
-  @string-split.js
+  @polykata
+  @hdf-json-api
+  @kv
+  @bug-clinic
 
   # attach to last session.
   exec tmux attach-session

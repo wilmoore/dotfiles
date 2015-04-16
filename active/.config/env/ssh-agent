@@ -1,0 +1,1 @@
+eval $(ssh-agent -a $SSH_AUTH_SOCK 2>/dev/null)

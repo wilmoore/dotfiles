@@ -95,7 +95,6 @@ cask install audacity || true
 # backup & sync
 ##################################################
 
-cask install bittorrent-sync || true
 cask install chronosync || true
 
 ##################################################
@@ -252,13 +251,13 @@ install translate-toolkit || true
 # mapping
 ###############################################
 
-cask install mapbox-studio
+cask install mapbox-studio || true
 
 ###############################################
 # mobile development
 ###############################################
 
-install carthage
+install carthage || true
 install https://raw.githubusercontent.com/Homebrew/homebrew/7988deef06d203e9899ba16d094dab805ad74ff4/Library/Formula/fruitstrap.rb || true
 cask install pusher || true
 install ios-webkit-debug-proxy || true
@@ -300,12 +299,6 @@ install wireshark || true
 ###############################################
 
 cask install reflector || true
-
-###############################################
-# pair programming
-###############################################
-
-cask install screenhero || true
 
 ###############################################
 # pdf
@@ -402,9 +395,6 @@ install pkg-config || true
 ###############################################
 # software development programming languages
 ###############################################
-
-# adobe air
-cask install adobe-air || true
 
 # andoid
 install android-platform-tools || true
@@ -562,7 +552,11 @@ cask install mkvtools || true
 
 install boot2docker || true
 install docker || true
-install docker-compose || true
+docker-completion || true
+link --overwrite docker-completion
+docker-compose || true
+docker-machine || true
+docker-swarm || true
 cask install kitematic || true
 cask install virtualbox --appdir=/Applications || true
 

@@ -2,42 +2,50 @@
   "browsers": {
     "local": [
       {
-        "command": "/Applications/Firefox.app/Contents/MacOS/firefox-bin",
-        "version": "31.0",
-        "name": "firefox",
+        "command": "/opt/homebrew-cask/Caskroom/google-chrome/latest/Google Chrome.app",
+        "version": "41.0.2272.118",
+        "name": "chrome",
         "re": {},
-        "type": "firefox",
-        "profile": {
-          "name": "browser-launcher-16a12fee",
-          "file": "/Users/wil.moore/Library/Application Support/Firefox/Profiles/3bx8torm.browser-launcher-16a12fee/prefs.js"
-        }
-      },
-      {
-        "command": "/opt/homebrew-cask/Caskroom/firefox/latest/Firefox.app/Contents/MacOS/firefox-bin",
-        "version": "31.0",
-        "name": "firefox",
-        "re": {},
-        "type": "firefox",
-        "profile": {
-          "name": "browser-launcher-629bba53",
-          "file": "/Users/wil.moore/Library/Application Support/Firefox/Profiles/3bx8torm.browser-launcher-629bba53/prefs.js"
-        }
+        "type": "chrome",
+        "profile": "/Users/wil.moore/.config/browser-launcher/chrome-41.0.2272.118_8f742a38"
       },
       {
         "command": "/Applications/Safari.app",
-        "version": "7.0.6",
+        "version": "8.0",
         "name": "safari",
         "type": "safari",
         "profile": false
       },
       {
+        "command": "/Applications/Firefox.app/Contents/MacOS/firefox-bin",
+        "version": "33.1",
+        "name": "firefox",
+        "re": {},
+        "type": "firefox",
+        "profile": {
+          "name": "browser-launcher-c252085e",
+          "file": "/Users/wil.moore/Library/Application Support/Firefox/Profiles/r69e54t7.browser-launcher-c252085e/prefs.js"
+        }
+      },
+      {
+        "command": "/opt/homebrew-cask/Caskroom/firefox/latest/Firefox.app/Contents/MacOS/firefox-bin",
+        "version": "34.0.5",
+        "name": "firefox",
+        "re": {},
+        "type": "firefox",
+        "profile": {
+          "name": "browser-launcher-8711665f",
+          "file": "/Users/wil.moore/Library/Application Support/Firefox/Profiles/r69e54t7.browser-launcher-8711665f/prefs.js"
+        }
+      },
+      {
         "command": "phantomjs",
-        "version": "1.9.7",
+        "version": "1.9.8",
         "name": "phantom",
         "re": {},
         "type": "phantom",
         "headless": true,
-        "profile": "/Users/wil.moore/.config/browser-launcher/phantom-1.9.7_600a3714"
+        "profile": "/Users/wil.moore/.config/browser-launcher/phantom-1.9.8_1a9f71af"
       }
     ]
   }

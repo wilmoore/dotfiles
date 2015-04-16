@@ -21,7 +21,7 @@ if [ $? != 0 ]; then
 
   # split right pane vertically
   tmux split-window -v -p 25 -t $PROJECT_NAME:editor
-  tmux send-keys -t $PROJECT_NAME "cd $PROJECT_CDTO ; npm run develop; clear" C-m
+  tmux send-keys -t $PROJECT_NAME "cd $PROJECT_CDTO ; npm run dev:server; clear" C-m
 
   # select first pane of first window
   tmux select-pane -t $PROJECT_NAME:editor.1

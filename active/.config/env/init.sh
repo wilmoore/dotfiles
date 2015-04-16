@@ -15,6 +15,7 @@ source $XDG_CONFIG_HOME/env/limits
 source $XDG_CONFIG_HOME/env/manpages
 source $XDG_CONFIG_HOME/env/osx
 source $XDG_CONFIG_HOME/env/pager
+source $XDG_CONFIG_HOME/env/ssh-agent
 source $XDG_CONFIG_HOME/env/terminal
 
 # programming languages

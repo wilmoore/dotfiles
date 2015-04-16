@@ -249,16 +249,11 @@ NeoBundle "marijnh/tern_for_vim", { "build": { "mac": "npm install" } }
 " JavaScript (React/JSX)
 NeoBundle "mxw/vim-jsx"
 
-" JSON
-NeoBundle "tpope/vim-jdaddy"
-
 " PHP
 NeoBundle "spf13/PIV"
 
 " Ruby
 NeoBundle "tpope/vim-bundler"
-NeoBundle "tpope/vim-rails"
-NeoBundle "tpope/vim-rake"
 
 " UML / diagramming
 " https://github.com/aklt/plantuml-syntax
@@ -270,7 +265,7 @@ NeoBundleLazy "aklt/plantuml-syntax"
 
 " https://github.com/terryma/vim-multiple-cursors
 " http://www.youtube.com/watch?v=Umb59mMvCxA
-NeoBundle "terryma/vim-multiple-cursors"
+" NeoBundle "terryma/vim-multiple-cursors"
 
 " ----------------------------------------
 " Tmux Integration
