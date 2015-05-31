@@ -1,6 +1,9 @@
 # tell node programs that use the `update-notifier` package not to store anything.
 export NO_UPDATE_NOTIFIER=1
 
+# repl history
+export NODE_REPL_HISTORY_FILE=~/.cache/node-history
+
 # initialize
 source $(dirname $0)/node-init-npm
 source $(dirname $0)/node-init-nvm

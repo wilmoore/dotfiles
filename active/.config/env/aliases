@@ -53,3 +53,18 @@ alias npm-install-g='npm install -g node-inspector@latest finch@latest vimdebug@
 # open files.
 alias open-readme='open README.md -a "Marked 2"'
 
+# better dig
+alias better-dig='dig +nostats +nocomments +nocmd'
+
+# kill all postgres processes
+alias kill-pg='killall Postgres && killall postgres && find ~/Library/Application\ Support/Postgres -name "postmaster.pid" -delete'
+
+# source cat
+scat() {
+  highlight -O ansi $1 | less
+}
+
+# untar a url
+untgz-url() {
+  curl -# -L $1 | tar xvz
+}

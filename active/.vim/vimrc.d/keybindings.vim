@@ -41,13 +41,6 @@ map <leader>a :%y+<cr>
 map <leader>p <esc>"+p
 
 " -------
-" Buffer Navigation
-" -------
-
-map <C-J> :bnext<CR>
-map <C-K> :bprev<CR>
-
-" -------
 " Window/Split Navigation
 " -------
 

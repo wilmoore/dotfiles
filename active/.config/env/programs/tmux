@@ -9,10 +9,7 @@ if [[ -z "$TMUX" && -z "$EMACS" && -z "$VIM" ]]; then
   @launcher 2>/dev/null
 
   # initialize in-progress apps/libs
-  @node-require-globs
   @polykata
-  @hdf-json-api
-  @kv
   @bug-clinic
 
   # attach to last session.

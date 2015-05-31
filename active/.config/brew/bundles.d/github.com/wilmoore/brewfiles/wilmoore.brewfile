@@ -152,6 +152,7 @@ install --HEAD https://raw.github.com/apiaryio/snowcrash/master/tools/homebrew/s
 
 # install influxdb || true
 install elasticsearch || true
+install mongodb --with-openssl || true
 cask install postgres || true
 install redis || true
 install sqlite3 || true
@@ -207,6 +208,7 @@ cask install marked || true
 ##################################################
 
 install macvim --custom-icons --env-std --override-system-vim --with-lua --with-luajit --with-csope || true
+install fpp
 
 ##################################################
 # entertainment
@@ -227,6 +229,7 @@ install resty || true
 # image manipulation
 ##################################################
 
+install cairo || true
 install dcraw || true
 install install exif || true
 install exiftool || true
@@ -239,6 +242,7 @@ cask install seashore || true
 cask install texturepacker || true
 install ufraw || true
 cask install xee || true
+cask install xquartz || true
 
 ##################################################
 # internationalization, localization, translation
@@ -292,6 +296,7 @@ install socat || true
 install stunnel || true
 cask install speedlimit || true
 install tcpdump || true
+cask install tunnelblick || true
 install wireshark || true
 
 ###############################################
@@ -351,7 +356,6 @@ install webkit2png || true
 # security
 ###############################################
 
-cask install gpgtools || true
 install keychain || true
 install keybase || true
 
@@ -513,7 +517,7 @@ install jq || true
 install jsonpp || true
 install lnav || true
 install moreutils || true
-install ngrok || true
+cask install ngrok || true
 install pcre || true
 install reattach-to-user-namespace || true
 install sysdig || true
@@ -550,13 +554,7 @@ cask install mkvtools || true
 # virtualization
 ##################################################
 
-install boot2docker || true
-install docker || true
-docker-completion || true
-link --overwrite docker-completion
 docker-compose || true
-docker-machine || true
-docker-swarm || true
 cask install kitematic || true
 cask install virtualbox --appdir=/Applications || true
 

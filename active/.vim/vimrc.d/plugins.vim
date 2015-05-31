@@ -22,6 +22,14 @@ let g:airline_section_y = ''
 map // :TComment<cr>
 
 " -------
+" taboo
+" -------
+
+set guioptions-=e
+set sessionoptions+=tabpages,globals
+let g:taboo_tab_format = "(%N) %f%m"
+
+" -------
 " vim-markdown
 " -------
 
@@ -169,7 +177,7 @@ let g:syntastic_check_on_wq = 1
 let g:syntastic_aggregate_errors = 1
 
 let g:syntastic_json_checkers = ['jsonlint']
-let g:syntastic_javascript_checkers = ['jshint', 'eslint']
+let g:syntastic_javascript_checkers = ['standard']
 let g:syntastic_python_checkers=['pylint']
 
 " -------

@@ -31,6 +31,7 @@ source $XDG_CONFIG_HOME/env/programs/aws
 source $XDG_CONFIG_HOME/env/programs/docker
 source $XDG_CONFIG_HOME/env/programs/git
 source $XDG_CONFIG_HOME/env/programs/gh
+source $XDG_CONFIG_HOME/env/programs/pkgconfig
 source $XDG_CONFIG_HOME/env/programs/postgres.app
 source $XDG_CONFIG_HOME/env/programs/terminal-notifier
 source $XDG_CONFIG_HOME/env/programs/tmux
