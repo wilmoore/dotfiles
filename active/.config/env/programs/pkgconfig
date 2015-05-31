@@ -1,0 +1,2 @@
+# https://github.com/Homebrew/homebrew/issues/14123#issuecomment-8755196
+export PKG_CONFIG_PATH=/opt/X11/lib/pkgconfig

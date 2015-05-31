@@ -1,8 +1,5 @@
-ctrlp
-homebrew
-neocomplete
-neosnippet
-npm
-fontconfig
-keybase
-node-history
+*
+!.gitignore
+!screenshots
+!vim
+!virtualbox
