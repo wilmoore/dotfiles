@@ -62,7 +62,7 @@ alias kill-pg='killall Postgres && killall postgres && find ~/Library/Applicatio
 # source cat
 scat()
 {
-  highlight -O ansi $1 | less
+  highlight -O ansi $1 | less -
 }
 
 # untar a url
