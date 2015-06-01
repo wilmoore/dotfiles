@@ -5,19 +5,6 @@
 caskroom/cask/brew-cask
 
 ##################################################
-# @homebrew completions
-##################################################
-
-bundler-completion
-docker-completion
-gem-completion
-grunt-completion
-rails-completion
-pip-completion
-rake-completion
-ruby-completion
-
-##################################################
 # archive
 ##################################################
 
@@ -124,7 +111,7 @@ wkhtmltopdf
 # screen capture/casting
 ##################################################
 
-https://raw.githubusercontent.com/sickill/asciinema/master/packaging/homebrew/asciinema.rb
+asciinema
 webkit2png
 
 ###############################################

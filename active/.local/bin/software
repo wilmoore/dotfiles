@@ -1,60 +1,68 @@
 #!/usr/bin/env bash
 set -eu
 
-# TODO:
-# (1) support for `--edit`
-# (2) support for `--list`
+#
+# Constants
+#
 
 SOFTWARE_PREFIX=~/.config/software
 HOMEBREW_PREFIX=$HOME/.homebrew
+APPLICATION_DIR=/Applications
 
-# application directory
-appdir="/Applications"
+#
+# Arg Parsing
+#
 
-software()
+CMD=${1-''}
+
+if [ "$CMD" == "--edit" ]; then
+  $EDITOR $SOFTWARE_PREFIX
+  exit 0
+fi
+
+if [ "$CMD" == "--view" ]; then
+  less $SOFTWARE_PREFIX/*
+  exit 0
+fi
+
+if [ "$CMD" == "--list" ]; then
+  find $SOFTWARE_PREFIX -type f
+  exit 0
+fi
+
+#
+# Convention-based installer
+# npm-install--global => 'npm install --global'
+#
+
+invoke()
 {
-  grep '\S' $SOFTWARE_PREFIX/$1 | grep -v '^#' | tr '\n' ' '
-}
+  echo "Installing software from $1"
+  local names=($(grep '\S' $SOFTWARE_PREFIX/$1 | grep -v '^#' | tr '\n' ' '))
+  local command="$(echo $1 | sed -e 's/--/@/g' -e 's/-/ /g' -e 's/@/ --/g') ${@:2}"
 
-tap()
-{
-  echo "Installing homebrew taps..."
-  local taps=($(software tap))
-
-  for repo in "${taps[@]}"; do
-    echo "brew tap $repo"
-    brew tap $repo || true
+  for name in "${names[@]}"; do
+    echo "$command $name"
+    eval "$command $name || true"
     echo ""
   done
 }
 
-homebrew_install() {
-  if [ ! -d $HOMEBREW_PREFIX ]; then
-    echo "Installing homebrew..."
-    curl -#fSL http://github.com/mxcl/homebrew/tarball/master | tar xz —strip 1 -C $HOMEBREW_PREFIX
-    $HOMEBREW_PREFIX/bin/brew install git
-  fi
+# install homebrew
+if [ ! -d $HOMEBREW_PREFIX ]; then
+  echo "Installing homebrew..."
+  curl -#fSL http://github.com/mxcl/homebrew/tarball/master | tar xz —strip 1 -C $HOMEBREW_PREFIX
+  $HOMEBREW_PREFIX/bin/brew install git
+fi
 
-  export PATH=$HOMEBREW_PREFIX/bin:$PATH
-}
+# set homebrew bin path
+export PATH=$HOMEBREW_PREFIX/bin:$PATH
 
-homebrew_updates() {
-  echo "Updating homebrew"
-  brew update
-}
+# update homebrew
+echo "Updating homebrew"
+brew update
 
-# install/update homebrew
-homebrew_install
-homebrew_updates
-
-# brew tap
-tap
-
-echo "brew install ..."
-brew install $(software brew) || true
-
-echo "brew cask install ..."
-brew cask install --appdir=$appdir $(software cask) || true
-
-echo "npm install --global ..."
-npm install --global $(software npm) || true
+invoke brew-tap
+invoke brew-install
+invoke brew-cask-install --appdir=$APPLICATION_DIR
+invoke npm-install--global
