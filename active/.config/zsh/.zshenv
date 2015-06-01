@@ -14,7 +14,8 @@ cdpath=(
 )
 
 # programs and manual page search paths
-typeset -gU cdpath fpath mailpath path
+# typeset -gU cdpath fpath mailpath path
+typeset -U cdpath fpath mailpath path
 
 # paths searched for programs
 path=(
