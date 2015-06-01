@@ -2,7 +2,7 @@
 # @homebrew external commands
 ##################################################
 
-brew-cask
+# brew-cask
 
 ##################################################
 # @homebrew completions

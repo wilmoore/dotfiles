@@ -40,7 +40,7 @@ homebrew_install() {
 
 homebrew_updates() {
   echo "Updating homebrew"
-  brew update && brew upgrade brew-cask
+  brew update
 }
 
 # install/update homebrew
