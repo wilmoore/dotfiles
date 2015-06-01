@@ -48,6 +48,10 @@ invoke()
   done
 }
 
+#
+# main
+#
+
 # install homebrew
 if [ ! -d $HOMEBREW_PREFIX ]; then
   echo "Installing homebrew..."
@@ -61,8 +65,16 @@ export PATH=$HOMEBREW_PREFIX/bin:$PATH
 # update homebrew
 echo "Updating homebrew"
 brew update
+brew upgrade
 
+# install software
 invoke brew-tap
 invoke brew-install
 invoke brew-cask-install --appdir=$APPLICATION_DIR
 invoke npm-install--global
+
+# update alfred
+brew cask alfred link
+
+# cleanup
+brew cleanup
