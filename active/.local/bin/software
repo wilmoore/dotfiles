@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 set -eu
 
+# TODO:
+# (1) support for `--edit`
+# (2) support for `--list`
+
 PREFIX=~/.config/software
 
 # application directory
