@@ -12,3 +12,6 @@
 [submodule "active/.config/sprout/commonjs-lib"]
 	path = active/.config/sprout/commonjs-lib
 	url = https://github.com/wilmoore/sprout-commonjs-lib.git
+[submodule "active/.config/terminal/originals/ocean-terminal"]
+	path = active/.config/terminal/originals/ocean-terminal
+	url = https://github.com/mdo/ocean-terminal.git
