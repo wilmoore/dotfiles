@@ -1,0 +1,296 @@
+##################################################
+# @homebrew external commands
+##################################################
+
+brew-cask
+
+##################################################
+# @homebrew completions
+##################################################
+
+bundler-completion
+docker-completion
+gem-completion
+grunt-completion
+rails-completion
+pip-completion
+rake-completion
+ruby-completion
+
+##################################################
+# archive
+##################################################
+
+atool
+unrar
+
+##################################################
+# books / reading
+##################################################
+
+homebrew/binary/kindlegen
+
+##################################################
+# chat, IM, irc
+##################################################
+
+znc
+
+##################################################
+# cloud deployment
+##################################################
+
+aws-elasticbeanstalk
+awscli
+azukiapp/azk/azk
+heroku-toolbelt
+terraform
+
+##################################################
+# cloud file management / file sharing
+##################################################
+
+s3cmd
+https://gist.githubusercontent.com/wilmoore/14c3f12cdd4706e74dc3/raw/6249017ee0a4f5fbcea2b24d3caac9b346a93316/transfer.rb
+
+##################################################
+# database management
+##################################################
+
+# postgres
+pgcli
+
+##################################################
+# editor / pager
+##################################################
+
+macvim --custom-icons --env-std --override-system-vim --with-lua --with-luajit --with-csope
+fpp
+
+##################################################
+# image manipulation
+##################################################
+
+cairo
+dcraw
+exif
+exiftool
+ghostscript
+graphicsmagick
+imagemagick
+ufraw
+
+##################################################
+# internationalization, localization, translation
+###############################################
+
+translate-toolkit
+
+###############################################
+# mobile development
+###############################################
+
+carthage
+https://raw.githubusercontent.com/Homebrew/homebrew/7988deef06d203e9899ba16d094dab805ad74ff4/Library/Formula/fruitstrap.rb
+ios-webkit-debug-proxy
+ios-sim
+
+###############################################
+# networking
+###############################################
+
+arp-scan
+fping
+knock
+masscan
+mitmproxy
+netcat
+ngrep
+nmap
+ssh-copy-id
+sshfs
+socat
+stunnel
+tcpdump
+wireshark
+
+###############################################
+# pdf
+###############################################
+
+wkhtmltopdf
+
+##################################################
+# screen capture/casting
+##################################################
+
+https://raw.githubusercontent.com/sickill/asciinema/master/packaging/homebrew/asciinema.rb
+webkit2png
+
+###############################################
+# security
+###############################################
+
+keychain
+keybase
+
+###############################################
+# serialization
+###############################################
+
+protobuf
+
+##################################################
+# shell
+##################################################
+
+# console
+hr
+
+# bash
+bash
+
+# zsh
+zsh
+zsh-completions
+zsh-lovers
+
+###############################################
+# software development environment
+###############################################
+
+apple-gcc42
+autoconf
+automake
+cmake
+clib
+gettext
+global
+intltool
+pkg-config
+
+###############################################
+# software development programming languages
+###############################################
+
+# andoid
+android-platform-tools
+android-sdk
+
+# clojure
+leiningen
+
+# css/sass
+sassc
+
+# dotnet
+kvm
+
+# erlang
+erlang
+elixir --HEAD
+rebar
+
+# go
+go
+
+# groovy
+groovy
+
+# haskell
+ghc
+cabal-install
+
+# lua
+lua
+
+# node
+nvm
+
+# python
+python --universal
+
+# ruby
+ruby-build
+rbenv
+rbenv-default-gems
+rbenv-gem-rehash
+# echo bundler > ${RBENV_ROOT}/default-gems
+
+# rust
+cargo-completion
+rustc-completion
+
+# uml / diagramming
+plantuml
+
+##################################################
+# source control
+##################################################
+
+# mercurial
+mercurial
+
+# git / github
+hub
+git
+github-release
+
+##################################################
+# static analysis
+##################################################
+
+flow
+
+##################################################
+# utility
+##################################################
+
+ag
+--HEAD choose
+ctags
+htop-osx
+jq
+jsonpp
+lnav
+moreutils
+pcre
+reattach-to-user-namespace
+sysdig
+terminal-notifier
+gnu-time
+rename
+todo-txt
+tmux
+trash
+tree
+watch
+watchman
+wget
+
+##################################################
+# video
+##################################################
+
+ffmpeg
+youtube-dl
+
+##################################################
+# virtualization
+##################################################
+
+docker-compose
+
+##################################################
+# web browsers & browser engines
+##################################################
+
+browser
+phantomjs
+v8
+
+##################################################
+# web servers
+##################################################
+
+nginx

@@ -1,0 +1,52 @@
+#!/usr/bin/env bash
+set -eu
+
+PREFIX=~/.config/software
+
+# application directory
+appdir="/Applications"
+
+software()
+{
+  grep '\S' $PREFIX/$1 | grep -v '^#' | tr '\n' ' '
+}
+
+tap()
+{
+  echo "Installing homebrew taps..."
+  local taps=($(software tap))
+
+  for repo in "${taps[@]}"; do
+    echo "brew tap $repo"
+    brew tap $repo || true
+    echo ""
+  done
+}
+
+homebrew_install() {
+  if test ! $(which brew); then
+    echo "Installing homebrew..."
+    bash < <(curl -sL https://raw.github.com/wilmoore/homebrew-home/master/install)
+  fi
+}
+
+homebrew_updates() {
+  echo "Updating homebrew"
+  brew update && brew upgrade brew-cask
+}
+
+# install/update homebrew
+homebrew_install
+homebrew_updates
+
+# brew tap
+tap
+
+echo "brew install ..."
+brew install $(software brew) || true
+
+echo "brew cask install ..."
+brew cask install --appdir=$appdir $(software cask) || true
+
+echo "npm install --global ..."
+npm install --global $(software npm) || true
