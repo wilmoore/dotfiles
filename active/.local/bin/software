@@ -31,6 +31,8 @@ homebrew_install() {
   if test ! $(which brew); then
     echo "Installing homebrew..."
     bash < <(curl -sL https://raw.github.com/wilmoore/homebrew-home/master/install)
+  else
+    export PATH=$(brew --prefix)/bin:$PATH
   fi
 }
 
