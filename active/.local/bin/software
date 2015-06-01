@@ -5,14 +5,15 @@ set -eu
 # (1) support for `--edit`
 # (2) support for `--list`
 
-PREFIX=~/.config/software
+SOFTWARE_PREFIX=~/.config/software
+HOMEBREW_PREFIX=$HOME/.homebrew
 
 # application directory
 appdir="/Applications"
 
 software()
 {
-  grep '\S' $PREFIX/$1 | grep -v '^#' | tr '\n' ' '
+  grep '\S' $SOFTWARE_PREFIX/$1 | grep -v '^#' | tr '\n' ' '
 }
 
 tap()
@@ -28,10 +29,13 @@ tap()
 }
 
 homebrew_install() {
-  if test ! $(which brew); then
+  if test !-d $HOMEBREW_PREFIX; then
     echo "Installing homebrew..."
-    bash < <(curl -sL https://raw.github.com/wilmoore/homebrew-home/master/install)
+    curl -#fSL http://github.com/mxcl/homebrew/tarball/master | tar xz —strip 1 -C $HOMEBREW_PREFIX
+    $HOMEBREW_PREFIX/bin/brew install git
   fi
+
+  export PATH=$HOMEBREW_PREFIX/bin:$PATH
 }
 
 homebrew_updates() {
