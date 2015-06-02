@@ -8,12 +8,49 @@ set -eu
 SOFTWARE_PREFIX=~/.config/software
 HOMEBREW_PREFIX=$HOME/.homebrew
 APPLICATION_DIR=/Applications
+# RUBYINSTALL_DIR=$XDG_DATA_HOME/rubies
+
+#
+# Convention-based installer
+# npm-install--global => 'npm install --global'
+#
+
+invoke()
+{
+  echo "Installing software from $1"
+  echo ""
+
+  # local programs=($(grep '\S' $SOFTWARE_PREFIX/$1 | grep -v '^#' | tr '\n' ' '))
+  local programs=($(grep '\S' $SOFTWARE_PREFIX/$1 | grep -v '^#'))
+  local installs="$(echo $1 | sed -e 's/--/@/g' -e 's/-/ /g' -e 's/@/ --/g' -e 's/_/-/g') ${@:2}"
+
+  for name in "${programs[@]}"; do
+    local program=$(echo $name | sed 's/^!//')
+    local installer=$(echo "$installs $program" | tr -s " ")
+    echo "Installing $program"
+
+    # if program exists, skip it, otherwise, intall.
+    if [ -z "$(command -v $program)" ]; then
+      echo $installer
+      bash -c "$installer || true"
+    else
+        echo "$program: already installed...skipping!"
+    fi
+
+    echo ""
+  done
+}
 
 #
 # Arg Parsing
 #
 
 CMD=${1-''}
+
+if [ "$CMD" == "--dev" ]; then
+  $EDITOR $0
+  exit 0
+fi
 
 if [ "$CMD" == "--edit" ]; then
   $EDITOR $SOFTWARE_PREFIX
@@ -30,23 +67,11 @@ if [ "$CMD" == "--list" ]; then
   exit 0
 fi
 
-#
-# Convention-based installer
-# npm-install--global => 'npm install --global'
-#
-
-invoke()
-{
-  echo "Installing software from $1"
-  local names=($(grep '\S' $SOFTWARE_PREFIX/$1 | grep -v '^#' | tr '\n' ' '))
-  local command="$(echo $1 | sed -e 's/--/@/g' -e 's/-/ /g' -e 's/@/ --/g') ${@:2}"
-
-  for name in "${names[@]}"; do
-    echo "$command $name"
-    eval "$command $name || true"
-    echo ""
-  done
-}
+if [ "$CMD" == "--upgrade" ]; then
+  brew update
+  brew upgrade --all
+  exit 0
+fi
 
 #
 # main
@@ -65,16 +90,15 @@ export PATH=$HOMEBREW_PREFIX/bin:$PATH
 # update homebrew
 echo "Updating homebrew"
 brew update
-brew upgrade
 
-# install software
+# software installations
 invoke brew-tap
 invoke brew-install
-invoke brew-cask-install --appdir=$APPLICATION_DIR
+# invoke nvm-install
 invoke npm-install--global
-
-# update alfred
-brew cask alfred link
+invoke rbenv-install
+invoke brew-cask-install --appdir=$APPLICATION_DIR
+hash -r
 
 # cleanup
 brew cleanup

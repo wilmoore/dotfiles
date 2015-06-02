@@ -29,7 +29,6 @@ znc
 
 aws-elasticbeanstalk
 awscli
-azukiapp/azk/azk
 heroku-toolbelt
 terraform
 
@@ -162,7 +161,6 @@ pkg-config
 
 # andoid
 android-platform-tools
-android-sdk
 
 # clojure
 leiningen
@@ -175,7 +173,7 @@ kvm
 
 # erlang
 erlang
-elixir --HEAD
+elixir
 rebar
 
 # go
@@ -234,7 +232,7 @@ flow
 ##################################################
 
 ag
---HEAD choose
+choose
 ctags
 htop-osx
 jq
