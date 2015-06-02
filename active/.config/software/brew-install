@@ -192,15 +192,15 @@ lua
 # node
 nvm
 
+# php
+php-version
+
 # python
 python --universal
 
 # ruby
 ruby-build
 rbenv
-rbenv-default-gems
-rbenv-gem-rehash
-# echo bundler > ${RBENV_ROOT}/default-gems
 
 # rust
 cargo-completion

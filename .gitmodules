@@ -18,3 +18,6 @@
 [submodule "active/.rbenv/plugins/rbenv-default-gems"]
 	path = active/.rbenv/plugins/rbenv-default-gems
 	url = https://github.com/sstephenson/rbenv-default-gems.git
+[submodule "active/.rbenv/plugins/rbenv-gem-rehash"]
+	path = active/.rbenv/plugins/rbenv-gem-rehash
+	url = https://github.com/sstephenson/rbenv-gem-rehash.git

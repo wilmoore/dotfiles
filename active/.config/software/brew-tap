@@ -3,14 +3,15 @@
 ###############################################
 
 aspnet/k
-homebrew/binary
-homebrew/completions
-homebrew/dupes
-caskroom/fonts
-homebrew/headonly
-homebrew/versions
 caskroom/cask
+caskroom/fonts
 caskroom/unofficial
 caskroom/versions
-phinze/homebrew-cask
+homebrew/binary
 homebrew/boneyard
+homebrew/completions
+homebrew/dupes
+homebrew/headonly
+homebrew/php
+homebrew/versions
+phinze/homebrew-cask

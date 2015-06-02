@@ -7,7 +7,7 @@
 
 \set HISTCONTROL ignoreboth
 \set HISTSIZE 20000
-\set HISTFILE ~/.psql_history- :DBNAME
+\set HISTFILE ~/.cache/psql/.psql_history- :DBNAME
 \set IGNOREEOF 5
 \set show_slow_queries
 \set G '\\set QUIET 1\\x\\g\\x\\set QUIET 0'

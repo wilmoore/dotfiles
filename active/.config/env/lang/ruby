@@ -4,6 +4,3 @@ export RBENV_VERSION=2.2.0-dev
 
 # enable rbenv, shims and autocompletion.
 eval "$(rbenv init -)"
-
-# setup default gem(s) (i.e. bundler)
-# echo bundler > ${RBENV_ROOT}/default-gems
