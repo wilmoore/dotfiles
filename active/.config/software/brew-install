@@ -194,6 +194,7 @@ nvm
 
 # php
 php-version
+php56
 
 # python
 python --universal
