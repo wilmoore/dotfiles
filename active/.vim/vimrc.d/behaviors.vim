@@ -17,6 +17,13 @@ filetype plugin indent on
 syntax enable
 
 " -------
+" netrw
+" -------
+
+" prevent history / bookmarks from being tracked.
+let g:netrw_dirhistmax=0
+
+" -------
 " Timeout
 " -------
 
