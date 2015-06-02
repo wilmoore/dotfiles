@@ -203,6 +203,7 @@ ruby-build
 rbenv
 
 # rust
+rust
 cargo-completion
 rustc-completion
 

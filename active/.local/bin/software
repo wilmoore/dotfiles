@@ -96,7 +96,7 @@ invoke brew-tap
 invoke brew-install
 # invoke nvm-install
 invoke npm-install--global
-invoke rbenv-install
+invoke rbenv-install --skip-existing
 invoke brew-cask-install --appdir=$APPLICATION_DIR
 hash -r
 
