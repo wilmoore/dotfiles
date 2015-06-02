@@ -197,7 +197,7 @@ php-version
 php56
 
 # python
-python --universal
+python
 
 # ruby
 ruby-build
