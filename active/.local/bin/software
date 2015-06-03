@@ -33,6 +33,7 @@ invoke()
     if [ -z "$(command -v $program)" ]; then
       echo $installer
       bash -c "$installer || true"
+      hash -r
     else
         echo "$program: already installed...skipping!"
     fi
@@ -98,7 +99,6 @@ invoke brew-install
 invoke npm-install--global
 invoke rbenv-install --skip-existing
 invoke brew-cask-install --appdir=$APPLICATION_DIR
-hash -r
 
 # cleanup
 brew cleanup

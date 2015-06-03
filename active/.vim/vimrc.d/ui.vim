@@ -38,11 +38,8 @@ endif
 " general
 set background=dark
 
-" base16 setup (set for base16-based themes)
-let base16colorspace=256
-
-" Tomorrow Night Eighties
-colorscheme Tomorrow-Night-Eighties
+" Oceanic Next Theme (yosiat/oceanic-next-vim)
+colorscheme OceanicNext
 
 " -------
 " Fonts

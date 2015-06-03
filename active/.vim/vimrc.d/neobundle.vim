@@ -46,10 +46,8 @@ NeoBundle "dietsche/vim-lastplace"
 " Color Schemes, Themes
 " ----------------------------------------
 
-NeoBundle "chriskempson/base16-vim"
-NeoBundle "chriskempson/vim-tomorrow-theme"
-NeoBundle "flazz/vim-colorschemes"
-NeoBundle "godlygeek/csapprox"
+" NeoBundle "godlygeek/csapprox"
+NeoBundle 'yosiat/oceanic-next-vim'
 
 " ----------------------------------------
 " Commands

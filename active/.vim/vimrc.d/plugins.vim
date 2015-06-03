@@ -13,6 +13,34 @@ let g:airline_powerline_fonts = 1
 let g:airline_section_y = ''
 
 " -------
+" airline (experiment)
+" http://isotope11.com/blog/rebuilding-my-vim-setup-from-scratch
+" -------
+
+let g:airline_theme='luna'
+let g:airline_powerline_fonts=1
+let g:airline_enable_branch=1
+let g:airline_enable_syntastic=1
+let g:airline_powerline_fonts = 1
+let g:airline_linecolumn_prefix = '␊ '
+let g:airline_linecolumn_prefix = '␤ '
+let g:airline_linecolumn_prefix = '¶ '
+let g:airline_branch_prefix = '⎇ '
+let g:airline_paste_symbol = 'ρ'
+let g:airline_paste_symbol = 'Þ'
+let g:airline_paste_symbol = '∥'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_mode_map = {
+      \ 'n' : 'N',
+      \ 'i' : 'I',
+      \ 'R' : 'REPLACE',
+      \ 'v' : 'VISUAL',
+      \ 'V' : 'V-LINE',
+      \ 'c' : 'CMD   ',
+      \ '': 'V-BLCK',
+      \ }
+
+" -------
 " TComment
 " -------
 

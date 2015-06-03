@@ -6,18 +6,18 @@
 	path = active/.vim/bundle/neobundle.vim
 	url = https://github.com/Shougo/neobundle.vim
 
-[submodule "active/.config/base16-shell"]
-	path = active/.config/base16-shell
-	url = https://github.com/chriskempson/base16-shell.git
 [submodule "active/.config/sprout/commonjs-lib"]
 	path = active/.config/sprout/commonjs-lib
 	url = https://github.com/wilmoore/sprout-commonjs-lib.git
+
 [submodule "active/.config/terminal/originals/ocean-terminal"]
 	path = active/.config/terminal/originals/ocean-terminal
 	url = https://github.com/mdo/ocean-terminal.git
+
 [submodule "active/.rbenv/plugins/rbenv-default-gems"]
 	path = active/.rbenv/plugins/rbenv-default-gems
 	url = https://github.com/sstephenson/rbenv-default-gems.git
+
 [submodule "active/.rbenv/plugins/rbenv-gem-rehash"]
 	path = active/.rbenv/plugins/rbenv-gem-rehash
 	url = https://github.com/sstephenson/rbenv-gem-rehash.git

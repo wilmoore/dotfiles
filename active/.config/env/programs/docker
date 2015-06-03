@@ -1,2 +1,2 @@
 # boot2docker init.
-$(boot2docker shellinit 2>/dev/null)
+eval $(boot2docker shellinit 2>/dev/null)
