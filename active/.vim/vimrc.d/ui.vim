@@ -36,10 +36,10 @@ endif
 " -------
 
 " general
-set background=dark
+set background=light
 
-" Oceanic Next Theme (yosiat/oceanic-next-vim)
-colorscheme OceanicNext
+" Spacegray Theme (https://github.com/ajh17/Spacegray.vim)
+colorscheme spacegray
 
 " -------
 " Fonts
@@ -50,7 +50,8 @@ if has("gui_running")
   " (i.e. MacVIM)
   " set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h12
   " set guifont=Sauce\ Code\ Powerline:h12
-  set guifont=Droid\ Sans\ Mono\ for\ Powerline:h18
+  " set guifont=Droid\ Sans\ Mono\ for\ Powerline:h18
+  set guifont=Sauce\ Code\ Powerline:h14
 endif
 
 " -------

@@ -9,25 +9,23 @@
 " https://www.youtube.com/watch?v=MQHc0Vj0IsE
 
 " ----------------------------------------
-" NeoBundle
+" @NeoBundle
 " ----------------------------------------
 
 if has('vim_starting')
-  " Be iMproved"
-  set nocompatible
+ if &compatible
+   " Be iMproved
+   set nocompatible
+ endif
 
-  " Required:
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
+ " Required:
+ set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
 " Required:
 call neobundle#begin(expand('~/.vim/bundle'))
 
-" ----------------------------------------
-" @NeoBundle
-" ----------------------------------------
-
-NeoBundleFetch "shougo/neobundle.vim"
+NeoBundleFetch "Shougo/neobundle.vim"
 
 " ----------------------------------------
 " ASCII values
@@ -46,8 +44,8 @@ NeoBundle "dietsche/vim-lastplace"
 " Color Schemes, Themes
 " ----------------------------------------
 
-" NeoBundle "godlygeek/csapprox"
-NeoBundle 'yosiat/oceanic-next-vim'
+" Spacegray Theme (https://github.com/ajh17/Spacegray.vim)
+NeoBundle 'ajh17/Spacegray.vim'
 
 " ----------------------------------------
 " Commands
@@ -248,5 +246,4 @@ call neobundle#end()
 
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
-" NeoBundleCheck
-
+NeoBundleCheck

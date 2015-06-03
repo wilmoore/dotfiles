@@ -21,3 +21,6 @@
 [submodule "active/.rbenv/plugins/rbenv-gem-rehash"]
 	path = active/.rbenv/plugins/rbenv-gem-rehash
 	url = https://github.com/sstephenson/rbenv-gem-rehash.git
+[submodule "active/.config/terminal/originals/Spacegray.vim"]
+	path = active/.config/terminal/originals/Spacegray.vim
+	url = https://github.com/ajh17/Spacegray.vim.git

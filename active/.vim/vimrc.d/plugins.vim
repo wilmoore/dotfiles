@@ -6,30 +6,35 @@
 " airline
 " -------
 
-" use powerline fonts.
+" theme
+let g:airline_theme = 'luna'
+
+" powerline fonts.
 let g:airline_powerline_fonts = 1
 
-" disable `fileencoding` and `fileformat`.
-let g:airline_section_y = ''
+" enable branch
+let g:airline_enable_branch = 1
 
-" -------
-" airline (experiment)
-" http://isotope11.com/blog/rebuilding-my-vim-setup-from-scratch
-" -------
+" enable syntastic
+let g:airline_enable_syntastic = 1
 
-let g:airline_theme='luna'
-let g:airline_powerline_fonts=1
-let g:airline_enable_branch=1
-let g:airline_enable_syntastic=1
-let g:airline_powerline_fonts = 1
+" linecolumn prefix
 let g:airline_linecolumn_prefix = '␊ '
 let g:airline_linecolumn_prefix = '␤ '
 let g:airline_linecolumn_prefix = '¶ '
+
+" branch prefix
 let g:airline_branch_prefix = '⎇ '
+
+" paste symbol
 let g:airline_paste_symbol = 'ρ'
 let g:airline_paste_symbol = 'Þ'
 let g:airline_paste_symbol = '∥'
+
+" enabled extentions
 let g:airline#extensions#tabline#enabled = 1
+
+" mode mapping
 let g:airline_mode_map = {
       \ 'n' : 'N',
       \ 'i' : 'I',

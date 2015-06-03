@@ -5,23 +5,18 @@ export NVM_DIR=$XDG_DATA_HOME/node
 [[ -r $(brew --prefix nvm)/nvm.sh ]] && . $(brew --prefix nvm)/nvm.sh
 [[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
 
-# ensure these nvm node versions are installed
+# nvm/node versions to be installed.
 nvm_versions=(
   iojs
   0.12
 )
 
-# ensures the latest version of node and iojs are installed
-# nvm install iojs
-# nvm install 0
-
-
+# install node versions that are not yet installed.
 for version in "${nvm_versions[@]}"; do
-  nvm which $version
-
-  if [ $? -eq 0 ]; then
-
-  nvm install $version
+  nvm which $version >/dev/null 2>&1
+  if [ $? -eq 1 ]; then
+    nvm install $version
+  fi
 done
 
 # ensures the latest installed node (via `nvm install ...`) is in play in new shells.
