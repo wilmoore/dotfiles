@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -eu
+# set -eu
 
 #
 # Constants
@@ -19,12 +19,22 @@ invoke()
   echo "Installing software from $1"
   echo ""
 
-  # local programs=($(grep '\S' $SOFTWARE_PREFIX/$1 | grep -v '^#' | tr '\n' ' '))
-  local programs=($(grep '\S' $SOFTWARE_PREFIX/$1 | grep -v '^#'))
   local installs="$(echo $1 | sed -e 's/--/@/g' -e 's/-/ /g' -e 's/@/ --/g' -e 's/_/-/g') ${@:2}"
 
-  for name in "${programs[@]}"; do
-    local program=$(echo $name | sed 's/^!//')
+  while read line; do
+    local info=$(echo $line | sed 's/^!//')
+
+    echo $info | grep -q '^#'
+    if [ $? -eq 0 ]; then
+      continue
+    fi
+
+    echo $info | grep -vq '\S'
+    if [ $? -eq 0 ]; then
+      continue
+    fi
+
+    local program=$(echo $info | awk '{ print $1 }')
     local installer=$(echo "$installs $program" | tr -s " ")
     echo "Installing $program"
 
@@ -38,7 +48,7 @@ invoke()
     fi
 
     echo ""
-  done
+  done < $SOFTWARE_PREFIX/$1
 }
 
 #
