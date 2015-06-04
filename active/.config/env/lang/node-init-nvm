@@ -1,3 +1,10 @@
+# nvm/node versions to be installed.
+nvm_versions=(
+  iojs
+  0.10
+  0.12
+)
+
 # set before initializing `nvm`. Node.js verions will be installed here:
 export NVM_DIR=$XDG_DATA_HOME/node
 
@@ -5,16 +12,10 @@ export NVM_DIR=$XDG_DATA_HOME/node
 [[ -r $(brew --prefix nvm)/nvm.sh ]] && . $(brew --prefix nvm)/nvm.sh
 [[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
 
-# nvm/node versions to be installed.
-nvm_versions=(
-  iojs
-  0.12
-)
-
 # install node versions that are not yet installed.
 for version in "${nvm_versions[@]}"; do
   nvm which $version >/dev/null 2>&1
-  if [ $? -eq 1 ] && [ -r $(brew --prefix nvm)/nvm.sh ]; then
+  if [ $? -eq 1 -a -r $(brew --prefix nvm)/nvm.sh ]; then
     nvm install $version
   fi
 done
