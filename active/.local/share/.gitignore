@@ -2,3 +2,5 @@
 !.gitignore
 !vim
 !vim/*
+!rbenv
+!rbenv/*
