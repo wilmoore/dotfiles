@@ -14,10 +14,10 @@ nvm_versions=(
 # install node versions that are not yet installed.
 for version in "${nvm_versions[@]}"; do
   nvm which $version >/dev/null 2>&1
-  if [ $? -eq 1 ]; then
+  if [ $? -eq 1 ] && [ -r $(brew --prefix nvm)/nvm.sh ]; then
     nvm install $version
   fi
 done
 
 # ensures the latest installed node (via `nvm install ...`) is in play in new shells.
-nvm use 0 >/dev/null
+[[ -r $(brew --prefix nvm)/nvm.sh ]] && nvm use 0 >/dev/null

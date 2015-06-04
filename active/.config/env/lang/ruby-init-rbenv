@@ -1,8 +1,8 @@
 # directory under which Ruby versions and shims reside.
-RBENV_ROOT="~/.local/share/rbenv"
+export RBENV_ROOT=~/.local/share/rbenv
 
 # set default ruby version.
 export RBENV_VERSION=2.1.5
 
 # enable rbenv, shims and autocompletion.
-eval "$(rbenv init -)"
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
