@@ -7,7 +7,6 @@
 
 SOFTWARE_PREFIX=~/.config/software
 HOMEBREW_PREFIX=$HOME/.homebrew
-APPLICATION_DIR=/Applications
 
 #
 # Convention-based installer
@@ -22,6 +21,13 @@ invoke()
   local installs="$(echo $1 | sed -e 's/--/@/g' -e 's/-/ /g' -e 's/@/ --/g' -e 's/_/-/g') ${@:2}"
 
   while read line; do
+    local force=0
+
+    echo $line | grep -q '^!'
+    if [ $? -eq 0 ]; then
+      force=1
+    fi
+
     local info=$(echo $line | sed 's/^!//')
 
     echo $info | grep -q '^#'
@@ -38,8 +44,8 @@ invoke()
     local installer=$(echo "$installs $program" | tr -s " ")
     echo "Installing $program"
 
-    # if program exists, skip it, otherwise, intall.
-    if [ -z "$(command -v $program)" ]; then
+    # if program exists and force is not set, skip it, otherwise, intall.
+    if [ -z "$(command -v $program)" ] || [ $force -eq 1 ]; then
       echo $installer
       bash -c "$installer || true"
       hash -r
@@ -106,7 +112,7 @@ invoke brew-tap
 invoke brew-install
 invoke npm-install--global
 invoke rbenv-install --skip-existing
-invoke brew-cask-install --appdir=$APPLICATION_DIR
+invoke brew-cask-install
 
 # cleanup
 brew cleanup

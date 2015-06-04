@@ -51,6 +51,7 @@ pgcli
 ##################################################
 
 macvim --custom-icons --env-std --override-system-vim --with-lua --with-luajit --with-csope
+!vim --override-system-vi --with-client-server --with-lua --with-luajit
 fpp
 
 ##################################################
@@ -188,6 +189,7 @@ cabal-install
 
 # lua
 lua
+luajit
 
 # node
 nvm
