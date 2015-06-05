@@ -35,4 +35,3 @@ source $XDG_CONFIG_HOME/env/programs/pkgconfig
 source $XDG_CONFIG_HOME/env/programs/postgres.app
 source $XDG_CONFIG_HOME/env/programs/terminal-notifier
 source $XDG_CONFIG_HOME/env/programs/tmux
-source $XDG_CONFIG_HOME/env/programs/vim

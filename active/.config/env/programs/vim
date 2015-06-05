@@ -1,2 +1,0 @@
-# set vim's runtime path
-export VIMRUNTIME="$(brew --prefix vim)/share/vim/vim74"

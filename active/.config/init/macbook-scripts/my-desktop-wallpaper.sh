@@ -1,2 +1,1 @@
-sudo cp "$HOME/.config/dock/wallpaper.jpg" /System/Library/CoreServices/DefaultDesktop.jpg
-killall "Dock" >/dev/null 2>&1
+wallpaper ~/.config/wallpapers/mortal_kombat_x_scorpion_sub_zero_art_101495_3840x2400.jpg

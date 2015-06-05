@@ -135,7 +135,8 @@ highlight CursorColumn guibg=#303000 ctermbg=234
 " -------
 
 " Remember info about open buffers on close
-set viminfo^=%
+" set viminfo^=%
+set viminfo=
 
 " Specify the behavior when switching between buffers
 " http://stackoverflow.com/a/6853779/128346
@@ -156,11 +157,11 @@ set backupdir=$XDG_CACHE_HOME/vim,/tmp
 set undodir=$XDG_CACHE_HOME/vim,/tmp
 
 " set viminfo directory
-if empty(expand($XDG_CACHE_HOME))
-  set viminfo+=n/tmp/viminfo
-else
-  set viminfo+=n$XDG_CACHE_HOME/vim/viminfo
-endif
+" if empty(expand($XDG_CACHE_HOME))
+  " set viminfo+=n/tmp/viminfo
+" else
+  " set viminfo+=n$XDG_CACHE_HOME/vim/viminfo
+" endif
 
 " enable backups
 set backup

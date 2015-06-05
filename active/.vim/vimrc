@@ -6,6 +6,12 @@
 " plugin and bundle management.
 source ~/.vim/vimrc.d/neobundle.vim
 
+" viminfo.
+source ~/.vim/vimrc.d/viminfo.vim
+
+" recovery.
+source ~/.vim/vimrc.d/recovery.vim
+
 " user interface.
 source ~/.vim/vimrc.d/ui.vim
 
@@ -35,4 +41,3 @@ source ~/.vim/vimrc.d/sourcecode.vim
 
 " project Specific .vimrc Files.
 source ~/.vim/vimrc.d/exrc.vim
-
