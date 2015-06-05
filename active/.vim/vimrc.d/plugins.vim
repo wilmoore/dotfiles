@@ -13,23 +13,23 @@ let g:airline_theme = 'luna'
 let g:airline_powerline_fonts = 1
 
 " enable branch
-let g:airline_enable_branch = 1
+" let g:airline_enable_branch = 1
 
 " enable syntastic
-let g:airline_enable_syntastic = 1
+" let g:airline_enable_syntastic = 1
 
 " linecolumn prefix
-let g:airline_linecolumn_prefix = '␊ '
-let g:airline_linecolumn_prefix = '␤ '
-let g:airline_linecolumn_prefix = '¶ '
+" let g:airline_linecolumn_prefix = '␊ '
+" let g:airline_linecolumn_prefix = '␤ '
+" let g:airline_linecolumn_prefix = '¶ '
 
 " branch prefix
-let g:airline_branch_prefix = '⎇ '
+" let g:airline_branch_prefix = '⎇ '
 
 " paste symbol
-let g:airline_paste_symbol = 'ρ'
-let g:airline_paste_symbol = 'Þ'
-let g:airline_paste_symbol = '∥'
+" let g:airline_paste_symbol = 'ρ'
+" let g:airline_paste_symbol = 'Þ'
+" let g:airline_paste_symbol = '∥'
 
 " enabled extentions
 let g:airline#extensions#tabline#enabled = 1
@@ -154,6 +154,9 @@ endif
 " fe (file explore) invokes NERDTreeFind
 nmap fe :NERDTreeFind<cr>
 
+" CWD is changed when the NERD tree is first loaded to the directory it is initialized in.
+let g:NERDTreeChDirMode = 1
+
 " Close all open buffers on entering a window if the only
 " buffer that's left is the NERDTree buffer
 function! CloseIfOnlyNerdTreeLeft()
@@ -166,9 +169,11 @@ function! CloseIfOnlyNerdTreeLeft()
   endif
 endfunction
 
+" show hidden files
 let NERDTreeShowHidden=1
+
+" show bookmarks
 let NERDTreeShowBookmarks=1
-let NERDTreeWinSize=26
 
 " close nerdtree after using it to open a file/buffer
 let NERDTreeQuitOnOpen = 1
