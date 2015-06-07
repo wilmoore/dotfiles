@@ -1,0 +1,11 @@
+# to install rust:
+# https://gist.github.com/wilmoore/453b59dc2183a0874978#install
+
+# rust install directory.
+export RUSTUP_PREFIX=~/.local/opt/rust
+
+# add rust binaries to path.
+path=(
+  $RUSTUP_PREFIX/bin
+  $path
+)

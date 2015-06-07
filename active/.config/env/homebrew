@@ -1,15 +1,17 @@
+# Via the below configuration, you can install homebrew safely with the following command:
+# curl -#fSL http://github.com/mxcl/homebrew/tarball/master | tar xz --strip 1 -C $HOMEBREW_PREFIX
+
+# install homebrew to a directory owned by $USER
+HOMEBREW_PREFIX=$HOME/.homebrew
+
 # wondering why this is not the default???
 export HOMEBREW_CACHE=$XDG_CACHE_HOME/homebrew
 
 # ensure homebrew cask links applications into `/Applications`.
 export HOMEBREW_CASK_OPTS="--appdir=/Applications --binarydir=$HOME/.local/bin"
 
-# where are your brew bundles?
-export BUNDLE_DIR="$XDG_CONFIG_HOME/brew/bundles.d"
-
 # add homebrew installed binaries to the search path.
-export PATH=$HOME/.homebrew/bin:$PATH
-export PATH=$HOME/.homebrew/sbin:$PATH
+path=($HOMEBREW_PREFIX/{bin,sbin} $path)
 
 # homebrew installed program man pages.
 export MANPATH=$HOME/.homebrew/share/man:$MANPATH
