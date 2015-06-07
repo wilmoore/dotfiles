@@ -1,6 +1,5 @@
-acs
 aglio
-alloy
+appcelerator
 bug-clinic
 cordova
 curl-trace-parser
@@ -9,13 +8,12 @@ fixpack
 ios-deploy
 kick-off-koa
 node-inspector
-npm
+!npm
 react-native
 spot
 sprout
 standard
 stream-adventure
-titanium
 travis-encrypt
 up
 yo

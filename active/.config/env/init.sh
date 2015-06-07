@@ -19,6 +19,7 @@ source $XDG_CONFIG_HOME/env/ssh-agent
 source $XDG_CONFIG_HOME/env/terminal
 
 # programming languages
+source $XDG_CONFIG_HOME/env/lang/android
 source $XDG_CONFIG_HOME/env/lang/erlang
 source $XDG_CONFIG_HOME/env/lang/go
 source $XDG_CONFIG_HOME/env/lang/haskell

@@ -183,7 +183,7 @@ spotify
 angry-ip-scanner
 charles
 cocoapacketanalyzer
-debookee
+# debookee # skip since it never seem to complete.
 iconping
 speedlimit
 tunnelblick
@@ -247,9 +247,6 @@ genymotion
 
 # java
 java
-
-# titanium
-titanium-studio
 
 ##################################################
 # system services

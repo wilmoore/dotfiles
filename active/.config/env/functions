@@ -14,3 +14,13 @@ function wallpaper () {
   cp -f ~/.config/wallpapers/desktoppicture.db ~/Library/Application\ Support/Dock/
   sqlite3 ~/Library/Application\ Support/Dock/desktoppicture.db "update data set value = '$1';" && killall -kill Dock
 }
+
+# list mounted volumes
+function volumes () {
+  df | grep '/Volumes/' | tr -s ' ' | cut -d ' ' -f 1,9- | awk -F '/Volumes/' '{ print $1,$2 }' | tr -s ' '
+}
+
+# lock screen
+function lock () {
+  /System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resources/CGSession -suspend
+}

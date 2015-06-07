@@ -160,7 +160,7 @@ pkg-config
 ###############################################
 
 # andoid
-android-platform-tools
+android-sdk
 
 # clojure
 leiningen
