@@ -1,5 +1,0 @@
-#!/usr/bin/env sh
-
-for formula in $(brew cask list); do
-  brew cask uninstall --force $formula || true
-done

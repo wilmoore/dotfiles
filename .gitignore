@@ -6,16 +6,5 @@
 .zcompcache
 .zcompdump*
 .zhistory
-active/.config/gh-update
-active/.config/robomongo/robomongo.json
-active/.virtualbox
 viminfo
 yankring_history*.txt
-
-# binary symlinks should not be tracked.
-
-active/.local/bin/ksdiff
-active/.local/bin/sketchtool
-active/.local/bin/sketchtool resources.bundle
-active/.local/bin/stree
-active/.local/bin/*deploy

@@ -1,0 +1,4 @@
+# binary symlinks should not be tracked.
+ksdiff
+sketchtool
+sketchtool resources.bundle
