@@ -37,9 +37,6 @@ alias path-sorted='echo $PATH | tr ":" "\n" | sort'
 # log utilities
 alias clear-logs='sudo rm -rf /private/var/log/asl/*.asl'
 
-# todo.sh
-alias todo='todo.sh'
-
 # tmux
 alias tmux-edit-sessions='$EDITOR $XDG_CONFIG_HOME/tmux/sessions'
 
