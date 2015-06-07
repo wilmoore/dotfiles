@@ -4,6 +4,9 @@
 # rust install directory.
 export RUSTUP_PREFIX=~/.local/opt/rust
 
+# rustup data directory.
+export RUSTUP_HOME=$XDG_DATA_HOME/rustup
+
 # add rust binaries to path.
 path=(
   $RUSTUP_PREFIX/bin

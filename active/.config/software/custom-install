@@ -1,0 +1,7 @@
+# install rust
+if [ ! $(command -v rustc) ]; then
+  cd /tmp
+  curl -O https://static.rust-lang.org/rustup.sh
+  chmod +x rustup.sh
+  ./rustup.sh --disable-sudo
+fi

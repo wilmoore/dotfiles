@@ -57,6 +57,10 @@ invoke()
   done < $SOFTWARE_PREFIX/$1
 }
 
+custom () {
+  source $SOFTWARE_PREFIX/custom-install
+}
+
 #
 # Arg Parsing
 #
@@ -113,6 +117,7 @@ invoke brew-install
 invoke npm-install--global
 invoke rbenv-install --skip-existing
 invoke brew-cask-install
+custom
 
 # cleanup
 brew cleanup
