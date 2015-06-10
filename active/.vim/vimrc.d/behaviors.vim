@@ -17,6 +17,14 @@ filetype plugin indent on
 syntax enable
 
 " -------
+" Fix CTRL-x CTRL-F for lines with equal.
+" http://vim.wikia.com/wiki/FileName_Completion_in_Shell_Scripts
+" -------
+
+set isfname-==
+set isfname-={,}
+
+" -------
 " Timeout
 " -------
 
@@ -134,37 +142,10 @@ highlight CursorColumn guibg=#303000 ctermbg=234
 " Buffers
 " -------
 
-" Remember info about open buffers on close
-" set viminfo^=%
-set viminfo=
-
 " Specify the behavior when switching between buffers
 " http://stackoverflow.com/a/6853779/128346
 set switchbuf=useopen,usetab,newtab
 set stal=2
-
-" -------
-" Backup and Swap
-" -------
-
-" set swap directory
-set directory=$XDG_CACHE_HOME/vim,/tmp
-
-" set backup directory
-set backupdir=$XDG_CACHE_HOME/vim,/tmp
-
-" set undo directory
-set undodir=$XDG_CACHE_HOME/vim,/tmp
-
-" set viminfo directory
-" if empty(expand($XDG_CACHE_HOME))
-  " set viminfo+=n/tmp/viminfo
-" else
-  " set viminfo+=n$XDG_CACHE_HOME/vim/viminfo
-" endif
-
-" enable backups
-set backup
 
 " -------
 " Search
