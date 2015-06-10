@@ -1,2 +1,6 @@
 export ANDROID_HOME=~/.homebrew/opt/android-sdk
-[[ $(command -v titanium) ]] && titanium config android.sdkPath $ANDROID_HOME >/dev/null
+
+# if the titanium command exists, set `android.sdkPath`.
+if [ $(command -v titanium) ]; then
+  titanium config android.sdkPath >/dev/null || titanium config android.sdkPath $ANDROID_HOME
+fi

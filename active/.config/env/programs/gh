@@ -1,5 +1,0 @@
-# gh init.
-export GH_CONFIG="$HOME/Documents/private/config/gh/config"
-
-# gh aliases.
-[ $(command -v gh) ] && eval "$(gh alias -s)"

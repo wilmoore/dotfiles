@@ -243,7 +243,6 @@ moreutils
 pcre
 reattach-to-user-namespace
 sysdig
-terminal-notifier
 gnu-time
 rename
 tmux

@@ -8,6 +8,11 @@ keychain-secret-for () {
   ((security find-internet-password -gs $domain -a $2 1>&3) 2>&1 | cut -d'"' -f2) 3>&1 | tail -1
 }
 
+# get generic keychain password by name.
+find-generic-password () {
+  security find-generic-password -s $1 -w
+}
+
 # set desktop wallpaper image.
 function wallpaper () {
   rm -f ~/Library/Application\ Support/Dock/desktoppicture.db
