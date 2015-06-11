@@ -25,7 +25,12 @@ endif
 " Required:
 call neobundle#begin(expand('~/.vim/bundle'))
 
+" ----------------------------------------
+" @NeoBundle Configuration
+" ----------------------------------------
+
 NeoBundleFetch "Shougo/neobundle.vim"
+let g:neobundle#install_process_timeout = 1500
 
 " ----------------------------------------
 " ASCII values
@@ -152,6 +157,7 @@ NeoBundle "calebsmith/vim-lambdify"
 NeoBundle "msanders/cocoa.vim"
 
 " JavaScript
+NeoBundle "Valloric/YouCompleteMe", { 'build' : { 'mac' : './install.sh --clang-completer --system-libclang --omnisharp-completer --gocode-completer' } }
 NeoBundle "marijnh/tern_for_vim", { "build": { "mac": "npm install" } }
 
 " JSON Schema

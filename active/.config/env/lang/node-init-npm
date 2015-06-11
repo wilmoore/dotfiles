@@ -1,21 +1,27 @@
 # ...since putting `~/.npmrc` in source control is non-safe.
+export NPM_CONFIG_USERCONFIG="$HOME/Documents/private/@home/.npmrc"
 export NPM_CONFIG_EMAIL="wil.moore@wilmoore.com"
 export NPM_CONFIG_INIT_MODULE=""
 export NPM_CONFIG_INIT_AUTHOR_NAME="Wil Moore III"
 export NPM_CONFIG_INIT_AUTHOR_EMAIl="wil.moore@wilmoore.com"
 export NPM_CONFIG_INIT_AUTHOR_URL="http://github.com/wilmoore"
 export NPM_CONFIG_INIT_LICENSE="MIT"
+export NPM_CONFIG_INIT_VERSION="0.0.0"
 export NPM_CONFIG_STRICT_SSL="false"
 export NPM_CONFIG_CACHE="$HOME/.cache/npm"
 export NPM_CONFIG_PREFIX="$XDG_DATA_HOME/node"
+export NPM_CONFIG_FETCH_RETRY_FACTOR=1
+export NPM_CONFIG_FETCH_RETRY_MINTIMEOUT=5
+export NPM_CONFIG_FETCH_RETRY_MAXTIMEOUT=5
 
 # set search path for global node modules.
-export NODE_PATH=$NPM_CONFIG_PREFIX/lib/node_modules
+# export NODE_PATH=$NPM_CONFIG_PREFIX/lib/node_modules
 
 # node (npm) installed programs (bins).
 export PATH=$NPM_CONFIG_PREFIX/bin:$PATH
 
-# use the globally installed (non-nvm) installed `npm`.
+# use the globally installed `npm` command (instead of the one bound to the nvm installed node version).
+# type `which -a npm` to further understand what this solves.
 alias npm="$(which -a npm | sort -u | head -1)"
 
 # npm command completion (i.e. `npm run <tab>`).

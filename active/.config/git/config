@@ -127,6 +127,9 @@
   # list aliases
   aliases             = !git config --get-regexp '^alias.' | awk -F '[. ]' '{ print $2 }'
 
+  # list contributors with format `Name <email>` format.
+  authors             = !git shortlog -nes | tr -s ' ' | cut -f2-
+
   # backup current branch
   backup-branch       = !OB=$(git name-rev --name-only HEAD) && BB=__SQUASH_BACKUP_$OB && git branch -M $OB $BB && git checkout -b $OB && git branch
 
@@ -146,7 +149,7 @@
   conflicted          = grep --name-only --full-name '<<<<<<< HEAD'
 
   # list contributor stats for this repo
-  contributors        = !git shortlog -n -s --no-merges $@ | cat - && echo && echo total $(git rev-list --count HEAD)
+  contributors        = !git shortlog -nes --no-merges $@ | cat - && echo && echo total $(git rev-list --count HEAD)
 
   # count modified files
   count-modified      = !echo $(git status --porcelain | grep -E '[^MARC]' | wc -l | awk '{ print $1 }') files modified
