@@ -1,8 +1,8 @@
-# tell node programs that use the `update-notifier` package not to store anything.
-export NO_UPDATE_NOTIFIER=1
-
-# repl history
+# repl history: https://iojs.org/api/repl.html
 export NODE_REPL_HISTORY_FILE=~/.cache/node-history
+
+# advanced line-editor mode (i.e. honors `set -o vi`): https://iojs.org/api/repl.html
+export NODE_NO_READLINE=1
 
 # initialize
 source $(dirname $0)/node-init-npm

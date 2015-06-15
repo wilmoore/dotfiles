@@ -12,27 +12,32 @@ let g:airline_theme = 'luna'
 " powerline fonts.
 let g:airline_powerline_fonts = 1
 
-" enable branch
-" let g:airline_enable_branch = 1
-
-" enable syntastic
-" let g:airline_enable_syntastic = 1
-
-" linecolumn prefix
-" let g:airline_linecolumn_prefix = '␊ '
-" let g:airline_linecolumn_prefix = '␤ '
-" let g:airline_linecolumn_prefix = '¶ '
-
-" branch prefix
-" let g:airline_branch_prefix = '⎇ '
-
-" paste symbol
-" let g:airline_paste_symbol = 'ρ'
-" let g:airline_paste_symbol = 'Þ'
-" let g:airline_paste_symbol = '∥'
-
 " enabled extentions
 let g:airline#extensions#tabline#enabled = 1
+
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+
+" powerline symbols
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = ''
+
+" unicode symbols
+let g:airline_symbols.crypt = '🔒'
+let g:airline_symbols.linenr = '␊'
+let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.paste = 'Þ'
+let g:airline_symbols.paste = '∥'
+let g:airline_symbols.whitespace = 'Ξ'
 
 " mode mapping
 let g:airline_mode_map = {
@@ -187,15 +192,6 @@ augroup quit_if_only_nerdtree
 augroup END
 
 " -------
-" Gist
-" -------
-
-" let g:gist_clip_command = "pbcopy"
-" let g:gist_detect_filetype = 1
-" let g:gist_open_browser_after_post = 1
-" let g:gist_post_private = 1
-
-" -------
 " SQLUtilities
 " -------
 
@@ -217,61 +213,4 @@ let g:syntastic_aggregate_errors = 1
 let g:syntastic_json_checkers = ['jsonlint']
 let g:syntastic_javascript_checkers = ['standard']
 let g:syntastic_python_checkers=['pylint']
-
-" -------
-" UltiSnips
-" -------
-
-" Inspiration
-" https://github.com/honza/vim-snippets (lots of snippets)
-" https://gist.github.com/ashb/311512 (CommonJS snippet/template)
-
-" list all available snippets in the current expand context (you need to be in `insert` mode.
-let g:UltiSnipsListSnippets = "<c-l>"
-
-" Snippet directories.
-let g:UltiSnipsSnippetDirectories = ["bundle/vim-snippets/UltiSnips", "snippets/custom"]
-
-" Trigger configuration.
-let g:UltiSnipsExpandTrigger       = "<C-J>"
-let g:UltiSnipsJumpForwardTrigger  = "<C-J>"
-let g:UltiSnipsJumpBackwardTrigger = "<C-K>"
-
-" split window type for :UltiSnipsEdit.
-let g:UltiSnipsEditSplit = "vertical"
-
-" key binding for :UltiSnipsEdit.
-noremap <leader>se :UltiSnipsEdit<cr>
-
-" -------
-" neocomplete
-" -------
-
-let g:acp_enableAtStartup = 1
-let g:neocomplete#enable_auto_select = 0
-let g:neocomplete#enable_at_startup = 1
-let g:neocomplete#enable_smart_case = 1
-let g:neocomplete#enable_underbar_completion = 1
-let g:neocomplete#enable_auto_close_preview = 1
-let g:neocomplete#enable_prefetch = 1
-let g:neocomplete#enable_auto_delimiter = 1
-let g:neocomplete#enable_refresh_always = 1
-let g:neocomplete#sources#syntax#min_keyword_length = 3
-let g:neocomplete#auto_completion_start_length = 3
-
-" <TAB>: completion.
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-inoremap <expr><S-TAB>  pumvisible() ? "\<C-p>" : "\<TAB>"
-
-" <CR>: close popup
-inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
-function! s:my_cr_function()
-  return pumvisible() ? neocomplete#close_popup() : "\<CR>"
-endfunction
-
-" <S-CR>: close popup and save indent.
-inoremap <silent> <s-CR> <C-r>=<SID>my_scr_function()<CR>
-function! s:my_scr_function()
-  return pumvisible() ? neocomplete#close_popup()"\<CR>" : "\<CR>"
-endfunction
 

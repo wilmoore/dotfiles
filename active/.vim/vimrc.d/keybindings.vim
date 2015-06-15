@@ -186,6 +186,14 @@ map mro :Mru<cr>
 " http://stackoverflow.com/a/2148055/128346
 
 " -------
+" Git Commit Browser
+" -------
+
+" launch the git commit browser.
+nnoremap <leader>cb :Extradite<CR>
+nnoremap <leader>gb :Extradite<CR>
+
+" -------
 " Increment/Decrement
 " -------
 

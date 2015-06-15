@@ -160,7 +160,9 @@ pkg-config
 ###############################################
 
 # andoid
+android-ndk
 android-sdk
+gradle221
 
 # clojure
 leiningen

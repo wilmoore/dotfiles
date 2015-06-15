@@ -1,3 +1,6 @@
+# install/update android sdk
+yes | android update sdk --no-ui
+
 # install rust
 if [ ! $(command -v rustc) ]; then
   cd /tmp

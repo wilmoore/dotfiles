@@ -1,6 +1,6 @@
-export ANDROID_HOME=~/.homebrew/opt/android-sdk
-
-# if the titanium command exists, set `android.sdkPath`.
-if [ $(command -v titanium) ]; then
-  titanium config android.sdkPath >/dev/null || titanium config android.sdkPath $ANDROID_HOME
-fi
+# to automate SDK install: `android update sdk --no-ui`
+export ANDROID_HOME=$(brew --prefix android)
+export ANDROID_NDK=$(brew --prefix android-ndk)
+export ANDROID_TOOLS=$ANDROID_HOME/tools
+export ANDROID_PLATFORM_TOOLS=$ANDROID_HOME/platform-tools
+export PATH=$ANDROID_TOOLS:$ANDROID_PLATFORM_TOOLS:$PATH

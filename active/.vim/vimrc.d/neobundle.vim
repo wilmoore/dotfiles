@@ -30,7 +30,6 @@ call neobundle#begin(expand('~/.vim/bundle'))
 " ----------------------------------------
 
 NeoBundleFetch "Shougo/neobundle.vim"
-let g:neobundle#install_process_timeout = 1500
 
 " ----------------------------------------
 " ASCII values
@@ -87,20 +86,8 @@ NeoBundle "epmatsw/ag.vim"
 " ----------------------------------------
 
 " Markdown
-" NeoBundle "gabrielelana/vim-markdown"
+NeoBundle "gabrielelana/vim-markdown"
 NeoBundle "itspriddle/vim-marked"
-
-" ----------------------------------------
-" Completion
-" ----------------------------------------
-
-NeoBundle "Shougo/neocomplete.vim"
-
-" ----------------------------------------
-" Debugging
-" ----------------------------------------
-
-NeoBundle "mattboehm/vim-unstack"
 
 " ----------------------------------------
 " Documentation
@@ -117,7 +104,6 @@ NeoBundle "tpope/vim-endwise"
 NeoBundle "HTML-AutoCloseTag"
 
 " generic formatting
-NeoBundle "Align"
 NeoBundle "Chiel92/vim-autoformat"
 NeoBundle "editorconfig/editorconfig-vim"
 NeoBundle "AndrewRadev/splitjoin.vim"
@@ -185,13 +171,6 @@ NeoBundle "shougo/vimshell"
 NeoBundle "tpope/vim-dispatch"
 
 " ----------------------------------------
-" Snippets, Templates
-" ----------------------------------------
-
-NeoBundle "SirVer/ultisnips"
-NeoBundle "honza/vim-snippets"
-
-" ----------------------------------------
 " Source Control
 " ----------------------------------------
 
@@ -199,7 +178,6 @@ NeoBundle "honza/vim-snippets"
 NeoBundle "tpope/vim-git"
 NeoBundle "tpope/vim-fugitive"
 NeoBundle "int3/vim-extradite"
-NeoBundle "gregsexton/gitv"
 
 " Github
 NeoBundle "mattn/webapi-vim"
@@ -225,24 +203,16 @@ NeoBundle "paradigm/TextObjectify"
 NeoBundle "machakann/vim-textobj-delimited"
 
 " ----------------------------------------
-" Tmux Integration
-" ----------------------------------------
-
-NeoBundle "AdrianSchneider/vim-tdd"
-
-" ----------------------------------------
 " Visual Indicators
 " ----------------------------------------
 
-NeoBundle "nathanaelkane/vim-indent-guides"
 NeoBundle "mhinz/vim-signify"
 NeoBundle "kien/rainbow_parentheses.vim"
 
 " ----------------------------------------
-" Visual Selection, Cursors
+" Visual Selection
 " ----------------------------------------
 
-NeoBundle "myusuf3/numbers.vim"
 NeoBundle "gorkunov/smartpairs.vim"
 
 " ----------------------------------------

@@ -27,6 +27,7 @@ source $XDG_CONFIG_HOME/env/lang/node
 source $XDG_CONFIG_HOME/env/lang/php
 source $XDG_CONFIG_HOME/env/lang/ruby-init-rbenv
 source $XDG_CONFIG_HOME/env/lang/rust
+source $XDG_CONFIG_HOME/env/lang/titanium
 
 # programs
 source $XDG_CONFIG_HOME/env/programs/aws
