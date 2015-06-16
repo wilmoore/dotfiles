@@ -1,4 +1,5 @@
 bundler
+cheat
+cocoapods
 pry
 pry-doc
-cheat

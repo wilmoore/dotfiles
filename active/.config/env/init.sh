@@ -25,7 +25,7 @@ source $XDG_CONFIG_HOME/env/lang/go
 source $XDG_CONFIG_HOME/env/lang/haskell
 source $XDG_CONFIG_HOME/env/lang/node
 source $XDG_CONFIG_HOME/env/lang/php
-source $XDG_CONFIG_HOME/env/lang/ruby-init-rbenv
+source $XDG_CONFIG_HOME/env/lang/ruby
 source $XDG_CONFIG_HOME/env/lang/rust
 source $XDG_CONFIG_HOME/env/lang/titanium
 
