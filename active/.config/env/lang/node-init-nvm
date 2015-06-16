@@ -1,4 +1,7 @@
 # nvm/node versions to be installed.
+DEFAULT_NODE_VERSION=iojs
+
+# nvm/node versions to be installed.
 nvm_versions=(
   iojs
   0.10
@@ -21,4 +24,4 @@ for version in "${nvm_versions[@]}"; do
 done
 
 # ensures the latest installed node (via `nvm install ...`) is in play in new shells.
-[[ -r $(brew --prefix nvm)/nvm.sh ]] && nvm use 0 >/dev/null
+[[ -r $(brew --prefix nvm)/nvm.sh ]] && nvm use $DEFAULT_NODE_VERSION >/dev/null

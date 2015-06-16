@@ -244,6 +244,7 @@ ccmenu
 ##################################################
 
 # andoid
+android-studio
 genymotion
 
 # java
