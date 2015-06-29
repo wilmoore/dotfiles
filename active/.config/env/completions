@@ -3,5 +3,3 @@ fpath=(
   $XDG_CONFIG_HOME/completions/zsh
   $fpath
 )
-
-compinit

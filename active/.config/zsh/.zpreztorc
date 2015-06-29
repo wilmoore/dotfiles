@@ -7,24 +7,9 @@ zstyle ':prezto:*:*' color 'yes'
 
 # Set the Prezto modules to load (browse modules). Order matters.
 zstyle ':prezto:load' pmodule \
-  'environment' \
-  'completion' \
-  'directory' \
-  'editor' \
   'history' \
   'history-substring-search' \
-  'osx' \
-  'spectrum' \
-  'ssh' \
-  'python' \
-  'prompt' \
-  'utility'
-
-# Set the key mapping style to 'emacs' or 'vi'.
-zstyle ':prezto:module:editor' key-bindings 'vi'
-
-# disable color diff as it messes up the intrinsic diff tool which does not work on directories (https://github.com/sorin-ionescu/prezto/issues/332)
-zstyle ':prezto:module:utility:diff' color 'no'
+  'prompt'
 
 # Enable positive result highlighting.
 zstyle ':prezto:module:history-substring-search' color 'yes'
