@@ -31,6 +31,7 @@ aws-elasticbeanstalk
 awscli
 heroku-toolbelt
 terraform
+utopia
 
 ##################################################
 # cloud file management / file sharing
@@ -38,6 +39,14 @@ terraform
 
 s3cmd
 https://gist.githubusercontent.com/wilmoore/14c3f12cdd4706e74dc3/raw/6249017ee0a4f5fbcea2b24d3caac9b346a93316/transfer.rb
+
+##################################################
+# database server
+##################################################
+
+mariadb
+postgresql
+mongodb
 
 ##################################################
 # database management

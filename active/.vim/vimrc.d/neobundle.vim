@@ -128,7 +128,6 @@ NeoBundle "scrooloose/nerdtree"
 NeoBundle "netrw.vim"
 NeoBundle "tyru/open-browser.vim"
 NeoBundle "tpope/vim-projectionist"
-NeoBundle "mkitt/tabline.vim"
 NeoBundle "Shougo/unite.vim"
 
 " ----------------------------------------
@@ -190,12 +189,6 @@ NeoBundle "tpope/vim-rhubarb"
 NeoBundle "bling/vim-airline"
 
 " ----------------------------------------
-" Tabs
-" ----------------------------------------
-
-NeoBundle "gcmt/taboo.vim"
-
-" ----------------------------------------
 " Text Objects
 " ----------------------------------------
 
@@ -223,4 +216,4 @@ call neobundle#end()
 
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
-NeoBundleCheck
+" NeoBundleCheck

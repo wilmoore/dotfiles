@@ -1,5 +1,5 @@
 fpath=(
-  $(brew --prefix zsh-completions)/share/zsh-completions
+  $HOMEBREW_OPT/zsh-completions/share/zsh-completions
   $XDG_CONFIG_HOME/completions/zsh
   $fpath
 )

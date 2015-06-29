@@ -1,4 +1,6 @@
-# php-version (PHP)
-[ -f $(brew --prefix php-version)/php-version.sh ] && \
-  source $(brew --prefix php-version)/php-version.sh && \
+PHP_VERSION_DIR=$HOMEBREW_OPT/php-version
+
+if [ -f $PHP_VERSION_DIR/php-version.sh ]; then
+  source $PHP_VERSION_DIR/php-version.sh
   php-version 5
+fi

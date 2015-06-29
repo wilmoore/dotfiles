@@ -4,6 +4,9 @@
 # install homebrew to a directory owned by $USER
 HOMEBREW_PREFIX=$HOME/.homebrew
 
+# homebrew opt directory
+HOMEBREW_OPT=$HOMEBREW_PREFIX/opt
+
 # wondering why this is not the default???
 export HOMEBREW_CACHE=$XDG_CACHE_HOME/homebrew
 

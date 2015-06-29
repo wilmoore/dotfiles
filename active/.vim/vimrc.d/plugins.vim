@@ -12,43 +12,13 @@ let g:airline_theme = 'luna'
 " powerline fonts.
 let g:airline_powerline_fonts = 1
 
-" enabled extentions
+" Enable the list of buffers
+" (https://joshldavis.com/2014/04/05/vim-tab-madness-buffers-vs-tabs)
 let g:airline#extensions#tabline#enabled = 1
 
-if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
-endif
-
-" powerline symbols
-let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
-let g:airline_symbols.branch = ''
-let g:airline_symbols.readonly = ''
-let g:airline_symbols.linenr = ''
-
-" unicode symbols
-let g:airline_symbols.crypt = '🔒'
-let g:airline_symbols.linenr = '␊'
-let g:airline_symbols.linenr = '␤'
-let g:airline_symbols.linenr = '¶'
-let g:airline_symbols.branch = '⎇'
-let g:airline_symbols.paste = 'ρ'
-let g:airline_symbols.paste = 'Þ'
-let g:airline_symbols.paste = '∥'
-let g:airline_symbols.whitespace = 'Ξ'
-
-" mode mapping
-let g:airline_mode_map = {
-      \ 'n' : 'N',
-      \ 'i' : 'I',
-      \ 'R' : 'REPLACE',
-      \ 'v' : 'VISUAL',
-      \ 'V' : 'V-LINE',
-      \ 'c' : 'CMD   ',
-      \ '': 'V-BLCK',
-      \ }
+" Show just the filename
+" (https://joshldavis.com/2014/04/05/vim-tab-madness-buffers-vs-tabs)
+let g:airline#extensions#tabline#fnamemod = ':t'
 
 " -------
 " TComment
@@ -58,14 +28,6 @@ let g:airline_mode_map = {
 " NOTE: vim-commentary did not handle visually selected lines well.
 
 map // :TComment<cr>
-
-" -------
-" taboo
-" -------
-
-set guioptions-=e
-set sessionoptions+=tabpages,globals
-let g:taboo_tab_format = "(%N) %f%m"
 
 " -------
 " vim-markdown
@@ -131,8 +93,11 @@ nmap sjj :SplitjoinJoin<cr>
 " CtrlP
 " -------
 
-" Type `fs` to activate.
-let g:ctrlp_map = 'fs'
+" Open CtrlP in find buffer mode by default
+let g:ctrlp_cmd = 'CtrlPBuffer'
+
+" Type `<CTRL>+l` to activate.
+let g:ctrlp_map = '<c-l>'
 
 " Set this to 1 to set searching by filename (as opposed to full path).
 let g:ctrlp_by_filename = 1

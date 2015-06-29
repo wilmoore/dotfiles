@@ -1,6 +1,6 @@
 # to automate SDK install: `android update sdk --no-ui`
-export ANDROID_HOME=$(brew --prefix android)
-export ANDROID_NDK=$(brew --prefix android-ndk)
+export ANDROID_HOME=$HOMEBREW_OPT/android-sdk
+export ANDROID_NDK=$HOMEBREW_OPT/android-ndk
 export ANDROID_TOOLS=$ANDROID_HOME/tools
 export ANDROID_PLATFORM_TOOLS=$ANDROID_HOME/platform-tools
 export PATH=$ANDROID_TOOLS:$ANDROID_PLATFORM_TOOLS:$PATH

@@ -6,6 +6,9 @@
 *.private
 *.vimrc
 
+# ctags
+tags
+
 # npm
 npm-debug.log
 

@@ -41,7 +41,7 @@ map <leader>a :%y+<cr>
 map <leader>p <esc>"+p
 
 " -------
-" Window/Split Navigation
+" Window, Split Navigation
 " -------
 
 " double-tab to cycle through windows/splits.
@@ -54,15 +54,41 @@ map <right> :vertical resize +5<cr>
 map <left>  :vertical resize -5<cr>
 
 " -------
+" Buffer Navigation & Management
+" https://joshldavis.com/2014/04/05/vim-tab-madness-buffers-vs-tabs/
+" -------
+
+" To open a new empty buffer
+" This replaces :tabnew which I used to bind to this mapping
+nmap <leader>t :enew<cr>
+
+" Close the current buffer and move to the previous one
+" This replicates the idea of closing a tab
+nmap <leader>w :bp <BAR> bd #<CR>
+
+" Move to the next buffer
+nmap <leader>l :bnext<CR>
+
+" Move to the previous buffer
+nmap <leader>h :bprevious<CR>
+
+" Move to the previous buffer
+nmap <leader>b :ls<cr>:b<space>
+
+" -------
 " Help
 " -------
 
 " get help for the word under the cursor.
-map <leader>h :execute ":help " . expand("<cword>")<cr>
+map <leader>H :execute ":help " . expand("<cword>")<cr>
 
 " -------
-" Open files (find, tab edit, mru)
+" Open files (ctrl{p,t}, find, tab edit, mru)
 " -------
+
+" `:CtrlP` prompt.
+nnoremap <silent> <C-p> :CtrlP<cr>
+nnoremap <silent> <C-t> :CtrlP<cr>
 
 " `:find` prompt.
 map fo :find 
@@ -202,16 +228,6 @@ map + <c-a>
 
 " support shifted and non-shifted keys. (decrement)
 map - <c-x>
-
-" -------
-" Search
-" -------
-
-" clear search highlight
-nnoremap <leader>HH :nohlsearch<CR>
-
-" turn on search highlight
-nnoremap <leader>H :set hlsearch<CR>
 
 " -------
 " Undo/Redo

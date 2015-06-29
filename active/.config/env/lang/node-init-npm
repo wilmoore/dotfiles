@@ -14,9 +14,6 @@ export NPM_CONFIG_FETCH_RETRY_FACTOR=1
 export NPM_CONFIG_FETCH_RETRY_MINTIMEOUT=5
 export NPM_CONFIG_FETCH_RETRY_MAXTIMEOUT=5
 
-# set search path for global node modules.
-# export NODE_PATH=$NPM_CONFIG_PREFIX/lib/node_modules
-
 # node (npm) installed programs (bins).
 export PATH=$NPM_CONFIG_PREFIX/bin:$PATH
 
