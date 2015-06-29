@@ -1,13 +1,6 @@
 # nvm/node versions to be installed.
 DEFAULT_NODE_VERSION=iojs
 
-# nvm/node versions to be installed.
-nvm_versions=(
-  iojs
-  0.10
-  0.12
-)
-
 # set before initializing `nvm`. Node.js verions will be installed here:
 export NVM_DIR=$XDG_DATA_HOME/node
 
@@ -17,14 +10,6 @@ NVM_BIN_DIR=$HOMEBREW_OPT/nvm
 # initialize `nvm`.
 [[ -r $NVM_BIN_DIR/nvm.sh ]] && . $NVM_BIN_DIR/nvm.sh
 [[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
-
-# install node versions that are not yet installed.
-for version in "${nvm_versions[@]}"; do
-  nvm which $version >/dev/null 2>&1
-  if [ $? -eq 1 -a -r $NVM_BIN_DIR/nvm.sh ]; then
-    nvm install $version
-  fi
-done
 
 # ensures the latest installed node (via `nvm install ...`) is in play in new shells.
 [[ -r $NVM_BIN_DIR/nvm.sh ]] && nvm use $DEFAULT_NODE_VERSION >/dev/null

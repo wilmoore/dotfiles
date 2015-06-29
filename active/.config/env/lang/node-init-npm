@@ -20,6 +20,3 @@ export PATH=$NPM_CONFIG_PREFIX/bin:$PATH
 # use the globally installed `npm` command (instead of the one bound to the nvm installed node version).
 # type `which -a npm` to further understand what this solves.
 alias npm="$(which -a npm | sort -u | head -1)"
-
-# npm command completion (i.e. `npm run <tab>`).
-source <(npm completion)
