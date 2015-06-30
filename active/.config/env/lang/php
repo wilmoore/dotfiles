@@ -1,6 +1,0 @@
-PHP_VERSION_DIR=$HOMEBREW_OPT/php-version
-
-if [ -f $PHP_VERSION_DIR/php-version.sh ]; then
-  source $PHP_VERSION_DIR/php-version.sh
-  php-version 5
-fi

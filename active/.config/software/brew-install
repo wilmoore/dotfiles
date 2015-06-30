@@ -207,7 +207,6 @@ node
 n
 
 # php
-php-version
 php56
 
 # python
