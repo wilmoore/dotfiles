@@ -1,4 +1,7 @@
-# if the titanium command exists, set `android.sdkPath`.
-if [ $(command -v titanium) ]; then
-  titanium config android.sdkPath >/dev/null || titanium config android.sdkPath $ANDROID_HOME
-fi
+# load in the background because it's slow
+{
+  # if the titanium command exists, set `android.sdkPath`.
+  if [ $(command -v titanium) ]; then
+    titanium config android.sdkPath >/dev/null || titanium config android.sdkPath $ANDROID_HOME
+  fi
+} &!

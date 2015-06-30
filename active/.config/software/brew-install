@@ -202,7 +202,9 @@ lua
 luajit
 
 # node
-nvm
+# nvm
+node
+n
 
 # php
 php-version

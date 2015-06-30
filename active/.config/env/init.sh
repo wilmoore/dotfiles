@@ -24,14 +24,22 @@ source $XDG_CONFIG_HOME/env/lang/erlang
 source $XDG_CONFIG_HOME/env/lang/go
 source $XDG_CONFIG_HOME/env/lang/haskell
 source $XDG_CONFIG_HOME/env/lang/node
-source $XDG_CONFIG_HOME/env/lang/php
+# this is slower than I like it to be and I really don't care about PHP so not loading it for now.
+# source $XDG_CONFIG_HOME/env/lang/php
 source $XDG_CONFIG_HOME/env/lang/ruby
 source $XDG_CONFIG_HOME/env/lang/rust
 source $XDG_CONFIG_HOME/env/lang/titanium
 
+#
 # programs
+#
+
+# keeping this, but modified it a bit to not load the command completion...
+# it takes us from loading in 0.07s to 0.10s (0.03s) -- without completion
+# it loads in 0.08s in the worst case or 0.07s in the best case.
 source $XDG_CONFIG_HOME/env/programs/aws
-source $XDG_CONFIG_HOME/env/programs/docker
+# commenting out for now since it takes us from loading in 0.07s to 0.13s (0.06s)
+# source $XDG_CONFIG_HOME/env/programs/docker
 source $XDG_CONFIG_HOME/env/programs/git
 source $XDG_CONFIG_HOME/env/programs/pkgconfig
 source $XDG_CONFIG_HOME/env/programs/tmux

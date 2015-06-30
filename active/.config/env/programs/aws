@@ -2,4 +2,4 @@
 export AWS_CONFIG_FILE=~/Documents/private/@home/.config/.aws/config
 
 # aws command completion
-source $HOMEBREW_PREFIX/share/zsh/site-functions/_aws
+# source $HOMEBREW_PREFIX/share/zsh/site-functions/_aws
