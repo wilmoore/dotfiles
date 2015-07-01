@@ -7,6 +7,7 @@ zstyle ':prezto:*:*' color 'yes'
 
 # Set the Prezto modules to load (browse modules). Order matters.
 zstyle ':prezto:load' pmodule \
+  'completion' \
   'history' \
   'history-substring-search' \
   'prompt'
