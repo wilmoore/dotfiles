@@ -165,6 +165,7 @@ NeoBundleLazy "aklt/plantuml-syntax"
 " Shell, Terminal, Multiplex
 " ----------------------------------------
 
+NeoBundle "wincent/terminus"
 NeoBundle "shougo/vimproc", {'build': {'windows': 'make -f make_mingw32.mak', 'cygwin': 'make -f make_cygwin.mak', 'mac': 'make -f make_mac.mak', 'unix': 'make -f make_unix.mak'}}
 NeoBundle "shougo/vimshell"
 NeoBundle "tpope/vim-dispatch"
@@ -216,4 +217,4 @@ call neobundle#end()
 
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
-" NeoBundleCheck
+NeoBundleCheck
