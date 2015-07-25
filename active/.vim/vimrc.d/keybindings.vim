@@ -58,9 +58,12 @@ map <left>  :vertical resize -5<cr>
 " https://joshldavis.com/2014/04/05/vim-tab-madness-buffers-vs-tabs/
 " -------
 
-" To open a new empty buffer
+" To open a new empty tab
 " This replaces :tabnew which I used to bind to this mapping
 nmap <leader>t :enew<cr>
+
+" open a new empty buffer
+nmap <leader>n :enew<cr>
 
 " Close the current buffer and move to the previous one
 " This replicates the idea of closing a tab

@@ -4,4 +4,5 @@ capistrano
 cocoapods
 foreman
 pry
+pry-byebug
 pry-doc

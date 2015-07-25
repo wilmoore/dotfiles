@@ -23,7 +23,7 @@ mailplane
 
 # productivity
 evernote
-flashlight
+# flashlight (quite broken)
 
 # security
 1password
@@ -65,6 +65,7 @@ shiori
 
 calibre
 kindle
+ichm
 send-to-kindle
 
 ##################################################
