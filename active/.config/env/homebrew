@@ -18,3 +18,7 @@ path=($HOMEBREW_PREFIX/{bin,sbin} $path)
 
 # homebrew installed program man pages.
 export MANPATH=$HOME/.homebrew/share/man:$MANPATH
+
+# un-authenticated Homebrew gitHub API requests have a low rate limit which is easily exceeded
+# Authenticated requests get a higher rate limit.
+export HOMEBREW_GITHUB_API_TOKEN="$(find-generic-password GITHUB_OAUTH_TOKEN)"
