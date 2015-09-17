@@ -134,6 +134,7 @@ webkit2png
 
 keychain
 keybase
+vault
 
 ###############################################
 # serialization
@@ -207,10 +208,8 @@ cabal-install
 lua
 luajit
 
-# node
-# nvm
-node
-n
+# node (manually installed)
+# SEE: ~/.config/env/lang/node
 
 # php
 php56
@@ -255,7 +254,6 @@ choose
 ctags
 htop-osx
 jq
-jsonpp
 lnav
 moreutils
 pcre

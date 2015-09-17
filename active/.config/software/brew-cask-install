@@ -13,8 +13,10 @@ caskroom/fonts/font-anonymous-pro-for-powerline
 caskroom/fonts/font-dejavu-sans-mono-for-powerline
 caskroom/fonts/font-droid-sans-mono-for-powerline
 caskroom/fonts/font-fira-mono-for-powerline
+caskroom/fonts/font-hack
 caskroom/fonts/font-liberation-mono-for-powerline
 caskroom/fonts/font-meslo-lg-for-powerline
+caskroom/fonts/font-open-sans
 caskroom/fonts/font-sauce-code-powerline
 
 # email
@@ -137,7 +139,6 @@ marked
 
 chromecast
 flash
-kodi
 
 ##################################################
 # games
@@ -178,6 +179,7 @@ mapbox-studio
 # mobile development
 ##################################################
 
+ifunbox
 pusher
 
 ##################################################
@@ -294,6 +296,7 @@ geekbench
 
 mactubes
 miro-video-converter
+recordit
 screenflick
 vlc
 vlc-remote

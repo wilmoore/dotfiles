@@ -36,7 +36,7 @@ source $XDG_CONFIG_HOME/env/lang/titanium
 # it takes us from loading in 0.07s to 0.10s (0.03s) -- without completion
 # it loads in 0.08s in the worst case or 0.07s in the best case.
 source $XDG_CONFIG_HOME/env/programs/aws
-# commenting out for now since it takes us from loading in 0.13s to 0.43s (0.30s)
+# NOTE: this is not linked via the init script as it doubles terminal init time. Just source this file from any tmux project that needs it.
 # source $XDG_CONFIG_HOME/env/programs/docker
 source $XDG_CONFIG_HOME/env/programs/git
 source $XDG_CONFIG_HOME/env/programs/pkgconfig

@@ -1,5 +1,0 @@
-# node/io verions will be installed to $N_PREFIX/n/versions:
-export N_PREFIX=$XDG_DATA_HOME
-
-# install or activate the latest node/iojs release.
-n io stable

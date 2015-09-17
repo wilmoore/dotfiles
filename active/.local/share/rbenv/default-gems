@@ -6,3 +6,6 @@ foreman
 pry
 pry-byebug
 pry-doc
+pry-rescue
+pry-stack_explorer
+xcode-install

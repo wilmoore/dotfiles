@@ -1,14 +1,20 @@
 aglio
 appcelerator
+babel-node
 bug-clinic
 cordova
 curl-trace-parser
 doctoc
 fixpack
+generator-generator
+git-commander
 ios-deploy
+jsonpp
 kick-off-koa
 node-inspector
+notes
 !npm
+prettyjson
 react-native
 spot
 sprout
@@ -16,4 +22,5 @@ standard
 stream-adventure
 travis-encrypt
 up
+wifi-password
 yo

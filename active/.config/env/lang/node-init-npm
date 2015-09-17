@@ -9,7 +9,7 @@ export NPM_CONFIG_INIT_LICENSE="MIT"
 export NPM_CONFIG_INIT_VERSION="0.0.0"
 export NPM_CONFIG_STRICT_SSL="false"
 export NPM_CONFIG_CACHE="$HOME/.cache/npm"
-export NPM_CONFIG_PREFIX="$XDG_DATA_HOME/node"
+export NPM_CONFIG_PREFIX="$NODE_HOME"
 export NPM_CONFIG_FETCH_RETRY_FACTOR=1
 export NPM_CONFIG_FETCH_RETRY_MINTIMEOUT=5
 export NPM_CONFIG_FETCH_RETRY_MAXTIMEOUT=5
@@ -19,4 +19,4 @@ export PATH=$NPM_CONFIG_PREFIX/bin:$PATH
 
 # use the globally installed `npm` command (instead of the one bound to the nvm installed node version).
 # type `which -a npm` to further understand what this solves.
-alias npm="$(which -a npm | sort -u | head -1)"
+# alias npm="$(which -a npm | sort -u | head -1)"
