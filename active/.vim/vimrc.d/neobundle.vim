@@ -121,7 +121,7 @@ NeoBundle "diepm/vim-rest-console"
 " ----------------------------------------
 
 NeoBundle "kien/ctrlp.vim"
-NeoBundle "Lokaltog/vim-easymotion"
+NeoBundle "easymotion/vim-easymotion"
 NeoBundle "bogado/file-line"
 NeoBundle "yegappan/mru"
 NeoBundle "scrooloose/nerdtree"

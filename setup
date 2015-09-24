@@ -98,6 +98,7 @@ if [[ -d $DOTFILES_ROOT_PATH ]]; then
 
   git pull 2>/dev/null || fail "command failed: [git pull]...aborting!"
   git submodule update --init --recursive 2>/dev/null || fail "command failed: [git submodule update --init --recursive]...aborting!"
+  git submodule foreach git pull origin master
 
   cd -
 
