@@ -20,7 +20,7 @@ This table of contents is not exhaustive in that it only links directly to confi
 
 - `dfup`: update dotfiles (runs ~/.dotfiles/setup).
 - `dfls`: list dotfiles.
-- `zfup`: zprezto update.
+- `zpup`: zprezto update.
 - `brew bundle-dir`: runs `brew bundle` on all brewfiles found under `$HOME/.brews.d`.
 
 ## Tmux
