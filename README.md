@@ -18,10 +18,8 @@ This table of contents is not exhaustive in that it only links directly to confi
 
 ## Management Commands
 
-- `dfup`: update dotfiles (runs ~/.dotfiles/setup).
+- `dfup`: (runs `~/.dotfiles/setup`) pull latest dotfiles and updates all submodules.
 - `dfls`: list dotfiles.
-- `zpup`: zprezto update.
-- `brew bundle-dir`: runs `brew bundle` on all brewfiles found under `$HOME/.brews.d`.
 
 ## Tmux
 
