@@ -164,6 +164,7 @@ vmap <silent>sf <Plug>SQLUFormatter<CR>
 
 " -------
 " Syntastic
+" See ../after/ftplugin for file specific settings
 " -------
 
 " When set to 1 the error window will be automatically opened when errors are detected, and closed when none are detected.
@@ -174,8 +175,3 @@ let g:syntastic_check_on_wq = 1
 
 " When set, syntastic runs all checkers that apply then aggregates errors found by all checkers in a single list.
 let g:syntastic_aggregate_errors = 1
-
-let g:syntastic_json_checkers = ['jsonlint']
-let g:syntastic_javascript_checkers = ['standard']
-let g:syntastic_python_checkers=['pylint']
-

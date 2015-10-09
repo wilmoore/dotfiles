@@ -58,6 +58,11 @@ map <left>  :vertical resize -5<cr>
 " https://joshldavis.com/2014/04/05/vim-tab-madness-buffers-vs-tabs/
 " -------
 
+" Toggle between the last two visited buffers
+nnoremap <leader>j <C-^>
+nnoremap <leader>k <C-^>
+nnoremap <leader>- <C-^>
+
 " To open a new empty tab
 " This replaces :tabnew which I used to bind to this mapping
 nmap <leader>t :enew<cr>
