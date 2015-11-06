@@ -6,7 +6,7 @@ use_node() {
     VERSION=$(cat .node-version)
   fi
 
-  if [[ -z $ver ]] && [[ -f .nvmrc ]]; then
+  if [[ -z $VERSION ]] && [[ -f .nvmrc ]]; then
     VERSION=$(cat .nvmrc)
   fi
 
