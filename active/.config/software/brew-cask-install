@@ -74,6 +74,7 @@ send-to-kindle
 # chat, IM, irc
 ##################################################
 
+gitter
 hipchat
 limechat
 skype

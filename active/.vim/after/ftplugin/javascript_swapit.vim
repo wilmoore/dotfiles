@@ -8,3 +8,4 @@ SwapList requestio params query
 SwapList consolelog log info warn error trace dir count
 SwapList consoletime time timeEnd
 SwapList consolegroup group groupCollapsed groupEnd
+SwapList httpmethods DELETE GET POST PUT PATCH HEAD OPTIONS

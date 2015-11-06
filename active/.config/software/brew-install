@@ -166,6 +166,7 @@ autoconf
 automake
 cmake
 clib
+direnv
 gettext
 global
 intltool

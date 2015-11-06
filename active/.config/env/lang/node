@@ -1,21 +1,23 @@
-# node or iojs
-export NODE_BASE=node
+# Binaries are here:
+# https://nodejs.org/dist
 
-# node or iojs version
-# export NODE_VERSION=v0.12.5
-export NODE_VERSION=v4.1.0
+# https://nodejs.org/api/repl.html#repl_environment_variable_options
+export NODE_REPL_HISTORY=~/.cache/node/.node_repl_history
 
 # node home directory
 export NODE_HOME="$XDG_DATA_HOME/node"
 
-# full path to current node/iojs version
-export NODE_PATH="$NODE_HOME/versions/$NODE_BASE-$NODE_VERSION"
+# optional version name prefix
+export NODE_VERSION_PREFIX="node-v"
 
-# program path
-export PATH="$NODE_PATH/bin:$PATH"
+# node versions directory
+export NODE_VERSIONS="$NODE_HOME/versions"
 
-# repl history: https://iojs.org/api/repl.html#repl_environment_variable_options
-export NODE_REPL_HISTORY=~/.cache/node/.node_repl_history
+# node or iojs version
+export DEFAULT_NODE_VERSION=5.0.0
+
+# node program path (beware, with multiple node versions installed, you'll have multiple npms in here
+export PATH="$NODE_VERSIONS/$NODE_VERSION_PREFIX$DEFAULT_NODE_VERSION/bin:$PATH"
 
 # initialize npm
 source $(dirname $0)/node-init-npm

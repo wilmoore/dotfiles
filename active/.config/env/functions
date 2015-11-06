@@ -20,6 +20,11 @@ function wallpaper () {
   sqlite3 ~/Library/Application\ Support/Dock/desktoppicture.db "update data set value = '$1';" && killall -kill Dock
 }
 
+# simple static http server.
+function simple-http-server () {
+  python -m SimpleHTTPServer $@
+}
+
 # list mounted volumes
 function volumes () {
   df | grep '/Volumes/' | tr -s ' ' | cut -d ' ' -f 1,9- | awk -F '/Volumes/' '{ print $1,$2 }' | tr -s ' '
@@ -33,4 +38,16 @@ function lock () {
 # reboot system.
 function restart () {
   sudo shutdown -r now
+}
+
+# source cat
+scat()
+{
+  highlight -O ansi $1 | less -
+}
+
+# untar a url
+untgz_url()
+{
+  curl -# -L $1 | tar xvz
 }

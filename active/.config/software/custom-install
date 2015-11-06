@@ -8,3 +8,10 @@ if [ ! $(command -v rustc) ]; then
   chmod +x rustup.sh
   ./rustup.sh --disable-sudo
 fi
+
+# install otto
+if [ ! $(command -v otto) ]; then
+  cd ~/.local/bin
+  curl https://dl.bintray.com/mitchellh/otto/otto_0.1.0_darwin_amd64.zip | bsdtar -xvf-
+  cd -
+fi

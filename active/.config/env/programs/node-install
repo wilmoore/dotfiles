@@ -1,0 +1,3 @@
+# add node-install program to search path.
+# node-install 5.0.0 $NODE_VERSIONS
+export PATH=~/.local/opt/node-install/bin:$PATH

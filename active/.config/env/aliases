@@ -43,10 +43,6 @@ alias tmux-edit-sessions='$EDITOR $XDG_CONFIG_HOME/tmux/sessions'
 # ip address
 alias ip='curl -s http://canihazip.com/s'
 
-# global tool installs.
-# these really need to be installed by the system packager!
-alias npm-install-g='npm install -g node-inspector@latest finch@latest vimdebug@latest grunt-cli@latest jshint@0.9.1 browser-repl@latest up@latest node-inspector@latest JSON.sh@latest'
-
 # open files.
 alias open-readme='open README.md -a "Marked 2"'
 
@@ -56,14 +52,5 @@ alias better-dig='dig +nostats +nocomments +nocmd'
 # kill all postgres processes
 alias kill-pg='killall Postgres && killall postgres && find ~/Library/Application\ Support/Postgres -name "postmaster.pid" -delete'
 
-# source cat
-scat()
-{
-  highlight -O ansi $1 | less -
-}
-
-# untar a url
-untgz_url()
-{
-  curl -# -L $1 | tar xvz
-}
+# docker utilities
+alias docker:cleanup='docker rm $(docker ps -a -q) ; docker rmi $(docker images -q)'

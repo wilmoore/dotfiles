@@ -70,8 +70,6 @@ NeoBundle "gmarik/vim-visual-star-search"
 " General
 NeoBundle "tomtom/tcomment_vim"
 NeoBundle "Raimondi/delimitMate"
-NeoBundle "tpope/vim-endwise"
-NeoBundle "tpope/vim-eunuch"
 NeoBundle "sjl/gundo.vim"
 NeoBundle "tpope/vim-surround"
 

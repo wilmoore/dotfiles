@@ -14,5 +14,11 @@ export NPM_CONFIG_FETCH_RETRY_FACTOR=1
 export NPM_CONFIG_FETCH_RETRY_MINTIMEOUT=5
 export NPM_CONFIG_FETCH_RETRY_MAXTIMEOUT=5
 
-# node (npm) installed programs (bins).
+# where globally installed programs live.
 export PATH=$NPM_CONFIG_PREFIX/bin:$PATH
+
+# use the globally installed verson of npm.
+alias npm="$(npm config get prefix)/bin/npm"
+
+# NOTE: to stay logged into multiple registries simultaneously see:
+# https://github.com/npm/npm/issues/5717#issuecomment-49561182
