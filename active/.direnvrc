@@ -1,0 +1,19 @@
+# use node [version]
+use_node() {
+  local VERSION=$1
+
+  if [[ -z $VERSION ]] && [[ -f .node-version ]]; then
+    VERSION=$(cat .node-version)
+  fi
+
+  if [[ -z $ver ]] && [[ -f .nvmrc ]]; then
+    VERSION=$(cat .nvmrc)
+  fi
+
+  if [[ -z $VERSION ]]; then
+    echo Unknown node version
+    exit 1
+  fi
+
+  load_prefix $NODE_VERSIONS/$NODE_VERSION_PREFIX$VERSION
+}
