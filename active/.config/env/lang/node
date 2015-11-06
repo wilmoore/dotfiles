@@ -7,9 +7,6 @@ export NODE_REPL_HISTORY=~/.cache/node/.node_repl_history
 # node home directory
 export NODE_HOME="$XDG_DATA_HOME/node"
 
-# optional version name prefix
-export NODE_VERSION_PREFIX="node-v"
-
 # node versions directory
 export NODE_VERSIONS="$NODE_HOME/versions"
 
@@ -17,7 +14,8 @@ export NODE_VERSIONS="$NODE_HOME/versions"
 export DEFAULT_NODE_VERSION=5.0.0
 
 # node program path (beware, with multiple node versions installed, you'll have multiple npms in here
-export PATH="$NODE_VERSIONS/$NODE_VERSION_PREFIX$DEFAULT_NODE_VERSION/bin:$PATH"
+export PATH="$NODE_VERSIONS/node-v$DEFAULT_NODE_VERSION/bin:$PATH"
+export MANPATH="$NODE_VERSIONS/node-v$DEFAULT_NODE_VERSION/share/man:$MANPATH"
 
 # initialize npm
 source $(dirname $0)/node-init-npm
