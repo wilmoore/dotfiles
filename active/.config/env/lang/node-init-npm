@@ -1,5 +1,6 @@
-# ...since putting `~/.npmrc` in source control is non-safe.
-export NPM_CONFIG_USERCONFIG="$HOME/Documents/private/@home/.npmrc"
+# NOTE: to stay logged into multiple registries simultaneously see:
+# https://github.com/npm/npm/issues/5717#issuecomment-49561182
+export NPM_CONFIG_USERCONFIG="$HOME/Documents/private/@home/.npmrc" # to keep `~/.npmrc` out of source control.
 export NPM_CONFIG_EMAIL="wil.moore@wilmoore.com"
 export NPM_CONFIG_INIT_MODULE=""
 export NPM_CONFIG_INIT_AUTHOR_NAME="Wil Moore III"
@@ -7,7 +8,7 @@ export NPM_CONFIG_INIT_AUTHOR_EMAIl="wil.moore@wilmoore.com"
 export NPM_CONFIG_INIT_AUTHOR_URL="http://github.com/wilmoore"
 export NPM_CONFIG_INIT_LICENSE="MIT"
 export NPM_CONFIG_INIT_VERSION="0.0.0"
-export NPM_CONFIG_STRICT_SSL="false"
+export NPM_CONFIG_STRICT_SSL="true"
 export NPM_CONFIG_CACHE="$HOME/.cache/npm"
 export NPM_CONFIG_PREFIX="$NODE_HOME"
 export NPM_CONFIG_FETCH_RETRY_FACTOR=1
@@ -17,8 +18,5 @@ export NPM_CONFIG_FETCH_RETRY_MAXTIMEOUT=5
 # where globally installed programs live.
 export PATH=$NPM_CONFIG_PREFIX/bin:$PATH
 
-# use the globally installed verson of npm.
-alias npm="$(npm config get prefix)/bin/npm"
-
-# NOTE: to stay logged into multiple registries simultaneously see:
-# https://github.com/npm/npm/issues/5717#issuecomment-49561182
+# use the npm installed in configured `$NPM_CONFIG_PREFIX`.
+alias npm="[[ -n `command -v node` ]] && `npm config get prefix`/bin/npm"

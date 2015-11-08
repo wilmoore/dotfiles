@@ -1,21 +1,11 @@
-# Binaries are here:
-# https://nodejs.org/dist
-
 # https://nodejs.org/api/repl.html#repl_environment_variable_options
 export NODE_REPL_HISTORY=~/.cache/node/.node_repl_history
 
 # node home directory
 export NODE_HOME="$XDG_DATA_HOME/node"
 
-# node versions directory
+# node versions directory (binaries are downloadable @ https://nodejs.org/dist)
 export NODE_VERSIONS="$NODE_HOME/versions"
 
-# node or iojs version
-export DEFAULT_NODE_VERSION=5.0.0
-
-# node program path (beware, with multiple node versions installed, you'll have multiple npms in here
-export PATH="$NODE_VERSIONS/node-v$DEFAULT_NODE_VERSION/bin:$PATH"
-export MANPATH="$NODE_VERSIONS/node-v$DEFAULT_NODE_VERSION/share/man:$MANPATH"
-
-# initialize npm
+# configure npm
 source $(dirname $0)/node-init-npm

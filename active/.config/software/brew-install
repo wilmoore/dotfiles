@@ -209,8 +209,10 @@ cabal-install
 lua
 luajit
 
-# node (manually installed)
-# SEE: ~/.config/env/lang/node
+# Configuration: $XDG_CONFIG_HOME/env/lang/node
+# More NodeJS versions installed here: $NODE_VERSIONS (see ~/.direnvrc)
+node
+https://raw.githubusercontent.com/wilmoore/nodejs-install/master/share/homebrew/nodejs-install.rb
 
 # php
 php56
