@@ -1,0 +1,2 @@
+# scratch directory (temporary experiments, code examples, etc.)
+export SCRATCH_DIR="$XDG_CACHE_HOME/tmp"

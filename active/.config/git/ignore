@@ -6,6 +6,9 @@
 *.private
 *.vimrc
 
+# direnv
+.envrc
+
 # ctags
 tags
 

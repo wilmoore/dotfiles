@@ -18,5 +18,18 @@ export NPM_CONFIG_FETCH_RETRY_MAXTIMEOUT=5
 # where globally installed programs live.
 export PATH=$NPM_CONFIG_PREFIX/bin:$PATH
 
-# use the npm installed in configured `$NPM_CONFIG_PREFIX`.
-alias npm="[[ -n `command -v node` ]] && `npm config get prefix`/bin/npm"
+# add flexibility to npm based on how your project is setup.
+npm () {
+  if [[ -z `command -v node` ]]; then
+    echo 'You need to install NodeJS before you can run npm' >&2
+    return 1
+  fi
+
+  if [[ $USE_NODE_NPM -eq 1 ]]; then
+    # for projects that have messed up dependencies that break on flat `node_modules` or have other obscure issues where `npm` specific to that node version is needed.
+    $(dirname $(which node))/npm $*
+  else
+    # use the npm installed in configured `$NPM_CONFIG_PREFIX`.
+    $(command npm config get prefix)/bin/npm $*
+  fi
+}

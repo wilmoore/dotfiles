@@ -54,3 +54,6 @@ alias kill-pg='killall Postgres && killall postgres && find ~/Library/Applicatio
 
 # docker utilities
 alias docker:cleanup='docker rm $(docker ps -a -q) ; docker rmi $(docker images -q)'
+
+# view markdown files with marked
+alias marked='open -a "Marked 2" $*'

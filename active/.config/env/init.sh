@@ -15,6 +15,7 @@ source $XDG_CONFIG_HOME/env/limits
 source $XDG_CONFIG_HOME/env/manpages
 source $XDG_CONFIG_HOME/env/osx
 source $XDG_CONFIG_HOME/env/pager
+source $XDG_CONFIG_HOME/env/scratch
 source $XDG_CONFIG_HOME/env/ssh-agent
 source $XDG_CONFIG_HOME/env/terminal
 
@@ -32,13 +33,11 @@ source $XDG_CONFIG_HOME/env/lang/titanium
 # programs
 #
 
-# keeping this, but modified it a bit to not load the command completion...
-# it takes us from loading in 0.07s to 0.10s (0.03s) -- without completion
-# it loads in 0.08s in the worst case or 0.07s in the best case.
 source $XDG_CONFIG_HOME/env/programs/direnv
+# NOTE: The aws completion significantly increases shell init time. It is commented out.
 source $XDG_CONFIG_HOME/env/programs/aws
-# NOTE: this is not linked via the init script as it doubles terminal init time. Just source this file from any tmux project that needs it.
-# source $XDG_CONFIG_HOME/env/programs/docker
+# NOTE: The docker init significantly increases shell init time. You can comment it out and force each project to source it directly.
+source $XDG_CONFIG_HOME/env/programs/docker
 source $XDG_CONFIG_HOME/env/programs/git
 source $XDG_CONFIG_HOME/env/programs/node-install
 source $XDG_CONFIG_HOME/env/programs/pkgconfig
