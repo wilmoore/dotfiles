@@ -29,10 +29,7 @@ source $XDG_CONFIG_HOME/env/lang/ruby
 source $XDG_CONFIG_HOME/env/lang/rust
 source $XDG_CONFIG_HOME/env/lang/titanium
 
-#
 # programs
-#
-
 source $XDG_CONFIG_HOME/env/programs/direnv
 # NOTE: The aws completion significantly increases shell init time. It is commented out.
 source $XDG_CONFIG_HOME/env/programs/aws
