@@ -1,27 +1,24 @@
 [submodule "active/.config/zsh/.zprezto"]
 	path = active/.config/zsh/.zprezto
 	url = https://github.com/sorin-ionescu/prezto.git
-
 [submodule "active/.vim/bundle/neobundle.vim"]
 	path = active/.vim/bundle/neobundle.vim
 	url = https://github.com/Shougo/neobundle.vim
-
 [submodule "active/.config/sprout/commonjs-lib"]
 	path = active/.config/sprout/commonjs-lib
 	url = https://github.com/wilmoore/sprout-commonjs-lib.git
-
 [submodule "active/.config/terminal/originals/ocean-terminal"]
 	path = active/.config/terminal/originals/ocean-terminal
 	url = https://github.com/mdo/ocean-terminal.git
-
 [submodule "active/.config/terminal/originals/Spacegray.vim"]
 	path = active/.config/terminal/originals/Spacegray.vim
 	url = https://github.com/ajh17/Spacegray.vim.git
-
 [submodule "active/.local/share/rbenv/plugins/rbenv-default-gems"]
 	path = active/.local/share/rbenv/plugins/rbenv-default-gems
 	url = https://github.com/sstephenson/rbenv-default-gems.git
-
 [submodule "active/.local/share/rbenv/plugins/rbenv-gem-rehash"]
 	path = active/.local/share/rbenv/plugins/rbenv-gem-rehash
 	url = https://github.com/sstephenson/rbenv-gem-rehash.git
+[submodule "active/.local/opt/tmuxifier"]
+	path = active/.local/opt/tmuxifier
+	url = https://github.com/jimeh/tmuxifier.git

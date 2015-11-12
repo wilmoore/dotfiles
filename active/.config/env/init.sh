@@ -33,9 +33,9 @@ source $XDG_CONFIG_HOME/env/lang/titanium
 source $XDG_CONFIG_HOME/env/programs/direnv
 # NOTE: The aws completion significantly increases shell init time. It is commented out.
 source $XDG_CONFIG_HOME/env/programs/aws
-# NOTE: The docker init significantly increases shell init time. You can comment it out and force each project to source it directly.
-source $XDG_CONFIG_HOME/env/programs/docker
+# NOTE: You'll need to source this within your project directory as this somehow breaks tmux
+source $XDG_CONFIG_HOME/env/programs/docker-toolbox
 source $XDG_CONFIG_HOME/env/programs/git
 source $XDG_CONFIG_HOME/env/programs/node-install
 source $XDG_CONFIG_HOME/env/programs/pkgconfig
-source $XDG_CONFIG_HOME/env/programs/tmux
+source $XDG_CONFIG_HOME/env/programs/tmuxifier
