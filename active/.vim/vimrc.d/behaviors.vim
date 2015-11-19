@@ -32,8 +32,15 @@ set timeoutlen=2000
 set ttimeoutlen=0
 
 " -------
-" Tabs
+" Buffers & Tabs
 " -------
+
+" Specify the behavior when switching between buffers
+" http://stackoverflow.com/a/6853779/128346
+set switchbuf=useopen
+
+" When to show tab line
+set stal=2
 
 " Maximum number of tabs to display
 set tabpagemax=50
@@ -99,6 +106,7 @@ set suffixesadd+=py
 set suffixesadd+=.rb
 set suffixesadd+=.rs
 set suffixesadd+=.scala
+set suffixesadd+=.scss
 set suffixesadd+=.swift
 set suffixesadd+=.sh
 set suffixesadd+=.xml
@@ -139,15 +147,6 @@ highlight CursorLine guibg=#303000 ctermbg=234
 highlight CursorColumn guibg=#303000 ctermbg=234
 
 " -------
-" Buffers
-" -------
-
-" Specify the behavior when switching between buffers
-" http://stackoverflow.com/a/6853779/128346
-set switchbuf=useopen,usetab,newtab
-set stal=2
-
-" -------
 " Search
 " -------
 
@@ -155,4 +154,3 @@ set nohlsearch
 set incsearch
 set ignorecase
 set smartcase
-

@@ -1,2 +1,5 @@
-eval "$(direnv hook zsh)"
 # export DIRENV_LOG_FORMAT=""
+
+if [ $(command -v direnv) ]; then
+  eval "$(direnv hook zsh)"
+fi

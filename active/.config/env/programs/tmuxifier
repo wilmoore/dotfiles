@@ -1,0 +1,4 @@
+export PATH=~/.local/opt/tmuxifier/bin:$PATH
+export TMUXIFIER_TMUX_OPTS="-2"
+export TMUXIFIER_LAYOUT_PATH=$HOME/Documents/private/tmuxifier/layouts
+eval "$(tmuxifier init -)"

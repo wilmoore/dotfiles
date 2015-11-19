@@ -2,4 +2,5 @@
 export AWS_CONFIG_FILE=~/Documents/private/@home/.config/.aws/config
 
 # aws command completion
+# commented out because completion significantly increases shell init time
 # source $HOMEBREW_PREFIX/share/zsh/site-functions/_aws
