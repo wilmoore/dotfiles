@@ -1,59 +1,32 @@
-# editors & pagers
-alias less=$PAGER
-alias zless=$PAGER
-
-# windows compatibility
-alias cls='clear'
-
 # colors
 alias colors='for i in {0..255} ; do printf "\x1b[38;5;${i}mcolour${i}\n"; done'
-
-# FEF (frequently edited files)
-alias edit-zsh='$EDITOR ~/.zshenv'
-
-# osx system management.
-alias osxup='sudo softwareupdate -i -a'
-alias nosleep='pmset noidle'
 
 # https://news.ycombinator.com/item?id=7748346
 alias lock='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resources/CGSession -suspend'
 
-# zprezto management
-alias zpup='cd $XDG_CONFIG_HOME/zsh/.zprezto && git checkout master 2>/dev/null && git pull --no-rebase && git submodule update --init --recursive && cd - && exec $SHELL'
+# reboot system.
+alias restart='sudo shutdown -r now'
 
-# list dotfiles.
-alias dfls='ls -lah ~/.dotfiles/active'
-
-# update dotfiles (idempotent -- run as many times as you like).
-alias dfup='bash ~/.dotfiles/setup'
+# dotfiles.
+alias dotfiles:list='ls -lah ~/.dotfiles/active'
+alias dotfiles:goto='cd ~/.dotfiles'
+alias dotfiles:update='bash ~/.dotfiles/setup'
 
 # servers
-alias http-serve='python -m SimpleHTTPServer'
+alias simple-http-server='python -m SimpleHTTPServer $@'
 
 # path utilities
 alias path='echo $PATH | tr ":" "\n"'
 alias path-sorted='echo $PATH | tr ":" "\n" | sort'
 
-# log utilities
-alias clear-logs='sudo rm -rf /private/var/log/asl/*.asl'
-
-# tmux
-alias tmux-edit-sessions='$EDITOR $XDG_CONFIG_HOME/tmux/sessions'
-
 # ip address
 alias ip='curl -s http://canihazip.com/s'
 
 # open files.
-alias open-readme='open README.md -a "Marked 2"'
+alias readme-open='open README.md -a "Marked 2"'
 
 # better dig
-alias better-dig='dig +nostats +nocomments +nocmd'
-
-# kill all postgres processes
-alias kill-pg='killall Postgres && killall postgres && find ~/Library/Application\ Support/Postgres -name "postmaster.pid" -delete'
+alias dig-pretty='dig +nostats +nocomments +nocmd'
 
 # docker utilities
 alias docker:cleanup='docker rm $(docker ps -a -q) ; docker rmi $(docker images -q)'
-
-# view markdown files with marked
-alias marked='open -a "Marked 2" $*'

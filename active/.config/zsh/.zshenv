@@ -7,11 +7,9 @@ export PROJECTS_DIR="$HOME/Documents/projects"
 
 # auto `cd` paths
 cdpath=(
-  $HOME                 # home directory
-  $HOME/Documents       # documents directory
-  $PROJECTS_DIR         # active projects
-  $PROJECTS_DIR/@{devicewise,dfit,itriage,welltok} # organizations
-  $cdpath               # default
+  $HOME         # home directory
+  $PROJECTS_DIR # projects directory
+  $cdpath       # default
 )
 
 # programs and manual page search paths
