@@ -67,17 +67,24 @@ NeoBundle "gmarik/vim-visual-star-search"
 " Editing
 " ----------------------------------------
 
-" General
-NeoBundle "tomtom/tcomment_vim"
-NeoBundle "Raimondi/delimitMate"
-NeoBundle "sjl/gundo.vim"
-NeoBundle "tpope/vim-surround"
+" Auto Close Pairs
+NeoBundle "jiangmiao/auto-pairs"
 
-" Contextual
+" Commenting
+" NOTE: vim-commentary did not handle visually selected lines well.
+NeoBundle "tomtom/tcomment_vim"
+
+" Term toggling
 NeoBundle "mjbrownie/swapit"
 
 " Search & Replace
 NeoBundle "epmatsw/ag.vim"
+
+" Surround
+NeoBundle "tpope/vim-surround"
+
+" Undo
+NeoBundle "sjl/gundo.vim"
 
 " ----------------------------------------
 " Documentation
@@ -97,22 +104,12 @@ NeoBundle "rizzatti/dash.vim"
 " Formatting
 " ----------------------------------------
 
-" auto formatting
-NeoBundle "tpope/vim-endwise"
-NeoBundle "HTML-AutoCloseTag"
-
 " generic formatting
 NeoBundle "Chiel92/vim-autoformat"
 NeoBundle "editorconfig/editorconfig-vim"
 NeoBundle "AndrewRadev/splitjoin.vim"
 NeoBundle "scrooloose/syntastic"
 NeoBundle "SQLUtilities"
-
-" ----------------------------------------
-" HTTP Client
-" ----------------------------------------
-
-NeoBundle "diepm/vim-rest-console"
 
 " ----------------------------------------
 " Navigation, Exploration
@@ -134,10 +131,15 @@ NeoBundle "Shougo/unite.vim"
 
 " Polyglot (lots of languages)
 NeoBundle "sheerun/vim-polyglot"
+NeoBundle "tpope/vim-endwise"
 NeoBundle "calebsmith/vim-lambdify"
 
 " Cocoa
 NeoBundle "msanders/cocoa.vim"
+
+" HTML
+NeoBundle "rstacruz/sparkup"
+NeoBundle "alvan/vim-closetag"
 
 " JavaScript
 NeoBundle "Valloric/YouCompleteMe", { 'build' : { 'mac' : './install.sh --clang-completer --system-libclang --omnisharp-completer --gocode-completer' } }
@@ -200,12 +202,6 @@ NeoBundle "machakann/vim-textobj-delimited"
 
 NeoBundle "mhinz/vim-signify"
 NeoBundle "kien/rainbow_parentheses.vim"
-
-" ----------------------------------------
-" Visual Selection
-" ----------------------------------------
-
-NeoBundle "gorkunov/smartpairs.vim"
 
 " ----------------------------------------
 " ----------------------------------------
