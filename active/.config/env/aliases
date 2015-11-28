@@ -1,11 +1,10 @@
 # colors
 alias colors='for i in {0..255} ; do printf "\x1b[38;5;${i}mcolour${i}\n"; done'
 
+# system
+alias system:restart='sudo shutdown -r now'
 # https://news.ycombinator.com/item?id=7748346
-alias lock='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resources/CGSession -suspend'
-
-# reboot system.
-alias restart='sudo shutdown -r now'
+alias system:lock='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resources/CGSession -suspend'
 
 # dotfiles.
 alias dotfiles:list='ls -lah ~/.dotfiles/active'
