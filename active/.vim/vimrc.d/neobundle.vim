@@ -32,7 +32,14 @@ call neobundle#begin(expand('~/.vim/bundle'))
 NeoBundleFetch "Shougo/neobundle.vim"
 
 " ----------------------------------------
-" ASCII values
+" Dependencies
+" ----------------------------------------
+
+" depended upon by tpope/vim-surround
+NeoBundle "tpope/vim-repeat"
+
+" ----------------------------------------
+" Enhance ga/:ascii
 " ----------------------------------------
 
 NeoBundle "tpope/vim-characterize"
@@ -41,7 +48,6 @@ NeoBundle "tpope/vim-characterize"
 " Buffer Settings
 " ----------------------------------------
 
-NeoBundle "tpope/vim-sleuth"
 NeoBundle "dietsche/vim-lastplace"
 
 " ----------------------------------------
@@ -50,12 +56,6 @@ NeoBundle "dietsche/vim-lastplace"
 
 " Spacegray Theme (https://github.com/ajh17/Spacegray.vim)
 NeoBundle 'ajh17/Spacegray.vim'
-
-" ----------------------------------------
-" Commands
-" ----------------------------------------
-
-NeoBundle "tpope/vim-repeat"
 
 " ----------------------------------------
 " Content Search & Selection (within file)
@@ -67,24 +67,11 @@ NeoBundle "gmarik/vim-visual-star-search"
 " Editing
 " ----------------------------------------
 
-" Auto Close Pairs
 NeoBundle "jiangmiao/auto-pairs"
-
-" Commenting
-" NOTE: vim-commentary did not handle visually selected lines well.
-NeoBundle "tomtom/tcomment_vim"
-
-" Term toggling
+NeoBundle "tomtom/tcomment_vim" " NOTE: vim-commentary did not handle visually selected lines well.
 NeoBundle "mjbrownie/swapit"
-
-" Search & Replace
 NeoBundle "epmatsw/ag.vim"
-
-" Surround
 NeoBundle "tpope/vim-surround"
-
-" Undo
-NeoBundle "sjl/gundo.vim"
 
 " ----------------------------------------
 " Documentation
@@ -122,7 +109,6 @@ NeoBundle "yegappan/mru"
 NeoBundle "scrooloose/nerdtree"
 NeoBundle "netrw.vim"
 NeoBundle "tyru/open-browser.vim"
-NeoBundle "tpope/vim-projectionist"
 NeoBundle "Shougo/unite.vim"
 
 " ----------------------------------------
@@ -162,39 +148,16 @@ NeoBundle "tpope/vim-bundler"
 NeoBundleLazy "aklt/plantuml-syntax"
 
 " ----------------------------------------
-" Shell, Terminal, Multiplex
+" Source Control (git)
 " ----------------------------------------
 
-NeoBundle "wincent/terminus"
-NeoBundle "shougo/vimproc", {'build': {'windows': 'make -f make_mingw32.mak', 'cygwin': 'make -f make_cygwin.mak', 'mac': 'make -f make_mac.mak', 'unix': 'make -f make_unix.mak'}}
-NeoBundle "shougo/vimshell"
-NeoBundle "tpope/vim-dispatch"
-
-" ----------------------------------------
-" Source Control
-" ----------------------------------------
-
-" Git
-NeoBundle "tpope/vim-git"
 NeoBundle "tpope/vim-fugitive"
-NeoBundle "int3/vim-extradite"
-
-" Github
-NeoBundle "mattn/webapi-vim"
-NeoBundle "tpope/vim-rhubarb"
 
 " ----------------------------------------
 " Status Line
 " ----------------------------------------
 
 NeoBundle "bling/vim-airline"
-
-" ----------------------------------------
-" Text Objects
-" ----------------------------------------
-
-NeoBundle "paradigm/TextObjectify"
-NeoBundle "machakann/vim-textobj-delimited"
 
 " ----------------------------------------
 " Visual Indicators

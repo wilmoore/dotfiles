@@ -66,4 +66,3 @@ set number
 set scrolloff=0
 set sidescrolloff=15
 set sidescroll=1
-

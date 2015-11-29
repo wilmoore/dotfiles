@@ -40,12 +40,6 @@ let g:markdown_drop_empty_blockquotes = 1
 let g:markdown_enable_folding = 0
 
 " -------
-" smartpairs
-" -------
-
-let g:smartpairs_uber_mode = 1
-
-" -------
 " open-browser
 " -------
 
@@ -155,12 +149,6 @@ let g:NERDTreeWinSize = 40
 augroup quit_if_only_nerdtree
   autocmd WinEnter * :call CloseIfOnlyNerdTreeLeft()
 augroup END
-
-" -------
-" SQLUtilities
-" -------
-
-vmap <silent>sf <Plug>SQLUFormatter<CR>
 
 " -------
 " Syntastic

@@ -7,4 +7,3 @@
 " -------
 
 set laststatus=2
-
