@@ -67,6 +67,8 @@ NeoBundle "gmarik/vim-visual-star-search"
 " Editing
 " ----------------------------------------
 
+" NOTE: incompatible with `gabrielelana/vim-markdown` unless configured with `let g:markdown_enable_mappings = 0`
+" SEE: https://github.com/jiangmiao/auto-pairs/issues/34
 NeoBundle "jiangmiao/auto-pairs"
 NeoBundle "tomtom/tcomment_vim" " NOTE: vim-commentary did not handle visually selected lines well.
 NeoBundle "mjbrownie/swapit"
@@ -160,11 +162,23 @@ NeoBundle "tpope/vim-fugitive"
 NeoBundle "bling/vim-airline"
 
 " ----------------------------------------
+" Unicode
+" ----------------------------------------
+
+NeoBundle "unicode.vim"
+
+" ----------------------------------------
 " Visual Indicators
 " ----------------------------------------
 
 NeoBundle "mhinz/vim-signify"
 NeoBundle "kien/rainbow_parentheses.vim"
+
+" ----------------------------------------
+" Workflow
+" ----------------------------------------
+
+NeoBundle "krisajenkins/vim-pipe"
 
 " ----------------------------------------
 " ----------------------------------------

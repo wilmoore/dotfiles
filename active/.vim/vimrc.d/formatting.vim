@@ -38,4 +38,3 @@ set smarttab
 
 " convert all typed tabs to spaces
 set expandtab
-

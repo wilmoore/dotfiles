@@ -145,12 +145,3 @@ set hidden
 highlight CursorLine term=underline cterm=underline gui=underline
 highlight CursorLine guibg=#303000 ctermbg=234
 highlight CursorColumn guibg=#303000 ctermbg=234
-
-" -------
-" Search
-" -------
-
-set nohlsearch
-set incsearch
-set ignorecase
-set smartcase

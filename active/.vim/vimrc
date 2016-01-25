@@ -33,6 +33,9 @@ source ~/.vim/vimrc.d/mouse.vim
 " formatting options.
 source ~/.vim/vimrc.d/formatting.vim
 
+" search.
+source ~/.vim/vimrc.d/search.vim
+
 " status line.
 source ~/.vim/vimrc.d/status.vim
 

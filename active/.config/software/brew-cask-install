@@ -3,21 +3,31 @@
 ##################################################
 
 # application launchers
-phinze/homebrew-cask/alfred
+alfred
 
 # window management
 slate
 
 # powerline fonts.
-caskroom/fonts/font-anonymous-pro-for-powerline
-caskroom/fonts/font-dejavu-sans-mono-for-powerline
-caskroom/fonts/font-droid-sans-mono-for-powerline
-caskroom/fonts/font-fira-mono-for-powerline
-caskroom/fonts/font-hack
-caskroom/fonts/font-liberation-mono-for-powerline
-caskroom/fonts/font-meslo-lg-for-powerline
-caskroom/fonts/font-open-sans
-caskroom/fonts/font-sauce-code-powerline
+font-anonymous-pro-for-powerline
+font-dejavu-sans-mono-for-powerline
+font-droid-sans-mono-for-powerline
+font-fira-mono-for-powerline
+font-hack
+font-liberation-mono-for-powerline
+font-meslo-lg-for-powerline
+font-open-sans
+font-sauce-code-powerline
+
+# caskroom/fonts/font-anonymous-pro-for-powerline
+# caskroom/fonts/font-dejavu-sans-mono-for-powerline
+# caskroom/fonts/font-droid-sans-mono-for-powerline
+# caskroom/fonts/font-fira-mono-for-powerline
+# caskroom/fonts/font-hack
+# caskroom/fonts/font-liberation-mono-for-powerline
+# caskroom/fonts/font-meslo-lg-for-powerline
+# caskroom/fonts/font-open-sans
+# caskroom/fonts/font-sauce-code-powerline
 
 # email
 mailbox
@@ -119,6 +129,7 @@ xscope
 ##################################################
 
 gitbook
+mactex
 
 ##################################################
 # diagnostic
@@ -206,6 +217,13 @@ tunnelblick
 ##################################################
 
 hacker-menu
+
+##################################################
+# notifications
+##################################################
+
+# https://github.com/ekonstantinidis/gitify
+gitify
 
 ##################################################
 # pdf
@@ -303,7 +321,6 @@ geekbench
 
 mactubes
 miro-video-converter
-recordit
 screenflick
 vlc
 vlc-remote
@@ -314,6 +331,7 @@ vlcstreamer
 ##################################################
 
 handbrake
+handbrakecli
 makemkv
 mkvtools
 

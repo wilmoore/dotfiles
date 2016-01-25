@@ -3,10 +3,6 @@
 ###############################################
 
 aspnet/k
-caskroom/cask
-caskroom/fonts
-caskroom/unofficial
-caskroom/versions
 homebrew/binary
 homebrew/boneyard
 homebrew/completions
@@ -14,5 +10,4 @@ homebrew/dupes
 homebrew/headonly
 homebrew/php
 homebrew/versions
-phinze/homebrew-cask
 utopiansociety/utopia

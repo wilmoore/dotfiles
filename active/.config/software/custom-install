@@ -1,12 +1,21 @@
 # install/update android sdk
 yes | android update sdk --no-ui
 
+# install rebar3
+if [ ! $(command -v rebar3) ]; then
+  cd ~/.local/bin
+  curl -O https://s3.amazonaws.com/rebar3/rebar3
+  chmod +x rebar3
+  cd -
+fi
+
 # install rust
 if [ ! $(command -v rustc) ]; then
   cd /tmp
   curl -O https://static.rust-lang.org/rustup.sh
   chmod +x rustup.sh
   ./rustup.sh --disable-sudo
+  cd -
 fi
 
 # install otto

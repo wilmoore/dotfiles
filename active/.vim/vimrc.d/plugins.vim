@@ -31,7 +31,11 @@ map // :TComment<cr>
 
 " -------
 " vim-markdown
+" https://github.com/gabrielelana/vim-markdown#configuration
 " -------
+
+" disable default mappings (seems to help with this issue: https://github.com/jiangmiao/auto-pairs/issues/34)
+let g:markdown_enable_mappings = 0
 
 " drop comments.
 let g:markdown_drop_empty_blockquotes = 1
