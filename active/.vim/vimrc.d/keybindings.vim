@@ -16,9 +16,8 @@ let mapleader = "\<Space>"
 
 " Instead of a custom mapping, I am going back to the default of <C-[> for the following reasons:
 
-" 1. There is a painful pause whenever you want to type a literal `j`.
-" 2. If you use `set -o vi` in your shell (I do) the custom mapping is not available so you have to get used to multiple mappings.
-" 3. When pair programming with another VIM you'll have to remember the default mapping anyhow.
+" 1. If you use `set -o vi` in your shell (as I do) the custom mapping is not available so you have to get used to this mapping anyway.
+" 2. When pair programming with another VIMmer you'll have to remember the default mapping.
 
 " Why <C-[> instead of <ESC>?
 " Because <C-[> is much more natural for my fingers to reach.
@@ -63,10 +62,6 @@ nnoremap <leader>j <C-^>
 nnoremap <leader>k <C-^>
 nnoremap <leader>- <C-^>
 
-" To open a new empty tab
-" This replaces :tabnew which I used to bind to this mapping
-nmap <leader>t :enew<cr>
-
 " open a new empty buffer
 nmap <leader>n :enew<cr>
 
@@ -98,13 +93,10 @@ map <leader>H :execute ":help " . expand("<cword>")<cr>
 nnoremap <silent> <C-p> :CtrlP<cr>
 nnoremap <silent> <C-t> :CtrlP<cr>
 
-" `:find` prompt.
+" `:find` prompt (find and open).
 map fo :find 
 
-" `:tabe` prompt.
-map to :tabe 
-
-" `:Mru` prompt.
+" `:Mru` prompt (most recently opened).
 map mo :Mru<cr>
 map mro :Mru<cr>
 
@@ -220,21 +212,16 @@ map mro :Mru<cr>
 " http://stackoverflow.com/a/2148055/128346
 
 " -------
-" Git Commit Browser
-" -------
-
-" launch the git commit browser.
-nnoremap <leader>cb :Extradite<CR>
-nnoremap <leader>gb :Extradite<CR>
-
-" -------
 " Increment/Decrement
 " -------
 
-" support shifted and non-shifted keys. (increment)
+" support + for increment (instead of only <c-a>)
 map + <c-a>
 
-" support shifted and non-shifted keys. (decrement)
+" support = for increment (+ is ok but you need to hit <shift> to get to it)
+map = <c-a>
+
+" support - for decrement (instead of only <c-x>)
 map - <c-x>
 
 " -------
@@ -244,4 +231,3 @@ map - <c-x>
 " remap U to <C-r> for easier REDO (remember, `r` is for replace, not redo)
 " from http://vimbits.com/bits/356
 nnoremap U <C-r>
-
