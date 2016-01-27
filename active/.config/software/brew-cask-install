@@ -59,11 +59,16 @@ the-unarchiver
 audacity
 
 ##################################################
-# backup & sync
+# backup/sync, cloud file management, sharing
 ##################################################
 
 arq
+bittorrent-sync
 chronosync
+cloudup
+dropbox
+forklift
+google-drive
 
 ##################################################
 # bookmarks
@@ -89,16 +94,6 @@ hipchat
 limechat
 skype
 slack
-
-##################################################
-# cloud file management / file sharing
-##################################################
-
-bittorrent-sync
-cloudup
-dropbox
-forklift
-google-drive
 
 ##################################################
 # database management
@@ -129,7 +124,6 @@ xscope
 ##################################################
 
 gitbook
-mactex
 
 ##################################################
 # diagnostic
@@ -173,19 +167,12 @@ imagealpha
 seashore
 texturepacker
 xee
-xquartz
 
 ##################################################
 # internationalization, localization, translation
 ##################################################
 
 poedit
-
-##################################################
-# mapping
-##################################################
-
-mapbox-studio
 
 ##################################################
 # mobile development
@@ -339,7 +326,7 @@ mkvtools
 # virtualization
 ##################################################
 
-kitematic
+dockertoolbox
 virtualbox
 
 ##################################################

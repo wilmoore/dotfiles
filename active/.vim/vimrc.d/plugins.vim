@@ -167,3 +167,6 @@ let g:syntastic_check_on_wq = 1
 
 " When set, syntastic runs all checkers that apply then aggregates errors found by all checkers in a single list.
 let g:syntastic_aggregate_errors = 1
+
+" When set, syntastic checks the file/buffer when opened (default = 1; however, this can slow things down)
+let g:syntastic_check_on_open = 0

@@ -37,3 +37,6 @@ source $XDG_CONFIG_HOME/env/programs/git
 source $XDG_CONFIG_HOME/env/programs/node-install
 source $XDG_CONFIG_HOME/env/programs/pkgconfig
 source $XDG_CONFIG_HOME/env/programs/tmuxifier
+
+# services
+source $XDG_CONFIG_HOME/env/services/saucelabs

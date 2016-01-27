@@ -1,0 +1,2 @@
+export SAUCE_USERNAME=$(security find-generic-password -s SAUCE_USERNAME -w)
+export SAUCE_ACCESS_KEY=$(security find-generic-password -s SAUCE_ACCESS_KEY -w)
