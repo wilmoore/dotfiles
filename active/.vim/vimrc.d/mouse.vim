@@ -3,5 +3,7 @@
 " ----------------------------------------
 
 set mouse=a
-set ttym=xterm2
 
+if !has('nvim')
+  set ttymouse=xterm2
+endif

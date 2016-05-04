@@ -1,0 +1,64 @@
+<PcFileCache>
+  <File path="/Users/wilmoore/.homebrew/Cellar/mono/4.2.1.102_1/lib/pkgconfig/aspnetwebstack.pc" lastWriteTime="2016-02-05T18:55:23-07:00" name="aspnetwebstack" version="4.2.1" description="References Microsoft ASP.NET Web Stack">
+    <Assembly name="System.Web.Razor" version="2.0.0.0" culture="neutral" publicKeyToken="31bf3856ad364e35" file="/Users/wilmoore/.homebrew/Cellar/mono/4.2.1.102_1/lib/mono/gac/System.Web.Razor/2.0.0.0__31bf3856ad364e35/System.Web.Razor.dll" />
+    <Assembly name="System.Web.Http" version="4.0.0.0" culture="neutral" publicKeyToken="31bf3856ad364e35" file="/Users/wilmoore/.homebrew/Cellar/mono/4.2.1.102_1/lib/mono/gac/System.Web.Http/4.0.0.0__31bf3856ad364e35/System.Web.Http.dll" />
+    <Assembly name="System.Web.WebPages" version="2.0.0.0" culture="neutral" publicKeyToken="31bf3856ad364e35" file="/Users/wilmoore/.homebrew/Cellar/mono/4.2.1.102_1/lib/mono/gac/System.Web.WebPages/2.0.0.0__31bf3856ad364e35/System.Web.WebPages.dll" />
+    <Assembly name="System.Web.WebPages.Razor" version="2.0.0.0" culture="neutral" publicKeyToken="31bf3856ad364e35" file="/Users/wilmoore/.homebrew/Cellar/mono/4.2.1.102_1/lib/mono/gac/System.Web.WebPages.Razor/2.0.0.0__31bf3856ad364e35/System.Web.WebPages.Razor.dll" />
+    <Assembly name="System.Web.WebPages.Deployment" version="2.0.0.0" culture="neutral" publicKeyToken="31bf3856ad364e35" file="/Users/wilmoore/.homebrew/Cellar/mono/4.2.1.102_1/lib/mono/gac/System.Web.WebPages.Deployment/2.0.0.0__31bf3856ad364e35/System.Web.WebPages.Deployment.dll" />
+  </File>
+  <File path="/Users/wilmoore/.homebrew/Cellar/mono/4.2.1.102_1/lib/pkgconfig/cecil.pc" lastWriteTime="2016-02-05T18:55:23-07:00" name="cecil" version="4.2.1" description="Mono Internal Libraries -- Do not use">
+    <Assembly name="Mono.Cecil" version="0.9.5.0" culture="neutral" publicKeyToken="0738eb9f132ed756" file="/Users/wilmoore/.homebrew/Cellar/mono/4.2.1.102_1/lib/mono/gac/Mono.Cecil/0.9.5.0__0738eb9f132ed756/Mono.Cecil.dll" />
+  </File>
+  <File path="/Users/wilmoore/.homebrew/Cellar/mono/4.2.1.102_1/lib/pkgconfig/dotnet.pc" lastWriteTime="2016-02-05T18:55:23-07:00" />
+  <File path="/Users/wilmoore/.homebrew/Cellar/mono/4.2.1.102_1/lib/pkgconfig/dotnet35.pc" lastWriteTime="2016-02-05T18:55:23-07:00" />
+  <File path="/Users/wilmoore/.homebrew/Cellar/mono/4.2.1.102_1/lib/pkgconfig/mono-2.pc" lastWriteTime="2016-02-05T18:55:23-07:00" />
+  <File path="/Users/wilmoore/.homebrew/Cellar/mono/4.2.1.102_1/lib/pkgconfig/mono-cairo.pc" lastWriteTime="2016-02-05T18:55:23-07:00" />
+  <File path="/Users/wilmoore/.homebrew/Cellar/mono/4.2.1.102_1/lib/pkgconfig/mono-lineeditor.pc" lastWriteTime="2016-02-05T18:55:23-07:00" />
+  <File path="/Users/wilmoore/.homebrew/Cellar/mono/4.2.1.102_1/lib/pkgconfig/mono-nunit.pc" lastWriteTime="2016-02-05T18:55:23-07:00" />
+  <File path="/Users/wilmoore/.homebrew/Cellar/mono/4.2.1.102_1/lib/pkgconfig/mono-options.pc" lastWriteTime="2016-02-05T18:55:23-07:00" />
+  <File path="/Users/wilmoore/.homebrew/Cellar/mono/4.2.1.102_1/lib/pkgconfig/mono.pc" lastWriteTime="2016-02-05T18:55:23-07:00" />
+  <File path="/Users/wilmoore/.homebrew/Cellar/mono/4.2.1.102_1/lib/pkgconfig/monodoc.pc" lastWriteTime="2016-02-05T18:55:23-07:00" name="monodoc" version="4.2.1" description="Monodoc - Mono Documentation Tools">
+    <Assembly name="monodoc" version="1.0.0.0" culture="neutral" publicKeyToken="0738eb9f132ed756" file="/Users/wilmoore/.homebrew/Cellar/mono/4.2.1.102_1/lib/mono/monodoc/monodoc.dll" />
+  </File>
+  <File path="/Users/wilmoore/.homebrew/Cellar/mono/4.2.1.102_1/lib/pkgconfig/monosgen-2.pc" lastWriteTime="2016-02-05T18:55:23-07:00" />
+  <File path="/Users/wilmoore/.homebrew/Cellar/mono/4.2.1.102_1/lib/pkgconfig/reactive.pc" lastWriteTime="2016-02-05T18:55:23-07:00" name="reactive" version="4.2.1" description="Reactive Extensions">
+    <Assembly name="System.Reactive.Interfaces" version="2.2.0.0" culture="neutral" publicKeyToken="31bf3856ad364e35" file="/Users/wilmoore/.homebrew/Cellar/mono/4.2.1.102_1/lib/mono/4.5/System.Reactive.Interfaces.dll" />
+    <Assembly name="System.Reactive.Core" version="2.2.0.0" culture="neutral" publicKeyToken="31bf3856ad364e35" file="/Users/wilmoore/.homebrew/Cellar/mono/4.2.1.102_1/lib/mono/4.5/System.Reactive.Core.dll" />
+    <Assembly name="System.Reactive.Linq" version="2.2.0.0" culture="neutral" publicKeyToken="31bf3856ad364e35" file="/Users/wilmoore/.homebrew/Cellar/mono/4.2.1.102_1/lib/mono/4.5/System.Reactive.Linq.dll" />
+    <Assembly name="System.Reactive.PlatformServices" version="2.2.0.0" culture="neutral" publicKeyToken="31bf3856ad364e35" file="/Users/wilmoore/.homebrew/Cellar/mono/4.2.1.102_1/lib/mono/4.5/System.Reactive.PlatformServices.dll" />
+    <Assembly name="System.Reactive.Providers" version="2.2.0.0" culture="neutral" publicKeyToken="31bf3856ad364e35" file="/Users/wilmoore/.homebrew/Cellar/mono/4.2.1.102_1/lib/mono/4.5/System.Reactive.Providers.dll" />
+    <Assembly name="System.Reactive.Debugger" version="2.2.0.0" culture="neutral" publicKeyToken="31bf3856ad364e35" file="/Users/wilmoore/.homebrew/Cellar/mono/4.2.1.102_1/lib/mono/4.5/System.Reactive.Debugger.dll" />
+    <Assembly name="System.Reactive.Experimental" version="2.2.0.0" culture="neutral" publicKeyToken="31bf3856ad364e35" file="/Users/wilmoore/.homebrew/Cellar/mono/4.2.1.102_1/lib/mono/4.5/System.Reactive.Experimental.dll" />
+    <Assembly name="System.Reactive.Runtime.Remoting" version="2.2.0.0" culture="neutral" publicKeyToken="31bf3856ad364e35" file="/Users/wilmoore/.homebrew/Cellar/mono/4.2.1.102_1/lib/mono/4.5/System.Reactive.Runtime.Remoting.dll" />
+  </File>
+  <File path="/Users/wilmoore/.homebrew/Cellar/mono/4.2.1.102_1/lib/pkgconfig/system.web.extensions.design_1.0.pc" lastWriteTime="2016-02-05T18:55:23-07:00" />
+  <File path="/Users/wilmoore/.homebrew/Cellar/mono/4.2.1.102_1/lib/pkgconfig/system.web.extensions_1.0.pc" lastWriteTime="2016-02-05T18:55:23-07:00" />
+  <File path="/Users/wilmoore/.homebrew/Cellar/mono/4.2.1.102_1/lib/pkgconfig/system.web.mvc.pc" lastWriteTime="2016-02-05T18:55:23-07:00" />
+  <File path="/Users/wilmoore/.homebrew/Cellar/mono/4.2.1.102_1/lib/pkgconfig/system.web.mvc2.pc" lastWriteTime="2016-02-05T18:55:23-07:00" />
+  <File path="/Users/wilmoore/.homebrew/Cellar/mono/4.2.1.102_1/lib/pkgconfig/system.web.mvc3.pc" lastWriteTime="2016-02-05T18:55:23-07:00" name="system.web.mvc3" version="3.0.0.0" description="System.Web.Mvc - ASP.NET MVC v3">
+    <Assembly name="System.Web.Mvc" version="3.0.0.0" culture="neutral" publicKeyToken="31bf3856ad364e35" file="/Users/wilmoore/.homebrew/Cellar/mono/4.2.1.102_1/lib/mono/gac/System.Web.Mvc/3.0.0.0__31bf3856ad364e35/System.Web.Mvc.dll" />
+  </File>
+  <File path="/Users/wilmoore/.homebrew/Cellar/mono/4.2.1.102_1/lib/pkgconfig/wcf.pc" lastWriteTime="2016-02-05T18:55:23-07:00" />
+  <File path="/Users/wilmoore/.homebrew/Cellar/mono/4.2.1.102_1/lib/pkgconfig/xbuild12.pc" lastWriteTime="2016-02-05T18:55:23-07:00" name="xbuild12" version="12.0" description="XBuild/MSBuild 12.0">
+    <Assembly name="Microsoft.Build.Engine" version="12.0.0.0" culture="neutral" publicKeyToken="b03f5f7f11d50a3a" file="/Users/wilmoore/.homebrew/Cellar/mono/4.2.1.102_1/lib/mono/xbuild/12.0/bin/Microsoft.Build.Engine.dll" />
+    <Assembly name="Microsoft.Build.Framework" version="12.0.0.0" culture="neutral" publicKeyToken="b03f5f7f11d50a3a" file="/Users/wilmoore/.homebrew/Cellar/mono/4.2.1.102_1/lib/mono/xbuild/12.0/bin/Microsoft.Build.Framework.dll" />
+    <Assembly name="Microsoft.Build.Tasks.v12.0" version="12.0.0.0" culture="neutral" publicKeyToken="b03f5f7f11d50a3a" file="/Users/wilmoore/.homebrew/Cellar/mono/4.2.1.102_1/lib/mono/xbuild/12.0/bin/Microsoft.Build.Tasks.v12.0.dll" />
+    <Assembly name="Microsoft.Build.Utilities.v12.0" version="12.0.0.0" culture="neutral" publicKeyToken="b03f5f7f11d50a3a" file="/Users/wilmoore/.homebrew/Cellar/mono/4.2.1.102_1/lib/mono/xbuild/12.0/bin/Microsoft.Build.Utilities.v12.0.dll" />
+    <Assembly name="Microsoft.Build" version="12.0.0.0" culture="neutral" publicKeyToken="b03f5f7f11d50a3a" file="/Users/wilmoore/.homebrew/Cellar/mono/4.2.1.102_1/lib/mono/xbuild/12.0/bin/Microsoft.Build.dll" />
+  </File>
+  <File path="/usr/lib/pkgconfig/apr-1.pc" lastWriteTime="2014-09-09T16:58:49-06:00" />
+  <File path="/usr/lib/pkgconfig/apr-util-1.pc" lastWriteTime="2014-09-09T17:07:26-06:00" />
+  <File path="/usr/lib/pkgconfig/libcrypto.pc" lastWriteTime="2015-07-16T19:59:44-06:00" />
+  <File path="/usr/lib/pkgconfig/libedit.pc" lastWriteTime="2014-09-09T17:24:19-06:00" />
+  <File path="/usr/lib/pkgconfig/libiodbc.pc" lastWriteTime="2014-09-09T16:39:40-06:00" />
+  <File path="/usr/lib/pkgconfig/libpcre.pc" lastWriteTime="2014-09-09T17:01:00-06:00" />
+  <File path="/usr/lib/pkgconfig/libpcreposix.pc" lastWriteTime="2014-09-09T17:01:00-06:00" />
+  <File path="/usr/lib/pkgconfig/libssl.pc" lastWriteTime="2015-07-16T19:59:44-06:00" />
+  <File path="/usr/lib/pkgconfig/openssl.pc" lastWriteTime="2015-07-16T19:59:44-06:00" />
+  <File path="/Users/wilmoore/.homebrew/Library/ENV/pkgconfig/10.10/libcurl.pc" lastWriteTime="2015-12-12T15:06:14-07:00" />
+  <File path="/Users/wilmoore/.homebrew/Library/ENV/pkgconfig/10.10/libexslt.pc" lastWriteTime="2015-05-31T18:32:30-06:00" />
+  <File path="/Users/wilmoore/.homebrew/Library/ENV/pkgconfig/10.10/libxml-2.0.pc" lastWriteTime="2015-05-31T18:32:30-06:00" />
+  <File path="/Users/wilmoore/.homebrew/Library/ENV/pkgconfig/10.10/libxslt.pc" lastWriteTime="2015-05-31T18:32:30-06:00" />
+  <File path="/Users/wilmoore/.homebrew/Library/ENV/pkgconfig/10.10/sqlite3.pc" lastWriteTime="2015-05-31T18:32:30-06:00" />
+  <File path="/Users/wilmoore/.homebrew/Library/ENV/pkgconfig/10.10/zlib.pc" lastWriteTime="2015-05-31T18:32:30-06:00" />
+</PcFileCache>

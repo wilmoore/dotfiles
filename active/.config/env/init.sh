@@ -25,6 +25,7 @@ source $XDG_CONFIG_HOME/env/lang/erlang
 source $XDG_CONFIG_HOME/env/lang/go
 source $XDG_CONFIG_HOME/env/lang/haskell
 source $XDG_CONFIG_HOME/env/lang/node
+source $XDG_CONFIG_HOME/env/lang/python
 source $XDG_CONFIG_HOME/env/lang/ruby
 source $XDG_CONFIG_HOME/env/lang/rust
 source $XDG_CONFIG_HOME/env/lang/titanium
@@ -37,6 +38,3 @@ source $XDG_CONFIG_HOME/env/programs/git
 source $XDG_CONFIG_HOME/env/programs/node-install
 source $XDG_CONFIG_HOME/env/programs/pkgconfig
 source $XDG_CONFIG_HOME/env/programs/tmuxifier
-
-# services
-source $XDG_CONFIG_HOME/env/services/saucelabs

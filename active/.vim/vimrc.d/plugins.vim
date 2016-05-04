@@ -157,6 +157,7 @@ augroup END
 " -------
 " Syntastic
 " See ../after/ftplugin for file specific settings
+" SEE: http://usevim.com/2016/03/07/linting
 " -------
 
 " When set to 1 the error window will be automatically opened when errors are detected, and closed when none are detected.
@@ -170,3 +171,27 @@ let g:syntastic_aggregate_errors = 1
 
 " When set, syntastic checks the file/buffer when opened (default = 1; however, this can slow things down)
 let g:syntastic_check_on_open = 0
+
+" for syntax errors, defaults to '>>'
+let g:syntastic_error_symbol = '❌'
+
+" where syntastic error sign is displayed
+highlight link SyntasticErrorSign SignColumn
+
+" for style errors, defaults to 'S>'
+let g:syntastic_style_error_symbol = '⁉️'
+
+" where syntastic style error sign is displayed
+highlight link SyntasticStyleErrorSign SignColumn
+
+" for syntax warnings, defaults to '>>'
+let g:syntastic_warning_symbol = '⚠️'
+
+" where syntastic warning sign is displayed
+highlight link SyntasticWarningSign SignColumn
+
+" for style warnings, defaults to 'S>'
+let g:syntastic_style_warning_symbol = '💩'
+
+" where syntastic style warning sign is displayed
+highlight link SyntasticStyleWarningSign SignColumn

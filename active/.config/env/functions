@@ -2,6 +2,18 @@
 # common functions
 #
 
+chomp () {
+  tr -d '\n'
+}
+
+docker-build () {
+  docker build --rm=true -t $(basename $PWD) .
+}
+
+docker-run () {
+  docker run --rm -ti $(basename $PWD) $@
+}
+
 # get keychain secret for a specific site/domain.
 keychain-secret-for () {
   local domain="$(echo $1 | cut -d'/' -f3)"

@@ -17,3 +17,6 @@ npm-debug.log
 
 # ruby (vendored bundler deps)
 vendor/bundle/
+
+# tern
+.tern-project

@@ -3,6 +3,7 @@
 ###############################################
 
 aspnet/k
+caskroom/fonts
 homebrew/binary
 homebrew/boneyard
 homebrew/completions

@@ -3,7 +3,7 @@
 
 # if the docker-machine command exists, start the default machine.
 if [ $(command -v docker-machine) ]; then
-  docker-machine start default >/dev/null
+  docker-machine start default &>/dev/null
   # SEE: https://github.com/docker/machine/issues/1774#issuecomment-156178408
   eval "$(docker-machine env default </dev/null)"
 fi

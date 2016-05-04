@@ -59,8 +59,15 @@ pandoc
 # editor / pager
 ##################################################
 
-!vim --override-system-vi --with-client-server --with-lua --with-luajit
+# !vim --override-system-vi --with-client-server --with-lua --with-luajit
+neovim/neovim/neovim
 fpp
+
+##################################################
+# hashing / checksum
+##################################################
+
+md5sha1sum
 
 ##################################################
 # image manipulation
@@ -134,6 +141,7 @@ vault
 # serialization
 ###############################################
 
+flatbuffers
 protobuf
 
 ##################################################
@@ -170,6 +178,9 @@ pkg-config
 # software development programming languages
 ###############################################
 
+# .NET development framework (F# is installed as part of Mono)
+mono
+
 # andoid
 android-ndk
 android-sdk
@@ -180,9 +191,6 @@ leiningen
 
 # css/sass
 sassc
-
-# dotnet
-kvm
 
 # erlang
 erlang
@@ -205,7 +213,8 @@ luajit
 
 # Configuration: $XDG_CONFIG_HOME/env/lang/node
 # More NodeJS versions installed here: $NODE_VERSIONS (see ~/.direnvrc)
-node
+# SEE ALSO: https://github.com/Homebrew/homebrew/pull/48901
+node --with-full-icu
 https://raw.githubusercontent.com/wilmoore/nodejs-install/master/share/homebrew/nodejs-install.rb
 
 # php
@@ -220,7 +229,12 @@ rbenv
 
 # rust
 cargo-completion
+# rust depends on libssh2
+libssh2
 rustc-completion
+
+# scala
+scala
 
 # uml / diagramming
 plantuml
@@ -233,6 +247,7 @@ plantuml
 mercurial
 
 # git / github
+diff-so-fancy
 git
 github-release
 
@@ -256,9 +271,12 @@ ag
 choose
 ctags
 htop-osx
+# NOTE: jq depends on oniguruma
 jq
 lnav
 moreutils
+# NOTE: jq depends on oniguruma
+oniguruma
 pcre
 reattach-to-user-namespace
 sysdig

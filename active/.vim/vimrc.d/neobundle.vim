@@ -55,13 +55,13 @@ NeoBundle "dietsche/vim-lastplace"
 " ----------------------------------------
 
 " Spacegray Theme (https://github.com/ajh17/Spacegray.vim)
-NeoBundle 'ajh17/Spacegray.vim'
+NeoBundle "ajh17/Spacegray.vim"
 
 " ----------------------------------------
 " Content Search & Selection (within file)
 " ----------------------------------------
 
-NeoBundle "gmarik/vim-visual-star-search"
+NeoBundle "thinca/vim-visualstar"
 
 " ----------------------------------------
 " Editing
@@ -99,6 +99,7 @@ NeoBundle "editorconfig/editorconfig-vim"
 NeoBundle "AndrewRadev/splitjoin.vim"
 NeoBundle "scrooloose/syntastic"
 NeoBundle "SQLUtilities"
+NeoBundle "tpope/vim-sleuth"
 
 " ----------------------------------------
 " Navigation, Exploration
@@ -124,6 +125,9 @@ NeoBundle "calebsmith/vim-lambdify"
 
 " Cocoa
 NeoBundle "msanders/cocoa.vim"
+
+" Flatbuffers
+NeoBundle "dcharbon/vim-flatbuffers"
 
 " HTML
 NeoBundle "rstacruz/sparkup"
@@ -154,6 +158,7 @@ NeoBundleLazy "aklt/plantuml-syntax"
 " ----------------------------------------
 
 NeoBundle "tpope/vim-fugitive"
+NeoBundle "rhysd/committia.vim"
 
 " ----------------------------------------
 " Status Line

@@ -5,6 +5,7 @@ export NODE_REPL_HISTORY=~/.cache/node/.node_repl_history
 export NODE_HOME="$XDG_DATA_HOME/node"
 
 # node versions directory (binaries are downloadable @ https://nodejs.org/dist)
+# https://github.com/direnv/direnv/wiki/Node
 export NODE_VERSIONS="$NODE_HOME/versions"
 
 # configure npm

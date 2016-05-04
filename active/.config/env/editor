@@ -1,3 +1,12 @@
 # default editor
-export EDITOR="vim"
+export EDITOR="nvim"
 export VISUAL="$EDITOR"
+
+# editor function
+vim () {
+  $EDITOR $@
+}
+
+edit () {
+  $EDITOR $@
+}

@@ -21,8 +21,9 @@ alias path-sorted='echo $PATH | tr ":" "\n" | sort'
 # ip address
 alias ip='curl -s http://canihazip.com/s'
 
-# open files.
-alias readme-open='open README.md -a "Marked 2"'
+# open files
+alias marked='open -a "Marked 2" $*'
+alias open:markdown='open -a "Marked 2" $*'
 
 # better dig
 alias dig-pretty='dig +nostats +nocomments +nocmd'

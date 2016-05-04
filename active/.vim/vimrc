@@ -6,6 +6,9 @@
 " plugin and bundle management.
 source ~/.vim/vimrc.d/neobundle.vim
 
+" ctags.
+source ~/.vim/vimrc.d/ctags.vim
+
 " viminfo.
 source ~/.vim/vimrc.d/viminfo.vim
 

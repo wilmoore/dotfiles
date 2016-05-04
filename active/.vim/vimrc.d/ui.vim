@@ -46,9 +46,8 @@ colorscheme spacegray
 if has("gui_running")
   " (i.e. MacVIM)
   " set guifont=DejaVu\ Sans\ Mono\ for\ Powerline:h12
-  " set guifont=Sauce\ Code\ Powerline:h12
   " set guifont=Droid\ Sans\ Mono\ for\ Powerline:h18
-  set guifont=Sauce\ Code\ Powerline:h14
+  set guifont=Sauce\ Code\ Powerline:h15
 endif
 
 " -------
@@ -57,6 +56,12 @@ endif
 
 " turn on line numbering
 set number
+set relativenumber
+
+" toggle relative line numbering depending on mode
+" http://jeffkreeftmeijer.com/2012/relative-line-numbers-in-vim-for-super-fast-movement
+:autocmd InsertEnter * :set norelativenumber
+:autocmd InsertLeave * :set relativenumber
 
 " -------
 " Scrolling

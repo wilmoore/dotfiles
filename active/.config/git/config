@@ -36,9 +36,6 @@
 [core]
   bare                = false
 
-  # use vim as preferred editor and start editing at first line when invoked
-  editor              = vim -pc ':normal gg'
-
   # while `~/.config/git/ignore` is the default, we define it anyhow because some programs (cough, souretree) do weird and rude things when this is blank.
   excludesfile        = ~/.config/git/ignore
 
@@ -58,6 +55,13 @@
   # (2) mixed spaces and tabs
   whitespace          = trailing-space,space-before-tab
 
+[color "diff-highlight"]
+
+  oldNormal           = red bold
+  oldHighlight        = red bold 52
+  newNormal           = green bold
+  newHighlight        = green bold 22
+
 [http]
   # see:
   # - https://github.com/isaacs/npm/pull/4222
@@ -74,9 +78,10 @@
 [color]
   ui                  = true
 
-[pull]
-  # so we can just write `git pull` instead of `git pull --rebase`
-  rebase              = true
+[pager]
+
+  diff                = diff-so-fancy | less --tabs=1,5 -RFX
+  show                = diff-so-fancy | less --tabs=1,5 -RFX
 
 [push]
   # safe handling when no refspec is given (i.e `git push`). The default in Git 2.x is 'simple'.
@@ -286,4 +291,3 @@
 
   # add a remote named upstream
   upstream            = remote add upstream
-
