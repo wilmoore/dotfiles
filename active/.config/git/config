@@ -144,6 +144,9 @@
   # number of commits in this branch
   branch-commit-count = !git log upstream/master.. --no-merges --format=oneline | wc | awk '{ print $1 }'
 
+  # up-to-date list of all branches (local and remote)
+  branches            = !git fetch --all --prune && git branch --all
+
   # stage and commit given file
   checkin             = ![[ -z "$*" ]] && echo 'No file name was provided.' 1>&2 && exit 1 || git stage "$*" && git commit $!
 

@@ -13,4 +13,4 @@ SwapList httpmethods GET POST DELETE PUT PATCH HEAD OPTIONS
 SwapList jsdoctags @param @return
 SwapList keepachangelog Added Changed Fixed Removed
 SwapList errorfirstcallback error err _
-SwapList bdd it it.skip it.only describe describe.skip describe.only
+SwapList bdd it it.skip it.only describe describe.skip describe.only context context.skip context.only

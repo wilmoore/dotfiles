@@ -63,19 +63,10 @@ audacity
 # backup/sync, cloud file management, sharing
 ##################################################
 
-arq
-bittorrent-sync
-chronosync
 cloudup
 dropbox
 forklift
 google-drive
-
-##################################################
-# bookmarks
-##################################################
-
-shiori
 
 ##################################################
 # books / reading
@@ -138,7 +129,6 @@ smcfancontrol
 # documentation viewers
 ##################################################
 
-dash
 marked
 
 ##################################################
@@ -196,17 +186,12 @@ spotify
 angry-ip-scanner
 charles
 cocoapacketanalyzer
-# debookee # skip since it never seem to complete.
 iconping
+mitmproxy
+proxychains-ng
 speedlimit
 tunnelblick
 viscosity
-
-##################################################
-# news
-##################################################
-
-hacker-menu
 
 ##################################################
 # notifications
@@ -308,7 +293,6 @@ sketch
 ##################################################
 
 appcleaner
-caffeine
 geekbench
 
 ##################################################
@@ -330,13 +314,6 @@ handbrake
 handbrakecli
 makemkv
 mkvtools
-
-##################################################
-# virtualization
-##################################################
-
-dockertoolbox
-virtualbox
 
 ##################################################
 # VPN

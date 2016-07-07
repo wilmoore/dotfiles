@@ -1,2 +1,3 @@
 # http://stackoverflow.com/a/17848593/128346
-eval $(ssh-agent -s -a $SSH_AUTH_SOCK 2>/dev/null)
+# eval $(ssh-agent -s -a $SSH_AUTH_SOCK 2>/dev/null)
+eval $(ssh-agent -s >/dev/null)

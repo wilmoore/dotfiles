@@ -138,7 +138,7 @@ NeoBundle "Valloric/YouCompleteMe", { 'build' : { 'mac' : './install.sh --clang-
 NeoBundle "marijnh/tern_for_vim", { "build": { "mac": "npm install" } }
 
 " JSON Schema
-NeoBundle "Quramy/vison"
+NeoBundle "elzr/vim-json"
 
 " JavaScript (React/JSX)
 NeoBundle "mxw/vim-jsx"

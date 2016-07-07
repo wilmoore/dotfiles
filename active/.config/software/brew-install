@@ -25,7 +25,6 @@ aws-elasticbeanstalk
 awscli
 heroku-toolbelt
 terraform
-utopia
 
 ##################################################
 # cloud file management / file sharing
@@ -216,6 +215,9 @@ luajit
 # SEE ALSO: https://github.com/Homebrew/homebrew/pull/48901
 node --with-full-icu
 https://raw.githubusercontent.com/wilmoore/nodejs-install/master/share/homebrew/nodejs-install.rb
+
+# ocaml/reason
+opam
 
 # php
 php56
