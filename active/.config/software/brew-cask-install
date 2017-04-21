@@ -36,6 +36,7 @@ mailplane
 
 # productivity
 evernote
+flux
 # flashlight (quite broken)
 
 # security
@@ -293,6 +294,7 @@ sketch
 ##################################################
 
 appcleaner
+displaylink
 geekbench
 
 ##################################################

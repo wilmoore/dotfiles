@@ -6,6 +6,9 @@ export NODE_HOME="$XDG_DATA_HOME/node"
 
 # node versions directory (binaries are downloadable @ https://nodejs.org/dist)
 # https://github.com/direnv/direnv/wiki/Node
+#
+# > ls $NODE_VERSIONS
+# > nodejs-install n.n.n $NODE_VERSIONS
 export NODE_VERSIONS="$NODE_HOME/versions"
 
 # configure npm

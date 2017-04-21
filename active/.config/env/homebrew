@@ -11,7 +11,7 @@ HOMEBREW_OPT=$HOMEBREW_PREFIX/opt
 export HOMEBREW_CACHE=$XDG_CACHE_HOME/homebrew
 
 # ensure homebrew cask links applications into `/Applications`.
-export HOMEBREW_CASK_OPTS="--appdir=/Applications --binarydir=$HOME/.local/bin"
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 # add homebrew installed binaries to the search path.
 path=($HOMEBREW_PREFIX/{bin,sbin} $path)

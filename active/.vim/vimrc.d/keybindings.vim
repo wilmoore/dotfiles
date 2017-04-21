@@ -57,26 +57,18 @@ map <left>  :vertical resize -5<cr>
 " https://joshldavis.com/2014/04/05/vim-tab-madness-buffers-vs-tabs/
 " -------
 
-" Toggle between the last two visited buffers
-nnoremap <leader>j <C-^>
-nnoremap <leader>k <C-^>
-nnoremap <leader>- <C-^>
-
 " open a new empty buffer
 nmap <leader>n :enew<cr>
 
 " Close the current buffer and move to the previous one
 " This replicates the idea of closing a tab
-nmap <leader>w :bp <BAR> bd #<CR>
+nmap <leader>c :bp <BAR> bd #<CR>
 
 " Move to the next buffer
 nmap <leader>l :bnext<CR>
 
 " Move to the previous buffer
 nmap <leader>h :bprevious<CR>
-
-" Move to the previous buffer
-nmap <leader>b :ls<cr>:b<space>
 
 " -------
 " Help
@@ -88,10 +80,6 @@ map <leader>H :execute ":help " . expand("<cword>")<cr>
 " -------
 " Open files (ctrl{p,t}, find, tab edit, mru)
 " -------
-
-" `:CtrlP` prompt.
-nnoremap <silent> <C-p> :CtrlP<cr>
-nnoremap <silent> <C-t> :CtrlP<cr>
 
 " `:find` prompt (find and open).
 map fo :find 
@@ -106,70 +94,27 @@ map mro :Mru<cr>
 
 " TBD (see: http://www.reddit.com/r/vim/comments/26mszm/what_is_everyones_favorite_commenting_plugin_and/chtembl)
 
-" -------
-" Surround Companion (for quoting stuff)
-" -------
-
-" A companion to "tpope/vim-surround" (and similar) plugins.
-" Inspired by Steve Losh's tutorial (http://learnvimscriptthehardway.stevelosh.com/chapters/09.html); however, enhanced to handle:
-"
-" 1. supports punctuated content (i.e. URLs, IP addresses, etc.).
-" 2. supports ", ', `, {}, (), and <>.
-"
-" Why use this if you are already using "surround"?
-"
-" Surround is great if you want to change surrounding content or if you need to add complex surrounding content;
-" however, if you just want to quickly add quotes or brackets, having a quick, hard to forget key sequence is nice.
-"
-" This was prompted by a "discussion @ http://redd.it/26tayb
+" surrounds powered by "machakann/vim-sandwich"
+nmap s <Nop>
+xmap s <Nop>
 
 " example.com => "example.com"
-:no <leader><leader>" gEwi"<esc>Ea"<esc>B
-:no <leader>" gEwi"<esc>ea"<esc>B
-:vn <leader>" "1c"<esc>"1pa"<esc>B
+nmap <leader><leader>w saiW
+nmap <leader><leader>W saiW
 
-" example.com => 'example.com'
-:no <leader><leader>' gEwi'<esc>Ea'<esc>B
-:no <leader>' gEwi'<esc>ea'<esc>B
-:vn <leader>' "1c'<esc>"1pa'<esc>B
+" { foo: 'bar' } => { "foo": 'bar' }
+nmap <leader>w saiw
+nmap <leader>W saiw
 
-" example.com => `example.com`
-:no <leader><leader>` gEwi`<esc>Ea`<esc>B
-:no <leader>` gEwi`<esc>ea`<esc>B
-:vn <leader>` "1c`<esc>"1pa`<esc>B
+" same as above but with visual selection
+vmap <leader>w sa
+vmap <leader>W sa
 
-" example.com => *example.com*
-:no <leader><leader>* gEwi*<esc>Ea*<esc>B
-:no <leader>* gEwi*<esc>ea*<esc>B
-:vn <leader>* "1c*<esc>"1pa*<esc>B
-
-" example.com => **example.com**
-:no <leader><leader>** gEwi**<esc>Ea**<esc>B
-:no <leader>** gEwi**<esc>ea**<esc>B
-:vn <leader>** "1c**<esc>"1pa**<esc>B
-
-" example.com => _example.com_
-:no <leader><leader>_ gEwi_<esc>Ea_<esc>B
-:no <leader>_ gEwi_<esc>ea_<esc>B
-:vn <leader>_ "1c_<esc>"1pa_<esc>B
-
-" example.com => {example.com}
-:no <leader><leader>{ gEwi{<esc>Ea}<esc>B
-:no <leader>{ gEwi{<esc>ea}<esc>B
-:vn <leader>{ "1c{<esc>"1pa}<esc>B
-
-:no <leader><leader>} gEwi{<esc>Ea}<esc>B
-:no <leader>} gEwi{<esc>ea}<esc>B
-:vn <leader>} "1c{<esc>"1pa}<esc>B
-
-" example.com => example.com
-:no <leader><leader>[ gEwi[<esc>Ea]<esc>B
-:no <leader>[ gEwi[<esc>ea]<esc>B
-:vn <leader>[ "1c[<esc>"1pa]<esc>B
-
-:no <leader><leader>] gEwi[<esc>Ea]<esc>B
-:no <leader>] gEwi[<esc>ea]<esc>B
-:vn <leader>] "1c[<esc>"1pa]<esc>B
+" -------
+" Surround Companion (for quoting stuff)
+" DEPRECATED IN FAVOR OF ABOVE.
+" OLD STUFF FOR REFERENCE: https://gist.github.com/wilmoore/240ece8b2b8f853dc9c375b4b921064d
+" -------
 
 " 3+3 => #{3+3}
 " user.name => #{user.name}
@@ -178,38 +123,6 @@ map mro :Mru<cr>
 :no <leader># gEwi#{<esc>ea}<esc>B
 " 3 + 3 => #{3 + 3}
 :vn <leader># "1c#{<esc>"1pa}<esc>B
-
-" example.com => (example.com)
-:no <leader><leader>( gEwi(<esc>Ea)<esc>B
-:no <leader>( gEwi(<esc>ea)<esc>B
-:vn <leader>( "1c(<esc>"1pa)<esc>B
-
-:no <leader><leader>) gEwi(<esc>Ea)<esc>B
-:no <leader>) gEwi(<esc>ea)<esc>B
-:vn <leader>) "1c(<esc>"1pa)<esc>B
-
-" example.com => <example.com>
-:no <leader><leader>< gEwi<<esc>Ea><esc>B
-:no <leader>< gEwi<<esc>ea><esc>B
-:vn <leader>< "1c<<esc>"1pa><esc>B
-
-:no <leader><leader>> gEwi<<esc>Ea><esc>B
-:no <leader>> gEwi<<esc>ea><esc>B
-:vn <leader>> "1c<<esc>"1pa><esc>B
-
-" What you get with something like "tpope/vim-surround":
-"
-" - support for swapping current surrounding content for new surrounding content.
-" - support for removing current surrounding content (i.e. un-surrounding).
-" - support for complex/arbitrary surrounding content (i.e. `<em>`).
-" - support for arbitrary motions and text objects.
-
-" Surround-like plugins
-"
-" tpop/vim-surround: https://github.com/tpope/vim-surround
-" rhysd/vim-operator-surround: https://github.com/rhysd/vim-operator-surround
-" vim-addon-surround: https://github.com/MarcWeber/vim-addon-surround
-" http://stackoverflow.com/a/2148055/128346
 
 " -------
 " Increment/Decrement

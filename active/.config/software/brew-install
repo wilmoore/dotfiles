@@ -37,6 +37,7 @@ https://gist.githubusercontent.com/wilmoore/14c3f12cdd4706e74dc3/raw/6249017ee0a
 # database server
 ##################################################
 
+kafka
 mariadb
 postgresql
 mongodb
@@ -87,6 +88,13 @@ ufraw
 
 translate-toolkit
 
+##################################################
+# HTTP clients (i.e. curl)
+###############################################
+
+curl
+httpie
+
 ###############################################
 # mobile development
 ###############################################
@@ -113,6 +121,7 @@ sshfs
 socat
 stunnel
 tcpdump
+tmate
 wireshark
 
 ###############################################
@@ -213,8 +222,9 @@ luajit
 # Configuration: $XDG_CONFIG_HOME/env/lang/node
 # More NodeJS versions installed here: $NODE_VERSIONS (see ~/.direnvrc)
 # SEE ALSO: https://github.com/Homebrew/homebrew/pull/48901
-node --with-full-icu
+node --with-full-icu --without-npm
 https://raw.githubusercontent.com/wilmoore/nodejs-install/master/share/homebrew/nodejs-install.rb
+yarn
 
 # ocaml/reason
 opam
@@ -252,6 +262,7 @@ mercurial
 diff-so-fancy
 git
 github-release
+hub
 
 ##################################################
 # static analysis
@@ -273,6 +284,7 @@ ag
 choose
 ctags
 htop-osx
+https://raw.githubusercontent.com/simeji/homebrew-jid/master/jid.rb
 # NOTE: jq depends on oniguruma
 jq
 lnav

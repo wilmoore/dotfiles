@@ -21,12 +21,21 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 
 " -------
+" Easy Motion
+" -------
+
+" Disable default mappings
+let g:EasyMotion_do_mapping = 0
+
+" Custom key mappings
+map <leader>/ <Plug>(easymotion-bd-w)
+
+" -------
 " TComment
 " -------
 
 " press // to comment current line and/or visually selected line(s).
 " NOTE: vim-commentary did not handle visually selected lines well.
-
 map // :TComment<cr>
 
 " -------
@@ -44,6 +53,12 @@ let g:markdown_drop_empty_blockquotes = 1
 let g:markdown_enable_folding = 0
 
 " -------
+" mirrors
+" -------
+
+let g:mirror#config_path = expand('~/Documents/projects/.mirrors.yml')
+
+" -------
 " open-browser
 " -------
 
@@ -56,6 +71,13 @@ vmap gx <Plug>(openbrowser-open)
 " search word.
 nmap gs <Plug>(openbrowser-search)
 vmap gs <Plug>(openbrowser-search)
+
+" -------
+" Fugitive
+" -------
+
+let s:github_domains = ['https://github.shuttercorp.net']
+let g:fugitive_github_domains = exists('g:fugitive_github_domains') ? g:fugitive_github_domains + s:github_domains : s:github_domains
 
 " -------
 " Signify
@@ -119,6 +141,11 @@ endif
 " NERDTree
 " -------
 
+" Open by default
+" https://medium.com/@victormours/a-better-nerdtree-setup-3d3921abc0b9#.rznjneizn
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
 " fe (file explore) invokes NERDTreeFind
 nmap fe :NERDTreeFind<cr>
 
@@ -136,6 +163,15 @@ function! CloseIfOnlyNerdTreeLeft()
     endif
   endif
 endfunction
+
+" UI cleanup
+" https://medium.com/@victormours/a-better-nerdtree-setup-3d3921abc0b9#.rznjneizn
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
+
+" automatically delete the buffer of the file you just deleted with NerdTree
+" https://medium.com/@victormours/a-better-nerdtree-setup-3d3921abc0b9#.rznjneizn
+let NERDTreeAutoDeleteBuffer = 1
 
 " show hidden files
 let NERDTreeShowHidden=1

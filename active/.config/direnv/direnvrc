@@ -1,0 +1,80 @@
+# Usage: use php
+# Loads PHP version from a `.php-version` or `.phpversion` file.
+#
+# Usage: use php <version>
+# Loads specified PHP version.
+#
+# If you specify a partial PHP version (i.e. `5.6`), a fuzzy match is performed
+# and the highest version installed matching the pattern is selected.
+#
+# Environment Variables:
+#
+# - $PHP_VERSIONS (required)
+#   You must specify a path to your installed PHP versions via the `$PHP_VERSIONS` variable.
+#
+# - $PHP_VERSION_PREFIX (optional) [default="php-v"]
+#   Overrides the default version prefix.
+
+use_php() {
+  local version=$1
+  local via=""
+  local php_version_prefix=${php_version_prefix:-php-v}
+  local php_wanted
+  local php_prefix
+
+  if [[ -z $PHP_VERSIONS ]] || [[ ! -d $PHP_VERSIONS ]]; then
+    log_error "You must specify a \$PHP_VERSIONS environment variable and the directory specified must exist!"
+    return 1
+  fi
+
+  if [[ -z $version ]] && [[ -f .phpversion ]]; then
+    version=$(< .phpversion)
+    via=".phpversion"
+  fi
+
+  if [[ -z $version ]] && [[ -f .php-version ]]; then
+    version=$(< .php-version)
+    via=".php-version"
+  fi
+
+  if [[ -z $version ]]; then
+    log_error "I do not know which PHP version to load because one has not been specified!"
+    return 1
+  fi
+
+  php_wanted=${php_version_prefix}${version}
+  php_prefix=$(
+    # Look for matching PHP versions in $PHP_VERSIONS path
+    find "$PHP_VERSIONS" -maxdepth 1 -mindepth 1 -type d -name "$php_wanted*" |
+
+    # Strip possible "/" suffix from $PHP_VERSIONS, then use that to
+    # Strip $PHP_VERSIONS/$php_version_prefix prefix from line.
+    while IFS= read -r line; do echo "${line#${PHP_VERSIONS%/}/${php_version_prefix}}"; done |
+
+    # Sort by version: split by "." then reverse numeric sort for each piece of the version string
+    sort -t . -k 1,1rn -k 2,2rn -k 3,3rn |
+
+    # The first one is the highest
+    head -1
+  )
+
+  php_prefix="${PHP_VERSIONS}/${php_version_prefix}${php_prefix}"
+
+  if [[ ! -d $php_prefix ]]; then
+    log_error "Unable to find PHP version ($version) in ($PHP_VERSIONS)!"
+    return 1
+  fi
+
+  if [[ ! -x $php_prefix/bin/php ]]; then
+    log_error "Unable to load PHP binary (php) for version ($version) in ($PHP_VERSIONS)!"
+    return 1
+  fi
+
+  load_prefix "$php_prefix"
+
+  if [[ -z $via ]]; then
+    log_status "Successfully loaded PHP $(php --version), from prefix ($php_prefix)"
+  else
+    log_status "Successfully loaded PHP $(php --version) (via $via), from prefix ($php_prefix)"
+  fi
+}

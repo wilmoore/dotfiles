@@ -21,14 +21,14 @@ source ~/.vim/vimrc.d/ui.vim
 " behaviors.
 source ~/.vim/vimrc.d/behaviors.vim
 
+" custom non-plugin key bindings.
+source ~/.vim/vimrc.d/keybindings.vim
+
 " plugin configuration (plugin specific key bindings).
 source ~/.vim/vimrc.d/plugins.vim
 
 " comments.
 source ~/.vim/vimrc.d/comments.vim
-
-" custom non-plugin key bindings.
-source ~/.vim/vimrc.d/keybindings.vim
 
 " mouse.
 source ~/.vim/vimrc.d/mouse.vim

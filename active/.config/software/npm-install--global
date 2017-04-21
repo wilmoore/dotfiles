@@ -21,6 +21,7 @@ iron-node
 !git+https://github.com/ramitos/jsctags.git
 jsonpp
 kick-off-koa
+n
 node-inspector
 notes
 prettyjson
@@ -34,5 +35,6 @@ travis-encrypt
 trymodule
 uglify-js
 up
+vimdebug
 wifi-password
 yo

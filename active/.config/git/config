@@ -33,6 +33,9 @@
   protocol            = https
   autoUpdate          = never
 
+[remote "origin"]
+  fetch               = +refs/pull/*/head:refs/remotes/origin/pr/*
+
 [core]
   bare                = false
 
@@ -141,6 +144,9 @@
   # list git sub-commands (lots of gems in there)
   bin                 = !find $(git --exec-path) -type f | xargs basename -a | $(git config --get core.pager)
 
+  # https://coderwall.com/p/x8xbnq/git-don-t-blame-people-for-changing-whitespaces-or-moving-code
+  blame               = blame -w -M
+
   # number of commits in this branch
   branch-commit-count = !git log upstream/master.. --no-merges --format=oneline | wc | awk '{ print $1 }'
 
@@ -203,7 +209,8 @@
   ignored             = !git status --ignored | grep -F 'Ignored files:' -A100
 
   # navigate to the JIRA story corresponding to the current branch (`git set-jira-domain your domain` to configure.
-  jira-branch         = !git web--browse $(git config --get jira.serverurl)/browse/$(git name-rev --name-only HEAD) >/dev/null 2>&1 || echo 'To set your Jira Server Url: `git config --replace-all jira.serverurl http://...`'
+  # assumes branch name begins with JIRA story ID
+  jira-branch         = !git web--browse $(git config --get jira.serverurl)/browse/$(git name-rev --name-only HEAD | cut -d- -f1-2) >/dev/null 2>&1 || echo 'To set your Jira Server Url: `git config --replace-all jira.serverurl http://...`'
 
   # last 5 files commited
   last-commited       = !git log --pretty=format: --name-only | grep -vE '^$' | head -n 5 | sort -u

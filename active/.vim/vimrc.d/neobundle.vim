@@ -32,13 +32,6 @@ call neobundle#begin(expand('~/.vim/bundle'))
 NeoBundleFetch "Shougo/neobundle.vim"
 
 " ----------------------------------------
-" Dependencies
-" ----------------------------------------
-
-" depended upon by tpope/vim-surround
-NeoBundle "tpope/vim-repeat"
-
-" ----------------------------------------
 " Enhance ga/:ascii
 " ----------------------------------------
 
@@ -73,7 +66,7 @@ NeoBundle "jiangmiao/auto-pairs"
 NeoBundle "tomtom/tcomment_vim" " NOTE: vim-commentary did not handle visually selected lines well.
 NeoBundle "mjbrownie/swapit"
 NeoBundle "epmatsw/ag.vim"
-NeoBundle "tpope/vim-surround"
+NeoBundle "machakann/vim-sandwich"
 
 " ----------------------------------------
 " Documentation
@@ -102,17 +95,26 @@ NeoBundle "SQLUtilities"
 NeoBundle "tpope/vim-sleuth"
 
 " ----------------------------------------
+" Infrastructure as code
+" ----------------------------------------
+
+NeoBundle "hashivim/vim-terraform"
+
+" ----------------------------------------
 " Navigation, Exploration
 " ----------------------------------------
 
-NeoBundle "kien/ctrlp.vim"
-NeoBundle "easymotion/vim-easymotion"
 NeoBundle "bogado/file-line"
-NeoBundle "yegappan/mru"
-NeoBundle "scrooloose/nerdtree"
+NeoBundle "easymotion/vim-easymotion"
 NeoBundle "netrw.vim"
-NeoBundle "tyru/open-browser.vim"
+NeoBundle "scrooloose/nerdtree"
 NeoBundle "Shougo/unite.vim"
+NeoBundle "tpope/vim-dispatch"
+NeoBundle "tpope/vim-projectionist"
+NeoBundle "tyru/open-browser.vim"
+NeoBundle "Xuyuanp/nerdtree-git-plugin"
+NeoBundle "yegappan/mru"
+NeoBundle "zenbro/mirror.vim"
 
 " ----------------------------------------
 " Programming (languages)
