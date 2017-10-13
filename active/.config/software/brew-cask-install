@@ -20,33 +20,15 @@ font-open-iconic
 font-open-sans
 font-sauce-code-powerline
 
-# caskroom/fonts/font-anonymous-pro-for-powerline
-# caskroom/fonts/font-dejavu-sans-mono-for-powerline
-# caskroom/fonts/font-droid-sans-mono-for-powerline
-# caskroom/fonts/font-fira-mono-for-powerline
-# caskroom/fonts/font-hack
-# caskroom/fonts/font-liberation-mono-for-powerline
-# caskroom/fonts/font-meslo-lg-for-powerline
-# caskroom/fonts/font-open-sans
-# caskroom/fonts/font-sauce-code-powerline
-
 # email
-mailbox
 mailplane
 
 # productivity
 evernote
 flux
-# flashlight (quite broken)
 
 # security
 1password
-
-##################################################
-# airplay
-##################################################
-
-reflector
 
 ##################################################
 # archive
@@ -66,25 +48,18 @@ audacity
 
 cloudup
 dropbox
-forklift
-google-drive
 
 ##################################################
 # books / reading
 ##################################################
 
-calibre
 kindle
-ichm
 send-to-kindle
 
 ##################################################
 # chat, IM, irc
 ##################################################
 
-gitter
-hipchat
-limechat
 screenhero
 skype
 slack
@@ -97,34 +72,11 @@ slack
 mysqlworkbench
 sequel-pro
 
-# mongodb
-robomongo
-
-# postgres
-pg-commander
-psequel
-
-##################################################
-# design
-##################################################
-
-colors
-colorpicker-hex
-colorpicker-skalacolor
-xscope
-
 ##################################################
 # desktop publishing / book authoring
 ##################################################
 
 gitbook
-
-##################################################
-# diagnostic
-##################################################
-
-gfxcardstatus
-smcfancontrol
 
 ##################################################
 # documentation viewers
@@ -136,14 +88,7 @@ marked
 # entertainment
 ##################################################
 
-chromecast
 flash
-
-##################################################
-# games
-##################################################
-
-minecraft
 
 ##################################################
 # http/rest client
@@ -152,54 +97,19 @@ minecraft
 paw
 
 ##################################################
-# image manipulation
-##################################################
-
-imageoptim
-imagealpha
-seashore
-texturepacker
-xee
-
-##################################################
-# internationalization, localization, translation
-##################################################
-
-poedit
-
-##################################################
-# mobile development
-##################################################
-
-ifunbox
-pusher
-
-##################################################
 # music
 ##################################################
 
 spotify
 
 ##################################################
-# networking
+# network
 ##################################################
 
-angry-ip-scanner
 charles
-cocoapacketanalyzer
-iconping
 mitmproxy
 proxychains-ng
-speedlimit
-tunnelblick
 viscosity
-
-##################################################
-# notifications
-##################################################
-
-# https://github.com/ekonstantinidis/gitify
-gitify
 
 ##################################################
 # photo editing
@@ -217,69 +127,29 @@ pdftk
 # productivity
 ##################################################
 
-libreoffice
+# TODO: Is Lucidchart good enough to switch to 100%?
 omnigraffle
 
 ##################################################
 # quick look plugins
 ##################################################
 
-cert-quicklook
-qlcolorcode
-qlprettypatch
-qlstephen
-qlmarkdown
-quicklook-json
-qlprettypatch
-quicklook-csv
-quicklook-json
+qlvideo
+qlimagesize
 betterzipql
-webp-quicklook
-
-##################################################
-# remote access & control
-##################################################
-
-remote-desktop-connection
-cord
-
-##################################################
-# screen capture/casting
-##################################################
-
-licecap
-paparazzi
 
 ##################################################
 # software development utilities
 ##################################################
 
 kaleidoscope
-ccmenu
 
 ##################################################
 # software development programming languages
 ##################################################
 
-# andoid
-android-studio
-genymotion
-
 # java
 java
-
-##################################################
-SSH tunnel management
-##################################################
-
-# secure pipes
-# http://spstage.opoetmail.com/pyro/index.php/
-
-##################################################
-# system services
-##################################################
-
-launchcontrol
 
 ##################################################
 # ui design
@@ -290,23 +160,10 @@ balsamiq-mockups
 sketch
 
 ##################################################
-# utility
+# video recording
 ##################################################
 
-appcleaner
-displaylink
-geekbench
-
-##################################################
-# video
-##################################################
-
-mactubes
-miro-video-converter
 screenflick
-vlc
-vlc-remote
-vlcstreamer
 
 ##################################################
 # video transcoding
@@ -314,21 +171,9 @@ vlcstreamer
 
 handbrake
 handbrakecli
-makemkv
-mkvtools
-
-##################################################
-# VPN
-##################################################
-
-shimo
 
 ##################################################
 # web browsers & browser engines
 ##################################################
 
-chromium
-firefox
 google-chrome
-node-webkit
-opera

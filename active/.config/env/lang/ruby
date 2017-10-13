@@ -1,1 +1,2 @@
-source $(dirname $0)/ruby-init-rbenv
+source $(dirname $0)/ruby-init-chruby
+# source $(dirname $0)/ruby-init-rbenv

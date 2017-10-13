@@ -1,3 +1,1 @@
-gem: --no-document
-install: --no-document
-update: --no-document
+gem: --env-shebang

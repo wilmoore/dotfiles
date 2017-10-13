@@ -1,0 +1,2 @@
+# enable rbenv, shims and autocompletion.
+source $(brew --prefix chruby)/share/chruby/chruby.sh

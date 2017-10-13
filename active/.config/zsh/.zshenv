@@ -3,7 +3,7 @@
 #
 
 # projects
-export PROJECTS_DIR="$HOME/Documents/projects"
+export PROJECTS_DIR="$HOME/projects"
 
 # auto `cd` paths
 cdpath=(

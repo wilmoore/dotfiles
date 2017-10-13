@@ -33,16 +33,14 @@
   protocol            = https
   autoUpdate          = never
 
-[remote "origin"]
-  fetch               = +refs/pull/*/head:refs/remotes/origin/pr/*
-
 [core]
   bare                = false
 
   # while `~/.config/git/ignore` is the default, we define it anyhow because some programs (cough, souretree) do weird and rude things when this is blank.
   excludesfile        = ~/.config/git/ignore
 
-  filemode            = true
+  # don't trust file modes
+  filemode            = false
 
   ignorecase          = false
 

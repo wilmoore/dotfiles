@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "amqplib": "^0.5.1",
+    "newrelic": "^2.2.1",
+    "node-gyp": "^3.6.2"
+  }
+}
