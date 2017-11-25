@@ -6,14 +6,6 @@ chomp () {
   tr -d '\n'
 }
 
-docker-build () {
-  docker build --rm=true -t $(basename $PWD) .
-}
-
-docker-run () {
-  docker run --rm -ti $(basename $PWD) $@
-}
-
 # get keychain secret for a specific site/domain.
 keychain-secret-for () {
   local domain="$(echo $1 | cut -d'/' -f3)"
@@ -23,13 +15,6 @@ keychain-secret-for () {
 # get generic keychain password by name.
 find-generic-password () {
   security find-generic-password -s $1 -w
-}
-
-# set desktop wallpaper image.
-function wallpaper () {
-  rm -f ~/Library/Application\ Support/Dock/desktoppicture.db
-  cp -f ~/.config/wallpapers/desktoppicture.db ~/Library/Application\ Support/Dock/
-  sqlite3 ~/Library/Application\ Support/Dock/desktoppicture.db "update data set value = '$1';" && killall -kill Dock
 }
 
 # list mounted volumes
