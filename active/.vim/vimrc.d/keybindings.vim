@@ -11,6 +11,13 @@
 let mapleader = "\<Space>"
 
 " -------
+" Spell
+" -------
+
+map <leader><leader>s ]s
+map <leader>s z=
+
+" -------
 " Escape (to normal mode)
 " -------
 
