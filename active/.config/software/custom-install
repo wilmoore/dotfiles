@@ -1,6 +1,16 @@
 # install/update android sdk
 yes | android update sdk --no-ui
 
+# install ngrok
+if [ ! $(command -v ngrok) ]; then
+  cd ~/.local/bin
+  curl -O https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-darwin-amd64.zip
+  unzip ngrok-stable-darwin-amd64.zip
+  chmod +x ngrok
+  rm ngrok-stable-darwin-amd64.zip
+  cd -
+fi
+
 # install rebar3
 if [ ! $(command -v rebar3) ]; then
   cd ~/.local/bin

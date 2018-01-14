@@ -3,21 +3,6 @@
 " ----------------------------------------
 
 " -------
-" Leader
-" -------
-
-" use <Space> as leader (thanks: http://sheerun.net/2014/03/21/how-to-boost-your-vim-productivity).
-" NOTE: YOU MUST map 'caps lock' to 'control' for this to be useful, otherwise it is quite painful.
-let mapleader = "\<Space>"
-
-" -------
-" Spell
-" -------
-
-map <leader><leader>s ]s
-map <leader>s z=
-
-" -------
 " Escape (to normal mode)
 " -------
 
@@ -30,6 +15,31 @@ map <leader>s z=
 " Because <C-[> is much more natural for my fingers to reach.
 " NOTE: YOU MUST map 'caps lock' to 'control' for this to be useful, otherwise it is quite painful.
 
+
+" -------
+" Leader
+" -------
+
+" use <Space> as leader (thanks: http://sheerun.net/2014/03/21/how-to-boost-your-vim-productivity).
+" NOTE: YOU MUST map 'caps lock' to 'control' for this to be useful, otherwise it is quite painful.
+let mapleader = "\<Space>"
+
+" -------
+" Help
+" -------
+
+" get help for the word under the cursor.
+map <leader>H :execute ":help " . expand("<cword>")<cr>
+
+
+" -------
+" Spell
+" -------
+
+map <leader><leader>s ]s
+map <leader>s z=
+
+
 " -------
 " Yank
 " -------
@@ -38,6 +48,7 @@ map <leader>s z=
 map <leader>y :%y+<cr>
 map <leader>a :%y+<cr>
 
+
 " -------
 " Paste
 " -------
@@ -45,6 +56,7 @@ map <leader>a :%y+<cr>
 " <leader>p -- unformatted system clipboard paste without need to toggle paste.
 " http://stackoverflow.com/a/3217023/128346
 map <leader>p <esc>"+p
+
 
 " -------
 " Window, Split Navigation
@@ -58,6 +70,7 @@ map <up>    :resize -5<cr>
 map <down>  :resize +5<cr>
 map <right> :vertical resize +5<cr>
 map <left>  :vertical resize -5<cr>
+
 
 " -------
 " Buffer Navigation & Management
@@ -77,23 +90,18 @@ nmap <leader>l :bnext<CR>
 " Move to the previous buffer
 nmap <leader>h :bprevious<CR>
 
-" -------
-" Help
-" -------
-
-" get help for the word under the cursor.
-map <leader>H :execute ":help " . expand("<cword>")<cr>
 
 " -------
 " Open files (ctrl{p,t}, find, tab edit, mru)
 " -------
 
 " `:find` prompt (find and open).
-map fo :find 
+map fo :find
 
 " `:Mru` prompt (most recently opened).
 map mo :Mru<cr>
 map mro :Mru<cr>
+
 
 " -------
 " Surround (custom surrounds)
@@ -131,6 +139,7 @@ vmap <leader>W sa
 " 3 + 3 => #{3 + 3}
 :vn <leader># "1c#{<esc>"1pa}<esc>B
 
+
 " -------
 " Increment/Decrement
 " -------
@@ -143,6 +152,7 @@ map = <c-a>
 
 " support - for decrement (instead of only <c-x>)
 map - <c-x>
+
 
 " -------
 " Undo/Redo
